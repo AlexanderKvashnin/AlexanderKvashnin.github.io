@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой простой сайт</title>
+    <title>IO/CD LAB</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,26 +36,30 @@
 h1 {
     animation: fadeIn 1.5s ease-out;
 }
- b {
-    color: #0077cc;
+.moving-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #0077cc;
+    border-radius: 50px;
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-b:hover {
-    color: #ff5722;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.moving-button:hover {
+    background-color: #ff5722; /* Меняет цвет */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Тень становится больше */
 }
+        
     </style>
 </head>
 <body>
-    <video autoplay muted loop id="bg-video">
-    <source src="https://disk.yandex.ru/client/disk/Загрузки?idApp=client&dialog=slider&idDialog=%2Fdisk%2FЗагрузки%2FGr_04_th10.mov" type="video/mov">
-</video>
-<div style="position: relative; z-index: 1; color: white; text-align: center; padding: 100px;">
+
     <h1>IO/CD LAB</h1>
     <p>Это пример простого сайта, который можно разместить на GitHub Pages.</p>
-</div>
+    <a href="https://github.com" class="moving-button">Перейти на GoogleScholar</a>
 </body>
 </html>
 
