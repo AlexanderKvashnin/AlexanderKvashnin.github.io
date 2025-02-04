@@ -36,11 +36,27 @@
 h1 {
     animation: fadeIn 1.5s ease-out;
 }
+ b {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+b:hover {
+    color: #ff5722;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+    <source src="https://disk.yandex.ru/client/disk/Загрузки?idApp=client&dialog=slider&idDialog=%2Fdisk%2FЗагрузки%2FGr_04_th10.mov" type="video/mov">
+</video>
+<div style="position: relative; z-index: 1; color: white; text-align: center; padding: 100px;">
     <h1>IO/CD LAB</h1>
     <p>Это пример простого сайта, который можно разместить на GitHub Pages.</p>
-    <p>Ссылка на <a href="https://github.com">GitHub</a>.</p>
+</div>
 </body>
 </html>
+
+
