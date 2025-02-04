@@ -52,6 +52,62 @@ h1 {
     background-color: #ff5722; /* Меняет цвет */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Тень становится больше */
 }
+
+/* Основные стили для вкладок */
+.tabs {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.tab {
+    margin-bottom: 10px;
+}
+
+.tab input {
+    display: none;
+}
+
+.tab-label {
+    display: block;
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-label:hover {
+    background-color: #005fa3;
+}
+
+.tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab input:checked ~ .tab-content {
+    max-height: 500px; /* Максимальная высота контента */
+    padding: 10px;
+}
+
+.tab-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tab-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
         
     </style>
 </head>
