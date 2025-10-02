@@ -2,11 +2,11 @@
 const teamData = [
     {
         id: 1,
-        name: "John Doe",
+        name: "Alexander Kvashnin",
         position: "Principal Investigator",
         bio: "Dr. John Doe is a renowned researcher with over 15 years of experience in the field. His work focuses on innovative approaches to complex problems.",
         website: "https://johndoe.com",
-        photo: "assets/team/john-doe.jpg" // путь к фотографии
+        photo: "assets/team/Kvashnin.PNG" // путь к фотографии
     },
     {
         id: 2,
