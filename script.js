@@ -2,24 +2,27 @@
 const teamData = [
     {
         id: 1,
-        name: "Alexander Kvashnin",
+        name: "John Doe",
         position: "Principal Investigator",
         bio: "Dr. John Doe is a renowned researcher with over 15 years of experience in the field. His work focuses on innovative approaches to complex problems.",
-        website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en"
+        website: "https://johndoe.com",
+        photo: "assets/team/john-doe.jpg" // путь к фотографии
     },
     {
         id: 2,
         name: "Jane Smith",
         position: "Postdoctoral Researcher",
         bio: "Dr. Jane Smith specializes in computational methods and data analysis. She has published numerous papers in top-tier journals.",
-        website: "https://janesmith.com"
+        website: "https://janesmith.com",
+        photo: "assets/team/jane-smith.jpg"
     },
     {
         id: 3,
         name: "Mike Johnson",
         position: "PhD Student",
         bio: "Mike is currently pursuing his PhD with a focus on machine learning applications in scientific research.",
-        website: "https://mikejohnson.com"
+        website: "https://mikejohnson.com",
+        photo: "assets/team/mike-johnson.jpg"
     }
 ];
 
@@ -147,7 +150,9 @@ function initializeTeam() {
         const memberElement = document.createElement('div');
         memberElement.className = 'team-member';
         memberElement.innerHTML = `
-            <div class="member-photo"></div>
+            <div class="member-photo">
+                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+            </div>
             <h3>${member.name}</h3>
             <p>${member.position}</p>
         `;
@@ -162,10 +167,17 @@ function openTeamModal(member) {
     const modalBody = modal.querySelector('.modal-body');
     
     modalBody.innerHTML = `
-        <h2>${member.name}</h2>
-        <p><strong>Position:</strong> ${member.position}</p>
-        <p><strong>Bio:</strong> ${member.bio}</p>
-        <a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>
+        <div class="modal-team-member">
+            <div class="modal-photo">
+                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+            </div>
+            <div class="modal-info">
+                <h2>${member.name}</h2>
+                <p><strong>Position:</strong> ${member.position}</p>
+                <p><strong>Bio:</strong> ${member.bio}</p>
+                <a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>
+            </div>
+        </div>
     `;
     
     modal.style.display = 'block';
