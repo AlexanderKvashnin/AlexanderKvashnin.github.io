@@ -120,8 +120,9 @@ body {
 
 .subprojects-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .subproject {
@@ -129,14 +130,20 @@ body {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
 }
 
 .subproject-image {
     width: 100%;
-    height: 200px;
+    height: 150px;
     background: #ecf0f1;
     border-radius: 4px;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+    font-style: italic;
 }
 
 .download-btn {
@@ -147,6 +154,12 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background: #219a52;
 }
 
 /* Publications */
@@ -156,10 +169,25 @@ body {
 
 .publication-item {
     background: white;
-    padding: 1rem;
+    padding: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+.publication-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.publication-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.publication-item a:hover {
+    text-decoration: underline;
 }
 
 /* Resources Grid */
@@ -180,6 +208,7 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
+    border-left: 4px solid #9b59b6;
 }
 
 .resource-item:hover {
@@ -216,45 +245,11 @@ body {
     top: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
+    color: #7f8c8d;
 }
 
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button {
-    padding: 0.75rem 1.5rem;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover {
-    background: #2980b9;
-}
-
-.add-project-btn,
-.add-resource-btn {
-    margin-top: 2rem;
-    background: #27ae60;
-}
-
-.add-project-btn:hover,
-.add-resource-btn:hover {
-    background: #219a52;
+.close:hover {
+    color: #34495e;
 }
 
 /* Responsive */
@@ -274,5 +269,13 @@ button:hover {
     
     .resources-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .subprojects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-tabs {
+        flex-direction: column;
     }
 }
