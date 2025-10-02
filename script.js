@@ -23,7 +23,7 @@ const teamData = [
     }
 ];
 
-let projectsData = [
+const projectsData = [
     {
         id: 1,
         name: "Machine Learning Research",
@@ -32,31 +32,81 @@ let projectsData = [
             {
                 id: 1,
                 title: "Neural Network Optimization",
-                description: "Developing efficient neural network architectures",
+                description: "Developing efficient neural network architectures for complex pattern recognition tasks in scientific data analysis.",
                 pdfUrl: "assets/pdfs/neural_network.pdf"
             },
             {
                 id: 2,
                 title: "Reinforcement Learning",
-                description: "Applying RL to real-world problems",
+                description: "Applying reinforcement learning algorithms to solve real-world optimization problems in various scientific domains.",
                 pdfUrl: "assets/pdfs/reinforcement_learning.pdf"
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Data Visualization",
+        description: "Interactive visualization tools for complex scientific data",
+        subprojects: [
+            {
+                id: 1,
+                title: "3D Molecular Visualization",
+                description: "Developing web-based 3D visualization tools for molecular structures and interactions.",
+                pdfUrl: "assets/pdfs/molecular_viz.pdf"
+            },
+            {
+                id: 2,
+                title: "Real-time Data Dashboard",
+                description: "Creating interactive dashboards for real-time monitoring of experimental data streams.",
+                pdfUrl: "assets/pdfs/dashboard.pdf"
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Computational Biology",
+        description: "Bioinformatics and computational approaches to biological problems",
+        subprojects: [
+            {
+                id: 1,
+                title: "Genome Sequence Analysis",
+                description: "Developing algorithms for efficient genome sequencing and variant analysis.",
+                pdfUrl: "assets/pdfs/genome_analysis.pdf"
+            },
+            {
+                id: 2,
+                title: "Protein Structure Prediction",
+                description: "Machine learning approaches for accurate protein structure prediction and analysis.",
+                pdfUrl: "assets/pdfs/protein_prediction.pdf"
             }
         ]
     }
 ];
 
-let resourcesData = [
+const resourcesData = [
     {
         id: 1,
         title: "Google Scholar",
-        description: "Comprehensive academic search engine",
+        description: "Comprehensive academic search engine for scholarly literature",
         url: "https://scholar.google.com"
     },
     {
         id: 2,
         title: "arXiv",
-        description: "Preprint repository for scientific papers",
+        description: "Preprint repository for physics, mathematics, computer science and more",
         url: "https://arxiv.org"
+    },
+    {
+        id: 3,
+        title: "PubMed",
+        description: "Free search engine accessing primarily the MEDLINE database",
+        url: "https://pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+        id: 4,
+        title: "GitHub",
+        description: "Platform for version control and collaboration on code and projects",
+        url: "https://github.com"
     }
 ];
 
@@ -226,17 +276,31 @@ function simulateGoogleScholarFetch() {
         setTimeout(() => {
             resolve([
                 {
-                    title: "Advanced Machine Learning Techniques",
-                    authors: "John Doe, Jane Smith",
+                    title: "Advanced Machine Learning Techniques for Scientific Discovery",
+                    authors: "John Doe, Jane Smith, Mike Johnson",
                     journal: "Nature Machine Intelligence",
                     year: "2024",
                     url: "#"
                 },
                 {
-                    title: "Deep Learning for Scientific Discovery",
-                    authors: "Jane Smith, Mike Johnson",
+                    title: "Deep Learning Approaches in Computational Biology",
+                    authors: "Jane Smith, Mike Johnson, Robert Brown",
                     journal: "Science Advances",
                     year: "2023",
+                    url: "#"
+                },
+                {
+                    title: "Interactive Visualization of Complex Scientific Data",
+                    authors: "Mike Johnson, John Doe, Sarah Wilson",
+                    journal: "IEEE Transactions on Visualization",
+                    year: "2023",
+                    url: "#"
+                },
+                {
+                    title: "Reinforcement Learning in Optimization Problems",
+                    authors: "John Doe, Robert Brown",
+                    journal: "Journal of Machine Learning Research",
+                    year: "2022",
                     url: "#"
                 }
             ]);
@@ -264,54 +328,6 @@ window.addEventListener('click', (event) => {
             modal.style.display = 'none';
         }
     });
-});
-
-// Add Project functionality
-document.querySelector('.add-project-btn').addEventListener('click', () => {
-    document.getElementById('projectModal').style.display = 'block';
-});
-
-document.getElementById('projectForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('projectName').value;
-    const description = document.getElementById('projectDescription').value;
-    
-    const newProject = {
-        id: projectsData.length + 1,
-        name,
-        description,
-        subprojects: []
-    };
-    
-    projectsData.push(newProject);
-    updateProjectTabs();
-    showProject(newProject.id);
-    document.getElementById('projectModal').style.display = 'none';
-    document.getElementById('projectForm').reset();
-});
-
-// Add Resource functionality
-document.querySelector('.add-resource-btn').addEventListener('click', () => {
-    document.getElementById('resourceModal').style.display = 'block';
-});
-
-document.getElementById('resourceForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const title = document.getElementById('resourceTitle').value;
-    const url = document.getElementById('resourceUrl').value;
-    const description = document.getElementById('resourceDescription').value;
-    
-    const newResource = {
-        id: resourcesData.length + 1,
-        title,
-        url,
-        description
-    };
-    
-    resourcesData.push(newResource);
-    updateResourcesGrid();
-    document.getElementById('resourceModal').style.display = 'none';
-    document.getElementById('resourceForm').reset();
 });
 
 // Initialize the website
