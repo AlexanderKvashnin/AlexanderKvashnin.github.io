@@ -1,168 +1,121 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IO/CD LAB</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #0077cc;
-        }
-        a {
-            color: #0077cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1 {
-    animation: fadeIn 1.5s ease-out;
-}
-.moving-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: #0077cc;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.moving-button:hover {
-    background-color: #ff5722; /* Меняет цвет */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Тень становится больше */
-}
-
-/* Основные стили для вкладок */
-.tabs {
-    max-width: 1200px;
-    margin: 50px auto;
-}
-
-.tab {
-    margin-bottom: 10px;
-}
-
-.tab input {
-    display: none;
-}
-
-.tab-label {
-    display: block;
-    padding: 10px;
-    background-color: #0077cc;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.tab-label:hover {
-    background-color: #005fa3;
-}
-
-.tab-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 10px;
-    background-color: #f9f9f9;
-    border-radius: 0 0 5px 5px;
-}
-
-.tab input:checked ~ .tab-content {
-    max-height: 500px; /* Максимальная высота контента */
-    padding: 10px;
-}
-
-.tab-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.tab-content p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-}
-
-        
-    </style>
+    <title>Research Lab Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Research Lab</div>
+            <ul class="nav-tabs">
+                <li class="tab-link active" data-tab="about">About</li>
+                <li class="tab-link" data-tab="team">Our Team</li>
+                <li class="tab-link" data-tab="projects">Projects</li>
+                <li class="tab-link" data-tab="publications">Publication List</li>
+                <li class="tab-link" data-tab="courses">Courses</li>
+                <li class="tab-link" data-tab="video">Video</li>
+                <li class="tab-link" data-tab="resources">Interesting Resources</li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <!-- About Tab -->
+        <div id="about" class="tab-content active">
+            <h1>About Our Lab</h1>
+            <p>Welcome to our research laboratory website. We focus on cutting-edge research in various fields.</p>
+        </div>
 
+        <!-- Team Tab -->
+        <div id="team" class="tab-content">
+            <h1>Our Team</h1>
+            <div class="team-grid">
+                <!-- Team members will be populated by JavaScript -->
+            </div>
+        </div>
 
-        <h1>IO/CD LAB</h1>
-        <p>Computational materials discovery for functional and constructional materials with potential for real applications in industry. We use modern methods of computational materials science and artificial intelligence (AI) technique to discover new materials, to study their properties and together with our colleagues who are experts in experiments to synthesize them.</p>
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <h1>Projects</h1>
+            <div class="project-tabs">
+                <!-- Project tabs will be populated by JavaScript -->
+            </div>
+            <div class="project-content">
+                <!-- Project content will be populated by JavaScript -->
+            </div>
+            <button class="add-project-btn">Add New Project</button>
+        </div>
 
-    
-    
-<div class="tabs">
-    <!-- Вкладка 1 -->
-    <div class="tab">
-        <input type="checkbox" id="tab1">
-        <label class="tab-label" for="tab1">Вкладка 1</label>
-        <div class="tab-content">
-            <img src="https://via.placeholder.com/400x200" alt="Пример изображения">
-            <p>Это текст для первой вкладки. Здесь можно добавить описание или другую информацию.</p>
-        <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-            <li>Пункт 3</li>
-        </ul>
+        <!-- Publications Tab -->
+        <div id="publications" class="tab-content">
+            <h1>Publication List</h1>
+            <div class="publications-list">
+                <!-- Publications will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Courses Tab -->
+        <div id="courses" class="tab-content">
+            <h1>Courses</h1>
+            <p>Information about courses will be added here.</p>
+        </div>
+
+        <!-- Video Tab -->
+        <div id="video" class="tab-content">
+            <h1>Video</h1>
+            <p>Video content will be added here.</p>
+        </div>
+
+        <!-- Resources Tab -->
+        <div id="resources" class="tab-content">
+            <h1>Interesting Resources</h1>
+            <div class="resources-grid">
+                <!-- Resources will be populated by JavaScript -->
+            </div>
+            <button class="add-resource-btn">Add New Resource</button>
+        </div>
+    </main>
+
+    <!-- Team Member Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <!-- Team member details will be populated by JavaScript -->
+            </div>
         </div>
     </div>
 
-    <!-- Вкладка 2 -->
-    <div class="tab">
-        <input type="checkbox" id="tab2">
-        <label class="tab-label" for="tab2">Вкладка 2</label>
-        <div class="tab-content">
-            <img src="https://via.placeholder.com/400x200" alt="Пример изображения">
-            <p>Это текст для второй вкладки. Здесь тоже можно добавить что-то интересное.</p>
+    <!-- Add Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="projectForm">
+                <input type="text" id="projectName" placeholder="Project Name" required>
+                <textarea id="projectDescription" placeholder="Project Description" required></textarea>
+                <button type="submit">Add Project</button>
+            </form>
         </div>
     </div>
 
-    <!-- Вкладка 3 -->
-    <div class="tab">
-        <input type="checkbox" id="tab3">
-        <label class="tab-label" for="tab3">Вкладка 3</label>
-        <div class="tab-content">
-            <img src="https://via.placeholder.com/400x200" alt="Пример изображения">
-            <p>Это текст для третьей вкладки. Вы можете добавлять столько вкладок, сколько нужно.</p>
+    <!-- Add Resource Modal -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Resource</h2>
+            <form id="resourceForm">
+                <input type="text" id="resourceTitle" placeholder="Resource Title" required>
+                <input type="url" id="resourceUrl" placeholder="Resource URL" required>
+                <textarea id="resourceDescription" placeholder="Resource Description" required></textarea>
+                <button type="submit">Add Resource</button>
+            </form>
         </div>
     </div>
-</div>
 
-<a href="https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en" class="moving-button">Перейти на GoogleScholar</a>
-
-<a href="https://github.com/AlexanderKvashnin/QE_tutorial" class="moving-button">QE Tutorial</a>
-
-    
+    <script src="script.js"></script>
 </body>
 </html>
-
-
