@@ -1,0 +1,17 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Machine Learning Research",
+            "description": "Advanced machine learning algorithms for scientific applications",
+            "subprojects": [
+                {
+                    "id": 1,
+                    "title": "Neural Network Optimization",
+                    "description": "Developing efficient neural network architectures",
+                    "pdfUrl": "assets/pdfs/neural_network.pdf"
+                }
+            ]
+        }
+    ]
+}
