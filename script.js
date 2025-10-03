@@ -4,24 +4,24 @@ const teamData = [
         id: 1,
         name: "Alexander Kvashnin",
         position: "Principal Investigator",
-        bio: "Dr. John Doe is a renowned researcher with over 15 years of experience in the field. His work focuses on innovative approaches to complex problems.",
+        bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intellegence to complex problems.",
         website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
         photo: "assets/team/Kvashnin.PNG" // путь к фотографии
     },
     {
         id: 2,
-        name: "Jane Smith",
-        position: "Postdoctoral Researcher",
-        bio: "Dr. Jane Smith specializes in computational methods and data analysis. She has published numerous papers in top-tier journals.",
-        website: "https://janesmith.com",
+        name: "Ilia Chepkasov",
+        position: "Senior Research Scientist",
+        bio: "Dr. Chepkasov specializes in computational methods and data analysis. Hhe has published numerous papers in top-tier journals.",
+        website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
         photo: "assets/team/jane-smith.jpg"
     },
     {
         id: 3,
-        name: "Mike Johnson",
-        position: "PhD Student",
-        bio: "Mike is currently pursuing his PhD with a focus on machine learning applications in scientific research.",
-        website: "https://mikejohnson.com",
+        name: "Viktor S. Baidyshev",
+        position: "Research Scientist",
+        bio: "Dr. Baidyshev specializes in computational methods and data analysis. Hhe has published numerous papers in top-tier journals.",
+        website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
         photo: "assets/team/mike-johnson.jpg"
     }
 ];
