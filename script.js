@@ -292,7 +292,7 @@ function simulateGoogleScholarFetch() {
                     authors: "John Doe, Jane Smith, Mike Johnson",
                     journal: "Nature Machine Intelligence",
                     year: "2024",
-                    url: "#"
+                    url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf"
                 },
                 {
                     title: "Deep Learning Approaches in Computational Biology",
