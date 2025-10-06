@@ -22,7 +22,7 @@ const teamData = [
     position: "Research Scientist",
     bio: "Dr. Baidyshev specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
-    photo: "assets/team/mike-johnson.jpg"
+    photo: "assets/team/Baidyshev.jpg"
   },
   {
     id: 4,
@@ -31,7 +31,39 @@ const teamData = [
     bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex materials using machine learning–driven methods.",
     website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
     photo: "assets/team/Jalolov.jpg"
-  }
+  },
+  {
+    id: 5,
+    name: "Michel Lukanov",
+    position: "PhD Student",
+    bio: "Mikhail Lukanov holds a Master's degree in Chemistry with a specialization in Theoretical and Experimental Chemistry. His work focuses on the application of quantum-mechanical methods and machine learning techniques to the study of molecular systems.",
+    website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
+    photo: "assets/team/Lukanov.jpg"
+  },
+  {
+    id: 6,
+    name: "Khasan Akhmadiev",
+    position: "PhD Student",
+    bio: "Young Scientist with a passion for Materials Design using Machine Learning and AI. I have a participation in conferences within the priority fields and research experience of low-dimensional materials (Carbon Nanotubes, Graphene, Diamane)",
+    website: "https://scholar.google.com/citations?user=NaPKRbwAAAAJ&hl=ru",
+    photo: "assets/team/Akhmadiev.jpg"
+  },
+   {
+    id: 7,
+    name: "Aleksandra Radina",
+    position: "PhD Student",
+    bio: "",
+    website: "https://scholar.google.com/citations?user=iymrPcMAAAAJ&hl=ru",
+    photo: "assets/team/jane-smith.jpg"
+  },
+  {
+    id: 8,
+    name: "Anastasiia Iosimovska",
+    position: "MSc Student",
+    bio: "Anastasiia Iosimovska is a Master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials.",
+    website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
+    photo: "assets/team/Iosimovska.jpg"
+  },
 ];
 
 
