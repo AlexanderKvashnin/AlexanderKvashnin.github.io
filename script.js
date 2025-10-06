@@ -15,7 +15,7 @@ const teamData = [
     position: "Senior Research Scientist",
     bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
-    photo: "assets/team/jane-smith.jpg"
+    photo: "assets/team/Chepkasov.jpg"
   },
   {
     id: 3,
