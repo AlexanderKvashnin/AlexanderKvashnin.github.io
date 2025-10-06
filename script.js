@@ -1,3 +1,4 @@
+console.log('JS LOADED v1');
 // Sample data
 const teamData = [
   {
