@@ -1,38 +1,39 @@
 // Sample data
 const teamData = [
-    {
-        id: 1,
-        name: "Alexander Kvashnin",
-        position: "Principal Investigator",
-        bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intellegence to complex problems.",
-        website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
-        photo: "assets/team/Kvashnin.PNG" // путь к фотографии
-    },
-    {
-        id: 2,
-        name: "Ilia Chepkasov",
-        position: "Senior Research Scientist",
-        bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
-        website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
-        photo: "assets/team/jane-smith.jpg"
-    },
-    {
-        id: 3,
-        name: "Viktor S. Baidyshev",
-        position: "Research Scientist",
-        bio: "Dr. Baidyshev specializes in computational methods and data analysis. Hhe has published numerous papers in top-tier journals.",
-        website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
-        photo: "assets/team/mike-johnson.jpg"
-    },
-        {
-        id: 4,
-        name: "Faridun Jalolov",
-        position: "PhD Student",
-        bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex material by using machine learning-driven methods.",
-        website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
-        photo: "assets/team/Jalolov.jpg"
-    },
+  {
+    id: 1,
+    name: "Alexander Kvashnin",
+    position: "Principal Investigator",
+    bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intelligence to complex problems.",
+    website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
+    photo: "assets/team/Kvashnin.PNG" // путь к фотографии
+  },
+  {
+    id: 2,
+    name: "Ilia Chepkasov",
+    position: "Senior Research Scientist",
+    bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
+    website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
+    photo: "assets/team/jane-smith.jpg"
+  },
+  {
+    id: 3,
+    name: "Viktor S. Baidyshev",
+    position: "Research Scientist",
+    bio: "Dr. Baidyshev specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
+    website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
+    photo: "assets/team/mike-johnson.jpg"
+  },
+  {
+    id: 4,
+    name: "Faridun Jalolov",
+    position: "PhD Student",
+    bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex materials using machine learning–driven methods.",
+    website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
+    photo: "assets/team/Jalolov.jpg"
+  }
 ];
+
 
 const projectsData = [
     {
