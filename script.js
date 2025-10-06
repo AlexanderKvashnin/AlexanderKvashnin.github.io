@@ -23,7 +23,16 @@ const teamData = [
         bio: "Dr. Baidyshev specializes in computational methods and data analysis. Hhe has published numerous papers in top-tier journals.",
         website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
         photo: "assets/team/mike-johnson.jpg"
-    }
+    },
+        {
+        id: 4,
+        name: "Faridun Jalolov",
+        position: "PhD Student",
+        bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex material by using machine learning-driven methods.",
+        website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
+        photo: "assets/team/Jalolov.jpg"
+    },
+    
 ];
 
 const projectsData = [
