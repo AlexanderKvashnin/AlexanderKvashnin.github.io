@@ -6,7 +6,7 @@ const teamData = [
     position: "Principal Investigator",
     bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intelligence to complex problems.",
     website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
-    photo: "assets/team/Kvashnin.PNG" // путь к фотографии
+    photo: "assets/team/Kvashnin.PNG"
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const teamData = [
     id: 4,
     name: "Faridun Jalolov",
     position: "PhD Student",
-    bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex materials using machine learning–driven methods.",
+    bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex materials using machine-learning-driven methods.",
     website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
     photo: "assets/team/Jalolov.jpg"
   },
@@ -36,7 +36,7 @@ const teamData = [
     id: 5,
     name: "Michel Lukanov",
     position: "PhD Student",
-    bio: "Mikhail Lukanov holds a Master's degree in Chemistry with a specialization in Theoretical and Experimental Chemistry. His work focuses on the application of quantum-mechanical methods and machine learning techniques to the study of molecular systems.",
+    bio: "Mikhail Lukanov holds a master's degree in chemistry with a specialization in theoretical and experimental chemistry. His work focuses on quantum-mechanical methods and machine learning for molecular systems.",
     website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
     photo: "assets/team/Lukanov.jpg"
   },
@@ -44,11 +44,11 @@ const teamData = [
     id: 6,
     name: "Khasan Akhmadiev",
     position: "PhD Student",
-    bio: "Young Scientist with a passion for Materials Design using Machine Learning and AI. I have a participation in conferences within the priority fields and research experience of low-dimensional materials (Carbon Nanotubes, Graphene, Diamane)",
+    bio: "Young scientist focusing on materials design using machine learning and AI; experience with low-dimensional materials (carbon nanotubes, graphene, diamane).",
     website: "https://scholar.google.com/citations?user=NaPKRbwAAAAJ&hl=ru",
     photo: "assets/team/Akhmadiev.jpg"
   },
-   {
+  {
     id: 7,
     name: "Aleksandra Radina",
     position: "PhD Student",
@@ -60,11 +60,12 @@ const teamData = [
     id: 8,
     name: "Anastasiia Iosimovska",
     position: "MSc Student",
-    bio: "Anastasiia Iosimovska is a Master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials.",
+    bio: "Anastasiia Iosimovska is a master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials.",
     website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
     photo: "assets/team/Iosimovska.jpg"
-  },
+  }
 ];
+
 
 
 const projectsData = [
