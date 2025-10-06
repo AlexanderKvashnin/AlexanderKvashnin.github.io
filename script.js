@@ -12,7 +12,7 @@ const teamData = [
         id: 2,
         name: "Ilia Chepkasov",
         position: "Senior Research Scientist",
-        bio: "Dr. Chepkasov specializes in computational methods and data analysis. Hhe has published numerous papers in top-tier journals.",
+        bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
         website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
         photo: "assets/team/jane-smith.jpg"
     },
