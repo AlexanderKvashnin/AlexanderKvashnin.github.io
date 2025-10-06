@@ -32,7 +32,6 @@ const teamData = [
         website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
         photo: "assets/team/Jalolov.jpg"
     },
-    
 ];
 
 const projectsData = [
