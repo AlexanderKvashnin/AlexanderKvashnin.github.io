@@ -75,7 +75,7 @@ const teamData = [
   },
     {
     id: 10,
-    name: "Daria",
+    name: "Daria Fedotova",
     position: "MSc Student",
     bio: "",
     website: "",
@@ -91,7 +91,7 @@ const teamData = [
   },
     {
     id: 12,
-    name: "Grigor",
+    name: "Grigory",
     position: "MSc Student",
     bio: "",
     website: "",
