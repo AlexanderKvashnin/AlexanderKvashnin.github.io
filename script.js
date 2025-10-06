@@ -64,6 +64,38 @@ const teamData = [
     bio: "Anastasiia Iosimovska is a master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials.",
     website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
     photo: "assets/team/Iosimovska.jpg"
+  },
+   {
+    id: 9,
+    name: "Olga Pushkova",
+    position: "MSc Student",
+    bio: "",
+    website: "",
+    photo: "assets/team/Pushkova.jpg"
+  },
+    {
+    id: 10,
+    name: "Daria",
+    position: "MSc Student",
+    bio: "",
+    website: "",
+    photo: "assets/team/Fedotova.jpg"
+  },
+     {
+    id: 11,
+    name: "Daniil Alekseev",
+    position: "MSc Student",
+    bio: "",
+    website: "",
+    photo: "assets/team/Alekseev.jpg"
+  },
+    {
+    id: 12,
+    name: "Grigor",
+    position: "MSc Student",
+    bio: "",
+    website: "",
+    photo: "assets/team/Gr.jpg"
   }
 ];
 
