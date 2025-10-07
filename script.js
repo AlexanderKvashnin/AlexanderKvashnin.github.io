@@ -61,7 +61,7 @@ const teamData = [
     id: 8,
     name: "Anastasiia Iosimovska",
     position: "MSc Student",
-    bio: "Anastasiia Iosimovska is a master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials.",
+    bio: "Anastasiia is a Master’s student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor’s degree in Chemistry from Lomonosov Moscow State University (MSU).",
     website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
     photo: "assets/team/Iosimovska.jpg"
   },
@@ -69,7 +69,7 @@ const teamData = [
     id: 9,
     name: "Olga Pushkova",
     position: "MSc Student",
-    bio: "",
+    bio: "Olga Pushkova is a 2st year graduate student at the Skolkovo Institute of Science and Technology, specializing in Applied Computational Mechanics. In 2024, she completed her bachelor's degree at NUST MISIS. Currently, he works in the industrial-oriented materials search group at Skoltech. Research area: prediction of the catalytic properties of nanoclusters using ML, investigation of the characteristics of catalytic materials by the SISSO method.",
     website: "",
     photo: "assets/team/Pushkova.jpg"
   },
@@ -77,7 +77,7 @@ const teamData = [
     id: 10,
     name: "Daria Fedotova",
     position: "MSc Student",
-    bio: "",
+    bio: "During her Bachelor’s studies at Mendeleev University, Daria focused on the surface reconstruction and surface chemistry of (111)-SiC, employing Molecular Dynamics simulations with the USPEX algorithm and DFT calculations. Currently, she is a first-year Master’s student in Materials Science at Skoltech.",
     website: "",
     photo: "assets/team/Fedotova.jpg"
   },
