@@ -1,7 +1,7 @@
-console.log('JS LOADED v2');
+console.log('JS LOADED v3-en');
 
 // =========================
-// Team data (как было)
+// Team data
 // =========================
 const teamData = [
   {
@@ -104,81 +104,121 @@ const teamData = [
 
 
 // =========================
-// Projects data (обновлено под твои папки и файлы)
-// Кнопки берут текст из f.label; если label не указан — красиво строим из имени файла
+// Projects data
+// Tabs: Higher tungsten boride / High-entropy materials / Functional materials / Catalysts / New computational methods
+// For Catalysts and Functional materials: publication cards with title, image slot, short abstract, and a "pdf" button.
 // =========================
 const projectsData = [
   {
     id: 1,
     name: "Higher tungsten boride",
-    description: "Structure, stability, and catalytic properties of tungsten borides with high B content.",
+    description: "",
     subprojects: [
-      {
-        id: 1,
-        title: "Publications",
-        description: "Selected papers related to higher tungsten borides.",
-        files: [
-          { label: "New tungsten borides (2018)", url: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf" },
-          { label: "WB5+x (2020)",               url: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf" },
-          { label: "Synthesis of WB5+x (2021)",   url: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf" },
-          { label: "Photocatalytic H₂ generation (2024)", url: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf" },
-          { label: "Scientific Reports (2024)",   url: "assets/pdfs/Higher_Tungtsen_Boride/2024_scientific_reports.pdf" },
-          { label: "Discovery of chemically… (2025)", url: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf" }
-        ]
-      }
+      { id: 1, title: "Publications", publications: [] }
     ]
   },
   {
     id: 2,
     name: "High-entropy materials",
-    description: "Design and screening of high-entropy ceramics, borides, and alloys using ML and DFT.",
+    description: "",
     subprojects: [
-      {
-        id: 1,
-        title: "Publications",
-        files: [
-          { label: "ML (2023)",                 url: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf" },
-          { label: "Sci Rep 28678 (2024)",      url: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf" },
-          { label: "JALCOM 177178 (2025)",      url: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf" },
-          { label: "JES (2025)",                url: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf" }
-        ]
-      }
+      { id: 1, title: "Publications", publications: [] }
     ]
   },
   {
     id: 3,
     name: "Functional materials",
-    description: "Discovery of materials with targeted electronic, magnetic, ionic, or optical functions.",
+    description: "",
     subprojects: [
       {
         id: 1,
         title: "Publications",
-        files: [
-          { label: "Computational search (2020)",        url: "assets/pdfs/Functional_Materials/2020_comp_search.pdf" },
-          { label: "Tantardini (2021)",                  url: "assets/pdfs/Functional_Materials/2021_tantardini.pdf" },
-          { label: "Large scale (2022)",                 url: "assets/pdfs/Functional_Materials/2022_large_scale.pdf" },
-          { label: "NbC site (2024)",                    url: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf" },
-          { label: "Discovery of chemically… (2025)",    url: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf" },
-          { label: "Synthesis of high-entropy (2025)",   url: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf" },
-          { label: "Tuning of mechanical (2025)",        url: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf" }
+        publications: [
+          {
+            title: "Computational Search for New W–Mo–B Compounds",
+            abstract: "Evolutionary structure prediction identified five stable W–Mo–B ternaries and composition–temperature phase diagrams. Links between electronic structure, crystal structure, composition, and mechanical properties were established.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
+            image: ""
+          },
+          {
+            title: "Computational Modeling of 2D Materials under High Pressure and Their Chemical Bonding: Silicene as Possible Field-Effect Transistor",
+            abstract: "Ab initio analysis shows pressure and anisotropic stress alter silicene hybridization. The results indicate feasibility of silicene-based FET pressure sensing and outline a general approach to study 2D materials under stress.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2021_tantardini.pdf",
+            image: ""
+          },
+          {
+            title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
+            abstract: "Evolutionary search combined with plasma-dynamic synthesis enables selective HfTaC coatings with controlled stoichiometry and properties. The route paves the way for broader families of functional and high-entropy carbides.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
+            image: ""
+          },
+          {
+            title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
+            abstract: "Few-nanometer NbC films on diamond exhibit superconductivity up to ~12.4 K (record for NbC). DFT confirms stability and supports potential for superconductive detectors leveraging diamond’s thermal conductivity.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
+            image: ""
+          },
+          {
+            title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
+            abstract: "A GNN fine-tuned on ~200 DFT entries screened >375k structures and highlighted Ta substitutions that widen stability ranges and enhance hardness. Synthesis and Vickers measurements corroborate the predictions.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf",
+            image: ""
+          },
+          {
+            title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+            abstract: "A single-step plasma process yields single-crystal high-entropy carbides/carbonitrides. ML/DFT guide compositions and conditions, providing a general route for functional ceramic nanopowders.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf",
+            image: ""
+          },
+          {
+            title: "Tuning of Mechanical Properties of Doped PbTe-Based Thermoelectric Materials Driven by Intrinsic Defects",
+            abstract: "DFT+COHP and DNN potentials reveal how dopants and intrinsic defects control brittleness and elasticity in PbTe. Practical guidelines are proposed for tailoring mechanical properties.",
+            pdfUrl: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf",
+            image: ""
+          }
         ]
       }
     ]
   },
   {
     id: 4,
-    name: "Nanocatalysts",
-    description: "Catalytic nanoparticles: activity, selectivity, and stability.",
+    name: "Catalysts",
+    description: "",
     subprojects: [
       {
         id: 1,
         title: "Publications",
-        files: [
-          { label: "Aggregate (2022)",                   url: "assets/pdfs/Catalyst/2022_aggregate.pdf" },
-          { label: "Structure-driven tuning (2023)",     url: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf" },
-          { label: "Nanoscale (2024)",                   url: "assets/pdfs/Catalyst/2024_nanoscale.pdf" },
-          { label: "Journal of Catalysis (2025)",        url: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf" },
-          { label: "PCCP – AuPd",                        url: "assets/pdfs/Catalyst/PCCP_AuPd.pdf" }
+        publications: [
+          {
+            title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
+            abstract: "MD of PVD synthesis yields non-equilibrium Cu–Au nanoparticles with size- and time-dependent composition. DFT shows CO oxidation activity strongly depends on local structure (fcc, icosahedral, amorphous) and is not simply tied to d-band centers.",
+            pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
+            image: ""
+          },
+          {
+            title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A DFT Study",
+            abstract: "For ~2 nm Au–Cu particles (core–shell vs alloy; fcc/icosahedral/amorphous), adjusting the core–shell ratio enables precise control of O/CO adsorption energies, especially for fcc. Alloys cannot reach equivalently narrow energy ranges.",
+            pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
+            image: ""
+          },
+          {
+            title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
+            abstract: "Review of recent progress: how core–shell architectures and theory (including DFT) enable structural control of catalytic performance. Promising directions and materials are outlined.",
+            pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
+            image: ""
+          },
+          {
+            title: "Adsorption Properties of Crystalline and Amorphous PdIr Nanoparticles: A Systematic First-Principles Study",
+            abstract: "For Pd–Ir (core–shell and alloy; 79/321 atoms; fcc and amorphous), DFT shows that tuning core–shell ratios narrows adsorption-energy spreads in fcc particles. Amorphous particles exhibit wide variability due to many nonequivalent sites.",
+            pdfUrl: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf",
+            image: ""
+          },
+          {
+            title: "Tuning the Surface Properties of AuPd Nanoparticles for Adsorption of O and CO",
+            abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd. Varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted catalytic-property tuning.",
+            pdfUrl: "assets/pdfs/Catalyst/PCCP_AuPd.pdf",
+            image: ""
+          }
         ]
       }
     ]
@@ -186,34 +226,20 @@ const projectsData = [
   {
     id: 5,
     name: "New computational methods",
-    description: "Automation, ML potentials, and algorithms for accelerated materials discovery.",
+    description: "",
     subprojects: [
-      {
-        id: 1,
-        title: "Publications",
-        files: [
-          { label: "Podryabinkin (2021)",                url: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf" },
-          { label: "Tantardini (2022)",                  url: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf" },
-          { label: "Tantardini (2023)",                  url: "assets/pdfs/New_Computational_Methods/2023_tantardini.pdf" },
-          { label: "Baidyshev (2024)",                   url: "assets/pdfs/New_Computational_Methods/2024_baidyshev.pdf" },
-          { label: "Jalolov (2024)",                     url: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf" },
-          { label: "Jalolov — Mechanical properties (2024)", url: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf" },
-          { label: "Tantardini (2024)",                  url: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf" }
-        ]
-      }
+      { id: 1, title: "Publications", publications: [] }
     ]
   }
 ];
 
 
 // =========================
-// Resources (как было)
-// =========================
 const resourcesData = [
   { id: 1, title: "Google Scholar", description: "Comprehensive academic search engine for scholarly literature", url: "https://scholar.google.com" },
-  { id: 2, title: "arXiv",          description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
-  { id: 3, title: "PubMed",         description: "Free search engine accessing primarily the MEDLINE database", url: "https://pubmed.ncbi.nlm.nih.gov" },
-  { id: 4, title: "GitHub",         description: "Platform for version control and collaboration on code and projects", url: "https://github.com" }
+  { id: 2, title: "arXiv", description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
+  { id: 3, title: "PubMed", description: "Free search engine accessing primarily the MEDLINE database", url: "https://pubmed.ncbi.nlm.nih.gov" },
+  { id: 4, title: "GitHub", description: "Platform for version control and collaboration on code and projects", url: "https://github.com" }
 ];
 
 
@@ -232,13 +258,12 @@ const closeButtons = document.querySelectorAll('.close');
 
 
 // =========================
-/* Tab Navigation */
+// Tabs
 // =========================
 tabLinks.forEach(tab => {
   tab.addEventListener('click', () => {
     const tabId = tab.getAttribute('data-tab');
 
-    // Update active tab
     tabLinks.forEach(t => t.classList.remove('active'));
     tabContents.forEach(t => t.classList.remove('active'));
 
@@ -253,7 +278,7 @@ tabLinks.forEach(tab => {
 
 
 // =========================
-/* Team */
+// Team
 // =========================
 function initializeTeam() {
   teamGrid.innerHTML = '';
@@ -294,7 +319,7 @@ function openTeamModal(member) {
 
 
 // =========================
-/* Projects */
+// Projects
 // =========================
 function initializeProjects() {
   updateProjectTabs();
@@ -313,19 +338,8 @@ function updateProjectTabs() {
     tab.addEventListener('click', () => showProject(project.id));
     projectTabs.appendChild(tab);
   });
-
   if (projectTabs.firstChild) {
     projectTabs.firstChild.classList.add('active');
-  }
-}
-
-// утилита: если нет label — строим подпись из имени файла
-function prettyFromUrl(url) {
-  try {
-    const file = url.split('/').pop().replace(/\.pdf$/i, '');
-    return file.replace(/_/g, ' ');
-  } catch {
-    return url;
   }
 }
 
@@ -333,39 +347,18 @@ function showProject(projectId) {
   const project = projectsData.find(p => p.id === projectId);
   if (!project) return;
 
-  // подсветка активного таба
   document.querySelectorAll('.project-tab').forEach(tab => {
     tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
   });
 
-  // контент проекта
   projectContent.innerHTML = `
     <div class="project-details active">
       <h2>${project.name}</h2>
-      <p>${project.description || ''}</p>
+      ${project.description ? `<p>${project.description}</p>` : ''}
       <div class="subprojects-grid">
         ${
           project.subprojects && project.subprojects.length
-            ? project.subprojects.map(sp => `
-              <div class="subproject">
-                <div class="subproject-image"></div>
-                <h3>${sp.title}</h3>
-                <p>${sp.description || ''}</p>
-                ${
-                  sp.files && sp.files.length
-                    ? `
-                      <div class="file-list">
-                        ${sp.files.map(f => `
-                          <a class="download-btn" href="${f.url}" target="_blank" rel="noopener" download title="${f.label || prettyFromUrl(f.url)}">
-                            ${f.label || prettyFromUrl(f.url)}
-                          </a>
-                        `).join('')}
-                      </div>
-                    `
-                    : `<p class="muted">No files yet.</p>`
-                }
-              </div>
-            `).join('')
+            ? project.subprojects.map(sp => renderSubproject(sp)).join('')
             : `<p>No subprojects yet.</p>`
         }
       </div>
@@ -373,9 +366,44 @@ function showProject(projectId) {
   `;
 }
 
+function renderSubproject(sp) {
+  if (sp.publications && sp.publications.length) {
+    return `
+      <div class="subproject">
+        <h3>${sp.title}</h3>
+        <div class="publications-grid">
+          ${
+            sp.publications.map(pub => `
+              <div class="pub-card">
+                <div class="pub-thumb">
+                  ${pub.image
+                    ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">`
+                    : `<div class="thumb-placeholder"></div>`
+                  }
+                </div>
+                <div class="pub-info">
+                  <h4 class="pub-title">${pub.title}</h4>
+                  ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
+                  <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
+                </div>
+              </div>
+            `).join('')
+          }
+        </div>
+      </div>
+    `;
+  }
+  return `
+    <div class="subproject">
+      <h3>${sp.title}</h3>
+      <p class="muted">No items yet.</p>
+    </div>
+  `;
+}
+
 
 // =========================
-/* Resources */
+// Resources
 // =========================
 function initializeResources() {
   updateResourcesGrid();
@@ -398,7 +426,7 @@ function updateResourcesGrid() {
 
 
 // =========================
-/* Publications (simulated) */
+// Publications (simulated)
 // =========================
 async function loadPublications() {
   publicationsList.innerHTML = '<p>Loading publications...</p>';
@@ -461,7 +489,7 @@ function simulateGoogleScholarFetch() {
 
 
 // =========================
-/* Modals */
+// Modals
 // =========================
 closeButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -479,7 +507,7 @@ window.addEventListener('click', (event) => {
 
 
 // =========================
-/* Init */
+// Init
 // =========================
 document.addEventListener('DOMContentLoaded', () => {
   initializeTeam();
