@@ -1,4 +1,4 @@
-console.log('JS LOADED v4');
+console.log('JS LOADED v5');
 
 // Team data
 const teamData = [
@@ -106,13 +106,75 @@ const projectsData = [
     id: 1,
     name: "Higher tungsten boride",
     description: "",
-    publications: [] // will fill later
+    publications: [
+      {
+        title: "New Tungsten Borides, Their Stability and Outstanding Mechanical Properties",
+        abstract: "Predicted new tungsten borides with wide stability ranges. WB<sub>5</sub> is superhard (≈45 GPa) and tough (~4 MPa·m<sup>0.5</sup>), retaining performance at high temperatures.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf",
+        image: ""
+      },
+      {
+        title: "WB<sub>5−x</sub>: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
+        abstract: "Experiment + DFT resolve disordered WB<sub>5−x</sub> (not “WB<sub>4</sub>”). Models (e.g., WB<sub>4.18</sub>) match XRD and are energetically favored; excellent mechanical properties and scalable synthesis.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf",
+        image: ""
+      },
+      {
+        title: "Efficient Synthesis of WB<sub>5−x</sub>–WB<sub>2</sub> Powders with Selectivity for WB<sub>5−x</sub> Content",
+        abstract: "Vacuumless DC arc discharge enables efficient WB<sub>5−x</sub> synthesis. Optimal parameters yield ~61.5% WB<sub>5−x</sub> by volume; nanoparticles mostly ≤100 nm. Low-cost route without vacuum systems.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf",
+        image: ""
+      },
+      {
+        title: "Photocatalytic H<sub>2</sub> Generation and CO<sub>2</sub> Reduction by WB<sub>5−x</sub> Cocatalyst of TiO<sub>2</sub> Catalyst",
+        abstract: "WB<sub>5−x</sub>–WB<sub>2</sub>/TiO<sub>2</sub> composites greatly enhance TiO<sub>2</sub> activity: up to ×23 in H<sub>2</sub> evolution and ×4 in CO<sub>2</sub> reduction under 410 nm. DFT supports observed efficiency gains.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf",
+        image: ""
+      },
+      {
+        title: "Theoretical Study of Adsorption and CO Oxidation on Higher Tungsten Boride Surfaces",
+        abstract: "DFT shows WB<sub>5−x</sub> surfaces exhibit favorable adsorption and low CO-oxidation barriers. Wulff shape predicts exposed (010)/(101) facets; broad gas adsorption suggests catalytic potential.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_scientific_reports.pdf",
+        image: ""
+      },
+      {
+        title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
+        abstract: "GNN (trained on ~200 DFT entries) screens >375k structures; Ta substitution broadens stability and boosts hardness. Vacuumless arc synthesis and Vickers tests validate predictions.",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf",
+        image: ""
+      }
+    ]
   },
   {
     id: 2,
     name: "High-entropy materials",
     description: "",
-    publications: [] // will fill later
+    publications: [
+      {
+        title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC<sub>5</sub> High-Entropy Carbide",
+        abstract: "CMC with ML potentials maps temperatures yielding single-phase vs multi-phase HEC. Arc discharge at ~2000 K gives single-phase TiZrNbHfTaC<sub>5</sub>; below ~1200 K phase separation occurs.",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf",
+        image: ""
+      },
+      {
+        title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
+        abstract: "DNN potential predicts melting in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>. Melting temperature increases with N, peaking near 25% N (≈3580±30 K) due to structural/entropy effects in the liquid.",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf",
+        image: ""
+      },
+      {
+        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+        abstract: "One-step plasma method produces single-crystal HE carbides and carbonitrides (N up to ~8 wt%). Ab initio + ML guide composition; process works with metals or oxides as precursors.",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
+        image: ""
+      },
+      {
+        title: "Polyaromatic Hydrocarbons as Prospective Anode Materials for Metal-Ion Batteries",
+        abstract: "First-principles show intercalated PAH crystals (e.g., pentacene) sustain low volume change and can exceed graphite capacity (~1.2–1.3× with Li/Na/K/Rb; ~2.3–2.6× with Mg/Ca).",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf",
+        image: ""
+      }
+    ]
   },
   {
     id: 3,
@@ -204,7 +266,50 @@ const projectsData = [
     id: 5,
     name: "New computational methods",
     description: "",
-    publications: [] // will fill later
+    publications: [
+      {
+        title: "Nanohardness from First Principles with Active Learning on Atomic Environments",
+        abstract: "On-the-fly ML potentials coupled to QM enable nanoindentation simulations and nanohardness prediction across materials (e.g., diamond, AlN, SiC, BC<sub>2</sub>N, Si), matching experimental/macroscopic trends.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf",
+        image: ""
+      },
+      {
+        title: "GIPAW Pseudopotentials of d Elements for Solid-State NMR",
+        abstract: "Developed GIPAW-capable pseudopotentials for 21 d-elements and validated chemical shifts/quadrupolar couplings on oxides/nitrides. Foundations for ML-aided NMR structure analysis.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf",
+        image: ""
+      },
+      {
+        title: "Generating and Grading 34 Optimised Norm-Conserving Vanderbilt Pseudopotentials for Actinides and Super-Heavy Elements in the PseudoDojo",
+        abstract: "Released scalar/fully-relativistic ONCV pseudopotentials (PBE/PBEsol/LDA) for 34 elements; validated vs all-electron ZORA using Δ-gauges; available in psp8/UPF2 formats.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2023_tantardini.pdf",
+        image: ""
+      },
+      {
+        title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
+        abstract: "DNN potential predicts melting behavior in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>; peak T<sub>m</sub> near 25% N (~3580±30 K). Demonstrates ML potentials for finite-T phase transitions.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_baidyshev.pdf",
+        image: ""
+      },
+      {
+        title: "Physically Intuitive Anisotropic Model of Hardness",
+        abstract: "Hardness modeled via shear/bulk moduli and their spatial variation; accounts for anisotropy and temperature via EoS-derived parameters; quantities accessible from DFT or experiment.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
+        image: ""
+      },
+      {
+        title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning",
+        abstract: "Active-learning MLIPs on local fragments enable accurate, affordable elasticity for complex polycrystals/composites; demonstrated on polycrystalline diamond with grain-size dependence.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf",
+        image: ""
+      },
+      {
+        title: "Material Hardness Descriptor Derived by Symbolic Regression",
+        abstract: "SISSO uncovers compact descriptor for Vickers hardness using bulk/shear moduli and Poisson’s ratio; screens 635 compounds, highlighting routes to harder materials via metastable mixing.",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf",
+        image: ""
+      }
+    ]
   }
 ];
 
