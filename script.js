@@ -1,8 +1,6 @@
-console.log('JS LOADED v3-en');
+console.log('JS LOADED v4');
 
-// =========================
 // Team data
-// =========================
 const teamData = [
   {
     id: 1,
@@ -102,81 +100,66 @@ const teamData = [
   }
 ];
 
-
-// =========================
-// Projects data
-// Tabs: Higher tungsten boride / High-entropy materials / Functional materials / Catalysts / New computational methods
-// For Catalysts and Functional materials: publication cards with title, image slot, short abstract, and a "pdf" button.
-// =========================
+// Projects data (cards per paper)
 const projectsData = [
   {
     id: 1,
     name: "Higher tungsten boride",
     description: "",
-    subprojects: [
-      { id: 1, title: "Publications", publications: [] }
-    ]
+    publications: [] // will fill later
   },
   {
     id: 2,
     name: "High-entropy materials",
     description: "",
-    subprojects: [
-      { id: 1, title: "Publications", publications: [] }
-    ]
+    publications: [] // will fill later
   },
   {
     id: 3,
     name: "Functional materials",
     description: "",
-    subprojects: [
+    publications: [
       {
-        id: 1,
-        title: "Publications",
-        publications: [
-          {
-            title: "Computational Search for New W–Mo–B Compounds",
-            abstract: "Evolutionary structure prediction identified five stable W–Mo–B ternaries and composition–temperature phase diagrams. Links between electronic structure, crystal structure, composition, and mechanical properties were established.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
-            image: ""
-          },
-          {
-            title: "Computational Modeling of 2D Materials under High Pressure and Their Chemical Bonding: Silicene as Possible Field-Effect Transistor",
-            abstract: "Ab initio analysis shows pressure and anisotropic stress alter silicene hybridization. The results indicate feasibility of silicene-based FET pressure sensing and outline a general approach to study 2D materials under stress.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2021_tantardini.pdf",
-            image: ""
-          },
-          {
-            title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
-            abstract: "Evolutionary search combined with plasma-dynamic synthesis enables selective HfTaC coatings with controlled stoichiometry and properties. The route paves the way for broader families of functional and high-entropy carbides.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
-            image: ""
-          },
-          {
-            title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
-            abstract: "Few-nanometer NbC films on diamond exhibit superconductivity up to ~12.4 K (record for NbC). DFT confirms stability and supports potential for superconductive detectors leveraging diamond’s thermal conductivity.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
-            image: ""
-          },
-          {
-            title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
-            abstract: "A GNN fine-tuned on ~200 DFT entries screened >375k structures and highlighted Ta substitutions that widen stability ranges and enhance hardness. Synthesis and Vickers measurements corroborate the predictions.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf",
-            image: ""
-          },
-          {
-            title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
-            abstract: "A single-step plasma process yields single-crystal high-entropy carbides/carbonitrides. ML/DFT guide compositions and conditions, providing a general route for functional ceramic nanopowders.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf",
-            image: ""
-          },
-          {
-            title: "Tuning of Mechanical Properties of Doped PbTe-Based Thermoelectric Materials Driven by Intrinsic Defects",
-            abstract: "DFT+COHP and DNN potentials reveal how dopants and intrinsic defects control brittleness and elasticity in PbTe. Practical guidelines are proposed for tailoring mechanical properties.",
-            pdfUrl: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf",
-            image: ""
-          }
-        ]
+        title: "Computational Search for New W–Mo–B Compounds",
+        abstract: "Evolutionary prediction identified five stable W–Mo–B ternaries and composition–temperature phase diagrams; links between electronic structure, crystal structure, composition, and mechanical properties were established.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
+        image: ""
+      },
+      {
+        title: "Computational Modeling of 2D Materials under High Pressure and Their Chemical Bonding: Silicene as Possible Field-Effect Transistor",
+        abstract: "Ab initio analysis shows pressure and anisotropic stress alter silicene hybridization; results indicate feasibility of silicene-based FET pressure sensing and a general approach to study stressed 2D materials.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2021_tantardini.pdf",
+        image: ""
+      },
+      {
+        title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
+        abstract: "Evolutionary search + plasma-dynamic synthesis enable selective HfTaC coatings with controlled stoichiometry and properties; a route toward broader families of functional and high-entropy carbides.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
+        image: ""
+      },
+      {
+        title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
+        abstract: "Few-nanometer NbC films on diamond exhibit superconductivity up to ~12.4 K (record for NbC); DFT supports stability and potential for sensitive superconductive detectors.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
+        image: ""
+      },
+      {
+        title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
+        abstract: "GNN fine-tuned on ~200 DFT entries screened >375k structures; Ta substitutions widen stability ranges and enhance hardness; synthesis and Vickers measurements corroborate predictions.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf",
+        image: ""
+      },
+      {
+        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+        abstract: "A single-step plasma process yields single-crystal high-entropy carbides/carbonitrides; ML/DFT guide compositions and conditions for functional ceramic nanopowders.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf",
+        image: ""
+      },
+      {
+        title: "Tuning of Mechanical Properties of Doped PbTe-Based Thermoelectric Materials Driven by Intrinsic Defects",
+        abstract: "DFT+COHP and DNN potentials reveal how dopants and intrinsic defects control brittleness and elasticity in PbTe; guidelines for tailoring mechanical properties are proposed.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf",
+        image: ""
       }
     ]
   },
@@ -184,42 +167,36 @@ const projectsData = [
     id: 4,
     name: "Catalysts",
     description: "",
-    subprojects: [
+    publications: [
       {
-        id: 1,
-        title: "Publications",
-        publications: [
-          {
-            title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
-            abstract: "MD of PVD synthesis yields non-equilibrium Cu–Au nanoparticles with size- and time-dependent composition. DFT shows CO oxidation activity strongly depends on local structure (fcc, icosahedral, amorphous) and is not simply tied to d-band centers.",
-            pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
-            image: ""
-          },
-          {
-            title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A DFT Study",
-            abstract: "For ~2 nm Au–Cu particles (core–shell vs alloy; fcc/icosahedral/amorphous), adjusting the core–shell ratio enables precise control of O/CO adsorption energies, especially for fcc. Alloys cannot reach equivalently narrow energy ranges.",
-            pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
-            image: ""
-          },
-          {
-            title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
-            abstract: "Review of recent progress: how core–shell architectures and theory (including DFT) enable structural control of catalytic performance. Promising directions and materials are outlined.",
-            pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
-            image: ""
-          },
-          {
-            title: "Adsorption Properties of Crystalline and Amorphous PdIr Nanoparticles: A Systematic First-Principles Study",
-            abstract: "For Pd–Ir (core–shell and alloy; 79/321 atoms; fcc and amorphous), DFT shows that tuning core–shell ratios narrows adsorption-energy spreads in fcc particles. Amorphous particles exhibit wide variability due to many nonequivalent sites.",
-            pdfUrl: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf",
-            image: ""
-          },
-          {
-            title: "Tuning the Surface Properties of AuPd Nanoparticles for Adsorption of O and CO",
-            abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd. Varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted catalytic-property tuning.",
-            pdfUrl: "assets/pdfs/Catalyst/PCCP_AuPd.pdf",
-            image: ""
-          }
-        ]
+        title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
+        abstract: "MD of PVD synthesis yields non-equilibrium Cu–Au nanoparticles with size- and time-dependent composition. DFT shows CO-oxidation activity depends on local structure (fcc/icosahedral/amorphous) and is not simply tied to d-band centers.",
+        pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
+        image: ""
+      },
+      {
+        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A DFT Study",
+        abstract: "For ~2 nm Au–Cu (core–shell vs alloy; fcc/icosahedral/amorphous), adjusting the core–shell ratio precisely controls O/CO adsorption energies, especially for fcc; alloys cannot reach equivalently narrow ranges.",
+        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
+        image: ""
+      },
+      {
+        title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
+        abstract: "Review of recent progress showing how core–shell architectures and theory (incl. DFT) enable structural control of catalytic performance; promising directions and materials are outlined.",
+        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
+        image: ""
+      },
+      {
+        title: "Adsorption Properties of Crystalline and Amorphous PdIr Nanoparticles: A Systematic First-Principles Study",
+        abstract: "For Pd–Ir (core–shell and alloy; 79/321 atoms; fcc and amorphous), tuning core–shell ratios narrows adsorption-energy spreads in fcc particles; amorphous particles show wide variability due to many nonequivalent sites.",
+        pdfUrl: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf",
+        image: ""
+      },
+      {
+        title: "Tuning the Surface Properties of AuPd Nanoparticles for Adsorption of O and CO",
+        abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd; varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted tuning.",
+        pdfUrl: "assets/pdfs/Catalyst/PCCP_AuPd.pdf",
+        image: ""
       }
     ]
   },
@@ -227,14 +204,11 @@ const projectsData = [
     id: 5,
     name: "New computational methods",
     description: "",
-    subprojects: [
-      { id: 1, title: "Publications", publications: [] }
-    ]
+    publications: [] // will fill later
   }
 ];
 
-
-// =========================
+// Resources
 const resourcesData = [
   { id: 1, title: "Google Scholar", description: "Comprehensive academic search engine for scholarly literature", url: "https://scholar.google.com" },
   { id: 2, title: "arXiv", description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
@@ -242,10 +216,7 @@ const resourcesData = [
   { id: 4, title: "GitHub", description: "Platform for version control and collaboration on code and projects", url: "https://github.com" }
 ];
 
-
-// =========================
-// DOM Elements
-// =========================
+// DOM
 const tabLinks = document.querySelectorAll('.tab-link');
 const tabContents = document.querySelectorAll('.tab-content');
 const teamGrid = document.querySelector('.team-grid');
@@ -256,52 +227,40 @@ const resourcesGrid = document.querySelector('.resources-grid');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
 
-
-// =========================
 // Tabs
-// =========================
 tabLinks.forEach(tab => {
   tab.addEventListener('click', () => {
     const tabId = tab.getAttribute('data-tab');
-
     tabLinks.forEach(t => t.classList.remove('active'));
     tabContents.forEach(t => t.classList.remove('active'));
-
     tab.classList.add('active');
     document.getElementById(tabId).classList.add('active');
-
-    if (tabId === 'publications') {
-      loadPublications();
-    }
+    if (tabId === 'publications') loadPublications();
   });
 });
 
-
-// =========================
 // Team
-// =========================
 function initializeTeam() {
   teamGrid.innerHTML = '';
   teamData.forEach(member => {
-    const memberElement = document.createElement('div');
-    memberElement.className = 'team-member';
-    memberElement.innerHTML = `
+    const el = document.createElement('div');
+    el.className = 'team-member';
+    el.innerHTML = `
       <div class="member-photo">
         <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
       </div>
       <h3>${member.name}</h3>
       <p>${member.position}</p>
     `;
-    memberElement.addEventListener('click', () => openTeamModal(member));
-    teamGrid.appendChild(memberElement);
+    el.addEventListener('click', () => openTeamModal(member));
+    teamGrid.appendChild(el);
   });
 }
 
 function openTeamModal(member) {
   const modal = document.getElementById('teamModal');
-  const modalBody = modal.querySelector('.modal-body');
-
-  modalBody.innerHTML = `
+  const body = modal.querySelector('.modal-body');
+  body.innerHTML = `
     <div class="modal-team-member">
       <div class="modal-photo">
         <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
@@ -317,15 +276,10 @@ function openTeamModal(member) {
   modal.style.display = 'block';
 }
 
-
-// =========================
 // Projects
-// =========================
 function initializeProjects() {
   updateProjectTabs();
-  if (projectsData.length > 0) {
-    showProject(projectsData[0].id);
-  }
+  if (projectsData.length > 0) showProject(projectsData[0].id);
 }
 
 function updateProjectTabs() {
@@ -338,9 +292,7 @@ function updateProjectTabs() {
     tab.addEventListener('click', () => showProject(project.id));
     projectTabs.appendChild(tab);
   });
-  if (projectTabs.firstChild) {
-    projectTabs.firstChild.classList.add('active');
-  }
+  if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
 }
 
 function showProject(projectId) {
@@ -355,97 +307,69 @@ function showProject(projectId) {
     <div class="project-details active">
       <h2>${project.name}</h2>
       ${project.description ? `<p>${project.description}</p>` : ''}
-      <div class="subprojects-grid">
-        ${
-          project.subprojects && project.subprojects.length
-            ? project.subprojects.map(sp => renderSubproject(sp)).join('')
-            : `<p>No subprojects yet.</p>`
-        }
-      </div>
+      ${renderPublications(project.publications)}
     </div>
   `;
 }
 
-function renderSubproject(sp) {
-  if (sp.publications && sp.publications.length) {
-    return `
-      <div class="subproject">
-        <h3>${sp.title}</h3>
-        <div class="publications-grid">
-          ${
-            sp.publications.map(pub => `
-              <div class="pub-card">
-                <div class="pub-thumb">
-                  ${pub.image
-                    ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">`
-                    : `<div class="thumb-placeholder"></div>`
-                  }
-                </div>
-                <div class="pub-info">
-                  <h4 class="pub-title">${pub.title}</h4>
-                  ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
-                  <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
-                </div>
-              </div>
-            `).join('')
-          }
-        </div>
-      </div>
-    `;
+function renderPublications(list) {
+  if (!list || !list.length) {
+    return `<p>No publications yet.</p>`;
   }
   return `
-    <div class="subproject">
-      <h3>${sp.title}</h3>
-      <p class="muted">No items yet.</p>
+    <div class="publications-grid">
+      ${list.map(pub => `
+        <div class="pub-card">
+          <div class="pub-thumb">
+            ${pub.image ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">` : `<div class="thumb-placeholder"></div>`}
+          </div>
+          <div class="pub-info">
+            <h4 class="pub-title">${pub.title}</h4>
+            ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
+            <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
+          </div>
+        </div>
+      `).join('')}
     </div>
   `;
 }
 
-
-// =========================
 // Resources
-// =========================
 function initializeResources() {
   updateResourcesGrid();
 }
 
 function updateResourcesGrid() {
   resourcesGrid.innerHTML = '';
-  resourcesData.forEach(resource => {
-    const resourceElement = document.createElement('a');
-    resourceElement.className = 'resource-item';
-    resourceElement.href = resource.url;
-    resourceElement.target = '_blank';
-    resourceElement.innerHTML = `
-      <h3>${resource.title}</h3>
-      <p>${resource.description}</p>
-    `;
-    resourcesGrid.appendChild(resourceElement);
+  resourcesData.forEach(res => {
+    const el = document.createElement('a');
+    el.className = 'resource-item';
+    el.href = res.url;
+    el.target = '_blank';
+    el.innerHTML = `<h3>${res.title}</h3><p>${res.description}</p>`;
+    resourcesGrid.appendChild(el);
   });
 }
 
-
-// =========================
 // Publications (simulated)
-// =========================
 async function loadPublications() {
   publicationsList.innerHTML = '<p>Loading publications...</p>';
   try {
     const publications = await simulateGoogleScholarFetch();
     publicationsList.innerHTML = '';
     publications.forEach(pub => {
-      const pubElement = document.createElement('div');
-      pubElement.className = 'publication-item';
-      pubElement.innerHTML = `
+      const el = document.createElement('div');
+      el.className = 'publication-item';
+      el.innerHTML = `
         <h3>${pub.title}</h3>
         <p><strong>Authors:</strong> ${pub.authors}</p>
         <p><strong>Journal:</strong> ${pub.journal}</p>
         <p><strong>Year:</strong> ${pub.year}</p>
         <a href="${pub.url}" target="_blank">View Publication</a>
       `;
-      publicationsList.appendChild(pubElement);
+      publicationsList.appendChild(el);
     });
-  } catch (error) {
+  } catch {
     publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
   }
 }
@@ -454,43 +378,16 @@ function simulateGoogleScholarFetch() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        {
-          title: "Advanced Machine Learning Techniques for Scientific Discovery",
-          authors: "John Doe, Jane Smith, Mike Johnson",
-          journal: "Nature Machine Intelligence",
-          year: "2024",
-          url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf"
-        },
-        {
-          title: "Deep Learning Approaches in Computational Biology",
-          authors: "Jane Smith, Mike Johnson, Robert Brown",
-          journal: "Science Advances",
-          year: "2023",
-          url: "#"
-        },
-        {
-          title: "Interactive Visualization of Complex Scientific Data",
-          authors: "Mike Johnson, John Doe, Sarah Wilson",
-          journal: "IEEE Transactions on Visualization",
-          year: "2023",
-          url: "#"
-        },
-        {
-          title: "Reinforcement Learning in Optimization Problems",
-          authors: "John Doe, Robert Brown",
-          journal: "Journal of Machine Learning Research",
-          year: "2022",
-          url: "#"
-        }
+        { title: "Advanced Machine Learning Techniques for Scientific Discovery", authors: "John Doe, Jane Smith, Mike Johnson", journal: "Nature Machine Intelligence", year: "2024", url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf" },
+        { title: "Deep Learning Approaches in Computational Biology", authors: "Jane Smith, Mike Johnson, Robert Brown", journal: "Science Advances", year: "2023", url: "#" },
+        { title: "Interactive Visualization of Complex Scientific Data", authors: "Mike Johnson, John Doe, Sarah Wilson", journal: "IEEE Transactions on Visualization", year: "2023", url: "#" },
+        { title: "Reinforcement Learning in Optimization Problems", authors: "John Doe, Robert Brown", journal: "Journal of Machine Learning Research", year: "2022", url: "#" }
       ]);
     }, 1000);
   });
 }
 
-
-// =========================
 // Modals
-// =========================
 closeButtons.forEach(button => {
   button.addEventListener('click', () => {
     modals.forEach(modal => modal.style.display = 'none');
@@ -499,16 +396,11 @@ closeButtons.forEach(button => {
 
 window.addEventListener('click', (event) => {
   modals.forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
+    if (event.target === modal) modal.style.display = 'none';
   });
 });
 
-
-// =========================
 // Init
-// =========================
 document.addEventListener('DOMContentLoaded', () => {
   initializeTeam();
   initializeProjects();
