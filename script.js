@@ -1,5 +1,8 @@
-console.log('JS LOADED v1');
-// Sample data
+console.log('JS LOADED v2');
+
+// =========================
+// Team data (как было)
+// =========================
 const teamData = [
   {
     id: 1,
@@ -65,7 +68,7 @@ const teamData = [
     website: "https://scholar.google.com/citations?user=J0-7stAAAAAJ&hl=ru&oi=ru",
     photo: "assets/team/Iosimovska.jpg"
   },
-   {
+  {
     id: 9,
     name: "Olga Pushkova",
     position: "MSc Student",
@@ -73,7 +76,7 @@ const teamData = [
     website: "",
     photo: "assets/team/Pushkova.jpg"
   },
-    {
+  {
     id: 10,
     name: "Daria Fedotova",
     position: "MSc Student",
@@ -81,7 +84,7 @@ const teamData = [
     website: "",
     photo: "assets/team/Fedotova.jpg"
   },
-     {
+  {
     id: 11,
     name: "Daniil Alekseev",
     position: "MSc Student",
@@ -89,7 +92,7 @@ const teamData = [
     website: "",
     photo: "assets/team/Alekseev.jpg"
   },
-    {
+  {
     id: 12,
     name: "Grigory",
     position: "MSc Student",
@@ -100,95 +103,123 @@ const teamData = [
 ];
 
 
-
+// =========================
+// Projects data (обновлено под твои папки и файлы)
+// Кнопки берут текст из f.label; если label не указан — красиво строим из имени файла
+// =========================
 const projectsData = [
-    {
+  {
+    id: 1,
+    name: "Higher tungsten boride",
+    description: "Structure, stability, and catalytic properties of tungsten borides with high B content.",
+    subprojects: [
+      {
         id: 1,
-        name: "Machine Learning Research",
-        description: "Advanced machine learning algorithms for scientific applications",
-        subprojects: [
-            {
-                id: 1,
-                title: "Neural Network Optimization",
-                description: "Developing efficient neural network architectures for complex pattern recognition tasks in scientific data analysis.",
-                pdfUrl: "assets/pdfs/neural_network.pdf"
-            },
-            {
-                id: 2,
-                title: "Reinforcement Learning",
-                description: "Applying reinforcement learning algorithms to solve real-world optimization problems in various scientific domains.",
-                pdfUrl: "assets/pdfs/reinforcement_learning.pdf"
-            }
+        title: "Publications",
+        description: "Selected papers related to higher tungsten borides.",
+        files: [
+          { label: "New tungsten borides (2018)", url: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf" },
+          { label: "WB5+x (2020)",               url: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf" },
+          { label: "Synthesis of WB5+x (2021)",   url: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf" },
+          { label: "Photocatalytic H₂ generation (2024)", url: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf" },
+          { label: "Scientific Reports (2024)",   url: "assets/pdfs/Higher_Tungtsen_Boride/2024_scientific_reports.pdf" },
+          { label: "Discovery of chemically… (2025)", url: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf" }
         ]
-    },
-    {
-        id: 2,
-        name: "Data Visualization",
-        description: "Interactive visualization tools for complex scientific data",
-        subprojects: [
-            {
-                id: 1,
-                title: "3D Molecular Visualization",
-                description: "Developing web-based 3D visualization tools for molecular structures and interactions.",
-                pdfUrl: "assets/pdfs/molecular_viz.pdf"
-            },
-            {
-                id: 2,
-                title: "Real-time Data Dashboard",
-                description: "Creating interactive dashboards for real-time monitoring of experimental data streams.",
-                pdfUrl: "assets/pdfs/dashboard.pdf"
-            }
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "High-entropy materials",
+    description: "Design and screening of high-entropy ceramics, borides, and alloys using ML and DFT.",
+    subprojects: [
+      {
+        id: 1,
+        title: "Publications",
+        files: [
+          { label: "ML (2023)",                 url: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf" },
+          { label: "Sci Rep 28678 (2024)",      url: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf" },
+          { label: "JALCOM 177178 (2025)",      url: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf" },
+          { label: "JES (2025)",                url: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf" }
         ]
-    },
-    {
-        id: 3,
-        name: "Computational Biology",
-        description: "Bioinformatics and computational approaches to biological problems",
-        subprojects: [
-            {
-                id: 1,
-                title: "Genome Sequence Analysis",
-                description: "Developing algorithms for efficient genome sequencing and variant analysis.",
-                pdfUrl: "assets/pdfs/genome_analysis.pdf"
-            },
-            {
-                id: 2,
-                title: "Protein Structure Prediction",
-                description: "Machine learning approaches for accurate protein structure prediction and analysis.",
-                pdfUrl: "assets/pdfs/protein_prediction.pdf"
-            }
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: "Functional materials",
+    description: "Discovery of materials with targeted electronic, magnetic, ionic, or optical functions.",
+    subprojects: [
+      {
+        id: 1,
+        title: "Publications",
+        files: [
+          { label: "Computational search (2020)",        url: "assets/pdfs/Functional_Materials/2020_comp_search.pdf" },
+          { label: "Tantardini (2021)",                  url: "assets/pdfs/Functional_Materials/2021_tantardini.pdf" },
+          { label: "Large scale (2022)",                 url: "assets/pdfs/Functional_Materials/2022_large_scale.pdf" },
+          { label: "NbC site (2024)",                    url: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf" },
+          { label: "Discovery of chemically… (2025)",    url: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf" },
+          { label: "Synthesis of high-entropy (2025)",   url: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf" },
+          { label: "Tuning of mechanical (2025)",        url: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf" }
         ]
-    }
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: "Nanocatalysts",
+    description: "Catalytic nanoparticles: activity, selectivity, and stability.",
+    subprojects: [
+      {
+        id: 1,
+        title: "Publications",
+        files: [
+          { label: "Aggregate (2022)",                   url: "assets/pdfs/Catalyst/2022_aggregate.pdf" },
+          { label: "Structure-driven tuning (2023)",     url: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf" },
+          { label: "Nanoscale (2024)",                   url: "assets/pdfs/Catalyst/2024_nanoscale.pdf" },
+          { label: "Journal of Catalysis (2025)",        url: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf" },
+          { label: "PCCP – AuPd",                        url: "assets/pdfs/Catalyst/PCCP_AuPd.pdf" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: "New computational methods",
+    description: "Automation, ML potentials, and algorithms for accelerated materials discovery.",
+    subprojects: [
+      {
+        id: 1,
+        title: "Publications",
+        files: [
+          { label: "Podryabinkin (2021)",                url: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf" },
+          { label: "Tantardini (2022)",                  url: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf" },
+          { label: "Tantardini (2023)",                  url: "assets/pdfs/New_Computational_Methods/2023_tantardini.pdf" },
+          { label: "Baidyshev (2024)",                   url: "assets/pdfs/New_Computational_Methods/2024_baidyshev.pdf" },
+          { label: "Jalolov (2024)",                     url: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf" },
+          { label: "Jalolov — Mechanical properties (2024)", url: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf" },
+          { label: "Tantardini (2024)",                  url: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf" }
+        ]
+      }
+    ]
+  }
 ];
 
+
+// =========================
+// Resources (как было)
+// =========================
 const resourcesData = [
-    {
-        id: 1,
-        title: "Google Scholar",
-        description: "Comprehensive academic search engine for scholarly literature",
-        url: "https://scholar.google.com"
-    },
-    {
-        id: 2,
-        title: "arXiv",
-        description: "Preprint repository for physics, mathematics, computer science and more",
-        url: "https://arxiv.org"
-    },
-    {
-        id: 3,
-        title: "PubMed",
-        description: "Free search engine accessing primarily the MEDLINE database",
-        url: "https://pubmed.ncbi.nlm.nih.gov"
-    },
-    {
-        id: 4,
-        title: "GitHub",
-        description: "Platform for version control and collaboration on code and projects",
-        url: "https://github.com"
-    }
+  { id: 1, title: "Google Scholar", description: "Comprehensive academic search engine for scholarly literature", url: "https://scholar.google.com" },
+  { id: 2, title: "arXiv",          description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
+  { id: 3, title: "PubMed",         description: "Free search engine accessing primarily the MEDLINE database", url: "https://pubmed.ncbi.nlm.nih.gov" },
+  { id: 4, title: "GitHub",         description: "Platform for version control and collaboration on code and projects", url: "https://github.com" }
 ];
 
+
+// =========================
 // DOM Elements
+// =========================
 const tabLinks = document.querySelectorAll('.tab-link');
 const tabContents = document.querySelectorAll('.tab-content');
 const teamGrid = document.querySelector('.team-grid');
@@ -199,227 +230,259 @@ const resourcesGrid = document.querySelector('.resources-grid');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
 
-// Tab Navigation
+
+// =========================
+/* Tab Navigation */
+// =========================
 tabLinks.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const tabId = tab.getAttribute('data-tab');
-        
-        // Update active tab
-        tabLinks.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(t => t.classList.remove('active'));
-        
-        tab.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-        
-        // Load specific content
-        if (tabId === 'publications') {
-            loadPublications();
-        }
-    });
+  tab.addEventListener('click', () => {
+    const tabId = tab.getAttribute('data-tab');
+
+    // Update active tab
+    tabLinks.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(t => t.classList.remove('active'));
+
+    tab.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+
+    if (tabId === 'publications') {
+      loadPublications();
+    }
+  });
 });
 
-// Initialize Team Section
+
+// =========================
+/* Team */
+// =========================
 function initializeTeam() {
-    teamGrid.innerHTML = '';
-    teamData.forEach(member => {
-        const memberElement = document.createElement('div');
-        memberElement.className = 'team-member';
-        memberElement.innerHTML = `
-            <div class="member-photo">
-                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
-            </div>
-            <h3>${member.name}</h3>
-            <p>${member.position}</p>
-        `;
-        memberElement.addEventListener('click', () => openTeamModal(member));
-        teamGrid.appendChild(memberElement);
-    });
-}
-
-// Team Modal
-function openTeamModal(member) {
-    const modal = document.getElementById('teamModal');
-    const modalBody = modal.querySelector('.modal-body');
-    
-    modalBody.innerHTML = `
-        <div class="modal-team-member">
-            <div class="modal-photo">
-                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
-            </div>
-            <div class="modal-info">
-                <h2>${member.name}</h2>
-                <p><strong>Position:</strong> ${member.position}</p>
-                <p><strong>Bio:</strong> ${member.bio}</p>
-                <a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>
-            </div>
-        </div>
+  teamGrid.innerHTML = '';
+  teamData.forEach(member => {
+    const memberElement = document.createElement('div');
+    memberElement.className = 'team-member';
+    memberElement.innerHTML = `
+      <div class="member-photo">
+        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+      </div>
+      <h3>${member.name}</h3>
+      <p>${member.position}</p>
     `;
-    
-    modal.style.display = 'block';
+    memberElement.addEventListener('click', () => openTeamModal(member));
+    teamGrid.appendChild(memberElement);
+  });
 }
 
-// Initialize Projects
+function openTeamModal(member) {
+  const modal = document.getElementById('teamModal');
+  const modalBody = modal.querySelector('.modal-body');
+
+  modalBody.innerHTML = `
+    <div class="modal-team-member">
+      <div class="modal-photo">
+        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+      </div>
+      <div class="modal-info">
+        <h2>${member.name}</h2>
+        <p><strong>Position:</strong> ${member.position}</p>
+        <p><strong>Bio:</strong> ${member.bio}</p>
+        <a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>
+      </div>
+    </div>
+  `;
+  modal.style.display = 'block';
+}
+
+
+// =========================
+/* Projects */
+// =========================
 function initializeProjects() {
-    updateProjectTabs();
-    if (projectsData.length > 0) {
-        showProject(projectsData[0].id);
-    }
+  updateProjectTabs();
+  if (projectsData.length > 0) {
+    showProject(projectsData[0].id);
+  }
 }
 
 function updateProjectTabs() {
-    projectTabs.innerHTML = '';
-    projectsData.forEach(project => {
-        const tab = document.createElement('button');
-        tab.className = 'project-tab';
-        tab.textContent = project.name;
-        tab.addEventListener('click', () => showProject(project.id));
-        projectTabs.appendChild(tab);
-    });
-    
-    // Set first tab as active
-    if (projectTabs.firstChild) {
-        projectTabs.firstChild.classList.add('active');
-    }
+  projectTabs.innerHTML = '';
+  projectsData.forEach(project => {
+    const tab = document.createElement('button');
+    tab.className = 'project-tab';
+    tab.textContent = project.name;
+    tab.setAttribute('data-id', project.id);
+    tab.addEventListener('click', () => showProject(project.id));
+    projectTabs.appendChild(tab);
+  });
+
+  if (projectTabs.firstChild) {
+    projectTabs.firstChild.classList.add('active');
+  }
+}
+
+// утилита: если нет label — строим подпись из имени файла
+function prettyFromUrl(url) {
+  try {
+    const file = url.split('/').pop().replace(/\.pdf$/i, '');
+    return file.replace(/_/g, ' ');
+  } catch {
+    return url;
+  }
 }
 
 function showProject(projectId) {
-    const project = projectsData.find(p => p.id === projectId);
-    if (!project) return;
-    
-    // Update active tab
-    document.querySelectorAll('.project-tab').forEach(tab => tab.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    projectContent.innerHTML = `
-        <div class="project-details active">
-            <h2>${project.name}</h2>
-            <p>${project.description}</p>
-            <div class="subprojects-grid">
-                ${project.subprojects.map(subproject => `
-                    <div class="subproject">
-                        <div class="subproject-image"></div>
-                        <h3>${subproject.title}</h3>
-                        <p>${subproject.description}</p>
-                        <button class="download-btn" onclick="downloadPDF('${subproject.pdfUrl}')">
-                            Download PDF
-                        </button>
-                    </div>
-                `).join('')}
-            </div>
-        </div>
-    `;
+  const project = projectsData.find(p => p.id === projectId);
+  if (!project) return;
+
+  // подсветка активного таба
+  document.querySelectorAll('.project-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
+  });
+
+  // контент проекта
+  projectContent.innerHTML = `
+    <div class="project-details active">
+      <h2>${project.name}</h2>
+      <p>${project.description || ''}</p>
+      <div class="subprojects-grid">
+        ${
+          project.subprojects && project.subprojects.length
+            ? project.subprojects.map(sp => `
+              <div class="subproject">
+                <div class="subproject-image"></div>
+                <h3>${sp.title}</h3>
+                <p>${sp.description || ''}</p>
+                ${
+                  sp.files && sp.files.length
+                    ? `
+                      <div class="file-list">
+                        ${sp.files.map(f => `
+                          <a class="download-btn" href="${f.url}" target="_blank" rel="noopener" download title="${f.label || prettyFromUrl(f.url)}">
+                            ${f.label || prettyFromUrl(f.url)}
+                          </a>
+                        `).join('')}
+                      </div>
+                    `
+                    : `<p class="muted">No files yet.</p>`
+                }
+              </div>
+            `).join('')
+            : `<p>No subprojects yet.</p>`
+        }
+      </div>
+    </div>
+  `;
 }
 
-// Initialize Resources
+
+// =========================
+/* Resources */
+// =========================
 function initializeResources() {
-    updateResourcesGrid();
+  updateResourcesGrid();
 }
 
 function updateResourcesGrid() {
-    resourcesGrid.innerHTML = '';
-    resourcesData.forEach(resource => {
-        const resourceElement = document.createElement('a');
-        resourceElement.className = 'resource-item';
-        resourceElement.href = resource.url;
-        resourceElement.target = '_blank';
-        resourceElement.innerHTML = `
-            <h3>${resource.title}</h3>
-            <p>${resource.description}</p>
-        `;
-        resourcesGrid.appendChild(resourceElement);
-    });
+  resourcesGrid.innerHTML = '';
+  resourcesData.forEach(resource => {
+    const resourceElement = document.createElement('a');
+    resourceElement.className = 'resource-item';
+    resourceElement.href = resource.url;
+    resourceElement.target = '_blank';
+    resourceElement.innerHTML = `
+      <h3>${resource.title}</h3>
+      <p>${resource.description}</p>
+    `;
+    resourcesGrid.appendChild(resourceElement);
+  });
 }
 
-// Load Publications from Google Scholar (simulated)
+
+// =========================
+/* Publications (simulated) */
+// =========================
 async function loadPublications() {
-    publicationsList.innerHTML = '<p>Loading publications...</p>';
-    
-    try {
-        // Note: Direct Google Scholar scraping is not possible due to CORS
-        // This is a simulation - you'll need to use a proxy or manual updates
-        const publications = await simulateGoogleScholarFetch();
-        
-        publicationsList.innerHTML = '';
-        publications.forEach(pub => {
-            const pubElement = document.createElement('div');
-            pubElement.className = 'publication-item';
-            pubElement.innerHTML = `
-                <h3>${pub.title}</h3>
-                <p><strong>Authors:</strong> ${pub.authors}</p>
-                <p><strong>Journal:</strong> ${pub.journal}</p>
-                <p><strong>Year:</strong> ${pub.year}</p>
-                <a href="${pub.url}" target="_blank">View Publication</a>
-            `;
-            publicationsList.appendChild(pubElement);
-        });
-    } catch (error) {
-        publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
-    }
+  publicationsList.innerHTML = '<p>Loading publications...</p>';
+  try {
+    const publications = await simulateGoogleScholarFetch();
+    publicationsList.innerHTML = '';
+    publications.forEach(pub => {
+      const pubElement = document.createElement('div');
+      pubElement.className = 'publication-item';
+      pubElement.innerHTML = `
+        <h3>${pub.title}</h3>
+        <p><strong>Authors:</strong> ${pub.authors}</p>
+        <p><strong>Journal:</strong> ${pub.journal}</p>
+        <p><strong>Year:</strong> ${pub.year}</p>
+        <a href="${pub.url}" target="_blank">View Publication</a>
+      `;
+      publicationsList.appendChild(pubElement);
+    });
+  } catch (error) {
+    publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
+  }
 }
 
-// Simulate Google Scholar fetch
 function simulateGoogleScholarFetch() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve([
-                {
-                    title: "Advanced Machine Learning Techniques for Scientific Discovery",
-                    authors: "John Doe, Jane Smith, Mike Johnson",
-                    journal: "Nature Machine Intelligence",
-                    year: "2024",
-                    url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf"
-                },
-                {
-                    title: "Deep Learning Approaches in Computational Biology",
-                    authors: "Jane Smith, Mike Johnson, Robert Brown",
-                    journal: "Science Advances",
-                    year: "2023",
-                    url: "#"
-                },
-                {
-                    title: "Interactive Visualization of Complex Scientific Data",
-                    authors: "Mike Johnson, John Doe, Sarah Wilson",
-                    journal: "IEEE Transactions on Visualization",
-                    year: "2023",
-                    url: "#"
-                },
-                {
-                    title: "Reinforcement Learning in Optimization Problems",
-                    authors: "John Doe, Robert Brown",
-                    journal: "Journal of Machine Learning Research",
-                    year: "2022",
-                    url: "#"
-                }
-            ]);
-        }, 1000);
-    });
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          title: "Advanced Machine Learning Techniques for Scientific Discovery",
+          authors: "John Doe, Jane Smith, Mike Johnson",
+          journal: "Nature Machine Intelligence",
+          year: "2024",
+          url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf"
+        },
+        {
+          title: "Deep Learning Approaches in Computational Biology",
+          authors: "Jane Smith, Mike Johnson, Robert Brown",
+          journal: "Science Advances",
+          year: "2023",
+          url: "#"
+        },
+        {
+          title: "Interactive Visualization of Complex Scientific Data",
+          authors: "Mike Johnson, John Doe, Sarah Wilson",
+          journal: "IEEE Transactions on Visualization",
+          year: "2023",
+          url: "#"
+        },
+        {
+          title: "Reinforcement Learning in Optimization Problems",
+          authors: "John Doe, Robert Brown",
+          journal: "Journal of Machine Learning Research",
+          year: "2022",
+          url: "#"
+        }
+      ]);
+    }, 1000);
+  });
 }
 
-// Download PDF function
-function downloadPDF(url) {
-    // In a real implementation, this would download the PDF
-    alert(`Downloading PDF from: ${url}`);
-    // window.open(url, '_blank');
-}
 
-// Modal functionality
+// =========================
+/* Modals */
+// =========================
 closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        modals.forEach(modal => modal.style.display = 'none');
-    });
+  button.addEventListener('click', () => {
+    modals.forEach(modal => modal.style.display = 'none');
+  });
 });
 
 window.addEventListener('click', (event) => {
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 });
 
-// Initialize the website
+
+// =========================
+/* Init */
+// =========================
 document.addEventListener('DOMContentLoaded', () => {
-    initializeTeam();
-    initializeProjects();
-    initializeResources();
+  initializeTeam();
+  initializeProjects();
+  initializeResources();
 });
