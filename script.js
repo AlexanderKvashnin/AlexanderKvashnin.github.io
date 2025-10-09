@@ -1,4 +1,4 @@
-console.log('JS LOADED v5');
+console.log('JS LOADED v6');
 
 // Team data
 const teamData = [
@@ -381,6 +381,25 @@ function openTeamModal(member) {
   modal.style.display = 'block';
 }
 
+// ===== Sorting helpers (new) =====
+function getYearFromPdfUrl(url) {
+  // take file name part and read leading 4 digits
+  const file = url.split('/').pop() || '';
+  const m = file.match(/^(\d{4})/);
+  return m ? parseInt(m[1], 10) : 0;
+}
+
+function sortPublicationsDescByYear(list) {
+  // don't mutate original array
+  return [...(list || [])].sort((a, b) => {
+    const ya = getYearFromPdfUrl(a.pdfUrl || '');
+    const yb = getYearFromPdfUrl(b.pdfUrl || '');
+    if (yb !== ya) return yb - ya;           // newer first
+    // tie-breaker: by title (optional)
+    return (b.title || '').localeCompare(a.title || '');
+  });
+}
+
 // Projects
 function initializeProjects() {
   updateProjectTabs();
@@ -408,11 +427,14 @@ function showProject(projectId) {
     tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
   });
 
+  // sort publications newest→oldest by year parsed from pdf file name
+  const sortedPubs = sortPublicationsDescByYear(project.publications);
+
   projectContent.innerHTML = `
     <div class="project-details active">
       <h2>${project.name}</h2>
       ${project.description ? `<p>${project.description}</p>` : ''}
-      ${renderPublications(project.publications)}
+      ${renderPublications(sortedPubs)}
     </div>
   `;
 }
