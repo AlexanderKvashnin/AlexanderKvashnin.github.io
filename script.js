@@ -92,7 +92,7 @@ const teamData = [
   },
   {
     id: 12,
-    name: "Grigory",
+    name: "Grigory Bychkov",
     position: "MSc Student",
     bio: "",
     website: "",
