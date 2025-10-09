@@ -257,7 +257,7 @@ const projectsData = [
       {
         title: "Tuning the Surface Properties of AuPd Nanoparticles for Adsorption of O and CO",
         abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd; varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted tuning.",
-        pdfUrl: "assets/pdfs/Catalyst/PCCP_AuPd.pdf",
+        pdfUrl: "assets/pdfs/Catalyst/2023_PCCP_AuPd.pdf",
         image: ""
       }
     ]
