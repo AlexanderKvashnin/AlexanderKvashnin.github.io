@@ -281,13 +281,13 @@ const projectsData = [
       },
       {
         title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
-        abstract: "DNN potential predicts melting behavior in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>; peak T<sub>m</sub> near 25% N (~3580±30 K). Demonstrates ML potentials for finite-T phase transitions.",
+        abstract: "New procedure of training DNN potential is proposed and used to predict melting behavior in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>; peak T<sub>m</sub> near 25% N (~3580±30 K) is bserved and comprehensively analyzed.",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_baidyshev.pdf",
         image: ""
       },
       {
         title: "Physically Intuitive Anisotropic Model of Hardness",
-        abstract: "Hardness modeled via shear/bulk moduli and their spatial variation; accounts for anisotropy and temperature via EoS-derived parameters; quantities accessible from DFT or experiment.",
+        abstract: "New model of hardness is proposed based on shear/bulk moduli and their spatial variation; model accounts for anisotropy and temperature via EoS-derived parameters; quantities accessible from DFT or experiment.",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
         image: ""
       },
