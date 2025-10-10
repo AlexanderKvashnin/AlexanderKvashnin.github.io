@@ -206,15 +206,9 @@ const projectsData = [
         image: ""
       },
       {
-        title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
-        abstract: "GNN fine-tuned on ~200 DFT entries screened >375k structures; Ta substitutions widen stability ranges and enhance hardness; synthesis and Vickers measurements corroborate predictions.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf",
-        image: ""
-      },
-      {
-        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
-        abstract: "A single-step plasma process yields single-crystal high-entropy carbides/carbonitrides; ML/DFT guide compositions and conditions for functional ceramic nanopowders.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2025_Synthesis_of_high_entropy.pdf",
+        title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material",
+        abstract: "Crystalline molybdenum borides were synthesized for the first time via DC arc discharge in ambient air. By varying current, arc duration, and Mo:B ratio, multiple phases including MoB, Mo₂B, MoB₂, MoB₃, and MoB<sub>5−x</sub> were obtained. XRD data analyzed with a CNN confirmed phase compositions. Optimal conditions (200 A, 40 s, Mo:B = 1:17) yielded ~70 wt% MoB<sub>5−x</sub>, providing a fast, low-cost route to high-performance boride ceramics.",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf",
         image: ""
       },
       {
