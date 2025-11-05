@@ -54,9 +54,9 @@ const teamData = [
     id: 7,
     name: "Aleksandra Radina",
     position: "PhD Student",
-    bio: "",
+    bio: "Studying the catalytic processes, dreams to make a new effective catalyst. Also involved in projects devoted to the studies of the chemical bonding changes in thermoelectrics, phase transitions and properties of the 2D materials.",
     website: "https://scholar.google.com/citations?user=iymrPcMAAAAJ&hl=ru",
-    photo: "assets/team/jane-smith.jpg"
+    photo: "assets/team/Radina.jpg"
   },
   {
     id: 8,
