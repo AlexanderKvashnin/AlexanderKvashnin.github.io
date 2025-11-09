@@ -481,3 +481,62 @@ body {
 }
 
 
+/* ============== For first page ===================== */
+.content-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+    padding: 20px 0;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.text-content p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .content-block,
+    .content-block.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .text-content,
+    .image-content {
+        width: 100%;
+    }
+}
+
+
+
+
