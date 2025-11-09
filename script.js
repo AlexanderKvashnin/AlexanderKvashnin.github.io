@@ -1,12 +1,20 @@
-console.log('JS LOADED v6');
+console.log('JS LOADED v7');
 
 // ===== TAB SWITCHING FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', function() {
+    initializeTabs();
+    initializeTeam();
+    initializeProjects();
+    initializeResources();
+});
+
+function initializeTabs() {
     const tabLinks = document.querySelectorAll('.tab-link');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabLinks.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
             const tabId = this.getAttribute('data-tab');
 
             // Remove active class from all tabs and contents
@@ -16,11 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to current tab and content
             this.classList.add('active');
             document.getElementById(tabId).classList.add('active');
+
+            // Load publications if needed
+            if (tabId === 'publications') {
+                loadPublications();
+            }
         });
     });
-});
+}
 
-// Team data
+// ===== TEAM DATA =====
 const teamData = [
   {
     id: 1,
@@ -82,7 +95,7 @@ const teamData = [
     id: 8,
     name: "Anastasiia Iosimovska",
     position: "MSc Student",
-    bio: "Anastasiia is a Master’s student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor’s degree in Chemistry from Lomonosov Moscow State University (MSU).",
+    bio: "Anastasiia is a Master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor's degree in Chemistry from Lomonosov Moscow State University (MSU).",
     website: "https://scholar.google.com/citations?hl=ru&user=Qqe_yZQAAAAJ",
     photo: "assets/team/Iosimovska.jpg"
   },
@@ -98,7 +111,7 @@ const teamData = [
     id: 10,
     name: "Daria Fedotova",
     position: "MSc Student",
-    bio: "During her Bachelor’s studies at Mendeleev University, Daria focused on the surface reconstruction and surface chemistry of (111)-SiC, employing Molecular Dynamics simulations with the USPEX algorithm and DFT calculations. Currently, she is a first-year Master’s student in Materials Science at Skoltech.",
+    bio: "During her Bachelor's studies at Mendeleev University, Daria focused on the surface reconstruction and surface chemistry of (111)-SiC, employing Molecular Dynamics simulations with the USPEX algorithm and DFT calculations. Currently, she is a first-year Master's student in Materials Science at Skoltech.",
     website: "",
     photo: "assets/team/Fedotova.jpg"
   },
@@ -120,7 +133,7 @@ const teamData = [
   }
 ];
 
-// Projects data (cards per paper)
+// ===== PROJECTS DATA =====
 const projectsData = [
   {
     id: 1,
@@ -135,7 +148,7 @@ const projectsData = [
       },
       {
         title: "WB<sub>5−x</sub>: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
-        abstract: "Experiment + DFT resolve disordered WB<sub>5−x</sub> (not “WB<sub>4</sub>”). Models (e.g., WB<sub>4.18</sub>) match XRD and are energetically favored; excellent mechanical properties and scalable synthesis.",
+        abstract: "Experiment + DFT resolve disordered WB<sub>5−x</sub> (not 'WB<sub>4</sub>'). Models (e.g., WB<sub>4.18</sub>) match XRD and are energetically favored; excellent mechanical properties and scalable synthesis.",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf",
         image: ""
       },
@@ -273,10 +286,10 @@ const projectsData = [
         abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd; varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted tuning.",
         pdfUrl: "assets/pdfs/Catalyst/2023_PCCP_AuPd.pdf",
         image: ""
-      }
+      },
       {
         title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
-        abstract: "This study demonstrates a rapid melamine-assisted N-doping method for conductive carbon black (Ketjenblack EC600JD), producing a high-loading (≈40 wt.% Pt) catalyst with exceptional activity and durability. Microscopy reveals uniform Pt nanoparticles (2.5–3 nm) and atomic Pt clusters on the N-doped support, attributed to strong Pt–N interactions. Density functional theory (DFT) calculations highlight the critical role of pyridinic-N defects in stabilizing atomic Pt, enhancing activity via charge transfer, and improving stability via strong Pt anchoring. Electrochemically, Pt/KB-600-N achieves twice the mass activity of commercial HiSPEC4000. ",
+        abstract: "This study demonstrates a rapid melamine-assisted N-doping method for conductive carbon black (Ketjenblack EC600JD), producing a high-loading (≈40 wt.% Pt) catalyst with exceptional activity and durability. Microscopy reveals uniform Pt nanoparticles (2.5–3 nm) and atomic Pt clusters on the N-doped support, attributed to strong Pt–N interactions. Density functional theory (DFT) calculations highlight the critical role of pyridinic-N defects in stabilizing atomic Pt, enhancing activity via charge transfer, and improving stability via strong Pt anchoring. Electrochemically, Pt/KB-600-N achieves twice the mass activity of commercial HiSPEC4000.",
         pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
         image: ""
       }
@@ -325,7 +338,7 @@ const projectsData = [
       },
       {
         title: "Material Hardness Descriptor Derived by Symbolic Regression",
-        abstract: "SISSO uncovers compact descriptor for Vickers hardness using bulk/shear moduli and Poisson’s ratio; screens 635 compounds, highlighting routes to harder materials via metastable mixing.",
+        abstract: "SISSO uncovers compact descriptor for Vickers hardness using bulk/shear moduli and Poisson's ratio; screens 635 compounds, highlighting routes to harder materials via metastable mixing.",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf",
         image: ""
       }
@@ -333,7 +346,7 @@ const projectsData = [
   }
 ];
 
-// Resources
+// ===== RESOURCES DATA =====
 const resourcesData = [
   { id: 1, title: "Google Scholar", description: "Comprehensive academic search engine for scholarly literature", url: "https://scholar.google.com" },
   { id: 2, title: "arXiv", description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
@@ -341,205 +354,200 @@ const resourcesData = [
   { id: 4, title: "GitHub", description: "Platform for version control and collaboration on code and projects", url: "https://github.com" }
 ];
 
-// DOM
-const tabLinks = document.querySelectorAll('.tab-link');
-const tabContents = document.querySelectorAll('.tab-content');
-const teamGrid = document.querySelector('.team-grid');
-const projectTabs = document.querySelector('.project-tabs');
-const projectContent = document.querySelector('.project-content');
-const publicationsList = document.querySelector('.publications-list');
-const resourcesGrid = document.querySelector('.resources-grid');
-const modals = document.querySelectorAll('.modal');
-const closeButtons = document.querySelectorAll('.close');
-
-
-// Team
+// ===== TEAM FUNCTIONS =====
 function initializeTeam() {
-  teamGrid.innerHTML = '';
-  teamData.forEach(member => {
-    const el = document.createElement('div');
-    el.className = 'team-member';
-    el.innerHTML = `
-      <div class="member-photo">
-        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
-      </div>
-      <h3>${member.name}</h3>
-      <p>${member.position}</p>
-    `;
-    el.addEventListener('click', () => openTeamModal(member));
-    teamGrid.appendChild(el);
-  });
+    const teamGrid = document.querySelector('.team-grid');
+    if (!teamGrid) return;
+    
+    teamGrid.innerHTML = '';
+    teamData.forEach(member => {
+        const el = document.createElement('div');
+        el.className = 'team-member';
+        el.innerHTML = `
+            <div class="member-photo">
+                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+            </div>
+            <h3>${member.name}</h3>
+            <p>${member.position}</p>
+        `;
+        el.addEventListener('click', () => openTeamModal(member));
+        teamGrid.appendChild(el);
+    });
 }
 
 function openTeamModal(member) {
-  const modal = document.getElementById('teamModal');
-  const body = modal.querySelector('.modal-body');
-  body.innerHTML = `
-    <div class="modal-team-member">
-      <div class="modal-photo">
-        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
-      </div>
-      <div class="modal-info">
-        <h2>${member.name}</h2>
-        <p><strong>Position:</strong> ${member.position}</p>
-        <p><strong>Bio:</strong> ${member.bio}</p>
-        <a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>
-      </div>
-    </div>
-  `;
-  modal.style.display = 'block';
+    const modal = document.getElementById('teamModal');
+    const body = modal.querySelector('.modal-body');
+    if (!modal || !body) return;
+    
+    body.innerHTML = `
+        <div class="modal-team-member">
+            <div class="modal-photo">
+                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+            </div>
+            <div class="modal-info">
+                <h2>${member.name}</h2>
+                <p><strong>Position:</strong> ${member.position}</p>
+                <p><strong>Bio:</strong> ${member.bio}</p>
+                ${member.website ? `<a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>` : ''}
+            </div>
+        </div>
+    `;
+    modal.style.display = 'block';
 }
 
-// ===== Sorting helpers (new) =====
-function getYearFromPdfUrl(url) {
-  // take file name part and read leading 4 digits
-  const file = url.split('/').pop() || '';
-  const m = file.match(/^(\d{4})/);
-  return m ? parseInt(m[1], 10) : 0;
-}
-
-function sortPublicationsDescByYear(list) {
-  // don't mutate original array
-  return [...(list || [])].sort((a, b) => {
-    const ya = getYearFromPdfUrl(a.pdfUrl || '');
-    const yb = getYearFromPdfUrl(b.pdfUrl || '');
-    if (yb !== ya) return yb - ya;           // newer first
-    // tie-breaker: by title (optional)
-    return (b.title || '').localeCompare(a.title || '');
-  });
-}
-
-// Projects
+// ===== PROJECTS FUNCTIONS =====
 function initializeProjects() {
-  updateProjectTabs();
-  if (projectsData.length > 0) showProject(projectsData[0].id);
+    updateProjectTabs();
+    if (projectsData.length > 0) showProject(projectsData[0].id);
 }
 
 function updateProjectTabs() {
-  projectTabs.innerHTML = '';
-  projectsData.forEach(project => {
-    const tab = document.createElement('button');
-    tab.className = 'project-tab';
-    tab.textContent = project.name;
-    tab.setAttribute('data-id', project.id);
-    tab.addEventListener('click', () => showProject(project.id));
-    projectTabs.appendChild(tab);
-  });
-  if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
+    const projectTabs = document.querySelector('.project-tabs');
+    if (!projectTabs) return;
+    
+    projectTabs.innerHTML = '';
+    projectsData.forEach(project => {
+        const tab = document.createElement('button');
+        tab.className = 'project-tab';
+        tab.textContent = project.name;
+        tab.setAttribute('data-id', project.id);
+        tab.addEventListener('click', () => showProject(project.id));
+        projectTabs.appendChild(tab);
+    });
+    if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
 }
 
 function showProject(projectId) {
-  const project = projectsData.find(p => p.id === projectId);
-  if (!project) return;
+    const project = projectsData.find(p => p.id === projectId);
+    const projectContent = document.querySelector('.project-content');
+    if (!project || !projectContent) return;
 
-  document.querySelectorAll('.project-tab').forEach(tab => {
-    tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
-  });
+    document.querySelectorAll('.project-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
+    });
 
-  // sort publications newest→oldest by year parsed from pdf file name
-  const sortedPubs = sortPublicationsDescByYear(project.publications);
+    const sortedPubs = sortPublicationsDescByYear(project.publications);
 
-  projectContent.innerHTML = `
-    <div class="project-details active">
-      <h2>${project.name}</h2>
-      ${project.description ? `<p>${project.description}</p>` : ''}
-      ${renderPublications(sortedPubs)}
-    </div>
-  `;
+    projectContent.innerHTML = `
+        <div class="project-details active">
+            <h2>${project.name}</h2>
+            ${project.description ? `<p>${project.description}</p>` : ''}
+            ${renderPublications(sortedPubs)}
+        </div>
+    `;
+}
+
+function getYearFromPdfUrl(url) {
+    const file = url.split('/').pop() || '';
+    const m = file.match(/^(\d{4})/);
+    return m ? parseInt(m[1], 10) : 0;
+}
+
+function sortPublicationsDescByYear(list) {
+    return [...(list || [])].sort((a, b) => {
+        const ya = getYearFromPdfUrl(a.pdfUrl || '');
+        const yb = getYearFromPdfUrl(b.pdfUrl || '');
+        if (yb !== ya) return yb - ya;
+        return (b.title || '').localeCompare(a.title || '');
+    });
 }
 
 function renderPublications(list) {
-  if (!list || !list.length) {
-    return `<p>No publications yet.</p>`;
-  }
-  return `
-    <div class="publications-grid">
-      ${list.map(pub => `
-        <div class="pub-card">
-          <div class="pub-thumb">
-            ${pub.image ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">` : `<div class="thumb-placeholder"></div>`}
-          </div>
-          <div class="pub-info">
-            <h4 class="pub-title">${pub.title}</h4>
-            ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
-            <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
-          </div>
+    if (!list || !list.length) {
+        return `<p>No publications yet.</p>`;
+    }
+    return `
+        <div class="publications-grid">
+            ${list.map(pub => `
+                <div class="pub-card">
+                    <div class="pub-thumb">
+                        ${pub.image ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">` : `<div class="thumb-placeholder"></div>`}
+                    </div>
+                    <div class="pub-info">
+                        <h4 class="pub-title">${pub.title}</h4>
+                        ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
+                        <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
+                    </div>
+                </div>
+            `).join('')}
         </div>
-      `).join('')}
-    </div>
-  `;
+    `;
 }
 
-// Resources
+// ===== RESOURCES FUNCTIONS =====
 function initializeResources() {
-  updateResourcesGrid();
+    updateResourcesGrid();
 }
 
 function updateResourcesGrid() {
-  resourcesGrid.innerHTML = '';
-  resourcesData.forEach(res => {
-    const el = document.createElement('a');
-    el.className = 'resource-item';
-    el.href = res.url;
-    el.target = '_blank';
-    el.innerHTML = `<h3>${res.title}</h3><p>${res.description}</p>`;
-    resourcesGrid.appendChild(el);
-  });
+    const resourcesGrid = document.querySelector('.resources-grid');
+    if (!resourcesGrid) return;
+    
+    resourcesGrid.innerHTML = '';
+    resourcesData.forEach(res => {
+        const el = document.createElement('a');
+        el.className = 'resource-item';
+        el.href = res.url;
+        el.target = '_blank';
+        el.innerHTML = `<h3>${res.title}</h3><p>${res.description}</p>`;
+        resourcesGrid.appendChild(el);
+    });
 }
 
-// Publications (simulated)
+// ===== PUBLICATIONS FUNCTIONS =====
 async function loadPublications() {
-  publicationsList.innerHTML = '<p>Loading publications...</p>';
-  try {
-    const publications = await simulateGoogleScholarFetch();
-    publicationsList.innerHTML = '';
-    publications.forEach(pub => {
-      const el = document.createElement('div');
-      el.className = 'publication-item';
-      el.innerHTML = `
-        <h3>${pub.title}</h3>
-        <p><strong>Authors:</strong> ${pub.authors}</p>
-        <p><strong>Journal:</strong> ${pub.journal}</p>
-        <p><strong>Year:</strong> ${pub.year}</p>
-        <a href="${pub.url}" target="_blank">View Publication</a>
-      `;
-      publicationsList.appendChild(el);
-    });
-  } catch {
-    publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
-  }
+    const publicationsList = document.querySelector('.publications-list');
+    if (!publicationsList) return;
+    
+    publicationsList.innerHTML = '<p>Loading publications...</p>';
+    try {
+        const publications = await simulateGoogleScholarFetch();
+        publicationsList.innerHTML = '';
+        publications.forEach(pub => {
+            const el = document.createElement('div');
+            el.className = 'publication-item';
+            el.innerHTML = `
+                <h3>${pub.title}</h3>
+                <p><strong>Authors:</strong> ${pub.authors}</p>
+                <p><strong>Journal:</strong> ${pub.journal}</p>
+                <p><strong>Year:</strong> ${pub.year}</p>
+                <a href="${pub.url}" target="_blank">View Publication</a>
+            `;
+            publicationsList.appendChild(el);
+        });
+    } catch {
+        publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
+    }
 }
 
 function simulateGoogleScholarFetch() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve([
-        { title: "Advanced Machine Learning Techniques for Scientific Discovery", authors: "John Doe, Jane Smith, Mike Johnson", journal: "Nature Machine Intelligence", year: "2024", url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf" },
-        { title: "Deep Learning Approaches in Computational Biology", authors: "Jane Smith, Mike Johnson, Robert Brown", journal: "Science Advances", year: "2023", url: "#" },
-        { title: "Interactive Visualization of Complex Scientific Data", authors: "Mike Johnson, John Doe, Sarah Wilson", journal: "IEEE Transactions on Visualization", year: "2023", url: "#" },
-        { title: "Reinforcement Learning in Optimization Problems", authors: "John Doe, Robert Brown", journal: "Journal of Machine Learning Research", year: "2022", url: "#" }
-      ]);
-    }, 1000);
-  });
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([
+                { title: "Advanced Machine Learning Techniques for Scientific Discovery", authors: "John Doe, Jane Smith, Mike Johnson", journal: "Nature Machine Intelligence", year: "2024", url: "/assets/pdfs/ACSAMII.2018.10.43809.pdf" },
+                { title: "Deep Learning Approaches in Computational Biology", authors: "Jane Smith, Mike Johnson, Robert Brown", journal: "Science Advances", year: "2023", url: "#" },
+                { title: "Interactive Visualization of Complex Scientific Data", authors: "Mike Johnson, John Doe, Sarah Wilson", journal: "IEEE Transactions on Visualization", year: "2023", url: "#" },
+                { title: "Reinforcement Learning in Optimization Problems", authors: "John Doe, Robert Brown", journal: "Journal of Machine Learning Research", year: "2022", url: "#" }
+            ]);
+        }, 1000);
+    });
 }
 
-// Modals
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    modals.forEach(modal => modal.style.display = 'none');
-  });
-});
+// ===== MODAL FUNCTIONS =====
+document.addEventListener('DOMContentLoaded', function() {
+    const closeButtons = document.querySelectorAll('.close');
+    const modals = document.querySelectorAll('.modal');
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            modals.forEach(modal => modal.style.display = 'none');
+        });
+    });
 
-window.addEventListener('click', (event) => {
-  modals.forEach(modal => {
-    if (event.target === modal) modal.style.display = 'none';
-  });
+    window.addEventListener('click', (event) => {
+        modals.forEach(modal => {
+            if (event.target === modal) modal.style.display = 'none';
+        });
+    });
 });
-
-// Init
-document.addEventListener('DOMContentLoaded', () => {
-  initializeTeam();
-  initializeProjects();
-  initializeResources();
-});
-
