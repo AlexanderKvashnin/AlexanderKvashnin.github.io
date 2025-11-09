@@ -1,5 +1,25 @@
 console.log('JS LOADED v6');
 
+// ===== TAB SWITCHING FUNCTIONALITY =====
+document.addEventListener('DOMContentLoaded', function() {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+
+            // Remove active class from all tabs and contents
+            tabLinks.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // Add active class to current tab and content
+            this.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+});
+
 // Team data
 const teamData = [
   {
@@ -332,17 +352,6 @@ const resourcesGrid = document.querySelector('.resources-grid');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
 
-// Tabs
-tabLinks.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const tabId = tab.getAttribute('data-tab');
-    tabLinks.forEach(t => t.classList.remove('active'));
-    tabContents.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tabId).classList.add('active');
-    if (tabId === 'publications') loadPublications();
-  });
-});
 
 // Team
 function initializeTeam() {
@@ -534,22 +543,3 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeResources();
 });
 
-// Tab switching functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabLinks.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const tabId = this.getAttribute('data-tab');
-
-            // Remove active class from all tabs and contents
-            tabLinks.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-
-            // Add active class to current tab and content
-            this.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-});
