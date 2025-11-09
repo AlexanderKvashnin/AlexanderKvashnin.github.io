@@ -481,7 +481,7 @@ body {
 }
 
 
-/* ============== For first page ===================== */
+/* ============== For first page ===================== 
 .content-block {
     display: flex;
     align-items: center;
@@ -523,7 +523,7 @@ body {
     font-size: 1.1em;
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность для мобильных устройств 
 @media (max-width: 768px) {
     .content-block,
     .content-block.reverse {
@@ -537,6 +537,6 @@ body {
     }
 }
 
-
+*/
 
 
