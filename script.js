@@ -352,7 +352,8 @@ const resourcesData = [
   { id: 2, title: "arXiv", description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
   { id: 3, title: "PubMed", description: "Free search engine accessing primarily the MEDLINE database", url: "https://pubmed.ncbi.nlm.nih.gov" },
   { id: 4, title: "GitHub", description: "Platform for version control and collaboration on code and projects", url: "https://github.com" },
-  { id: 5, title: "MaterialsProject", description: "Platform provides open web-based access to computed information on known and predicted materials and powerful analysis tools to design novel materials", url: "https://next-gen.materialsproject.org/"}
+  { id: 5, title: "MaterialsProject", description: "Platform provides open web-based access to computed information on known and predicted materials and powerful analysis tools to design novel materials", url: "https://next-gen.materialsproject.org/"},
+  { id: 6, title: "Overleaf", description: "Overleaf is a web-based, collaborative tool for creating and editing scientific and technical documents using the LaTeX typesetting system", url: "https://www.overleaf.com/"}
 ];
 
 // ===== TEAM FUNCTIONS =====
