@@ -201,12 +201,13 @@ const projectsData = [
         pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
         image: ""
       },
-      {
-        title: "Polyaromatic Hydrocarbons as Prospective Anode Materials for Metal-Ion Batteries",
-        abstract: "First-principles show intercalated PAH crystals (e.g., pentacene) sustain low volume change and can exceed graphite capacity (~1.2–1.3× with Li/Na/K/Rb; ~2.3–2.6× with Mg/Ca).",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf",
+     {
+        title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
+        abstract: "We develop and demonstrate a new method for preparing high-entropy carbide and carbonitride coatings of IV-V transition metal compounds, using (TiZrNbHfTa)CxNy as an example.",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2.pdf",
         image: ""
       }
+
     ]
   },
   {
@@ -236,6 +237,12 @@ const projectsData = [
         title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
         abstract: "Few-nanometer NbC films on diamond exhibit superconductivity up to ~12.4 K (record for NbC); DFT supports stability and potential for sensitive superconductive detectors.",
         pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
+        image: ""
+      },
+              {
+        title: "Polyaromatic Hydrocarbons as Prospective Anode Materials for Metal-Ion Batteries",
+        abstract: "First-principles show intercalated PAH crystals (e.g., pentacene) sustain low volume change and can exceed graphite capacity (~1.2–1.3× with Li/Na/K/Rb; ~2.3–2.6× with Mg/Ca).",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf",
         image: ""
       },
       {
