@@ -296,7 +296,7 @@ const projectsData = [
       },
       {
         title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
-        abstract: "This study demonstrates a rapid melamine-assisted N-doping method for conductive carbon black (Ketjenblack EC600JD), producing a high-loading (≈40 wt.% Pt) catalyst with exceptional activity and durability. Microscopy reveals uniform Pt nanoparticles (2.5–3 nm) and atomic Pt clusters on the N-doped support, attributed to strong Pt–N interactions. Density functional theory (DFT) calculations highlight the critical role of pyridinic-N defects in stabilizing atomic Pt, enhancing activity via charge transfer, and improving stability via strong Pt anchoring. Electrochemically, Pt/KB-600-N achieves twice the mass activity of commercial HiSPEC4000.",
+        abstract: "This study demonstrates a rapid melamine-assisted N-doping method for conductive carbon black (Ketjenblack EC600JD). Density functional theory (DFT) calculations highlight the critical role of pyridinic-N defects in stabilizing atomic Pt, enhancing activity via charge transfer, and improving stability via strong Pt anchoring.",
         pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
         image: ""
       }
