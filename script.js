@@ -204,7 +204,7 @@ const projectsData = [
      {
         title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
         abstract: "We develop and demonstrate a new method for preparing high-entropy carbide and carbonitride coatings of IV-V transition metal compounds, using (TiZrNbHfTa)CxNy as an example.",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2.pdf",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2026_HECN.pdf",
         image: ""
       }
 
