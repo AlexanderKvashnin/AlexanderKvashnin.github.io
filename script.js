@@ -1,11 +1,11 @@
-console.log('JS LOADED v7');
+console.log('JS LOADED v8');
 
 // ===== TAB SWITCHING FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     initializeTeam();
     initializeProjects();
-    initializeResources();
+    initializeCollaborators();
 });
 
 function initializeTabs() {
@@ -353,14 +353,78 @@ const projectsData = [
   }
 ];
 
-// ===== RESOURCES DATA =====
-const resourcesData = [
-  { id: 1, title: "Google Scholar", description: "Comprehensive academic search engine for scholarly literature", url: "https://scholar.google.com" },
-  { id: 2, title: "arXiv", description: "Preprint repository for physics, mathematics, computer science and more", url: "https://arxiv.org" },
-  { id: 3, title: "PubMed", description: "Free search engine accessing primarily the MEDLINE database", url: "https://pubmed.ncbi.nlm.nih.gov" },
-  { id: 4, title: "GitHub", description: "Platform for version control and collaboration on code and projects", url: "https://github.com" },
-  { id: 5, title: "MaterialsProject", description: "Platform provides open web-based access to computed information on known and predicted materials and powerful analysis tools to design novel materials", url: "https://next-gen.materialsproject.org/"},
-  { id: 6, title: "Overleaf", description: "Overleaf is a web-based, collaborative tool for creating and editing scientific and technical documents using the LaTeX typesetting system", url: "https://www.overleaf.com/"}
+// ===== COLLABORATORS DATA =====
+const collaboratorsData = [
+  {
+    id: 1,
+    name: "Ekaterina Kozlova",
+    position: "Professor of RAS, DSc in Physics and Mathematics",
+    affiliation: "Boreskov Institute of Catalysis",
+    website: "https://scholar.google.com/citations?user=ADaJ2iIAAAAJ&hl=en"
+  },
+  {
+    id: 2,
+    name: "Alexander Pak",
+    position: "DSc in Technical Science, Head of the Energy of the Future strategic project",
+    affiliation: "National Research Tomsk Polytechnic University",
+    website: "https://scholar.google.com/citations?user=lyLIYDoAAAAJ&hl=ru"
+  },
+  {
+    id: 3,
+    name: "Anastasia Alekseenko",
+    position: "PhD in Chemical Sciences",
+    affiliation: "Southern Federal University",
+    website: "https://scholar.google.com/citations?user=078eav0AAAAJ&hl=en"
+  },
+  {
+    id: 4,
+    name: "Jian Sun",
+    position: "Professor of Physics",
+    affiliation: "National Laboratory of Solid State Microstructures, Nanjing University",
+    website: "https://scholar.google.com/citations?user=nYzR4oAAAAAJ&hl=en"
+  },
+  {
+    id: 5,
+    name: "Dmitrii Semenok",
+    position: "PhD in Materials Science",
+    affiliation: "Center for High Pressure Science & Technology Advanced Research, Beijing, China",
+    website: "https://scholar.google.com/citations?user=ZDUeitwAAAAJ&hl=en"
+  },
+  {
+    id: 6,
+    name: "Dmitry Kvashnin",
+    position: "DSc in Physics and Mathematics, Head of the Center for Computer Modeling of Inorganic and Composite Nanoscale Materials",
+    affiliation: "Emanuel Institute of Biochemical Physics, RAS",
+    website: "https://scholar.google.ru/citations?user=iD1tun0AAAAJ"
+  },
+  {
+    id: 7,
+    name: "Christian Tantardini",
+    position: "PhD in Materials Science, Research Scientist III (Assistant Professor)",
+    affiliation: "Center for Integrative Petroleum Research",
+    website: "https://scholar.google.com/citations?hl=en&user=QCZdlUQAAAAJ"
+  },
+  {
+    id: 8,
+    name: "Alexander Shapeev",
+    position: "PhD, Head of Laboratory of Artificial Intelligence for Materials Design",
+    affiliation: "Skolkovo Institute of Science and Technology",
+    website: "https://scholar.google.com/citations?user=NMyIbIwAAAAJ&hl=en"
+  },
+  {
+    id: 9,
+    name: "Boris Yakobson",
+    position: "Professor of Materials Science & NanoEngineering, and of Chemistry",
+    affiliation: "Rice University",
+    website: "https://scholar.google.com/citations?user=OYtx5csAAAAJ&hl=en"
+  },
+  {
+    id: 10,
+    name: "Hayk Zakaryan",
+    position: "PhD in Materials Science",
+    affiliation: "Computational Materials Science Lab, Yerevan State University",
+    website: "https://scholar.google.com/citations?user=j4e2qYUAAAAJ&hl=ru"
+  }
 ];
 
 // ===== TEAM FUNCTIONS =====
@@ -484,24 +548,23 @@ function renderPublications(list) {
     `;
 }
 
-// ===== RESOURCES FUNCTIONS =====
-function initializeResources() {
-    updateResourcesGrid();
-}
+// ===== COLLABORATORS FUNCTIONS =====
+function initializeCollaborators() {
+  const collaboratorsGrid = document.querySelector('.collaborators-grid');
+  if (!collaboratorsGrid) return;
 
-function updateResourcesGrid() {
-    const resourcesGrid = document.querySelector('.resources-grid');
-    if (!resourcesGrid) return;
-    
-    resourcesGrid.innerHTML = '';
-    resourcesData.forEach(res => {
-        const el = document.createElement('a');
-        el.className = 'resource-item';
-        el.href = res.url;
-        el.target = '_blank';
-        el.innerHTML = `<h3>${res.title}</h3><p>${res.description}</p>`;
-        resourcesGrid.appendChild(el);
-    });
+  collaboratorsGrid.innerHTML = '';
+  collaboratorsData.forEach(person => {
+    const el = document.createElement('div');
+    el.className = 'collaborator-card';
+    el.innerHTML = `
+      <h3>${person.name}</h3>
+      <p><strong>${person.position}</strong></p>
+      <p>${person.affiliation}</p>
+      <a href="${person.website}" target="_blank" class="collaborator-link">Google Scholar</a>
+    `;
+    collaboratorsGrid.appendChild(el);
+  });
 }
 
 // ===== PUBLICATIONS FUNCTIONS =====
