@@ -19,109 +19,84 @@
                 <li class="tab-link" data-tab="publications">Publication List</li>
                 <li class="tab-link" data-tab="courses">Courses</li>
                 <li class="tab-link" data-tab="video">Video</li>
-                <li class="tab-link" data-tab="resources">Interesting Resources</li>
+                <li class="tab-link" data-tab="collaborators">Collaborators</li>
             </ul>
         </nav>
     </header>
 
     <main class="main-content">
-        <!-- About Tab 
+        <!-- About Tab -->
         <div id="about" class="tab-content active">
             <h1>Skoltech Industry-Oriented Computational Discovery LAB</h1>
-            <p>The laboratory is engaged in conducting a computer search for new materials aimed at further use in the industry. The main directions are: (1) Development of methods for predicting the properties of materials using AI
-Computer search for new materials with specified properties; (2) Investigation of the catalytic activity of new materials based on carbides, borides and nitrides of transition metals, including highly entropic compounds; (3) Prediction and research of new low-dimensional materials for use in catalysis (0D, 2D); (4) High-entropy materials and alloys</p>
-        </div>
--->
+            <p class="about-intro">The laboratory is engaged in conducting a computer search for new materials aimed at further use in the industry.</p>
+            
+            <div class="research-directions">
+                <!-- Direction 1 -->
+                <div class="direction-block">
+                    <div class="direction-content">
+                        <div class="direction-text">
+                            <h2>AI-Powered Materials Prediction</h2>
+                            <p>Development of advanced methods for predicting material properties using artificial intelligence and machine learning. Our research focuses on computer-aided discovery of new materials with specified properties for industrial applications.</p>
+                        </div>
+                        <div class="direction-image">
+                            <img src="assets/about/aiml.png" alt="AI Materials Prediction" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Direction 2 -->
+                <div class="direction-block reverse">
+                    <div class="direction-content">
+                        <div class="direction-image">
+                            <img src="assets/about/catalysis.png" alt="Catalytic Materials" onerror="this.style.display='none'">
+                        </div>
+                        <div class="direction-text">
+                            <h2>Advanced Catalytic Materials</h2>
+                            <p>Investigation of catalytic activity in novel materials based on transition metal carbides, borides, and nitrides, including highly entropic compounds. Exploring new frontiers in catalytic performance and stability.</p>
+                        </div>
+                    </div>
+                </div>
 
-<!-- NEW DATA -->
-<!-- About Tab -->
-<div id="about" class="tab-content active">
-    <h1>Skoltech Industry-Oriented Computational Discovery LAB</h1>
-    <p class="about-intro">The laboratory is engaged in conducting a computer search for new materials aimed at further use in the industry.</p>
-    
-    <div class="research-directions">
-        <!-- Direction 1 -->
-        <div class="direction-block">
-            <div class="direction-content">
-                <div class="direction-text">
-                    <h2>AI-Powered Materials Prediction</h2>
-                    <p>Development of advanced methods for predicting material properties using artificial intelligence and machine learning. Our research focuses on computer-aided discovery of new materials with specified properties for industrial applications.</p>
+                <!-- Direction 3 -->
+                <div class="direction-block reverse">
+                    <div class="direction-content">
+                        <div class="direction-image">
+                            <img src="assets/about/highen.png" alt="High Entropy Materials" onerror="this.style.display='none'">
+                        </div>
+                        <div class="direction-text">
+                            <h2>High-Entropy Materials & Alloys</h2>
+                            <p>Exploration of high-entropy materials and alloys with unique properties and enhanced performance characteristics. Developing novel material systems for extreme environments and specialized applications.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="direction-image">
-                    <img src="assets/about/aiml.png" alt="AI Materials Prediction" onerror="this.style.display='none'">
-      <!--              <div class="image-placeholder">AI & ML</div>   -->
-                </div>
-            </div>
-        </div>
 
-        <!-- Direction 2 -->
-        <div class="direction-block reverse">
-            <div class="direction-content">
-                <div class="direction-image">
-                    <img src="assets/about/catalysis.png" alt="Catalytic Materials" onerror="this.style.display='none'">
-                   <!-- <div class="image-placeholder">Catalysis</div> -->
+                <!-- Direction 4 -->
+                <div class="direction-block">
+                    <div class="direction-content">
+                        <div class="direction-text">
+                            <h2>High-Temperature Superconductors</h2>
+                            <p>Computational search for new high-temperature superconductors under high pressure among metal hydrides. Application of DFT and AI methods.</p>
+                        </div>
+                        <div class="direction-image">
+                            <img src="assets/about/highTc.png" alt="Superconductors" onerror="this.style.display='none'">
+                        </div>
+                    </div>
                 </div>
-                <div class="direction-text">
-                    <h2>Advanced Catalytic Materials</h2>
-                    <p>Investigation of catalytic activity in novel materials based on transition metal carbides, borides, and nitrides, including highly entropic compounds. Exploring new frontiers in catalytic performance and stability.</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Direction 3 -->
-<div class="direction-block reverse">
-            <div class="direction-content">
-                <div class="direction-image">
-                    <img src="assets/about/highen.png" alt="High Entropy Materials" onerror="this.style.display='none'">
-        <!--            <div class="image-placeholder">High Entropy</div> -->
-                </div>
-                <div class="direction-text">
-                    <h2>High-Entropy Materials & Alloys</h2>
-                    <p>Exploration of high-entropy materials and alloys with unique properties and enhanced performance characteristics. Developing novel material systems for extreme environments and specialized applications.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Direction 4 -->
-         <div class="direction-block">
-            <div class="direction-content">
-                <div class="direction-text">
-                    <h2>High-Temperature Superconductors</h2>
-                    <p>Copmutational search for new high-temperature superconductors under high pressure among metal hydrides. Application of DFT and AI-methods.</p>
-                </div>
-                <div class="direction-image">
-                    <img src="assets/about/highTc.png" alt="2D Materials" onerror="this.style.display='none'">
-                  <!--  <div class="image-placeholder">2D Materials</div> -->
-                </div>
-            </div>
-        </div>
-        
-    <!-- Direction 5 -->
-         <div class="direction-block">
-            <div class="direction-content">
-                <div class="direction-text">
-                    <h2>Low-Dimensional Materials</h2>
-                    <p>Prediction and comprehensive research of new low-dimensional materials (0D, 2D) for catalytic applications. Unlocking the potential of nanoscale materials for next-generation industrial processes.</p>
-                </div>
-                <div class="direction-image">
-                    <img src="assets/about/2d.png" alt="2D Materials" onerror="this.style.display='none'">
-                  <!--  <div class="image-placeholder">2D Materials</div> -->
+                <!-- Direction 5 -->
+                <div class="direction-block">
+                    <div class="direction-content">
+                        <div class="direction-text">
+                            <h2>Low-Dimensional Materials</h2>
+                            <p>Prediction and comprehensive research of new low-dimensional materials (0D, 2D) for catalytic applications. Unlocking the potential of nanoscale materials for next-generation industrial processes.</p>
+                        </div>
+                        <div class="direction-image">
+                            <img src="assets/about/2d.png" alt="2D Materials" onerror="this.style.display='none'">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-<!-- NEW DATA -->    
 
         <!-- Team Tab -->
         <div id="team" class="tab-content">
@@ -153,95 +128,25 @@ Computer search for new materials with specified properties; (2) Investigation o
         <!-- Courses Tab -->
         <div id="courses" class="tab-content">
             <h1>Thermodynamics of Materials</h1>
-            <p>The course provides a graduate level overview of selected topics of materials science related to formation of material and its stability. We will begin with the stability of materials by defining the energy contributions responsible for the stability including configuration, vibrational, and thermodynamic contributions to Gibbs free energy. Next, we will consider phase transitions and phase diagrams of materials with various dimensionality. One of the important factors responsible for stabilization is the formation of defects. Types of defects in bulk and 2D materials will be discussed. Considering all the above we will move to discussion of properties of surfaces and thin films which are the most important materials for sensing, energy storage, catalysis, and other applications.</p>
+            <p>The course provides a graduate-level overview of selected topics of materials science related to formation of material and its stability...</p>
 
             <h1>Computational Methods in Atomistic Simulations</h1>
-            <p>Course will cover both classical and modern topics of computational methods in atomistic simulations of condensed matters. We will begin from classical representations of electric and heat transport in condensed matter and will finish with modern theories covering the molecular dynamics methods coupled with density functional theory and applications of machine learning. Practical part of the course will be devoted to hands-on sessions where students will apply these theories on practice by performing calculations of real materials. This will give an entire picture of applied computational methods allowing the solution of various tasks like calculations of mechanical properties of solid-state compounds, lattice dynamics, thermal conductivity etc.</p>
+            <p>Course will cover both classical and modern topics of computational methods in atomistic simulations of condensed matters...</p>
         </div>
 
         <!-- Video Tab -->
-    <div id="video" class="tab-content">
-   <h1>Video Content</h1>
-    <div class="video-grid">
-        <!-- Video 1 -->
-        <div class="video-item">
-            <div class="video-preview">
-                <a href="https://vk.com/video-212217448_456240008" target="_blank" class="video-link">
-                    <img src="assets/videos/sber.video.png" alt="Video Preview 1" class="video-thumbnail">
-                    <div class="video-play-button">
-                        <svg width="64" height="64" viewBox="0 0 64 64">
-                            <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
-                            <polygon points="24,20 24,44 44,32" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <div class="video-info">
-                <h3>Cases of application of AI in science</h3>
-                <p class="video-description">29.10 // 16:20 (Moscow time). Cases of AI application in science. Alexander Kvashnin: Ai in materials science.</p>
-                <div class="video-meta">
-                    <span class="video-duration">02:00:31</span>
-                    <span class="video-date">October 29, 2025</span>
-                </div>
-                <a href="https://vk.com/video-212217448_456240008" target="_blank" class="watch-btn">Watch on VK Video</a>
+        <div id="video" class="tab-content">
+            <h1>Video Content</h1>
+            <div class="video-grid">
+                <!-- existing video items -->
             </div>
         </div>
 
-        <!-- Video 2 -->
-        <div class="video-item">
-            <div class="video-preview">
-                <a href="https://vk.com/video-215364149_456240011" target="_blank" class="video-link">
-                    <img src="assets/videos/nauka.rf.video.png" alt="Video Preview 2" class="video-thumbnail">
-                    <div class="video-play-button">
-                        <svg width="64" height="64" viewBox="0 0 64 64">
-                            <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
-                            <polygon points="24,20 24,44 44,32" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <div class="video-info">
-                <h3>Alexander Kvashnin about superhard materials</h3>
-                <p class="video-description">The guest of this issue, Alexander Kvashnin, Doctor of Physico-Mathematical Sciences, Professor at Skoltech and NUST MISIS, talks about the role of platinum, rhodium and palladium in modern science and industry.</p>
-                <div class="video-meta">
-                    <span class="video-duration">53:29</span>
-                    <span class="video-date">March 22, 2025</span>
-                </div>
-                <a href="https://vk.com/video-215364149_456240011" target="_blank" class="watch-btn">Watch on VK Video</a>
-            </div>
-        </div>
-                <!-- Video 3 -->
-        <div class="video-item">
-            <div class="video-preview">
-                <a href="https://rutube.ru/video/2046a38aa1db5eb4bbb4c765150f9570/" target="_blank" class="video-link">
-                    <img src="assets/videos/nauka.vse.png" alt="Video Preview 2" class="video-thumbnail">
-                    <div class="video-play-button">
-                        <svg width="64" height="64" viewBox="0 0 64 64">
-                            <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
-                            <polygon points="24,20 24,44 44,32" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <div class="video-info">
-                <h3>Science for Everyone - Season 2 | Evgeny Ershov - Alexander Kvashnin | Issue 8</h3>
-                <p class="video-description">In the studio, popular blogger, fighter, musician Evgeny Ershov and Doctor of Physical Mathematics, professor of Skoltech and Misis, scientist Alexander Kvashnin will analyze what programmable materials are, reveal alchemical secrets about materials on the planet, the fact that our bodies are actually not solid, but transparent, and we will even learn how to create an invisibility cloak!.</p>
-                <div class="video-meta">
-                    <span class="video-duration">30:59</span>
-                    <span class="video-date">November 05, 2024</span>
-                </div>
-                <a href="https://rutube.ru/video/2046a38aa1db5eb4bbb4c765150f9570/" target="_blank" class="watch-btn">Watch on Rutube</a>
-            </div>
-        </div>
-        
-     </div>
- </div>
-
-        <!-- Resources Tab -->
-        <div id="resources" class="tab-content">
-            <h1>Interesting Resources</h1>
-            <div class="resources-grid">
-                <!-- Resources will be populated by JavaScript -->
+        <!-- Collaborators Tab -->
+        <div id="collaborators" class="tab-content">
+            <h1>Collaborators</h1>
+            <div class="collaborators-grid">
+                <!-- Collaborators will be populated by JavaScript -->
             </div>
         </div>
     </main>
