@@ -1,4 +1,4 @@
-console.log('JS LOADED v8');
+console.log('JS LOADED v9');
 
 // ===== TAB SWITCHING FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', function() {
