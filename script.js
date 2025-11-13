@@ -424,7 +424,21 @@ const collaboratorsData = [
     position: "PhD in Materials Science",
     affiliation: "Computational Materials Science Lab, Yerevan State University",
     website: "https://scholar.google.com/citations?user=j4e2qYUAAAAJ&hl=ru"
-  }
+  },
+    {
+        id: 11,
+        name: "Stanislav Evlashin",
+        position: "DSc in Physics and Mathematics, Assistant Professor in the Center for Materials Technologies",
+        affiliation: " Skolkovo Institute of Science and Technology",
+        website: "https://scholar.google.com/citations?user=-MlPGEwAAAAJ&hl=ru"
+    },
+    {
+        id: 12,
+        name: "Sergey Kozlov",
+        position: "PhD in Chemistry, Assistant Professor in the Department of Chemical and Biomolecular Engineering",
+        affiliation: "National University of Singapore",
+        website: "https://scholar.google.com/citations?user=vZCaqdkAAAAJ"
+    }
 ];
 
 // ===== TEAM FUNCTIONS =====
