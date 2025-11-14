@@ -660,3 +660,79 @@ body {
 }
 
 /* ========================= NEW LINES ============================= */
+/* ===== VIDEO GRID ===== */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.video-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.video-preview {
+    position: relative;
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .85;
+    transition: transform .2s;
+}
+
+.video-preview:hover .video-play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-info {
+    padding: 16px;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.video-meta {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.watch-btn {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.watch-btn:hover {
+    background: #374151;
+}
