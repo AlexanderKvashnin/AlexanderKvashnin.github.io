@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTeam();
     initializeProjects();
     initializeCollaborators();
+    initializeVideos();
 });
 
 function initializeTabs() {
@@ -32,6 +33,55 @@ function initializeTabs() {
         });
     });
 }
+// ===== VIDEO DATA =====
+const videoData = [
+    {
+        title: "Cases of application of AI in science",
+        preview: "assets/videos/sber.video.png",
+        url: "https://vk.com/video-212217448_456240008",
+        description: "29.10 // 16:20 (Moscow time). Cases of AI application in science. Alexander Kvashnin: AI in materials science.",
+        duration: "02:00:31",
+        date: "October 29, 2025",
+        source: "VK Video"
+    },
+    {
+        title: "Alexander Kvashnin about superhard materials",
+        preview: "assets/videos/nauka.rf.video.png",
+        url: "https://vk.com/video-215364149_456240011",
+        description: "Alexander Kvashnin discusses the role of platinum, rhodium and palladium in science and industry.",
+        duration: "53:29",
+        date: "March 22, 2025",
+        source: "VK Video"
+    },
+    {
+        title: "Science for Everyone – Kvashnin episode",
+        preview: "assets/videos/nauka.vse.png",
+        url: "https://rutube.ru/video/2046a38aa1db5eb4bbb4c765150f9570/",
+        description: "Episode about programmable materials and invisibility cloak concepts.",
+        duration: "30:59",
+        date: "November 05, 2024",
+        source: "Rutube"
+    },
+    {
+        title: "The loud voice of Russian Science – Zaryadye",
+        preview: "assets/videos/zariadye.png",
+        url: "https://vkvideo.ru/video-152260072_456245412?t=2h9m7s",
+        description: "Popular science lecture at Zaryadye.",
+        duration: "--:--",
+        date: "February 08, 2024",
+        source: "VK Video"
+    },
+    {
+        title: "Almanac '16 ways to change the world'",
+        preview: "assets/videos/16.png",
+        url: "https://vkvideo.ru/video-91851618_456239316?t=9m25s",
+        description: "Short film about our investigations.",
+        duration: "--:--",
+        date: "February 16, 2024",
+        source: "VK Video"
+    }
+];
+
 
 // ===== TEAM DATA =====
 const teamData = [
@@ -618,6 +668,41 @@ function simulateGoogleScholarFetch() {
             ]);
         }, 1000);
     });
+}
+// ===== VIDEO FUNCTIONS =====
+function initializeVideos() {
+    const videoGrid = document.querySelector(".video-grid");
+    if (!videoGrid) return;
+
+    videoGrid.innerHTML = videoData.map(video => `
+        <div class="video-item">
+            <div class="video-preview">
+                <a href="${video.url}" target="_blank" class="video-link">
+                    <img src="${video.preview}" alt="Video preview" class="video-thumbnail">
+                    <div class="video-play-button">
+                        <svg width="64" height="64" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
+                            <polygon points="24,20 24,44 44,32" fill="white"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <div class="video-info">
+                <h3>${video.title}</h3>
+                <p class="video-description">${video.description}</p>
+
+                <div class="video-meta">
+                    <span class="video-duration">${video.duration}</span>
+                    <span class="video-date">${video.date}</span>
+                </div>
+
+                <a href="${video.url}" target="_blank" class="watch-btn">
+                    Watch (${video.source})
+                </a>
+            </div>
+        </div>
+    `).join('');
 }
 
 // ===== MODAL FUNCTIONS =====
