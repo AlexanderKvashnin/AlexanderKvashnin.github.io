@@ -540,11 +540,11 @@ function openTeamModal(member) {
                 <p><strong>Bio:</strong> ${member.bio}</p>
 
                 ${member.website ? 
-                    `<a href="${member.website}" target="_blank" class="team-btn">🔍 Google Scholar</a>` 
+                    `<a href="${member.website}" target="_blank" class="team-btn">Google Scholar</a>` 
                     : ''}
 
                 ${member.cv ? 
-                    `<a href="${member.cv}" target="_blank" class="team-btn">📄 Download CV</a>` 
+                    `<a href="${member.cv}" target="_blank" class="team-btn">Download CV</a>` 
                     : ''}
             </div>
         </div>
