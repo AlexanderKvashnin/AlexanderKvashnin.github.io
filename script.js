@@ -100,7 +100,8 @@ const teamData = [
     position: "Principal Investigator",
     bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intelligence to complex problems.",
     website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
-    photo: "assets/team/Kvashnin.PNG"
+    photo: "assets/team/Kvashnin.PNG",
+    cv: "assets/cv/Kvashnin.pdf"
   },
   {
     id: 2,
@@ -156,7 +157,8 @@ const teamData = [
     position: "MSc Student",
     bio: "Anastasiia is a Master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor's degree in Chemistry from Lomonosov Moscow State University (MSU).",
     website: "https://scholar.google.com/citations?hl=ru&user=Qqe_yZQAAAAJ",
-    photo: "assets/team/Iosimovska.jpg"
+    photo: "assets/team/Iosimovska.jpg",
+    cv: "assets/cv/Iosimovska.pdf"
   },
   {
     id: 9,
@@ -525,22 +527,33 @@ function openTeamModal(member) {
     const modal = document.getElementById('teamModal');
     const body = modal.querySelector('.modal-body');
     if (!modal || !body) return;
-    
+
     body.innerHTML = `
         <div class="modal-team-member">
             <div class="modal-photo">
                 <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
             </div>
+
             <div class="modal-info">
                 <h2>${member.name}</h2>
                 <p><strong>Position:</strong> ${member.position}</p>
                 <p><strong>Bio:</strong> ${member.bio}</p>
-                ${member.website ? `<a href="${member.website}" target="_blank" class="download-btn">Visit Personal Website</a>` : ''}
+
+                ${member.website ? 
+                    `<a href="${member.website}" target="_blank" class="team-btn">🔍 Google Scholar</a>` 
+                    : ''}
+
+                ${member.cv ? 
+                    `<a href="${member.cv}" target="_blank" class="team-btn">📄 Download CV</a>` 
+                    : ''}
             </div>
         </div>
     `;
+
     modal.style.display = 'block';
 }
+
+
 
 // ===== PROJECTS FUNCTIONS =====
 function initializeProjects() {
