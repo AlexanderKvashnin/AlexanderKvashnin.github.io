@@ -835,3 +835,28 @@ body {
         gap: 1rem;
     }
 }
+.team-btn {
+    display: inline-block;
+    background: #1d4ed8;          /* фирменный ярко-синий */
+    color: #ffffff;
+    padding: 10px 18px;
+    margin: 6px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.team-btn:hover {
+    background: #153eaa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.team-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
