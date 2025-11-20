@@ -544,7 +544,7 @@ function openTeamModal(member) {
                     : ''}
 
                 ${member.cv ? 
-                    `<a href="${member.cv}" target="_blank" class="team-btn">Download CV</a>` 
+                    `<a href="${member.cv}" target="_blank" class="team-btn">CV</a>` 
                     : ''}
             </div>
         </div>
