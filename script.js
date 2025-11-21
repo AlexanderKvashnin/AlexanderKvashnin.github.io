@@ -67,7 +67,7 @@ const videoData = [
         preview: "assets/videos/zariadye.png",
         url: "https://vkvideo.ru/video-152260072_456245412?t=2h9m7s",
         description: "Popular science lecture at Zaryadye.",
-        duration: "--:--",
+        duration: "07:11:21",
         date: "February 08, 2024",
         source: "VK Video"
     },
@@ -76,7 +76,7 @@ const videoData = [
         preview: "assets/videos/16.png",
         url: "https://vkvideo.ru/video-91851618_456239316?t=9m25s",
         description: "Short film about our investigations.",
-        duration: "--:--",
+        duration: "01:39:46",
         date: "February 16, 2024",
         source: "VK Video"
     },
@@ -85,7 +85,7 @@ const videoData = [
         preview: "assets/videos/preview_aleksandra_radina_video.png",
         url: "https://vkvideo.ru/video-220903431_456239237?list=f45c2b105738f3a17e&t=2m53s",
         description: "A talk by a student of our laboratory about catalyst design.",
-        duration: "--:--",
+        duration: "14:39",
         date: "December 17, 2024",
         source: "VK Video"
     }
