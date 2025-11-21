@@ -109,7 +109,8 @@ const teamData = [
     position: "Senior Research Scientist",
     bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
-    photo: "assets/team/Chepkasov.jpg"
+    photo: "assets/team/Chepkasov.jpg",
+    cv: "assets/cv/Chepkasov.pdf" 
   },
   {
     id: 3,
@@ -141,7 +142,8 @@ const teamData = [
     position: "PhD Student",
     bio: "Young scientist focusing on materials design using machine learning and AI; experience with low-dimensional materials (carbon nanotubes, graphene, diamane).",
     website: "https://scholar.google.com/citations?user=NaPKRbwAAAAJ&hl=ru",
-    photo: "assets/team/Akhmadiev.jpg"
+    photo: "assets/team/Akhmadiev.jpg",
+    cv: "assets/cv/Akhmadiev.pdf"
   },
   {
     id: 7,
@@ -149,7 +151,8 @@ const teamData = [
     position: "PhD Student",
     bio: "Studying the catalytic processes, dreams to make a new effective catalyst. Also involved in projects devoted to the studies of the chemical bonding changes in thermoelectrics, phase transitions and properties of the 2D materials.",
     website: "https://scholar.google.com/citations?user=iymrPcMAAAAJ&hl=ru",
-    photo: "assets/team/Radina.jpg"
+    photo: "assets/team/Radina.jpg",
+    cv: "assets/cv/Radina.pdf"
   },
   {
     id: 8,
@@ -166,7 +169,8 @@ const teamData = [
     position: "MSc Student",
     bio: "Olga Pushkova is a 2st year graduate student at the Skolkovo Institute of Science and Technology, specializing in Applied Computational Mechanics. In 2024, she completed her bachelor's degree at NUST MISIS. Currently, he works in the industrial-oriented materials search group at Skoltech. Research area: prediction of the catalytic properties of nanoclusters using ML, investigation of the characteristics of catalytic materials by the SISSO method.",
     website: "",
-    photo: "assets/team/Pushkova.jpg"
+    photo: "assets/team/Pushkova.jpg",
+    cv: "assets/cv/Pushkova.pdf"/
   },
   {
     id: 10,
@@ -180,9 +184,10 @@ const teamData = [
     id: 11,
     name: "Daniil Alekseev",
     position: "MSc Student",
-    bio: "",
-    website: "",
-    photo: "assets/team/Alekseev.jpg"
+    bio: "Daniil is a 1st year MSc student at Skoltech and '25 BSc MIPT graduate in Applied Maths and Physics. He specializes in atomistic simulations using MD and DFT methods supplement by ML. Has an experience with materials at extreme conditions and carbon allotropes.",
+    website: "https://scholar.google.com/citations?user=BPuuytwAAAAJ&hl=ru",
+    photo: "assets/team/Alekseev.jpg",
+    cv: "assets/cv/Alekseev.pdf"
   },
   {
     id: 12,
