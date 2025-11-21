@@ -20,6 +20,7 @@
                 <li class="tab-link" data-tab="courses">Courses</li>
                 <li class="tab-link" data-tab="video">Video</li>
                 <li class="tab-link" data-tab="collaborators">Collaborators</li>
+                <li class="tab-link" data-tab="contact">Contact</li>
             </ul>
         </nav>
     </header>
@@ -142,6 +143,41 @@
         </div>
 
     </main>
+    
+    <!-- Contact Tab -->
+<div id="contact" class="tab-content">
+    <h1>Contact Us</h1>
+
+    <p>If you want to contact the IOCD Lab or ask a question, you can reach us using the form below.</p>
+
+    <form class="contact-form"
+          action="mailto:A.Kvashnin@skoltech.ru"
+          method="POST"
+          enctype="text/plain">
+
+        <label>
+            Full Name:
+            <input type="text" name="name" required>
+        </label>
+
+        <label>
+            Your Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Message:
+            <textarea name="message" rows="6" required></textarea>
+        </label>
+
+        <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+
+    <p class="contact-note">
+        * After clicking "Send Message", your email program will open and you will need to confirm sending the email.
+    </p>
+</div>
+
 
     <!-- Team Modal -->
     <div id="teamModal" class="modal">
