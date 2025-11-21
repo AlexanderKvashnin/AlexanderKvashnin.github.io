@@ -692,15 +692,15 @@ function simulateGoogleScholarFetch() {
                 
                 { title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material", authors: "Yu. Vassilyeva, Yu. Neklya, M. Lukanov, A. Kvashnin, A. Pak", journal: "Thermal Science and Engineering Progress", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf" },
                 
-                { title: "Charge density waves and structural phase transition in the high-𝑇𝑐 superconducting LaH10 quantum crystal", authors: "C. Tantardini, A.G. Kvashnin, M. Giantomassi, M. Iliaš, B.I. Yakobson, R.J. Hemley, X. Gonze", journal: "Physical Review B", year: "2025", url: "#" },
+                { title: "Charge density waves and structural phase transition in the high-𝑇𝑐 superconducting LaH10 quantum crystal", authors: "C. Tantardini, A.G. Kvashnin, M. Giantomassi, M. Iliaš, B.I. Yakobson, R.J. Hemley, X. Gonze", journal: "Physical Review B", year: "2025", url: "/assets/pdfs/all_publications/2025_charge_density.pdf" },
                 
-                { title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation", authors: "A.R. Vildanova, A.E. Goldt, S.V. Porokhin, A.G. Kvashnin, V.S. Baidyshev, I.V. Chepkasov, F.S. Fedorov, K.A. Litvintseva, A.V. Lalov, V.A. Dmitrieva, M.M. Tepliakova, A.G. Nasibulin", journal: "Small", year: "2025", url: "#" },
+                { title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation", authors: "A.R. Vildanova, A.E. Goldt, S.V. Porokhin, A.G. Kvashnin, V.S. Baidyshev, I.V. Chepkasov, F.S. Fedorov, K.A. Litvintseva, A.V. Lalov, V.A. Dmitrieva, M.M. Tepliakova, A.G. Nasibulin", journal: "Small", year: "2025", url: "/assets/pdfs/all_publications/2025_ni_nanowires.pdf" },
                 
                 { title: "Designing high-efficiency cryogenic regenerators: The role of microstructure and geometry in magnetocaloric cooling", authors: "D.Yu. Karpenkov, R.A. Makarin, C. Tantardini, A.G. Kvashnin, A.Yu. Karpenkov, E.V. Argunov, T.A. Sviridova, T.B. Shapaeva, M.V. Zheleznyi", journal: "Journal of Alloys and Compounds", year: "2025", url: "#" },
                 
                 { title: "Tuning of Mechanical Properties of doped PbTe-based Thermoelectric Material Driven by Intrinsic Defects", authors: "I.V. Chepkasov, A.D. Radina, V.S. Baidyshev, M. Polovinkin, N. Rybin, A. Shapeev, A.A. Krikorov, A.R. Oganov, Z. Dashevsky, D.G. Kvashnin, A.G. Kvashnin", journal: "Journal of Materials Chemistry A", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf" },
                 
-                { title: "SbIV, an Unusual Player in 2D Spintronic Devices", authors: "C. Tantardini, M. Azizi, T. Altalhi, A.G. Kvashnin, A. Filippetti, C. Gatti, B.I. Yakobson, X. Gonze", journal: "ACS Nano", year: "2025", url: "#" },
+                { title: "SbIV, an Unusual Player in 2D Spintronic Devices", authors: "C. Tantardini, M. Azizi, T. Altalhi, A.G. Kvashnin, A. Filippetti, C. Gatti, B.I. Yakobson, X. Gonze", journal: "ACS Nano", year: "2025", url: "/assets/pdfs/all_publications/2025_sbiv.pdf" },
                 
                 { title: "Discovery of chemically modified higher tungsten boride by means of hybrid GNN/DFT approach", authors: "N.A. Matsokin, R.A. Eremin, A.A. Kuznetsova, I.S. Humonen, A.V. Krautsou, V.D. Lazarev, Y.Z. Vassilyeva, A.Ya. Pak, S.A. Budennyy, A.G. Kvashnin, A.A. Osiptsov", journal: "npj Computational Materials", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf" },
                 
@@ -716,7 +716,7 @@ function simulateGoogleScholarFetch() {
                 
                 { title: "Material hardness descriptor derived by symbolic regression", authors: "C. Tantardini, H.A. Zakaryan, Z.-K. Han, T. Altalhi, S.V. Levchenko, A.G. Kvashnin, B.I. Yakobson", journal: "Journal of Computational Science", year: "2024", url: "/assets/pdfs/all_publications/2024_material_hardness_descriptor.pdf" },
                 
-                { title: "Chemical bonding within AIIIBVI materials under uniaxial compression", authors: "R.S. Stepanov, A.D. Radina, C. Tantardini, A.G. Kvashnin, A.V. Kolobov", journal: "Physical Chemistry Chemical Physics", year: "2024", url: "#" },  
+                { title: "Chemical bonding within AIIIBVI materials under uniaxial compression", authors: "R.S. Stepanov, A.D. Radina, C. Tantardini, A.G. Kvashnin, A.V. Kolobov", journal: "Physical Chemistry Chemical Physics", year: "2024", url: "/assets/pdfs/all_publications/2024_chemical_bonding_stepanov.pdf" },  
                 
                 { title: "Theoretical study of adsorption properties and CO oxidation reaction on surfaces of higher tungsten boride", authors: "A.D. Radina, V.S. Baidyshev, I.V. Chepkasov, N.A. Matsokin, T. Altalhi, B.I. Yakobson, A.G. Kvashnin", journal: "Scientific Reports", year: "2024", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
                 
