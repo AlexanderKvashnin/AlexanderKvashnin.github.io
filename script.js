@@ -346,7 +346,7 @@ const projectsData = [
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         abstract: "Review of recent progress showing how core–shell architectures and theory (incl. DFT) enable structural control of catalytic performance; promising directions and materials are outlined.",
         pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
-        image: ""
+        image: "/assets/projects_pic/TOC_NP.png"
       },
       {
         title: "Adsorption Properties of Crystalline and Amorphous PdIr Nanoparticles: A Systematic First-Principles Study",
