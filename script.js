@@ -170,7 +170,7 @@ const teamData = [
     bio: "Olga Pushkova is a 2st year graduate student at the Skolkovo Institute of Science and Technology, specializing in Applied Computational Mechanics. In 2024, she completed her bachelor's degree at NUST MISIS. Currently, he works in the industrial-oriented materials search group at Skoltech. Research area: prediction of the catalytic properties of nanoclusters using ML, investigation of the characteristics of catalytic materials by the SISSO method.",
     website: "",
     photo: "assets/team/Pushkova.jpg",
-    cv: "assets/cv/Pushkova.pdf"/
+    cv: "assets/cv/Pushkova.pdf"
   },
   {
     id: 10,
