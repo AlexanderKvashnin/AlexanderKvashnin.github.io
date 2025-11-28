@@ -15,22 +15,23 @@ function initializeTabs() {
 
     tabLinks.forEach(tab => {
         tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            const tabId = this.getAttribute('data-tab');
+    e.preventDefault();
+    const tabId = this.getAttribute('data-tab');
 
-            // Remove active class from all tabs and contents
-            tabLinks.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
+    tabLinks.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
 
-            // Add active class to current tab and content
-            this.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
+    this.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
 
-            // Load publications if needed
-            if (tabId === 'publications') {
-                loadPublications();
-            }
-        });
+    if (tabId === 'publications') {
+        loadPublications();
+    }
+
+    if (tabId === 'courses') {
+        initializeCourses(); 
+    }
+});
     });
 }
 // ===== VIDEO DATA =====
@@ -680,23 +681,6 @@ function initializeCourses() {
         });
     });
 }
-
-function setupCoursesLazyInit() {
-    const coursesTab = document.querySelector('[data-tab="courses"]');
-
-    if (!coursesTab) return;
-
-    coursesTab.addEventListener('click', () => {
-        initializeCourses();   // инициализация только в момент открытия вкладки
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    setupCoursesLazyInit();
-});
-
-
-
 
 
 
