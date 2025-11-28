@@ -658,6 +658,44 @@ function initializeCollaborators() {
   });
 }
 
+// ============= COURSES FUNCTIONS ===========
+// Course section functionality
+function initializeCourses() {
+    const courseHeaders = document.querySelectorAll('.course-header');
+    
+    courseHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const courseSection = this.parentElement;
+            const courseDetails = courseSection.querySelector('.course-details');
+            
+            // Close all other course details
+            document.querySelectorAll('.course-details').forEach(details => {
+                if (details !== courseDetails) {
+                    details.classList.remove('active');
+                }
+            });
+            
+            // Toggle current course details
+            courseDetails.classList.toggle('active');
+        });
+    });
+}
+
+// Initialize courses when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCourses();
+    
+    // Also initialize when courses tab is shown (if using tab system)
+    const coursesTab = document.querySelector('[data-tab="courses"]');
+    if (coursesTab) {
+        coursesTab.addEventListener('click', initializeCourses);
+    }
+});
+
+
+
+
+
 // ===== PUBLICATIONS FUNCTIONS =====
 async function loadPublications() {
     const publicationsList = document.querySelector('.publications-list');
