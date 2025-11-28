@@ -681,16 +681,20 @@ function initializeCourses() {
     });
 }
 
-// Initialize courses when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initializeCourses();
-    
-    // Also initialize when courses tab is shown (if using tab system)
+function setupCoursesLazyInit() {
     const coursesTab = document.querySelector('[data-tab="courses"]');
-    if (coursesTab) {
-        coursesTab.addEventListener('click', initializeCourses);
-    }
+
+    if (!coursesTab) return;
+
+    coursesTab.addEventListener('click', () => {
+        initializeCourses();   // инициализация только в момент открытия вкладки
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupCoursesLazyInit();
 });
+
 
 
 
