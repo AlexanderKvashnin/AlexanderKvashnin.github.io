@@ -89,6 +89,15 @@ const videoData = [
         duration: "14:39",
         date: "December 17, 2024",
         source: "VK Video"
+    },
+    {
+        title: "Alexander Kvashnin and Dmitry Kvashnin. Promo, science is for everyone.",
+        preview: "assets/videos/AGDG_promo.png",
+        url: "https://vkvideo.ru/video1100113_456239178",
+        description: "Promo video within the framework of the Decade of Science and Technology in Russia.",
+        duration: "00:20",
+        date: "August 19, 20243,
+        source: "VK Video"
     }
 ];
 
