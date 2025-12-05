@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeProjects();
     initializeCollaborators();
     initializeVideos();
+    initializeReviews();
 });
 
 function initializeTabs() {
@@ -30,12 +31,23 @@ function initializeTabs() {
 
     if (tabId === 'courses') {
         initializeCourses(); 
+        if (tabId === 'reviews') {
+    initializeReviews();
+}
     }
 });
     });
 }
 // ===== REVIEWS DATA =====
 const reviewsData = [
+    {
+        title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery",
+        authors: "I.V. Chepkasov, A.G. Kvashnin",
+        abstract: "Recent experiments have revealed that lithium can form multilayer structures when intercalated in bilayer graphene [Nature 564 (2018) 234], challenging the long-held belief that alkali metals in layered materials are confined to single-layer configurations. This pioneering work initiates a new line of research related to the intercalation of alkali metals in carbon-based materials. The possibility of forming multilayer structures between bilayer graphene not only Li but also Na, K, Rb, Cs is shown. Multilayer Li structures are experimentally observed in atomic channels of modified bulk graphite and soft carbon. Multilayer Na structures in the mesochannels of carbon spheres lead to more stable dendrite-free Na cycling with high rate characteristics. It is possible to create fast-charging batteries based on hard carbon, in which the formation of multilayer Na structures in the pores allows to achieve high charging rates. In this review, the achievements in the formation and diffusion of multilayer structures of alkali metals in carbon-based anode materials for creating high-capacity and fast-charging ion batteries are discussed in detail.",
+        image: "assets/reviews/2025_small_rev.png",
+        journalUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202508433",
+        pdfUrl: "assets/pdfs/reviews/2025_small_rev.pdf"
+    },
     {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
@@ -45,20 +57,12 @@ const reviewsData = [
         pdfUrl: "assets/pdfs/reviews/2024_nanoscale.pdf"
     },
     {
-        title: "Catalytic Properties of AuCu Nanostructures",
-        authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin",
-        abstract: "Review of theoretical and experimental results on AuCu nanoparticles, focusing on adsorption, reactivity, and structural effects.",
-        image: "assets/reviews/review2.png",
-        journalUrl: "https://example.com",
-        pdfUrl: "assets/pdfs/reviews/2023_aucu_review.pdf"
-    },
-    {
-        title: "Advanced Boride Catalysts",
-        authors: "A.D. Radina, I.V. Chepkasov, A.G. Kvashnin",
-        abstract: "Overview of transition metal borides as promising catalysts and their structure–property relationships.",
+        title: "High-Temperature Superconductivity in Hydrides",
+        authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D.Zhou, A.V. Sadakov, O.A. Sobolevskiy, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov",
+        abstract: "Over the past six years (2015±2021), many superconducting hydrides with critical temperatures Tc up to +15C, which are currently record high, have been discovered. Now, we can already say that a special field of superconductivity has developed: hydride superconductivity at ultrahigh pressures. For the most part, the properties of superhydrides are well described by the Migdal±Eliashberg theory of strong electron±phonon interactions, especially when the anharmonicity of phonons is taken into account. We investigate the isotope effect, the effect of a magnetic field (up to 60±70 T) on the critical temperature and critical current in the hydride samples, and the dependence of Tc on the pressure and the degree of doping. The divergences between the theory and experiment are of interest, especially in the regions of phase stability and in the behavior of the upper critical magnetic fields at low temperatures. We present a retrospective analysis of data from 2015±2021 and describe promising directions for future research on hydride superconductivity.",
         image: "assets/reviews/review3.png",
-        journalUrl: "https://example.com",
-        pdfUrl: "assets/pdfs/reviews/borides_review.pdf"
+        journalUrl: "https://link.springer.com/article/10.1007/s10948-022-06148-1",
+        pdfUrl: "assets/pdfs/reviews/2022_review.pdf"
     },
     {
         title: "Machine Learning for Catalytic Nanomaterials",
@@ -69,6 +73,31 @@ const reviewsData = [
         pdfUrl: "assets/pdfs/reviews/ml_catalysis_review.pdf"
     }
 ];
+// ===== REVIEWS FUNCTIONS =====
+function initializeReviews() {
+    const container = document.querySelector('.reviews-grid');
+    if (!container) return;
+
+    container.innerHTML = reviewsData.map(r => `
+        <div class="review-card">
+            <div class="review-image">
+                <img src="${r.image}" alt="review image" onerror="this.style.display='none'">
+            </div>
+
+            <div class="review-info">
+                <h2 class="review-title">${r.title}</h2>
+                <p class="review-authors"><strong>Authors:</strong> ${r.authors}</p>
+                <p class="review-abstract">${r.abstract}</p>
+
+                <div class="review-buttons">
+                    <a class="review-btn" href="${r.journalUrl}" target="_blank">Journal</a>
+                    <a class="review-btn pdf" href="${r.pdfUrl}" target="_blank">PDF</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
 
 // ===== VIDEO DATA =====
 const videoData = [
