@@ -52,7 +52,7 @@ const reviewsData = [
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
         abstract: "The annual increase in demand for renewable energy is driving the development of catalysis-based technologies that generate, store and convert clean energy by splitting and forming chemical bonds. Thanks to efforts over the last two decades, great progress has been made in the use of core–shell nanostructures to improve the performance of metallic catalysts. The successful preparation and application of a large number of bimetallic core-shell nanocrystals demonstrates the wide range of possibilities they offer and suggests further advances in this field. Here, we have reviewed recent advances in the synthesis and study of core-shell nanostructures that are promising for catalysis. Particular attention has been paid to the structural tuning of the catalytic properties of core-shell nanostructures and to theoretical methods capable of describing their catalytic properties in order to efficiently search for new catalysts with desired properties. We have also identified the most promising areas of research in this field, in terms of experimental and theoretical studies, and in terms of promising materials to be studied.",
-        image: "assets/reviews/2024_nanoscale.png",
+        image: "/assets/projects_pic/TOC_NP.png",
         journalUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a",
         pdfUrl: "assets/pdfs/reviews/2024_nanoscale.pdf"
     },
