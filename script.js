@@ -96,7 +96,7 @@ const videoData = [
         url: "https://vkvideo.ru/video1100113_456239178",
         description: "Promo video within the framework of the Decade of Science and Technology in Russia.",
         duration: "00:20",
-        date: "August 19, 20243,
+        date: "August 19, 2023",
         source: "VK Video"
     }
 ];
