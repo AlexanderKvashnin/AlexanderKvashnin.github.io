@@ -61,16 +61,16 @@ const reviewsData = [
         authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D.Zhou, A.V. Sadakov, O.A. Sobolevskiy, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov",
         abstract: "Over the past six years (2015±2021), many superconducting hydrides with critical temperatures Tc up to +15C, which are currently record high, have been discovered. Now, we can already say that a special field of superconductivity has developed: hydride superconductivity at ultrahigh pressures. For the most part, the properties of superhydrides are well described by the Migdal±Eliashberg theory of strong electron±phonon interactions, especially when the anharmonicity of phonons is taken into account. We investigate the isotope effect, the effect of a magnetic field (up to 60±70 T) on the critical temperature and critical current in the hydride samples, and the dependence of Tc on the pressure and the degree of doping. The divergences between the theory and experiment are of interest, especially in the regions of phase stability and in the behavior of the upper critical magnetic fields at low temperatures. We present a retrospective analysis of data from 2015±2021 and describe promising directions for future research on hydride superconductivity.",
         image: "assets/reviews/review3.png",
-        journalUrl: "https://link.springer.com/article/10.1007/s10948-022-06148-1",
+        journalUrl: "https://arxiv.org/abs/2207.07637",
         pdfUrl: "assets/pdfs/reviews/2022_review.pdf"
     },
     {
-        title: "Machine Learning for Catalytic Nanomaterials",
-        authors: "C. Tantardini, A.G. Kvashnin",
-        abstract: "Survey of ML approaches for predicting adsorption energies, reaction pathways, and catalyst stability.",
+        title: "Computational Discovery of Hard and Superhard Materials",
+        authors: "A.G. Kvashnin, Z. Allahyari, A.R. Oganov",
+        abstract: "Computational materials discovery is a booming field of science, which helps in predicting new unexpected materials with optimal combinations of various physical properties. Going beyond the targeted search for new materials within prespecified systems, the recently developed method, Mendelevian search, allows one to look for materials with the desired properties across the entire Periodic Table, indicating possibly superhard (or other) materials that could be obtained experimentally. From this viewpoint, we discuss the recently developed methods for crystal structure prediction and empirical models of Vickers hardness and fracture toughness that allow fast screening for materials with optimal mechanical properties. We also discuss the results of the computational search for hard and superhard materials obtained in the last few years using these novel approaches and present a “treasure map” of hard and superhard materials, which summarizes known and predicted materials and points to promising future directions of superhard materials discovery",
         image: "assets/reviews/review4.png",
-        journalUrl: "https://example.com",
-        pdfUrl: "assets/pdfs/reviews/ml_catalysis_review.pdf"
+        journalUrl: "https://pubs.aip.org/aip/jap/article/126/4/040901/1064664/Computational-discovery-of-hard-and-superhard",
+        pdfUrl: "assets/pdfs/reviews/2019_review.pdf"
     }
 ];
 // ===== REVIEWS FUNCTIONS =====
