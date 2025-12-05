@@ -99,7 +99,7 @@ const teamData = [
     id: 1,
     name: "Alexander Kvashnin",
     position: "Principal Investigator",
-    bio: "Prof. Alexander Kvashnin holds the position of Full Professor at the Skolkovo Institute of Science and Technology. Prof. Kvashnin is a renowned researcher with over 15 years of experience in the field of computational materials science. His work focuses on applications of modern methods of computational materials science and artificial intelligence to complex problems.",
+    bio: "Prof. Alexander Kvashnin is a Full Professor at Skoltech and a head of IOCD Lab. Research experience is over 15 years in the field of computational materials science. Focuese on applications of modern methods of computational science and artificial intelligence to complex problems.",
     website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
     photo: "assets/team/Kvashnin.PNG",
     cv: "assets/cv/Kvashnin.pdf"
