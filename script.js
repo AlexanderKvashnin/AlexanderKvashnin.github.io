@@ -46,15 +46,15 @@ const reviewsData = [
         abstract: "Recent experiments have revealed that lithium can form multilayer structures when intercalated in bilayer graphene [Nature 564 (2018) 234], challenging the long-held belief that alkali metals in layered materials are confined to single-layer configurations. This pioneering work initiates a new line of research related to the intercalation of alkali metals in carbon-based materials. The possibility of forming multilayer structures between bilayer graphene not only Li but also Na, K, Rb, Cs is shown. Multilayer Li structures are experimentally observed in atomic channels of modified bulk graphite and soft carbon. Multilayer Na structures in the mesochannels of carbon spheres lead to more stable dendrite-free Na cycling with high rate characteristics. It is possible to create fast-charging batteries based on hard carbon, in which the formation of multilayer Na structures in the pores allows to achieve high charging rates. In this review, the achievements in the formation and diffusion of multilayer structures of alkali metals in carbon-based anode materials for creating high-capacity and fast-charging ion batteries are discussed in detail.",
         image: "assets/review/2025_small_rev.png",
         journalUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202508433",
-        pdfUrl: "assets/pdfs/review/2025_small_rev.pdf"
+        pdfUrl: "assets/review/2025_small_rev.pdf"
     },
     {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
         abstract: "The annual increase in demand for renewable energy is driving the development of catalysis-based technologies that generate, store and convert clean energy by splitting and forming chemical bonds. Thanks to efforts over the last two decades, great progress has been made in the use of core–shell nanostructures to improve the performance of metallic catalysts. The successful preparation and application of a large number of bimetallic core-shell nanocrystals demonstrates the wide range of possibilities they offer and suggests further advances in this field. Here, we have reviewed recent advances in the synthesis and study of core-shell nanostructures that are promising for catalysis. Particular attention has been paid to the structural tuning of the catalytic properties of core-shell nanostructures and to theoretical methods capable of describing their catalytic properties in order to efficiently search for new catalysts with desired properties. We have also identified the most promising areas of research in this field, in terms of experimental and theoretical studies, and in terms of promising materials to be studied.",
-        image: "/assets/pdfs/review/2024_nanoscale.png",
+        image: "/assets/review/2024_nanoscale.png",
         journalUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a",
-        pdfUrl: "assets/pdfs/review/2024_nanoscale.pdf"
+        pdfUrl: "assets/review/2024_nanoscale.pdf"
     },
     {
         title: "High-Temperature Superconductivity in Hydrides",
@@ -62,7 +62,7 @@ const reviewsData = [
         abstract: "Over the past six years (2015±2021), many superconducting hydrides with critical temperatures Tc up to +15C, which are currently record high, have been discovered. Now, we can already say that a special field of superconductivity has developed: hydride superconductivity at ultrahigh pressures. For the most part, the properties of superhydrides are well described by the Migdal±Eliashberg theory of strong electron±phonon interactions, especially when the anharmonicity of phonons is taken into account. We investigate the isotope effect, the effect of a magnetic field (up to 60±70 T) on the critical temperature and critical current in the hydride samples, and the dependence of Tc on the pressure and the degree of doping. The divergences between the theory and experiment are of interest, especially in the regions of phase stability and in the behavior of the upper critical magnetic fields at low temperatures. We present a retrospective analysis of data from 2015±2021 and describe promising directions for future research on hydride superconductivity.",
         image: "assets/review/review3.png",
         journalUrl: "https://arxiv.org/abs/2207.07637",
-        pdfUrl: "assets/pdfs/review/2022_review.pdf"
+        pdfUrl: "assets/review/2022_review.pdf"
     },
     {
         title: "Computational Discovery of Hard and Superhard Materials",
@@ -70,7 +70,7 @@ const reviewsData = [
         abstract: "Computational materials discovery is a booming field of science, which helps in predicting new unexpected materials with optimal combinations of various physical properties. Going beyond the targeted search for new materials within prespecified systems, the recently developed method, Mendelevian search, allows one to look for materials with the desired properties across the entire Periodic Table, indicating possibly superhard (or other) materials that could be obtained experimentally. From this viewpoint, we discuss the recently developed methods for crystal structure prediction and empirical models of Vickers hardness and fracture toughness that allow fast screening for materials with optimal mechanical properties. We also discuss the results of the computational search for hard and superhard materials obtained in the last few years using these novel approaches and present a “treasure map” of hard and superhard materials, which summarizes known and predicted materials and points to promising future directions of superhard materials discovery",
         image: "assets/review/computational_discovery_of_hard.png",
         journalUrl: "https://pubs.aip.org/aip/jap/article/126/4/040901/1064664/Computational-discovery-of-hard-and-superhard",
-        pdfUrl: "assets/pdfs/review/2019_review.pdf"
+        pdfUrl: "assets/review/2019_review.pdf"
     }
 ];
 // ===== REVIEWS FUNCTIONS =====
