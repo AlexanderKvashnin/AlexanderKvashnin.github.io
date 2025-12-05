@@ -34,6 +34,42 @@ function initializeTabs() {
 });
     });
 }
+// ===== REVIEWS DATA =====
+const reviewsData = [
+    {
+        title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
+        authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
+        abstract: "The annual increase in demand for renewable energy is driving the development of catalysis-based technologies that generate, store and convert clean energy by splitting and forming chemical bonds. Thanks to efforts over the last two decades, great progress has been made in the use of core–shell nanostructures to improve the performance of metallic catalysts. The successful preparation and application of a large number of bimetallic core-shell nanocrystals demonstrates the wide range of possibilities they offer and suggests further advances in this field. Here, we have reviewed recent advances in the synthesis and study of core-shell nanostructures that are promising for catalysis. Particular attention has been paid to the structural tuning of the catalytic properties of core-shell nanostructures and to theoretical methods capable of describing their catalytic properties in order to efficiently search for new catalysts with desired properties. We have also identified the most promising areas of research in this field, in terms of experimental and theoretical studies, and in terms of promising materials to be studied.",
+        image: "assets/reviews/2024_nanoscale.png",
+        journalUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a",
+        pdfUrl: "assets/pdfs/reviews/2024_nanoscale.pdf"
+    },
+    {
+        title: "Catalytic Properties of AuCu Nanostructures",
+        authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin",
+        abstract: "Review of theoretical and experimental results on AuCu nanoparticles, focusing on adsorption, reactivity, and structural effects.",
+        image: "assets/reviews/review2.png",
+        journalUrl: "https://example.com",
+        pdfUrl: "assets/pdfs/reviews/2023_aucu_review.pdf"
+    },
+    {
+        title: "Advanced Boride Catalysts",
+        authors: "A.D. Radina, I.V. Chepkasov, A.G. Kvashnin",
+        abstract: "Overview of transition metal borides as promising catalysts and their structure–property relationships.",
+        image: "assets/reviews/review3.png",
+        journalUrl: "https://example.com",
+        pdfUrl: "assets/pdfs/reviews/borides_review.pdf"
+    },
+    {
+        title: "Machine Learning for Catalytic Nanomaterials",
+        authors: "C. Tantardini, A.G. Kvashnin",
+        abstract: "Survey of ML approaches for predicting adsorption energies, reaction pathways, and catalyst stability.",
+        image: "assets/reviews/review4.png",
+        journalUrl: "https://example.com",
+        pdfUrl: "assets/pdfs/reviews/ml_catalysis_review.pdf"
+    }
+];
+
 // ===== VIDEO DATA =====
 const videoData = [
     {
