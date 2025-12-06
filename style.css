@@ -1077,6 +1077,7 @@ body {
 /* ------ IMAGE BLOCK ------ */
 
 .review-image {
+    margin-top: 12px;
     width: 340px;     
     height: 230px;    
     border-radius: 12px;
