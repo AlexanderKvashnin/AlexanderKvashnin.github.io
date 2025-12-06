@@ -1071,8 +1071,8 @@ body {
 }
 
 .review-image {
-    flex: 0 0 380px;
-    height: 260px;
+    flex: 0 0 420px;
+    height: 300px;
     border-radius: 10px;
     overflow: hidden;
     background: #f3f4f6;
