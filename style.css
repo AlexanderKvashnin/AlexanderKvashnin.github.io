@@ -1046,6 +1046,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
+
 /* ===== REVIEWS GRID ===== */
 .reviews-grid {
     display: grid;
@@ -1054,9 +1055,12 @@ body {
     margin-top: 2rem;
 }
 
+/* ------ CARD ------ */
+
 .review-card {
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 24px;
     padding: 24px;
     background: white;
     border-radius: 14px;
@@ -1070,12 +1074,15 @@ body {
     box-shadow: 0 8px 18px rgba(0,0,0,0.1);
 }
 
+/* ------ IMAGE BLOCK ------ */
+
 .review-image {
-    flex: 0 0 420px;
-    height: 300px;
-    border-radius: 10px;
+    width: 340px;     
+    height: 230px;    
+    border-radius: 12px;
     overflow: hidden;
-    background: #f3f4f6;
+    flex-shrink: 0;
+    background: #f3f4f6; 
 }
 
 .review-image img {
@@ -1083,6 +1090,8 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* ------ TEXT BLOCK ------ */
 
 .review-info {
     flex: 1;
@@ -1104,11 +1113,14 @@ body {
 }
 
 .review-abstract {
-     text-align: justify;
+    text-align: justify;
     font-size: 15px;
     color: #4b5563;
     margin-bottom: 20px;
+    line-height: 1.55;
 }
+
+/* ------ BUTTONS ------ */
 
 .review-buttons {
     margin-top: auto;
@@ -1123,7 +1135,7 @@ body {
     font-weight: 600;
     color: white;
     background: #111827;
-    transition: background .2s;
+    transition: background .2s ease;
 }
 
 .review-btn:hover {
@@ -1136,6 +1148,8 @@ body {
 .review-btn.pdf:hover {
     background: #1d4ed8;
 }
+
+/* ------ MOBILE ------ */
 
 @media (max-width: 768px) {
     .review-card {
