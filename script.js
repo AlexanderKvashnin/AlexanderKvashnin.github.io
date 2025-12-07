@@ -68,7 +68,7 @@ const reviewsData = [
         title: "Computational Discovery of Hard and Superhard Materials",
         authors: "A.G. Kvashnin, Z. Allahyari, A.R. Oganov",
         abstract: "Computational materials discovery is a booming field of science, which helps in predicting new unexpected materials with optimal combinations of various physical properties. Going beyond the targeted search for new materials within prespecified systems, the recently developed method, Mendelevian search, allows one to look for materials with the desired properties across the entire Periodic Table, indicating possibly superhard (or other) materials that could be obtained experimentally. From this viewpoint, we discuss the recently developed methods for crystal structure prediction and empirical models of Vickers hardness and fracture toughness that allow fast screening for materials with optimal mechanical properties. We also discuss the results of the computational search for hard and superhard materials obtained in the last few years using these novel approaches and present a “treasure map” of hard and superhard materials, which summarizes known and predicted materials and points to promising future directions of superhard materials discovery",
-        image: "assets/review/computational_discovery_of_hard.png",
+        image: "assets/review/2019_review.png",
         journalUrl: "https://pubs.aip.org/aip/jap/article/126/4/040901/1064664/Computational-discovery-of-hard-and-superhard",
         pdfUrl: "assets/review/2019_review.pdf"
     }
