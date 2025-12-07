@@ -1077,8 +1077,8 @@ body {
 /* ------ IMAGE BLOCK ------ */
 
 .review-image {
-    width: 340px;     
-    height: 230px;    
+    width: 400px;     
+    height: 300px;    
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
