@@ -62,35 +62,44 @@ body {
 }
 
 /* ================= ABOUT ================= */
+#about {
+    padding-top: 2rem;
+}
+
 #about h1 {
     text-align: center;
-    margin-bottom: 32px;
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.25;
 }
 
 .about-intro {
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    text-align: justify;
+    max-width: 1040px;
+    margin: 0 auto 1.6rem auto;
+    font-size: 1.15rem;
     line-height: 1.7;
-    color: #444;
+    color: #4b5563;
+    text-align: justify;
 }
 
 /* ===== LAB AT A GLANCE ===== */
 .lab-glance {
-    margin: 4rem 0;
+    margin: 5rem 0 4.5rem;
     text-align: center;
 }
 
 .lab-glance h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     color: #111827;
 }
 
 .glance-grid {
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+    gap: 2.2rem;
 }
 
 .glance-item {
@@ -116,20 +125,32 @@ body {
 
 /* ===== RESEARCH SCOPE ===== */
 .research-scope {
-    margin: 4rem 0;
+    margin: 5.5rem 0 4rem;
     text-align: center;
 }
 
 .research-scope h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
+    color: #111827;
+    position: relative;
+}
+
+.research-scope h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 2px;
+    background: #2563eb;
+    margin: 14px auto 0;
+    opacity: 0.35;
 }
 
 .research-scope ul {
     list-style: none;
     padding: 0;
-    max-width: 700px;
-    margin: 0 auto;
+    margin: 2.2rem auto 0;
+    max-width: 900px;
 }
 
 .research-scope li {
@@ -140,8 +161,8 @@ body {
 
 /* ===== QUOTE ===== */
 .about-quote {
-    margin: 4rem auto 2rem;
-    max-width: 800px;
+    margin: 4.5rem auto 2.5rem;
+    max-width: 900px;
     text-align: center;
     font-style: italic;
     color: #6b7280;
@@ -232,4 +253,12 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .about-intro {
+        font-size: 1.05rem;
+        text-align: left;
+    }
 }
