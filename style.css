@@ -1241,6 +1241,23 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+/* About page title */
+#about h1 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* About intro text */
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+    line-height: 1.7;
+}
+.about-intro:first-of-type {
+    font-size: 1.05rem;
+}
+
 
 
 
