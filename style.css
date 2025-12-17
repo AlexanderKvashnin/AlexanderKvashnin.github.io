@@ -48,6 +48,8 @@ body {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative; 
+    z-index: 1;
 }
 
 .tab-content {
@@ -1254,3 +1256,23 @@ body {
     text-align: justify;
     line-height: 1.7;
 }
+body {
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url("assets/body.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* полупрозрачный слой */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75); /* ← прозрачность */
+    pointer-events: none;
+    z-index: -1;
+}
+
