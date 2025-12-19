@@ -105,7 +105,7 @@ const videoData = [
         title: "THE PATH OF THE CONQUEROR",
         preview: "assets/videos/Conqueror.png",
         url: "https://vkvideo.ru/playlist/-229636815_1/video-229636815_456239686?linked=1",
-        description: "NEW ISSUE OF "THE CONQUEROR'S PATH"! Winner of the Sber Prize — about how AI discovers new generation materials",
+        description: "NEW ISSUE OF THE CONQUEROR'S PATH! Winner of the Sber Prize — about how AI discovers new generation materials",
         duration: "00:32:55",
         date: "December 18, 2025",
         source: "VK Video"
