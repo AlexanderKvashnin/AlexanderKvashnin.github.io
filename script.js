@@ -868,7 +868,7 @@ function simulateGoogleScholarFetch() {
     journal: "Diam. Rel. Mat.",
     year: "2025",
     links: [
-      { type: "PDF", url: "XXX" },
+      { type: "PDF", url: "/assets/pdfs/all_publications/2025_DIAMAT.pdf" },
       { type: "DOI", url: "https://doi.org/10.1016/j.diamond.2025.113184" }
     ]
   },
