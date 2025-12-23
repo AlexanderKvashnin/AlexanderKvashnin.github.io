@@ -848,7 +848,7 @@ function simulateGoogleScholarFetch() {
     journal: "Int. J. Refr. Met. Hard Mater.",
     year: "2026",
     links: [
-      { type: "PDF", url: "XXX" },
+      { type: "PDF", url: "/assets/pdfs/all_publications/2026_IJRMHM.pdf" },
       { type: "DOI", url: "https://doi.org/10.1016/j.ijrmhm.2025.107537" }
     ]
   },
