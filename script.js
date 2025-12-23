@@ -841,6 +841,56 @@ function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
+                  {
+    title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
+    authors: "D.S. Nikitin, I.I. Shanenkov, A. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin",
+    journal: "Int. J. Refr. Met. Hard Mater.",
+    year: "2026",
+    links: [
+      { type: "PDF", url: "XXX" },
+      { type: "DOI", url: "https://doi.org/10.1016/j.ijrmhm.2025.107537" }
+    ]
+  },
+  {
+    title: "Tuning Thermal Conductivity and Electron-Phonon Interactions in Carbon and Boron Nitride Moiré Diamanes via Twist Angle Manipulation",
+    authors: "R. Arabov, N. Rybin, V. Demin, M. Polovinkin, A. Kvashnin, L. Chernozatonskii, A. Shapeev",
+    journal: "Appl. Surf. Sci.",
+    year: "2026",
+    links: [
+      { type: "PDF", url: "XXX" },
+      { type: "DOI", url: "https://doi.org/10.1016/j.apsusc.2025.164801" }
+    ]
+  },
+  {
+    title: "Admittance spectroscopy of 2–5 nm detonation diamonds in NaCl-nanodiamond mixture. Electronic properties of small nanodiamonds",
+    authors: "S.G. Buga, M.Yu. Popov, D.A. Ovsyannikov, V.S. Baidyshev, A.G. Kvashnin",
+    journal: "Diam. Rel. Mat.",
+    year: "2025",
+    links: [
+      { type: "PDF", url: "XXX" },
+      { type: "DOI", url: "https://doi.org/10.1016/j.diamond.2025.113184" }
+    ]
+  },
+  {
+    title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery. A Review",
+    authors: "I.V. Chepkasov, A.G. Kvashnin",
+    journal: "Small",
+    year: "2025",
+    links: [
+      { type: "PDF", url: "/assets/pdfs/all_publications/2025_Small_rev.pdf" },
+      { type: "DOI", url: "https://doi.org/10.1002/smll.202508433" }
+    ]
+  },
+  {
+    title: "Core-dictated tuning of the performance of amorphous and crystalline TM@Pt and HEA@Pt core-shell nanoparticles catalysts",
+    authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin",
+    journal: "Mat. Today. Energy",
+    year: "2025",
+    links: [
+      { type: "PDF", url: "/assets/pdfs/all_publications/2025_MTE_core_shell.pdf" },
+      { type: "DOI", url: "https://doi.org/10.1016/j.mtener.2025.102130" }
+    ]
+  },
                 { title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization", authors: "Yu.A. Bayan, E.R. Beskopylny, E.U. Gerasimov, E.E. Aydakov, K.K. Volik, I.V. Pankov, I.V. Chepkasov, M.M. Lukanov, A.G. Kvashnin, A.A. Alekseenko", journal: "Small", year: "2025", links: [ { type: "PDF", url: "/assets/pdfs/Catalyst/2025_Small.pdf" }, { type: "DOI", url: "https://doi.org/10.1002/smll.202510144" } ] },
                 
                 { title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material", authors: "Yu. Vassilyeva, Yu. Neklya, M. Lukanov, A. Kvashnin, A. Pak", journal: "Thermal Science and Engineering Progress", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf" },
