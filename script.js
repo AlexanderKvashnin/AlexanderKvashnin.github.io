@@ -858,7 +858,7 @@ function simulateGoogleScholarFetch() {
     journal: "Appl. Surf. Sci.",
     year: "2026",
     links: [
-      { type: "PDF", url: "XXX" },
+      { type: "PDF", url: "/assets/pdfs/all_publications/2026_ASS.pdf" },
       { type: "DOI", url: "https://doi.org/10.1016/j.apsusc.2025.164801" }
     ]
   },
