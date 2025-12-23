@@ -825,7 +825,8 @@ async function loadPublications() {
             el.innerHTML = `
                 <h3>${pub.title}</h3>
                 <p><strong>Authors:</strong> ${pub.authors}</p>
-                <p><strong>Journal:</strong> ${pub.journal}, ${pub.year}</p>
+                <p><strong>Journal:</strong> ${pub.journal}</p>
+                <p><strong>Year:</strong> ${pub.year}</p>
                 ${linksSection}
             `;
             publicationsList.appendChild(el);
