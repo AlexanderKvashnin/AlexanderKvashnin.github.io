@@ -767,7 +767,7 @@ function initializeCourses() {
 
 
 
-// ===== PUBLICATIONS FUNCTIONS =====
+/* ===== PUBLICATIONS FUNCTIONS =====
 async function loadPublications() {
     const publicationsList = document.querySelector('.publications-list');
     if (!publicationsList) return;
@@ -792,6 +792,50 @@ async function loadPublications() {
         publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
     }
 }
+*/
+// ===== PUBLICATIONS FUNCTIONS =====
+async function loadPublications() {
+    const publicationsList = document.querySelector('.publications-list');
+    if (!publicationsList) return;
+    
+    publicationsList.innerHTML = '<p>Loading publications...</p>';
+    try {
+        const publications = await simulateGoogleScholarFetch();
+        publicationsList.innerHTML = '';
+        publications.forEach(pub => {
+            const el = document.createElement('div');
+            el.className = 'publication-item';
+            
+            // Генерируем HTML для ссылок, если они есть
+            let linksHTML = '';
+            if (pub.links && pub.links.length > 0) {
+                linksHTML = pub.links.map(link => 
+                    `<a href="${link.url}" target="_blank" class="link-${link.type.toLowerCase()}">${link.type}</a>`
+                ).join('\n            ');
+            } else if (pub.url) {
+                // Для обратной совместимости с одной ссылкой
+                linksHTML = `<a href="${pub.url}" target="_blank" class="link-pdf">PDF</a>`;
+            }
+            
+            // Добавляем контейнер для ссылок только если есть ссылки
+            const linksSection = linksHTML ? 
+                `<div class="links">${linksHTML}</div>` : 
+                '';
+            
+            el.innerHTML = `
+                <h3>${pub.title}</h3>
+                <p><strong>Authors:</strong> ${pub.authors}</p>
+                <p><strong>Journal:</strong> ${pub.journal}, ${pub.year}</p>
+                ${linksSection}
+            `;
+            publicationsList.appendChild(el);
+        });
+    } catch (error) {
+        console.error('Error loading publications:', error);
+        publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
+    }
+}
+
 
 function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
