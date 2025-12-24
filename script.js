@@ -628,21 +628,20 @@ function renderPublications(list) {
     <div class="publications-grid">
       ${list.map(pub => `
         <div class="pub-card">
-          <div class="pub-thumb">
-            ${pub.image
-              ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">`
-              : `<div class="thumb-placeholder"></div>`}
-          </div>
           <div class="pub-info">
-            <h4 class="pub-title">${pub.title}</h4>
-            ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
-            <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener">pdf</a>
+            <h4 class="pub-title">
+              <a href="${pub.pdfUrl}" target="_blank" rel="noopener">
+                ${pub.title}
+              </a>
+            </h4>
           </div>
+          <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener">PDF</a>
         </div>
       `).join('')}
     </div>
   `;
 }
+
 
 
 // ===== COLLABORATORS FUNCTIONS =====
