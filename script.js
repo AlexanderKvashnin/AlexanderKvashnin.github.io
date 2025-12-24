@@ -842,145 +842,491 @@ function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
-                  {
-    title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
-    authors: "D.S. Nikitin, I.I. Shanenkov, A. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin",
-    journal: "Int. J. Refr. Met. Hard Mater.",
-    year: "2026",
-    links: [
-      { type: "PDF", url: "/assets/pdfs/all_publications/2026_IJRMHM.pdf" },
-      { type: "DOI", url: "https://doi.org/10.1016/j.ijrmhm.2025.107537" }
-    ]
-  },
-  {
-    title: "Tuning Thermal Conductivity and Electron-Phonon Interactions in Carbon and Boron Nitride Moiré Diamanes via Twist Angle Manipulation",
-    authors: "R. Arabov, N. Rybin, V. Demin, M. Polovinkin, A. Kvashnin, L. Chernozatonskii, A. Shapeev",
-    journal: "Appl. Surf. Sci.",
-    year: "2026",
-    links: [
-      { type: "PDF", url: "/assets/pdfs/all_publications/2026_ASS.pdf" },
-      { type: "DOI", url: "https://doi.org/10.1016/j.apsusc.2025.164801" }
-    ]
-  },
-  {
-    title: "Admittance spectroscopy of 2–5 nm detonation diamonds in NaCl-nanodiamond mixture. Electronic properties of small nanodiamonds",
-    authors: "S.G. Buga, M.Yu. Popov, D.A. Ovsyannikov, V.S. Baidyshev, A.G. Kvashnin",
-    journal: "Diam. Rel. Mat.",
-    year: "2025",
-    links: [
-      { type: "PDF", url: "/assets/pdfs/all_publications/2025_DIAMAT.pdf" },
-      { type: "DOI", url: "https://doi.org/10.1016/j.diamond.2025.113184" }
-    ]
-  },
-  {
-    title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery. A Review",
-    authors: "I.V. Chepkasov, A.G. Kvashnin",
-    journal: "Small",
-    year: "2025",
-    links: [
-      { type: "PDF", url: "/assets/pdfs/all_publications/2025_Small_rev.pdf" },
-      { type: "DOI", url: "https://doi.org/10.1002/smll.202508433" }
-    ]
-  },
-  {
-    title: "Core-dictated tuning of the performance of amorphous and crystalline TM@Pt and HEA@Pt core-shell nanoparticles catalysts",
-    authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin",
-    journal: "Mat. Today. Energy",
-    year: "2025",
-    links: [
-      { type: "PDF", url: "/assets/pdfs/all_publications/2025_MTE_core_shell.pdf" },
-      { type: "DOI", url: "https://doi.org/10.1016/j.mtener.2025.102130" }
-    ]
-  },
-                { title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization", authors: "Yu.A. Bayan, E.R. Beskopylny, E.U. Gerasimov, E.E. Aydakov, K.K. Volik, I.V. Pankov, I.V. Chepkasov, M.M. Lukanov, A.G. Kvashnin, A.A. Alekseenko", journal: "Small", year: "2025", links: [ { type: "PDF", url: "/assets/pdfs/Catalyst/2025_Small.pdf" }, { type: "DOI", url: "https://doi.org/10.1002/smll.202510144" } ] },
-                
-                { title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material", authors: "Yu. Vassilyeva, Yu. Neklya, M. Lukanov, A. Kvashnin, A. Pak", journal: "Thermal Science and Engineering Progress", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf" },
-                
-                { title: "Charge density waves and structural phase transition in the high-𝑇𝑐 superconducting LaH10 quantum crystal", authors: "C. Tantardini, A.G. Kvashnin, M. Giantomassi, M. Iliaš, B.I. Yakobson, R.J. Hemley, X. Gonze", journal: "Physical Review B", year: "2025", url: "/assets/pdfs/all_publications/2025_charge_density.pdf" },
-                
-                { title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation", authors: "A.R. Vildanova, A.E. Goldt, S.V. Porokhin, A.G. Kvashnin, V.S. Baidyshev, I.V. Chepkasov, F.S. Fedorov, K.A. Litvintseva, A.V. Lalov, V.A. Dmitrieva, M.M. Tepliakova, A.G. Nasibulin", journal: "Small", year: "2025", url: "/assets/pdfs/all_publications/2025_ni_nanowires.pdf" },
-                
-                { title: "Designing high-efficiency cryogenic regenerators: The role of microstructure and geometry in magnetocaloric cooling", authors: "D.Yu. Karpenkov, R.A. Makarin, C. Tantardini, A.G. Kvashnin, A.Yu. Karpenkov, E.V. Argunov, T.A. Sviridova, T.B. Shapaeva, M.V. Zheleznyi", journal: "Journal of Alloys and Compounds", year: "2025", url: "#" },
-                
-                { title: "Tuning of Mechanical Properties of doped PbTe-based Thermoelectric Material Driven by Intrinsic Defects", authors: "I.V. Chepkasov, A.D. Radina, V.S. Baidyshev, M. Polovinkin, N. Rybin, A. Shapeev, A.A. Krikorov, A.R. Oganov, Z. Dashevsky, D.G. Kvashnin, A.G. Kvashnin", journal: "Journal of Materials Chemistry A", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf" },
-                
-                { title: "SbIV, an Unusual Player in 2D Spintronic Devices", authors: "C. Tantardini, M. Azizi, T. Altalhi, A.G. Kvashnin, A. Filippetti, C. Gatti, B.I. Yakobson, X. Gonze", journal: "ACS Nano", year: "2025", url: "/assets/pdfs/all_publications/2025_sbiv.pdf" },
-                
-                { title: "Discovery of chemically modified higher tungsten boride by means of hybrid GNN/DFT approach", authors: "N.A. Matsokin, R.A. Eremin, A.A. Kuznetsova, I.S. Humonen, A.V. Krautsou, V.D. Lazarev, Y.Z. Vassilyeva, A.Ya. Pak, S.A. Budennyy, A.G. Kvashnin, A.A. Osiptsov", journal: "npj Computational Materials", year: "2025", url: "/assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf" },
-                
-                { title: "Polyaromatic hydrocarbons as prospective anode materials for metal ion battery", authors: "I.V Chepkasov, V.S Baidyshev, A.G Kvashnin", journal: "Journal of Energy Storage", year: "2025", url: "/assets/pdfs/all_publications/2025_JES.pdf" },
-                
-                { title: "Adsorption properties of crystalline and amorphous PdIr nanoparticles. A systematic first-principles study", authors: "I.V. Chepkasov, V.S. Baidyshev, A.V. Iosimovska, I.S. Zamulin, A.G. Kvashnin", journal: "Journal of Catalysis", year: "2025", url: "/assets/pdfs/all_publications/2025_Journal_of_Catalysis.pdf" },
-                
-                { title: "Synthesis of high-entropy Ti-Zr-Nb-Hf-Ta carbides and carbonitrides in high-speed arc discharge plasma jet", authors: "D.S. Nikitin, I.I. Shanenkov, A.R. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin", journal: "Journal of Alloys and Compounds", year: "2025", url: "/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" },
-                
-                { title: "Physically intuitive anisotropic model of hardness", authors: "F.N. Jalolov and A.G. Kvashnin", journal: "Physical Review Materials", year: "2024", url: "/assets/pdfs/all_publications/2024_physically_intuitive.pdf" },
-                
-                { title: "Melting simulations of high-entropy carbonitrides by deep learning potentials", authors: "V.S. Baidyshev, C. Tantardini, A.G. Kvashnin", journal: "Scientific Reports", year: "2024", url: "/assets/pdfs/all_publications/2024_melting_simulations.pdf" },
-                
-                { title: "Material hardness descriptor derived by symbolic regression", authors: "C. Tantardini, H.A. Zakaryan, Z.-K. Han, T. Altalhi, S.V. Levchenko, A.G. Kvashnin, B.I. Yakobson", journal: "Journal of Computational Science", year: "2024", url: "/assets/pdfs/all_publications/2024_material_hardness_descriptor.pdf" },
-                
-                { title: "Chemical bonding within AIIIBVI materials under uniaxial compression", authors: "R.S. Stepanov, A.D. Radina, C. Tantardini, A.G. Kvashnin, A.V. Kolobov", journal: "Physical Chemistry Chemical Physics", year: "2024", url: "/assets/pdfs/all_publications/2024_chemical_bonding_stepanov.pdf" },  
-                
-                { title: "Theoretical study of adsorption properties and CO oxidation reaction on surfaces of higher tungsten boride", authors: "A.D. Radina, V.S. Baidyshev, I.V. Chepkasov, N.A. Matsokin, T. Altalhi, B.I. Yakobson, A.G. Kvashnin", journal: "Scientific Reports", year: "2024", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
-                
-                { title: "Electrical current-assisted reactive crucible melting technique: Case study of the Fe-Sn system", authors: "F. Bochkanov, D. Karpenkov, V. Fomin, A. Tukmakova, A. Kvashnin, A. Novotelnova, O. Kutsemako, N. Kulesh, V. Kurichenko, I. Bajenova, A. Khvan", journal: "Materialia", year: "2024", url: "#" },
-               
-                { title: "Photocatalytic H2 generation and CO2 reduction by WB5-x cocatalyst of TiO2 catalyst", authors: "A.Yu. Kurenkova, A.D. Radina, V.S. Baidyshev, P.V. Povalyaev, E.E. Aidakov, E.Yu. Gerasimov, D.D. Mishchenko, A.V. Zhurenok, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin", journal: "Applied Surface Science", year: "2024", url: "/assets/pdfs/all_publications/2024_photocatalytic.pdf" },
-                
-                { title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning", authors: "F.N. Jalolov, E.V. Podryabinkin, A.R. Oganov, A.V. Shapeev, A.G. Kvashnin", journal: "Advanced Theory and Simulations", year: "2024", url: "/assets/pdfs/all_publications/2024_mechanical_properties.pdf" },
-                
-                { title: "Structure-driven tuning of catalytic properties of core–shell nanostructures", authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin", journal: "Nanoscale", year: "2024", url: "/assets/pdfs/all_publications/2024_nanoscale_str.pdf" },
-                
-                { title: "Origin of brittle behavior of doped PbTe-based thermoelectric materials", authors: "I.V. Chepkasov, A.G. Kvashnin, A.D. Radina, N.A. Matsokin, F.N. Jalolov, D.G. Kvashnin, A.R. Oganov, Z. Dashevsky", journal: "Applied Physics Letters", year: "2024", url: "/assets/pdfs/all_publications/2024_apl_pb_te.pdf" },
-               
-                { title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application", authors: "R.A. Khmelnitsky, V.P. Martovitsky, J.V. Bondareva, A.I. Kolbatova, N. Titova, G.N. Goltsman, F.S. Fedorov, A.V. Egorov, N.A. Matsokin, A.G. Kvashnin, D.G. Kvashnin, S.A. Evlashin", journal: "Journal of Alloys and Compounds", year: "2024", url: "/assets/pdfs/all_publications/2024_NbC_site.pdf" },
-                
-                { title: "Generating and grading 34 optimised norm-conserving Vanderbilt pseudopotentials for actinides and super-heavy elements in the PseudoDojo", authors: "С. Tantardini, M. Iliaš, M. Giantomassi, A.G. Kvashnin, V. Pershina, X. Gonze", journal: "Computer Physics Communications", year: "2024", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
-                
-                { title: "Tuning the surface properties of AuPd nanoparticles for adsorption of O and CO", authors: "I.V. Chepkasov, I.S. Zamulin, V.S. Baidyshev, A.G. Kvashnin", journal: "Physical Chemistry Chemical Physics", year: "2023", url: "/assets/pdfs/all_publications/2024_PCCP_AuPd.pdf" },
-                
-                { title: "Structure-driven tuning of O and CO adsorption on AuCu nanoparticles. A DFT Study", authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin", journal: "Physical Review B", year: "2023", url: "/assets/pdfs/all_publications/2023_PRB.pdf" },
-                
-                { title: "Non-Fermi-Liquid Behavior of Superconducting SnH4", authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.V. Sadakov, D. Zhou, A.G. Kvashnin, I.A. Kruglov, O.A. Sobolevskiy, M.V. Lyubutina, T. Helm, S.W. Tozer, M. Bykov, A.F. Goncharov, V.M. Pudalov, I.S. Lyubutin", journal: "Advanced Science", year: "2023", url: "#" },
-                
-                { title: "Cluster structure of ultrahard fullerite revealed by Raman spectroscopy", authors: "F. Khorobrykh, S. Klimin, B. Kulnitskiy, F.N. Jalolov, A.G. Kvashnin, A. Eliseev, A. Kirichenko, V. Prenas, V. Denisov, N. Mel'nik, P. Sorokin, M. Popov", journal: "Carbon", year: "2023", url: "#" },
-                
-                { title: "Ionic Conductivity of Lithium Phosphides", authors: "A.P. Maltsev, I.V. Chepkasov, A.G. Kvashnin, and A.R. Oganov", journal: "Crystals", year: "2023", url: "/assets/pdfs/all_publications/2023_crystals_Ionic conductivity of lithium phosphides" },
-                
-                { title: "Reactivity of diamanes against oxidation: A DFT study", authors: "S Kaya, H. Dua, U. Sarkar, V.A. Demin, A.G. Kvashnin", journal: "Chemical Physics", year: "2023", url: "#" },
-                
-                { title: "Electronic Properties of Functionalized Diamanes for Field-Emission Displays", authors: "C. Tantardini, A.G. Kvashnin, M. Azizi, X. Gonze, C. Gatti, T. Altalhi, B.I. Yakobson", journal: "ACS Applied Materials & Interfaces", year: "2023", url: "/assets/pdfs/all_publications/2023_electronic_prop.pdf" },
-                
-                { title: "Surface Tamm States of 2–5 nm Nanodiamond via Raman Spectroscopy", authors: "M. Popov, F. Khorobrykh, S. Klimin, V. Churkin, D. Ovsyannikov, A. Kvashnin", journal: "Nanomaterials", year: "2023", url: "/assets/pdfs/all_publications/2023_nanomaterials.pdf" },
-                
-                { title: "Machine learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide", authors: "A.Ya. Pak, V. Sotskov, A.A. Gumovskaya, Yu.Z. Vassilyeva, Z.S. Bolatova, Yu.A. Kvashnina, G.Ya. Mamontov, A.V. Shapeev, A.G. Kvashnin", journal: "npj Computational Materials", year: "2023", url: "/assets/pdfs/all_publications/2023_ml_driven_synthesis.pdf" },
-                
-                { title: "Ultra-Low Thermal Conductivity of Moiré Diamanes", authors: "S. Chowdhury, V.A. Demin, L.A. Chernozatonskii, A.G. Kvashnin", journal: "Membranes", year: "2022", url: "/assets/pdfs/all_publications/2022_ultra_low_thermal.pdf" },
-                
-                { title: "Cu–Au nanoparticles produced by the aggregation of gas-phase metal atoms for CO oxidation", authors: "I.V. Chepkasov, V.S. Baidyshev, A.A. Golubnichiy, I.S. Zamulin, A.G. Kvashnin, S.M. Kozlov", journal: "Aggregate", year: "2022", url: "/assets/pdfs/all_publications/2022_cu_au.pdf" },
-                
-                { title: "Effect of magnetic impurities on superconductivity in LaH10", authors: "D.V. Semenok, I.A. Troyan, A.V. Sadakov, D. Zhou, M. Galasso, A.G. Kvashnin, I.A. Kruglov, A.A. Bykov, K.Y. Terent'ev, A.V. Cherepahin, O.A. Sobolevskiy, K.S. Pervakov, A.Yu. Seregin, T. Helm, T. Förster, A.D. Grockowiak, S.W. Tozer, Y. Nakamoto, K. Shimizu, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov", journal: "Advanced Materials", year: "2022", url: "/assets/pdfs/all_publications/2022_effect_of_magnetic.pdf" },
-                
-                { title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides", authors: "A.G. Kvashnin, D.S. Nikitin, I.I. Shanenkov, I.V. Chepkasov, Yu.A. Kvashnina, A. Nassyrbayev, A.A. Sivkov, Z. Bolatova, A.Ya. Pak", journal: "Advanced Functional Materials", year: "2022", url: "/assets/pdfs/all_publications/2022_large_scale_synthesis_and_applications_of_hafnium_tantalum.pdf" },
-                
-                { title: "Crystal Structure Evolution of Fluorine Under High Pressure", authors: "C. Tantardini, F.N. Jalolov, A.G. Kvashnin", journal: "Journal of Physical Chemistry C", year: "2022", url: "/assets/pdfs/all_publications/2022_crystal_structure_wvolution_of_fluorine.pdf" },
-                
-                { title: "Sr-Doped Molecular Hydrogen: Synthesis and Properties of SrH22", authors: "D.V. Semenok, W. Chen, X. Huang, D. Zhou, I.A. Kruglov, A.B. Mazitov, M. Galasso, C. Tantardini, X. Gonze, A.G. Kvashnin, A.R. Oganov, T. Cui", journal: "Advanced Materials", year: "2022", url: "/assets/pdfs/all_publications/2022_sr_doped_superionic.pdf" },
-                
-                { title: "High-temperature superconductivity in hydrides", authors: "I.A. Trojan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D. Zhou, A.V. Sadakov, O.A. Sobolevsky, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov", journal: "Physics-Uspekhi", year: "2022", url: "/assets/pdfs/all_publications/2022_high_temperature_superconductivity.pdf" },
-                
-                { title: "Efficient Synthesis of WB5-x-WB2 Powders with Selectivity for WB5-x Content", authors: "A.Ya. Pak, D.V. Rybkovskiy, Yu.Z. Vassilyeva, E.N. Kolobova, A.V. Filimonenko, A.G. Kvashnin", journal: "Inorganic Chemistry", year: "2022", url: "/assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf" },
-                
-                { title: "Computational Design of Gas Sensors Based on V3S4 Monolayer", authors: "I.V. Chepkasov, E.V. Sukhanova, A.G. Kvashnin, H.A. Zakaryan, M.A. Aghamalyan, Y.Sh. Mamasakhlisov, A.M. Manakhov, Z.I. Popov, D.G. Kvashnin", journal: "Nanomaterials", year: "2022", url: "/assets/pdfs/all_publications/2022_сomputational_ design_of_gas_sensors.pdf" },
-                
-                { title: "2D-Mo3S4 phase as promising contact for MoS2", authors: "E.V. Sukhanova, A.G. Kvashnin, L.A. Bereznikova, H.A. Zakaryan, M.A. Aghamalyan, D.G. Kvashnin, Z.I. Popov", journal: "Applied Surface Science", year: "2022", url: "/assets/pdfs/all_publications/2022_2d_mo3s4.pdf" },
-                
-                { title: "Map of Two-Dimensional Tungsten Chalcogenide Compounds (W–S, W–Se, W–Te) Based on USPEX Evolutionary Search", authors: "E.V. Sukhanova, A.G. Kvashnin, M.A. Agamalyan, H.A. Zakaryan, Z.I. Popov", journal: "JETP Letters", year: "2022", url: "/assets/pdfs/all_publications/2022_map_of_two_dimensional_tingsten_chalcogenide.pdf" },
-                
-                { title: "Nanohardness from First Principles with Active Learning on Atomic Environments", authors: "E.V. Podryabinkin, A.G. Kvashnin, M. Asgarpour, I.I. Maslenikov, D.A. Ovsyannikov, P.B. Sorokin, M.Yu Popov, A.V. Shapeev", journal: "Journal of Chemical Theory and Computation", year: "2022", url: "/assets/pdfs/all_publications/2022_nanohardness.pdf" },
-                
-                { title: "Diamane quasicrystals", authors: "L.A. Chernozatonskii, V.A. Demin, A.G. Kvashnin, D.G. Kvashnin", journal: "Applied Surface Science", year: "2022", url: "/assets/pdfs/all_publications/2022_diamane_qasicrystals.pdf" }
+                {
+                    title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
+                    authors: "D.S. Nikitin, I.I. Shanenkov, A. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin",
+                    journal: "Int. J. Refr. Met. Hard Mater.",
+                    year: "2026",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_IJRMHM.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.ijrmhm.2025.107537" }
+                    ]
+                },
+                {
+                    title: "Tuning Thermal Conductivity and Electron-Phonon Interactions in Carbon and Boron Nitride Moiré Diamanes via Twist Angle Manipulation",
+                    authors: "R. Arabov, N. Rybin, v. Demin, M. Polovinkin, A. Kvashnin, L. Chernozatonskii, A. Shapeev",
+                    journal: "Appl. Surf. Sci.",
+                    year: "2026",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_ASS.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.apsusc.2025.164801" }
+                    ]
+                },
+                {
+                    title: "Admittance spectroscopy of 2–5 nm detonation diamonds in NaCl-nanodiamond mixture. Electronic properties of small nanodiamonds",
+                    authors: "S.G. Buga, M.Yu. Popov, D.A. Ovsyannikov, V.S. Baidyshev, A.G. Kvashnin",
+                    journal: "Diam. Rel. Mat.",
+                    year: "2025",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_DIAMAT.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.diamond.2025.113184" }
+                    ]
+                },
+                {
+                    title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery. A Review",
+                    authors: "I.V. Chepkasov, A.G. Kvashnin",
+                    journal: "Small",
+                    year: "2025",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_Small_rev.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1002/smll.202508433" }
+                    ]
+                },
+                {
+                    title: "Core-dictated tuning of the performance of amorphous and crystalline TM@Pt and HEA@Pt core-shell nanoparticles catalysts",
+                    authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin",
+                    journal: "Mat. Today. Energy",
+                    year: "2025",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_MTE_core_shell.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.mtener.2025.102130" }
+                    ]
+                },
+                { 
+                    title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization", 
+                    authors: "Yu.A. Bayan, E.R. Beskopylny, E.U. Gerasimov, E.E. Aydakov, K.K. Volik, I.V. Pankov, I.V. Chepkasov, M.M. Lukanov, A.G. Kvashnin, A.A. Alekseenko", 
+                    journal: "Small", 
+                    year: "2025", 
+                    links: [ 
+                        { type: "PDF", url: "/assets/pdfs/Catalyst/2025_Small.pdf" }, 
+                        { type: "DOI", url: "https://doi.org/10.1002/smll.202510144" } 
+                    ] 
+                },
+                { 
+                    title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material", 
+                    authors: "Yu. Vassilyeva, Yu. Neklya, M. Lukanov, A. Kvashnin, A. Pak", 
+                    journal: "Thermal Science and Engineering Progress", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.tsep.2025.104134" }
+                    ]
+                },
+                { 
+                    title: "Charge density waves and structural phase transition in the high-𝑇𝑐 superconducting LaH10 quantum crystal", 
+                    authors: "C. Tantardini, A.G. Kvashnin, M. Giantomassi, M. Iliaš, B.I. Yakobson, R.J. Hemley, X. Gonze", 
+                    journal: "Physical Review B", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_charge_density.pdf" },
+                        { type: "DOI", url: "https://journals.aps.org/prb/abstract/10.1103/c7w9-7tgy" }
+                    ]
+                },
+                { 
+                    title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation", 
+                    authors: "A.R. Vildanova, A.E. Goldt, S.V. Porokhin, A.G. Kvashnin, V.S. Baidyshev, I.V. Chepkasov, F.S. Fedorov, K.A. Litvintseva, A.V. Lalov, V.A. Dmitrieva, M.M. Tepliakova, A.G. Nasibulin", 
+                    journal: "Small", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_ni_nanowires.pdf" },
+                        { type: "DOI", url: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202507040" }
+                    ]
+                },
+                { 
+                    title: "Designing high-efficiency cryogenic regenerators: The role of microstructure and geometry in magnetocaloric cooling", 
+                    authors: "D.Yu. Karpenkov, R.A. Makarin, C. Tantardini, A.G. Kvashnin, A.Yu. Karpenkov, E.V. Argunov, T.A. Sviridova, T.B. Shapaeva, M.V. Zheleznyi", 
+                    journal: "Journal of Alloys and Compounds", 
+                    year: "2025", 
+                    links: [] 
+                },
+                { 
+                    title: "Tuning of Mechanical Properties of doped PbTe-based Thermoelectric Material Driven by Intrinsic Defects", 
+                    authors: "I.V. Chepkasov, A.D. Radina, V.S. Baidyshev, M. Polovinkin, N. Rybin, A. Shapeev, A.A. Krikorov, A.R. Oganov, Z. Dashevsky, D.G. Kvashnin, A.G. Kvashnin", 
+                    journal: "Journal of Materials Chemistry A", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf" },
+                        { type: "DOI", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a" }
+                    ]
+                },
+                { 
+                    title: "SbIV, an Unusual Player in 2D Spintronic Devices", 
+                    authors: "C. Tantardini, M. Azizi, T. Altalhi, A.G. Kvashnin, A. Filippetti, C. Gatti, B.I. Yakobson, X. Gonze", 
+                    journal: "ACS Nano", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_sbiv.pdf" },
+                        { type: "DOI", url: "https://pubs.acs.org/doi/10.1021/acsnano.5c05027?ref=pdf" }
+                    ]
+                },
+                { 
+                    title: "Discovery of chemically modified higher tungsten boride by means of hybrid GNN/DFT approach", 
+                    authors: "N.A. Matsokin, R.A. Eremin, A.A. Kuznetsova, I.S. Humonen, A.V. Krautsou, V.D. Lazarev, Y.Z. Vassilyeva, A.Ya. Pak, S.A. Budennyy, A.G. Kvashnin, A.A. Osiptsov", 
+                    journal: "npj Computational Materials", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/Functional_Materials/2025_discovery_of_chemically.pdf" },
+                        { type: "DOI", url: "https://www.nature.com/articles/s41524-025-01628-z" }
+                    ]
+                },
+                { 
+                    title: "Polyaromatic hydrocarbons as prospective anode materials for metal ion battery", 
+                    authors: "I.V Chepkasov, V.S Baidyshev, A.G Kvashnin", 
+                    journal: "Journal of Energy Storage", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_JES.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S2352152X25015440?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Adsorption properties of crystalline and amorphous PdIr nanoparticles. A systematic first-principles study", 
+                    authors: "I.V. Chepkasov, V.S. Baidyshev, A.V. Iosimovska, I.S. Zamulin, A.G. Kvashnin", 
+                    journal: "Journal of Catalysis", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_Journal_of_Catalysis.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0021951725001678?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Synthesis of high-entropy Ti-Zr-Nb-Hf-Ta carbides and carbonitrides in high-speed arc discharge plasma jet", 
+                    authors: "D.S. Nikitin, I.I. Shanenkov, A.R. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin", 
+                    journal: "Journal of Alloys and Compounds", 
+                    year: "2025", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" },
+                        { type: "URL", url: "https://alexanderkvashnin.github.io/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" }
+                    ]
+                },
+                { 
+                    title: "Physically intuitive anisotropic model of hardness", 
+                    authors: "F.N. Jalolov and A.G. Kvashnin", 
+                    journal: "Physical Review Materials", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_physically_intuitive.pdf" },
+                        { type: "DOI", url: "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.8.123601" }
+                    ]
+                },
+                { 
+                    title: "Melting simulations of high-entropy carbonitrides by deep learning potentials", 
+                    authors: "V.S. Baidyshev, C. Tantardini, A.G. Kvashnin", 
+                    journal: "Scientific Reports", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_melting_simulations.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1038/s41598-024-78377-4" }
+                    ]
+                },
+                { 
+                    title: "Material hardness descriptor derived by symbolic regression", 
+                    authors: "C. Tantardini, H.A. Zakaryan, Z.-K. Han, T. Altalhi, S.V. Levchenko, A.G. Kvashnin, B.I. Yakobson", 
+                    journal: "Journal of Computational Science", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_material_hardness_descriptor.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/pii/S1877750324001959?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Chemical bonding within AIIIBVI materials under uniaxial compression", 
+                    authors: "R.S. Stepanov, A.D. Radina, C. Tantardini, A.G. Kvashnin, A.V. Kolobov", 
+                    journal: "Physical Chemistry Chemical Physics", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_chemical_bonding_stepanov.pdf" },
+                        { type: "DOI", url: "https://pubs.rsc.org/en/content/articlelanding/2024/cp/d4cp00937a" }
+                    ]
+                },
+                { 
+                    title: "Theoretical study of adsorption properties and CO oxidation reaction on surfaces of higher tungsten boride", 
+                    authors: "A.D. Radina, V.S. Baidyshev, I.V. Chepkasov, N.A. Matsokin, T. Altalhi, B.I. Yakobson, A.G. Kvashnin", 
+                    journal: "Scientific Reports", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1038/s41598-024-63676-7" }
+                    ]
+                },
+                { 
+                    title: "Electrical current-assisted reactive crucible melting technique: Case study of the Fe-Sn system", 
+                    authors: "F. Bochkanov, D. Karpenkov, V. Fomin, A. Tukmakova, A. Kvashnin, A. Novotelnova, O. Kutsemako, N. Kulesh, V. Kurichenko, I. Bajenova, A. Khvan", 
+                    journal: "Materialia", 
+                    year: "2024", 
+                    links: [] 
+                },
+                { 
+                    title: "Photocatalytic H2 generation and CO2 reduction by WB5-x cocatalyst of TiO2 catalyst", 
+                    authors: "A.Yu. Kurenkova, A.D. Radina, V.S. Baidyshev, P.V. Povalyaev, E.E. Aidakov, E.Yu. Gerasimov, D.D. Mishchenko, A.V. Zhurenok, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin", 
+                    journal: "Applied Surface Science", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_photocatalytic.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0169433224008080?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning", 
+                    authors: "F.N. Jalolov, E.V. Podryabinkin, A.R. Oganov, A.V. Shapeev, A.G. Kvashnin", 
+                    journal: "Advanced Theory and Simulations", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_mechanical_properties.pdf" },
+                        { type: "DOI", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171" }
+                    ]
+                },
+                { 
+                    title: "Structure-driven tuning of catalytic properties of core–shell nanostructures", 
+                    authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin", 
+                    journal: "Nanoscale", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_nanoscale_str.pdf" },
+                        { type: "DOI", url: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a" }
+                    ]
+                },
+                { 
+                    title: "Origin of brittle behavior of doped PbTe-based thermoelectric materials", 
+                    authors: "I.V. Chepkasov, A.G. Kvashnin, A.D. Radina, N.A. Matsokin, F.N. Jalolov, D.G. Kvashnin, A.R. Oganov, Z. Dashevsky", 
+                    journal: "Applied Physics Letters", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_apl_pb_te.pdf" },
+                        { type: "DOI", url: "https://pubs.aip.org/aip/apl/article-abstract/124/2/022104/2932948/Origin-of-brittle-behavior-of-doped-PbTe-based?redirectedFrom=fulltext" }
+                    ]
+                },
+                { 
+                    title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application", 
+                    authors: "R.A. Khmelnitsky, V.P. Martovitsky, J.V. Bondareva, A.I. Kolbatova, N. Titova, G.N. Goltsman, F.S. Fedorov, A.V. Egorov, N.A. Matsokin, A.G. Kvashnin, D.G. Kvashnin, S.A. Evlashin", 
+                    journal: "Journal of Alloys and Compounds", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_NbC_site.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0925838823045693?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Generating and grading 34 optimised norm-conserving Vanderbilt pseudopotentials for actinides and super-heavy elements in the PseudoDojo", 
+                    authors: "С. Tantardini, M. Iliaš, M. Giantomassi, A.G. Kvashnin, V. Pershina, X. Gonze", 
+                    journal: "Computer Physics Communications", 
+                    year: "2024", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1038/s41598-024-63676-7" }
+                    ]
+                },
+                { 
+                    title: "Tuning the surface properties of AuPd nanoparticles for adsorption of O and CO", 
+                    authors: "I.V. Chepkasov, I.S. Zamulin, V.S. Baidyshev, A.G. Kvashnin", 
+                    journal: "Physical Chemistry Chemical Physics", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_PCCP_AuPd.pdf" },
+                        { type: "DOI", url: "https://pubs.rsc.org/en/content/articlelanding/2023/cp/d3cp03213b" }
+                    ]
+                },
+                { 
+                    title: "Structure-driven tuning of O and CO adsorption on AuCu nanoparticles. A DFT Study", 
+                    authors: "I.V. Chepkasov, V.S. Baidyshev, A.G. Kvashnin", 
+                    journal: "Physical Review B", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_PRB.pdf" },
+                        { type: "DOI", url: "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.205414" }
+                    ]
+                },
+                { 
+                    title: "Non-Fermi-Liquid Behavior of Superconducting SnH4", 
+                    authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.V. Sadakov, D. Zhou, A.G. Kvashnin, I.A. Kruglov, O.A. Sobolevskiy, M.V. Lyubutina, T. Helm, S.W. Tozer, M. Bykov, A.F. Goncharov, V.M. Pudalov, I.S. Lyubutin", 
+                    journal: "Advanced Science", 
+                    year: "2023", 
+                    links: [] 
+                },
+                { 
+                    title: "Cluster structure of ultrahard fullerite revealed by Raman spectroscopy", 
+                    authors: "F. Khorobrykh, S. Klimin, B. Kulnitskiy, F.N. Jalolov, A.G. Kvashnin, A. Eliseev, A. Kirichenko, V. Prenas, V. Denisov, N. Mel'nik, P. Sorokin, M. Popov", 
+                    journal: "Carbon", 
+                    year: "2023", 
+                    links: [] 
+                },
+                { 
+                    title: "Ionic Conductivity of Lithium Phosphides", 
+                    authors: "A.P. Maltsev, I.V. Chepkasov, A.G. Kvashnin, and A.R. Oganov", 
+                    journal: "Crystals", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_crystals_ionic_conductivity_of_lithium_phosphides.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.3390/cryst13050756" }
+                    ]
+                },
+                { 
+                    title: "Reactivity of diamanes against oxidation: A DFT study", 
+                    authors: "S Kaya, H. Dua, U. Sarkar, V.A. Demin, A.G. Kvashnin", 
+                    journal: "Chemical Physics", 
+                    year: "2023", 
+                    links: [] 
+                },
+                { 
+                    title: "Electronic Properties of Functionalized Diamanes for Field-Emission Displays", 
+                    authors: "C. Tantardini, A.G. Kvashnin, M. Azizi, X. Gonze, C. Gatti, T. Altalhi, B.I. Yakobson", 
+                    journal: "ACS Applied Materials & Interfaces", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_electronic_prop.pdf" },
+                        { type: "DOI", url: "https://pubs.acs.org/doi/10.1021/acsami.3c01536?ref=PDF" }
+                    ]
+                },
+                { 
+                    title: "Surface Tamm States of 2–5 nm Nanodiamond via Raman Spectroscopy", 
+                    authors: "M. Popov, F. Khorobrykh, S. Klimin, V. Churkin, D. Ovsyannikov, A. Kvashnin", 
+                    journal: "Nanomaterials", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_nanomaterials.pdf" },
+                        { type: "DOI", url: "https://www.mdpi.com/2079-4991/13/4/696" }
+                    ]
+                },
+                { 
+                    title: "Machine learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide", 
+                    authors: "A.Ya. Pak, v. Sotskov, A.A. Gumovskaya, Yu.Z. Vassilyeva, Z.S. Bolatova, Yu.A. Kvashnina, G.Ya. Mamontov, A.V. Shapeev, A.G. Kvashnin", 
+                    journal: "npj Computational Materials", 
+                    year: "2023", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_ml_driven_synthesis.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1038/s41524-022-00955-9" }
+                    ]
+                },
+                { 
+                    title: "Ultra-Low Thermal Conductivity of Moiré Diamanes", 
+                    authors: "S. Chowdhury, V.A. Demin, L.A. Chernozatonskii, A.G. Kvashnin", 
+                    journal: "Membranes", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_ultra_low_thermal.pdf" },
+                        { type: "DOI", url: "https://www.mdpi.com/2077-0375/12/10/925" }
+                    ]
+                },
+                { 
+                    title: "Cu–Au nanoparticles produced by the aggregation of gas-phase metal atoms for CO oxidation", 
+                    authors: "I.V. Chepkasov, V.S. Baidyshev, A.A. Golubnichiy, I.S. Zamulin, A.G. Kvashnin, S.M. Kozlov", 
+                    journal: "Aggregate", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_cu_au.pdf" },
+                        { type: "DOI", url: "https://onlinelibrary.wiley.com/doi/10.1002/agt2.273" }
+                    ]
+                },
+                { 
+                    title: "Effect of magnetic impurities on superconductivity in LaH10", 
+                    authors: "D.V. Semenok, I.A. Troyan, A.V. Sadakov, D. Zhou, M. Galasso, A.G. Kvashnin, I.A. Kruglov, A.A. Bykov, K.Y. Terent'ev, A.V. Cherepahin, O.A. Sobolevskiy, K.S. Pervakov, A.Yu. Seregin, T. Helm, T. Förster, A.D. Grockowiak, S.W. Tozer, Y. Nakamoto, K. Shimizu, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov", 
+                    journal: "Advanced Materials", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_effect_of_magnetic.pdf" },
+                        { type: "DOI", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202204038" }
+                    ]
+                },
+                { 
+                    title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides", 
+                    authors: "A.G. Kvashnin, D.S. Nikitin, I.I. Shanenkov, I.V. Chepkasov, Yu.A. Kvashnina, A. Nassyrbayev, A.A. Sivkov, Z. Bolatova, A.Ya. Pak", 
+                    journal: "Advanced Functional Materials", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_large_scale_synthesis_and_applications_of_hafnium_tantalum.pdf" },
+                        { type: "DOI", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202206289" }
+                    ]
+                },
+                { 
+                    title: "Crystal Structure Evolution of Fluorine Under High Pressure", 
+                    authors: "C. Tantardini, F.N. Jalolov, A.G. Kvashnin", 
+                    journal: "Journal of Physical Chemistry C", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_crystal_structure_wvolution_of_fluorine.pdf" },
+                        { type: "DOI", url: "https://pubs.acs.org/doi/10.1021/acs.jpcc.2c02213?ref=PDF" }
+                    ]
+                },
+                { 
+                    title: "Sr-Doped Molecular Hydrogen: Synthesis and Properties of SrH22", 
+                    authors: "D.V. Semenok, W. Chen, X. Huang, D. Zhou, I.A. Kruglov, A.B. Mazitov, M. Galasso, C. Tantardini, X. Gonze, A.G. Kvashnin, A.R. Oganov, T. Cui", 
+                    journal: "Advanced Materials", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_sr_doped_superionic.pdf" },
+                        { type: "DOI", url: "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adma.202200924" }
+                    ]
+                },
+                { 
+                    title: "High-temperature superconductivity in hydrides", 
+                    authors: "I.A. Trojan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D. Zhou, A.V. Sadakov, O.A. Sobolevsky, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov", 
+                    journal: "Physics-Uspekhi", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_high_temperature_superconductivity.pdf" },
+                        { type: "DOI", url: "https://link.springer.com/article/10.1007/s10948-022-06148-1" }
+                    ]
+                },
+                { 
+                    title: "Efficient Synthesis of WB5-x-WB2 Powders with Selectivity for WB5-x Content", 
+                    authors: "A.Ya. Pak, D.V. Rybkovskiy, Yu.Z. Vassilyeva, E.N. Kolobova, A.V. Filimonenko, A.G. Kvashnin", 
+                    journal: "Inorganic Chemistry", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf" },
+                        { type: "DOI", url: "https://pubs.acs.org/doi/10.1021/acs.inorgchem.1c03880?ref=PDF" }
+                    ]
+                },
+                { 
+                    title: "Computational Design of Gas Sensors Based on V3S4 Monolayer", 
+                    authors: "I.V. Chepkasov, E.V. Sukhanova, A.G. Kvashnin, H.A. Zakaryan, M.A. Aghamalyan, Y.Sh. Mamasakhlisov, A.M. Manakhov, Z.I. Popov, D.G. Kvashnin", 
+                    journal: "Nanomaterials", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_сomputational_ design_of_gas_sensors.pdf" },
+                        { type: "DOI", url: "https://www.mdpi.com/2079-4991/12/5/774" }
+                    ]
+                },
+                { 
+                    title: "2D-Mo3S4 phase as promising contact for MoS2", 
+                    authors: "E.V. Sukhanova, A.G. Kvashnin, L.A. Bereznikova, H.A. Zakaryan, M.A. Aghamalyan, D.G. Kvashnin, Z.I. Popov", 
+                    journal: "Applied Surface Science", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_2d_mo3s4.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0169433222005414?via%3Dihub" }
+                    ]
+                },
+                { 
+                    title: "Map of Two-Dimensional Tungsten Chalcogenide Compounds (W–S, W–Se, W–Te) Based on USPEX Evolutionary Search", 
+                    authors: "E.V. Sukhanova, A.G. Kvashnin, M.A. Agamalyan, H.A. Zakaryan, Z.I. Popov", 
+                    journal: "JETP Letters", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_map_of_two_dimensional_tingsten_chalcogenide.pdf" },
+                        { type: "DOI", url: "https://link.springer.com/article/10.1134/S0021364022100162" }
+                    ]
+                },
+                { 
+                    title: "Nanohardness from First Principles with Active Learning on Atomic Environments", 
+                    authors: "E.V. Podryabinkin, A.G. Kvashnin, M. Asgarpour, I.I. Maslenikov, D.A. Ovsyannikov, P.B. Sorokin, M.Yu Popov, A.V. Shapeev", 
+                    journal: "Journal of Chemical Theory and Computation", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_nanohardness.pdf" },
+                        { type: "DOI", url: "https://pubs.acs.org/doi/10.1021/acs.jctc.1c00783?ref=PDF" }
+                    ]
+                },
+                { 
+                    title: "Diamane quasicrystals", 
+                    authors: "L.A. Chernozatonskii, V.A. Demin, A.G. Kvashnin, D.G. Kvashnin", 
+                    journal: "Applied Surface Science", 
+                    year: "2022", 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2022_diamane_qasicrystals.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0169433221024144?via%3Dihub" }
+                    ]
+                }
             ]);
         }, 1000);
     });
