@@ -90,79 +90,7 @@ body {
     margin: 0 auto 1rem;
 }
 
-/* Projects */
-.project-tabs {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
 
-.project-tab {
-    padding: 0.5rem 1rem;
-    background: #ecf0f1;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.project-tab.active {
-    background: #3498db;
-    color: white;
-}
-
-.project-details {
-    display: none;
-}
-
-.project-details.active {
-    display: block;
-}
-
-.subprojects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.subproject {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-left: 4px solid #3498db;
-}
-
-.subproject-image {
-    width: 100%;
-    height: 150px;
-    background: #ecf0f1;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #7f8c8d;
-    font-style: italic;
-}
-
-.download-btn {
-    background: #27ae60;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.download-btn:hover {
-    background: #219a52;
-}
 
 /* Publications */
 .publications-list {
@@ -407,34 +335,7 @@ body {
   margin-bottom: 24px;
   justify-content: center;
 }
-/* ===== PROJECTS LAYOUT ===== */
-.project-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
-  justify-content: center;
-}
 
-.project-tab {
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  background-color: #f8fafc;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.project-tab:hover {
-  background-color: #e2e8f0;
-}
-
-.project-tab.active {
-  background-color: #111827;
-  color: #fff;
-}
 
 /* ===== PUBLICATION CARDS GRID ===== */
 .publications-grid {
@@ -1307,4 +1208,117 @@ body::before {
     pointer-events: none;
     z-index: -1;
 }
+
+/* ================= PROJECTS (ACCORDION like COURSES) ================= */
+
+.projects-list {
+    margin-top: 20px;
+}
+
+/* карточка проекта (аналог .course-section) */
+.project-section {
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+/* шапка проекта (аналог .course-header) */
+.project-header {
+    display: flex;
+    cursor: pointer;
+    padding: 25px;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-header:hover {
+    background: #f0f0f0;
+}
+
+/* текст слева */
+.project-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.project-content h2 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.project-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* картинка справа */
+.project-image {
+    width: 200px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* раскрывающаяся часть (аналог .course-details) */
+.project-details {
+    display: none;
+    padding: 30px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.project-details.active {
+    display: block;
+}
+
+/* внутри раскрытия */
+.project-description {
+    margin-bottom: 25px;
+}
+
+.project-description h3 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+.project-description p {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* чтобы публикации выглядели нормально внутри */
+.project-details .publications-grid {
+    margin-top: 16px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-content {
+        padding-right: 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
 
