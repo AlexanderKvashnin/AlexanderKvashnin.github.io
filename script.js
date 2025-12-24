@@ -996,7 +996,7 @@ function simulateGoogleScholarFetch() {
                     year: "2025", 
                     links: [
                         { type: "PDF", url: "/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" },
-                        { type: "URL", url: "https://alexanderkvashnin.github.io/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" }
+                        { type: "DOI", url: "https://alexanderkvashnin.github.io/assets/pdfs/all_publications/2025_synthesis_ti_zr_nb_hf_ta.pdf" }
                     ]
                 },
                 { 
