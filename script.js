@@ -498,7 +498,7 @@ const collaboratorsData = [
     {
         id: 11,
         name: "Stanislav Evlashin",
-        position: "DSc in Physics and Mathematics, Assistant Professor in the Center for Materials Technologies",
+        position: "DSc in Chemistry, Assistant Professor in the Center for Materials Technologies",
         affiliation: " Skolkovo Institute of Science and Technology",
         website: "https://scholar.google.com/citations?user=-MlPGEwAAAAJ&hl=ru"
     },
