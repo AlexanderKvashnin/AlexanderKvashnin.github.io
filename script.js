@@ -858,7 +858,9 @@ function simulateGoogleScholarFetch() {
                     authors: "D.Yu. Karpenkov, R.A. Makarin, C. Tantardini, A.G. Kvashnin, A.Yu. Karpenkov, E.V. Argunov, T.A. Sviridova, T.B. Shapaeva, M.V. Zheleznyi", 
                     journal: "Journal of Alloys and Compounds", 
                     year: "2025", 
-                    links: [] 
+                    links: [
+                        { type: "DOI", url: "https://doi.org/10.1016/j.jallcom.2025.183808" }
+                    ] 
                 },
                 { 
                     title: "Tuning of Mechanical Properties of doped PbTe-based Thermoelectric Material Driven by Intrinsic Defects", 
