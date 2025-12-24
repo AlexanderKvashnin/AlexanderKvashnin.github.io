@@ -566,95 +566,84 @@ function openTeamModal(member) {
 
 // ===== PROJECTS FUNCTIONS =====
 function initializeProjects() {
-    updateProjectTabs();
-    if (projectsData.length > 0) showProject(projectsData[0].id);
-}
+  const container = document.querySelector('.projects-list');
+  if (!container) return;
 
-function updateProjectTabs() {
-  const projectTabs = document.querySelector('.project-tabs');
-  if (!projectTabs) return;
+  container.innerHTML = projectsData.map(p => `
+    <div class="project-section" data-id="${p.id}">
+      
+      <div class="project-header">
+        <div class="project-header-left">
+          <h2 class="project-title">${p.name}</h2>
+        </div>
 
-  projectTabs.innerHTML = '';
-
-  projectsData.forEach(project => {
-    const card = document.createElement('button');
-    card.className = 'project-tab-card';
-    card.setAttribute('data-id', project.id);
-
-    card.innerHTML = `
-      <div class="project-tab-card__img">
-        <img src="${project.image}" alt="${project.name}" onerror="this.style.display='none'">
+        <div class="project-header-image">
+          ${p.image ? `<img src="${p.image}" alt="${p.name}" onerror="this.style.display='none'">` : ''}
+        </div>
       </div>
-      <div class="project-tab-card__title">${project.name}</div>
-    `;
 
-    card.addEventListener('click', () => showProject(project.id));
-    projectTabs.appendChild(card);
+      <div class="project-details">
+        ${p.description ? `<p class="project-description">${p.description}</p>` : ''}
+        ${renderPublications(sortPublicationsDescByYear(p.publications))}
+      </div>
+
+    </div>
+  `).join('');
+
+ 
+  container.querySelectorAll('.project-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const section = this.closest('.project-section');
+      const details = section.querySelector('.project-details');
+
+      container.querySelectorAll('.project-details').forEach(d => {
+        if (d !== details) d.classList.remove('active');
+      });
+
+      details.classList.toggle('active');
+    });
   });
-
-  if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
 }
 
-function showProject(projectId) {
-  const project = projectsData.find(p => p.id === projectId);
-  const projectContent = document.querySelector('.project-content');
-  if (!project || !projectContent) return;
+// ===== helpers for publications sorting =====
+function getYearFromPdfUrl(url) {
+  const file = url.split('/').pop() || '';
+  const m = file.match(/^(\d{4})/);
+  return m ? parseInt(m[1], 10) : 0;
+}
 
-  document.querySelectorAll('.project-tab-card').forEach(tab => {
-  tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
-});
+function sortPublicationsDescByYear(list) {
+  return [...(list || [])].sort((a, b) => {
+    const ya = getYearFromPdfUrl(a.pdfUrl || '');
+    const yb = getYearFromPdfUrl(b.pdfUrl || '');
+    if (yb !== ya) return yb - ya;
+    return (b.title || '').localeCompare(a.title || '');
+  });
+}
 
+function renderPublications(list) {
+  if (!list || !list.length) return `<p>No publications yet.</p>`;
 
-  const sortedPubs = sortPublicationsDescByYear(project.publications);
-
-  projectContent.innerHTML = `
-    <div class="project-details active">
-      <div class="project-hero">
-        ${project.image ? `<img src="${project.image}" alt="${project.name}" onerror="this.style.display='none'">` : ''}
-      </div>
-      <h2>${project.name}</h2>
-      ${project.description ? `<p>${project.description}</p>` : ''}
-      ${renderPublications(sortedPubs)}
+  return `
+    <div class="publications-grid">
+      ${list.map(pub => `
+        <div class="pub-card">
+          <div class="pub-thumb">
+            ${pub.image
+              ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">`
+              : `<div class="thumb-placeholder"></div>`}
+          </div>
+          <div class="pub-info">
+            <h4 class="pub-title">${pub.title}</h4>
+            ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
+            <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener">pdf</a>
+          </div>
+        </div>
+      `).join('')}
     </div>
   `;
 }
 
-function getYearFromPdfUrl(url) {
-    const file = url.split('/').pop() || '';
-    const m = file.match(/^(\d{4})/);
-    return m ? parseInt(m[1], 10) : 0;
-}
-
-function sortPublicationsDescByYear(list) {
-    return [...(list || [])].sort((a, b) => {
-        const ya = getYearFromPdfUrl(a.pdfUrl || '');
-        const yb = getYearFromPdfUrl(b.pdfUrl || '');
-        if (yb !== ya) return yb - ya;
-        return (b.title || '').localeCompare(a.title || '');
-    });
-}
-
-function renderPublications(list) {
-    if (!list || !list.length) {
-        return `<p>No publications yet.</p>`;
-    }
-    return `
-        <div class="publications-grid">
-            ${list.map(pub => `
-                <div class="pub-card">
-                    <div class="pub-thumb">
-                        ${pub.image ? `<img src="${pub.image}" alt="thumbnail" onerror="this.style.display='none'">` : `<div class="thumb-placeholder"></div>`}
-                    </div>
-                    <div class="pub-info">
-                        <h4 class="pub-title">${pub.title}</h4>
-                        ${pub.abstract ? `<p class="pub-abstract">${pub.abstract}</p>` : ''}
-                        <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener" download>pdf</a>
-                    </div>
-                </div>
-            `).join('')}
-        </div>
-    `;
-}
 
 // ===== COLLABORATORS FUNCTIONS =====
 function initializeCollaborators() {
