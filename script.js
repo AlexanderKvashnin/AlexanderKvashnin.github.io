@@ -294,217 +294,130 @@ const teamData = [
 const projectsData = [
   {
     id: 1,
-    name: "Higher tungsten boride",
-    description: "",
+    name: "Higher Tungsten Boride",
+    image: "assets/projects_pic/higher_wb.png",
+    description:
+      "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
       {
         title: "New Tungsten Borides, Their Stability and Outstanding Mechanical Properties",
-        abstract: "Predicted new tungsten borides with wide stability ranges. WB<sub>5</sub> is superhard (≈45 GPa) and tough (~4 MPa·m<sup>0.5</sup>), retaining performance at high temperatures.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf"
       },
       {
-        title: "WB<sub>5−x</sub>: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
-        abstract: "Experiment + DFT resolve disordered WB<sub>5−x</sub> (not 'WB<sub>4</sub>'). Models (e.g., WB<sub>4.18</sub>) match XRD and are energetically favored; excellent mechanical properties and scalable synthesis.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf",
-        image: ""
+        title: "WB5−x: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf"
       },
       {
-        title: "Efficient Synthesis of WB<sub>5−x</sub>–WB<sub>2</sub> Powders with Selectivity for WB<sub>5−x</sub> Content",
-        abstract: "Vacuumless DC arc discharge enables efficient WB<sub>5−x</sub> synthesis. Optimal parameters yield ~61.5% WB<sub>5−x</sub> by volume; nanoparticles mostly ≤100 nm. Low-cost route without vacuum systems.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf",
-        image: ""
+        title: "Efficient Synthesis of WB5−x–WB2 Powders with Selectivity for WB5−x Content",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf"
       },
       {
-        title: "Photocatalytic H<sub>2</sub> Generation and CO<sub>2</sub> Reduction by WB<sub>5−x</sub> Cocatalyst of TiO<sub>2</sub> Catalyst",
-        abstract: "WB<sub>5−x</sub>–WB<sub>2</sub>/TiO<sub>2</sub> composites greatly enhance TiO<sub>2</sub> activity: up to ×23 in H<sub>2</sub> evolution and ×4 in CO<sub>2</sub> reduction under 410 nm. DFT supports observed efficiency gains.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf",
-        image: ""
-      },
-      {
-        title: "Theoretical Study of Adsorption and CO Oxidation on Higher Tungsten Boride Surfaces",
-        abstract: "DFT shows WB<sub>5−x</sub> surfaces exhibit favorable adsorption and low CO-oxidation barriers. Wulff shape predicts exposed (010)/(101) facets; broad gas adsorption suggests catalytic potential.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_scientific_reports.pdf",
-        image: ""
+        title: "Photocatalytic H2 Generation and CO2 Reduction by WB5−x Cocatalyst of TiO2",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf"
       },
       {
         title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
-        abstract: "GNN (trained on ~200 DFT entries) screens >375k structures; Ta substitution broadens stability and boosts hardness. Vacuumless arc synthesis and Vickers tests validate predictions.",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf"
       }
     ]
   },
+
   {
     id: 2,
-    name: "High-entropy materials",
-    description: "",
+    name: "High-Entropy Materials",
+    image: "assets/projects_pic/high_entropy.png",
+    description:
+      "Machine-learning-driven design, synthesis, and thermodynamic modeling of high-entropy carbides and carbonitrides. The project combines deep learning interatomic potentials with plasma and arc-discharge synthesis techniques.",
     publications: [
       {
-        title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC<sub>5</sub> High-Entropy Carbide",
-        abstract: "CMC with ML potentials maps temperatures yielding single-phase vs multi-phase HEC. Arc discharge at ~2000 K gives single-phase TiZrNbHfTaC<sub>5</sub>; below ~1200 K phase separation occurs.",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf",
-        image: ""
+        title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf"
       },
       {
         title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
-        abstract: "DNN potential predicts melting in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>. Melting temperature increases with N, peaking near 25% N (≈3580±30 K) due to structural/entropy effects in the liquid.",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf"
       },
       {
         title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
-        abstract: "One-step plasma method produces single-crystal HE carbides and carbonitrides (N up to ~8 wt%). Ab initio + ML guide composition; process works with metals or oxides as precursors.",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
-        image: ""
-      },
-     {
-        title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
-        abstract: "We develop and demonstrate a new method for preparing high-entropy carbide and carbonitride coatings of IV-V transition metal compounds, using (TiZrNbHfTa)CxNy as an example.",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2026_HECN.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf"
       }
-
     ]
   },
+
   {
     id: 3,
-    name: "Functional materials",
-    description: "",
+    name: "Functional Materials",
+    image: "assets/projects_pic/functional_materials.png",
+    description:
+      "Computational and experimental studies of functional materials including borides, carbides, thermoelectrics, and low-dimensional systems. Focus on structure–property relationships and scalable synthesis routes.",
     publications: [
       {
         title: "Computational Search for New W–Mo–B Compounds",
-        abstract: "Evolutionary prediction identified five stable W–Mo–B ternaries and composition–temperature phase diagrams; links between electronic structure, crystal structure, composition, and mechanical properties were established.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
-        image: ""
-      },
-      {
-        title: "Computational Modeling of 2D Materials under High Pressure and Their Chemical Bonding: Silicene as Possible Field-Effect Transistor",
-        abstract: "Ab initio analysis shows pressure and anisotropic stress alter silicene hybridization; results indicate feasibility of silicene-based FET pressure sensing and a general approach to study stressed 2D materials.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2021_tantardini.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf"
       },
       {
         title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
-        abstract: "Evolutionary search + plasma-dynamic synthesis enable selective HfTaC coatings with controlled stoichiometry and properties; a route toward broader families of functional and high-entropy carbides.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf"
       },
       {
         title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
-        abstract: "Few-nanometer NbC films on diamond exhibit superconductivity up to ~12.4 K (record for NbC); DFT supports stability and potential for sensitive superconductive detectors.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
-        image: ""
-      },
-              {
-        title: "Polyaromatic Hydrocarbons as Prospective Anode Materials for Metal-Ion Batteries",
-        abstract: "First-principles show intercalated PAH crystals (e.g., pentacene) sustain low volume change and can exceed graphite capacity (~1.2–1.3× with Li/Na/K/Rb; ~2.3–2.6× with Mg/Ca).",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jes.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf"
       },
       {
-        title: "Vacuum-free arc synthesis and characterization of crystalline molybdenum borides as instrumental material",
-        abstract: "Crystalline molybdenum borides were synthesized for the first time via DC arc discharge in ambient air. By varying current, arc duration, and Mo:B ratio, multiple phases including MoB, Mo₂B, MoB₂, MoB₃, and MoB<sub>5−x</sub> were obtained. XRD data analyzed with a CNN confirmed phase compositions. Optimal conditions (200 A, 40 s, Mo:B = 1:17) yielded ~70 wt% MoB<sub>5−x</sub>, providing a fast, low-cost route to high-performance boride ceramics.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf",
-        image: ""
-      },
-      {
-        title: "Tuning of Mechanical Properties of Doped PbTe-Based Thermoelectric Materials Driven by Intrinsic Defects",
-        abstract: "DFT+COHP and DNN potentials reveal how dopants and intrinsic defects control brittleness and elasticity in PbTe; guidelines for tailoring mechanical properties are proposed.",
-        pdfUrl: "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf",
-        image: ""
+        title: "Vacuum-Free Arc Synthesis and Characterization of Crystalline Molybdenum Borides",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf"
       }
     ]
   },
+
   {
     id: 4,
     name: "Catalysts",
-    description: "",
+    image: "assets/projects_pic/catalysts.png",
+    description:
+      "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
       {
         title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
-        abstract: "MD of PVD synthesis yields non-equilibrium Cu–Au nanoparticles with size- and time-dependent composition. DFT shows CO-oxidation activity depends on local structure (fcc/icosahedral/amorphous) and is not simply tied to d-band centers.",
-        pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf"
       },
       {
-        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A DFT Study",
-        abstract: "For ~2 nm Au–Cu (core–shell vs alloy; fcc/icosahedral/amorphous), adjusting the core–shell ratio precisely controls O/CO adsorption energies, especially for fcc; alloys cannot reach equivalently narrow ranges.",
-        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
-        image: ""
+        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles",
+        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf"
       },
       {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
-        abstract: "Review of recent progress showing how core–shell architectures and theory (incl. DFT) enable structural control of catalytic performance; promising directions and materials are outlined.",
-        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
-        image: "/assets/projects_pic/TOC_NP.png"
+        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf"
       },
       {
-        title: "Adsorption Properties of Crystalline and Amorphous PdIr Nanoparticles: A Systematic First-Principles Study",
-        abstract: "For Pd–Ir (core–shell and alloy; 79/321 atoms; fcc and amorphous), tuning core–shell ratios narrows adsorption-energy spreads in fcc particles; amorphous particles show wide variability due to many nonequivalent sites.",
-        pdfUrl: "assets/pdfs/Catalyst/2025_journal_of_catalysis.pdf",
-        image: ""
-      },
-      {
-        title: "Tuning the Surface Properties of AuPd Nanoparticles for Adsorption of O and CO",
-        abstract: "Ab initio results link surface charge redistribution and d-band centers to O/CO adsorption in Au–Pd; varying structure and composition (core–shell vs alloy; fcc/icosahedral) enables targeted tuning.",
-        pdfUrl: "assets/pdfs/Catalyst/2023_PCCP_AuPd.pdf",
-        image: ""
-      },
-      {
-        title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
-        abstract: "This study demonstrates a rapid melamine-assisted N-doping method for conductive carbon black (Ketjenblack EC600JD). Density functional theory (DFT) calculations highlight the critical role of pyridinic-N defects in stabilizing atomic Pt, enhancing activity via charge transfer, and improving stability via strong Pt anchoring.",
-        pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
-        image: ""
+        title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support",
+        pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf"
       }
     ]
   },
+
   {
     id: 5,
-    name: "New computational methods",
-    description: "",
+    name: "New Computational Methods",
+    image: "assets/projects_pic/computational_methods.png",
+    description:
+      "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
       {
         title: "Nanohardness from First Principles with Active Learning on Atomic Environments",
-        abstract: "On-the-fly ML potentials coupled to QM enable nanoindentation simulations and nanohardness prediction across materials (e.g., diamond, AlN, SiC, BC<sub>2</sub>N, Si), matching experimental/macroscopic trends.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf"
       },
       {
         title: "GIPAW Pseudopotentials of d Elements for Solid-State NMR",
-        abstract: "Developed GIPAW-capable pseudopotentials for 21 d-elements and validated chemical shifts/quadrupolar couplings on oxides/nitrides. Foundations for ML-aided NMR structure analysis.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf",
-        image: ""
-      },
-      {
-        title: "Generating and Grading 34 Optimised Norm-Conserving Vanderbilt Pseudopotentials for Actinides and Super-Heavy Elements in the PseudoDojo",
-        abstract: "Released scalar/fully-relativistic ONCV pseudopotentials (PBE/PBEsol/LDA) for 34 elements; validated vs all-electron ZORA using Δ-gauges; available in psp8/UPF2 formats.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2023_tantardini.pdf",
-        image: ""
-      },
-      {
-        title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
-        abstract: "New procedure of training DNN potential is proposed and used to predict melting behavior in (TiZrTaHfNb)C<sub>x</sub>N<sub>1−x</sub>; peak T<sub>m</sub> near 25% N (~3580±30 K) is bserved and comprehensively analyzed.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_baidyshev.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf"
       },
       {
         title: "Physically Intuitive Anisotropic Model of Hardness",
-        abstract: "New model of hardness is proposed based on shear/bulk moduli and their spatial variation; model accounts for anisotropy and temperature via EoS-derived parameters; quantities accessible from DFT or experiment.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
-        image: ""
-      },
-      {
-        title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning",
-        abstract: "Active-learning MLIPs on local fragments enable accurate, affordable elasticity for complex polycrystals/composites; demonstrated on polycrystalline diamond with grain-size dependence.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf"
       },
       {
         title: "Material Hardness Descriptor Derived by Symbolic Regression",
-        abstract: "SISSO uncovers compact descriptor for Vickers hardness using bulk/shear moduli and Poisson's ratio; screens 635 compounds, highlighting routes to harder materials via metastable mixing.",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf",
-        image: ""
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf"
       }
     ]
   }
@@ -658,39 +571,52 @@ function initializeProjects() {
 }
 
 function updateProjectTabs() {
-    const projectTabs = document.querySelector('.project-tabs');
-    if (!projectTabs) return;
-    
-    projectTabs.innerHTML = '';
-    projectsData.forEach(project => {
-        const tab = document.createElement('button');
-        tab.className = 'project-tab';
-        tab.textContent = project.name;
-        tab.setAttribute('data-id', project.id);
-        tab.addEventListener('click', () => showProject(project.id));
-        projectTabs.appendChild(tab);
-    });
-    if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
+  const projectTabs = document.querySelector('.project-tabs');
+  if (!projectTabs) return;
+
+  projectTabs.innerHTML = '';
+
+  projectsData.forEach(project => {
+    const card = document.createElement('button');
+    card.className = 'project-tab-card';
+    card.setAttribute('data-id', project.id);
+
+    card.innerHTML = `
+      <div class="project-tab-card__img">
+        <img src="${project.image}" alt="${project.name}" onerror="this.style.display='none'">
+      </div>
+      <div class="project-tab-card__title">${project.name}</div>
+    `;
+
+    card.addEventListener('click', () => showProject(project.id));
+    projectTabs.appendChild(card);
+  });
+
+  if (projectTabs.firstChild) projectTabs.firstChild.classList.add('active');
 }
 
 function showProject(projectId) {
-    const project = projectsData.find(p => p.id === projectId);
-    const projectContent = document.querySelector('.project-content');
-    if (!project || !projectContent) return;
+  const project = projectsData.find(p => p.id === projectId);
+  const projectContent = document.querySelector('.project-content');
+  if (!project || !projectContent) return;
 
-    document.querySelectorAll('.project-tab').forEach(tab => {
-        tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
-    });
+  document.querySelectorAll('.project-tab-card').forEach(tab => {
+  tab.classList.toggle('active', tab.getAttribute('data-id') === String(projectId));
+});
 
-    const sortedPubs = sortPublicationsDescByYear(project.publications);
 
-    projectContent.innerHTML = `
-        <div class="project-details active">
-            <h2>${project.name}</h2>
-            ${project.description ? `<p>${project.description}</p>` : ''}
-            ${renderPublications(sortedPubs)}
-        </div>
-    `;
+  const sortedPubs = sortPublicationsDescByYear(project.publications);
+
+  projectContent.innerHTML = `
+    <div class="project-details active">
+      <div class="project-hero">
+        ${project.image ? `<img src="${project.image}" alt="${project.name}" onerror="this.style.display='none'">` : ''}
+      </div>
+      <h2>${project.name}</h2>
+      ${project.description ? `<p>${project.description}</p>` : ''}
+      ${renderPublications(sortedPubs)}
+    </div>
+  `;
 }
 
 function getYearFromPdfUrl(url) {
