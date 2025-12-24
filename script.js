@@ -8,36 +8,43 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCollaborators();
     initializeVideos();
     initializeReviews();
+     const activeTab = document.querySelector('.tab-link.active')?.getAttribute('data-tab');
+  if (activeTab === 'courses' && !coursesInitialized) {
+    initializeCourses();
+    coursesInitialized = true;
+  }
 });
+
+let coursesInitialized = false;
 
 function initializeTabs() {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const tabContents = document.querySelectorAll('.tab-content');
+  const tabLinks = document.querySelectorAll('.tab-link');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-    tabLinks.forEach(tab => {
-        tab.addEventListener('click', function(e) {
-    e.preventDefault();
-    const tabId = this.getAttribute('data-tab');
+  tabLinks.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    tabLinks.forEach(t => t.classList.remove('active'));
-    tabContents.forEach(c => c.classList.remove('active'));
+      const tabId = tab.getAttribute('data-tab');
+      const target = document.getElementById(tabId);
+      if (!target) return;
 
-    this.classList.add('active');
-    document.getElementById(tabId).classList.add('active');
+      tabLinks.forEach(t => t.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
 
-    if (tabId === 'publications') {
-        loadPublications();
-    }
+      tab.classList.add('active');
+      target.classList.add('active');
 
-    if (tabId === 'courses') {
-        initializeCourses(); 
-        if (tabId === 'reviews') {
-    initializeReviews();
-}
-    }
-});
+      if (tabId === 'publications') loadPublications();
+
+      if (tabId === 'courses' && !coursesInitialized) {
+        initializeCourses();
+        coursesInitialized = true;
+      }
     });
+  });
 }
+
 // ===== REVIEWS DATA =====
 const reviewsData = [
     {
