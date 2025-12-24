@@ -971,13 +971,6 @@ function simulateGoogleScholarFetch() {
                     ]
                 },
                 { 
-                    title: "Electrical current-assisted reactive crucible melting technique: Case study of the Fe-Sn system", 
-                    authors: "F. Bochkanov, D. Karpenkov, V. Fomin, A. Tukmakova, A. Kvashnin, A. Novotelnova, O. Kutsemako, N. Kulesh, V. Kurichenko, I. Bajenova, A. Khvan", 
-                    journal: "Materialia", 
-                    year: "2024", 
-                    links: [] 
-                },
-                { 
                     title: "Photocatalytic H2 generation and CO2 reduction by WB5-x cocatalyst of TiO2 catalyst", 
                     authors: "A.Yu. Kurenkova, A.D. Radina, V.S. Baidyshev, P.V. Povalyaev, E.E. Aidakov, E.Yu. Gerasimov, D.D. Mishchenko, A.V. Zhurenok, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin", 
                     journal: "Applied Surface Science", 
@@ -1062,14 +1055,19 @@ function simulateGoogleScholarFetch() {
                     authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.V. Sadakov, D. Zhou, A.G. Kvashnin, I.A. Kruglov, O.A. Sobolevskiy, M.V. Lyubutina, T. Helm, S.W. Tozer, M. Bykov, A.F. Goncharov, V.M. Pudalov, I.S. Lyubutin", 
                     journal: "Advanced Science", 
                     year: "2023", 
-                    links: [] 
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2023_SnH4.pdf"},
+                        { type: "DOI", url: "https://doi.org/10.1002/advs.202303622"}
+                    ] 
                 },
                 { 
                     title: "Cluster structure of ultrahard fullerite revealed by Raman spectroscopy", 
                     authors: "F. Khorobrykh, S. Klimin, B. Kulnitskiy, F.N. Jalolov, A.G. Kvashnin, A. Eliseev, A. Kirichenko, V. Prenas, V. Denisov, N. Mel'nik, P. Sorokin, M. Popov", 
                     journal: "Carbon", 
                     year: "2023", 
-                    links: [] 
+                    links: [
+                        { type: "DOI", url: "https://doi.org/10.1016/j.carbon.2023.118314"}
+                           ] 
                 },
                 { 
                     title: "Ionic Conductivity of Lithium Phosphides", 
@@ -1080,13 +1078,6 @@ function simulateGoogleScholarFetch() {
                         { type: "PDF", url: "/assets/pdfs/all_publications/2023_crystals_ionic_conductivity_of_lithium_phosphides.pdf" },
                         { type: "DOI", url: "https://doi.org/10.3390/cryst13050756" }
                     ]
-                },
-                { 
-                    title: "Reactivity of diamanes against oxidation: A DFT study", 
-                    authors: "S Kaya, H. Dua, U. Sarkar, V.A. Demin, A.G. Kvashnin", 
-                    journal: "Chemical Physics", 
-                    year: "2023", 
-                    links: [] 
                 },
                 { 
                     title: "Electronic Properties of Functionalized Diamanes for Field-Emission Displays", 
