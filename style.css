@@ -142,7 +142,7 @@ body {
     opacity: 0.9;
 }
 
-/* Цвета для разных типов ссылок */
+
 .link-pdf {
     background-color: #dc3545;
 }
@@ -1337,7 +1337,7 @@ body::before {
 
 .project-details .pub-thumb,
 .project-details .thumb-placeholder {
-  display: none !important;   /* убираем картинки у статей */
+  display: none !important;   
 }
 
 .project-details .pub-info {
@@ -1350,7 +1350,7 @@ body::before {
 }
 
 .project-details .pub-abstract {
-  display: none; /* если абстракты тоже не нужны — оставь; если нужны, скажи */
+  display: none; 
 }
 
 .project-details .download-btn {
