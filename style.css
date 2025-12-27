@@ -1388,3 +1388,149 @@ body::before {
 }
 
 
+/* =========================================================
+   PROJECTS: bigger cards + nice publication list (PDF/DOI)
+   Put this block at the VERY END of your CSS
+   ========================================================= */
+
+/* --- Make project cards bigger / nicer --- */
+.project-section {
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.project-header {
+  padding: 28px;
+  gap: 26px;
+}
+
+.project-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Bigger image box (even if image not yet added) */
+.project-image {
+  width: 320px;
+  height: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+/* Placeholder text (won’t block clicks) */
+.project-image::after {
+  content: "Project image";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6b7280;
+  letter-spacing: 0.2px;
+  pointer-events: none;
+}
+
+/* If img exists, it covers placeholder */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Publications inside Projects (your real markup) --- */
+.project-pubs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* one row = clean card */
+.project-pub-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* text part */
+.project-pub-text {
+  flex: 1;
+  min-width: 0; /* so long titles wrap nicely */
+}
+
+/* Title = bold */
+.project-pub-title {
+  font-weight: 700;
+  font-size: 15.5px;
+  line-height: 1.35;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+/* Authors = thin gray */
+.project-pub-authors {
+  font-size: 13.5px;
+  color: #6b7280;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* links (PDF/DOI) */
+.project-pub-links {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Make link buttons work everywhere (not only inside .links) */
+.project-pub-links a.link-pdf,
+.project-pub-links a.link-doi {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.project-pub-links a.link-pdf:hover,
+.project-pub-links a.link-doi:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* keep your colors, but ensure they apply */
+a.link-pdf { background: #dc3545; }
+a.link-doi { background: #28a745; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .project-pub-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-pub-links {
+    width: 100%;
+  }
+}
