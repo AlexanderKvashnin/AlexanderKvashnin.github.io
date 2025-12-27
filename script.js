@@ -603,30 +603,8 @@ function openTeamModal(member) {
 }
 
 
-    body.innerHTML = `
-        <div class="modal-team-member">
-            <div class="modal-photo">
-                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
-            </div>
 
-            <div class="modal-info">
-                <h2>${member.name}</h2>
-                <p><strong>Position:</strong> ${member.position}</p>
-                <p><strong>Bio:</strong> ${member.bio}</p>
-
-                ${member.website ? 
-                    `<a href="${member.website}" target="_blank" class="team-btn">Google Scholar</a>` 
-                    : ''}
-
-                ${member.cv ? 
-                    `<a href="${member.cv}" target="_blank" class="team-btn">CV</a>` 
-                    : ''}
-            </div>
-        </div>
-    `;
-
-    modal.style.display = 'block';
-}
+   
 
 
 
