@@ -290,7 +290,9 @@ const teamData = [
   }
 ];
 
-// ===== PROJECTS DATA =====
+// -----------------------------
+// Projects data (updated with authors + doiUrl)
+// -----------------------------
 const projectsData = [
   {
     id: 1,
@@ -300,24 +302,34 @@ const projectsData = [
       "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
       {
-        title: "New Tungsten Borides, Their Stability and Outstanding Mechanical Properties",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf"
-      },
-      {
-        title: "WB5−x: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf"
-      },
-      {
-        title: "Efficient Synthesis of WB5−x–WB2 Powders with Selectivity for WB5−x Content",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf"
+        title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
+        authors: "Nikita A. Matsokin, Roman A. Eremin, Anastasia A. Kuznetsova, Innokentiy S. Humonen, Aliaksei V. Krautsou, Vladimir D. Lazarev, Yuliya Z. Vassilyeva, Alexander Ya. Pak, Semen A. Budennyy, Alexander G. Kvashnin, Andrei A. Osiptsov",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf",
+        doiUrl: "https://doi.org/10.1038/s41524-025-01628-z"
       },
       {
         title: "Photocatalytic H2 Generation and CO2 Reduction by WB5−x Cocatalyst of TiO2",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf"
+        authors: "Anna Yu. Kurenkova, Aleksandra D. Radina, Viktor S. Baidyshev, Pavel V. Povalyaev, Egor E. Aidakov, Evgeny Yu. Gerasimov, Denis D. Mishchenko, Angelina V. Zhurenok, Alexander Ya. Pak, Ekaterina A. Kozlova, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0169433224008080?via%3Dihub"
       },
       {
-        title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
-        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf"
+        title: "Efficient Synthesis of WB5−x–WB2 Powders with Selectivity for WB5−x Content",
+        authors: "Alexander Ya. Pak, Dmitry V. Rybkovskiy, Yuliya Z. Vassilyeva, Ekaterina N. Kolobova, Alexander V. Filimonenko, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf",
+        doiUrl: "https://pubs.acs.org/doi/10.1021/acs.inorgchem.1c03880"
+      },
+      {
+        title: "WB5−x: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
+        authors: "Alexander G. Kvashnin, Dmitry V. Rybkovskiy, Vladimir P. Filonenko, Vasilii I. Bugakov, Igor P. Zibrov, Vadim V. Brazhkin, Artem R. Oganov, Andrey A. Osiptsov, Artem Ya. Zakirov",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf",
+        doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202000775"
+      },
+      {
+        title: "New Tungsten Borides, Their Stability and Outstanding Mechanical Properties",
+        authors: "Alexander G. Kvashnin, Hayk A. Zakaryan, Changming Zhao, Yifeng Duan, Yulia A. Kvashnina, Congwei Xie, Huafeng Dong, Artem R. Oganov",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf",
+        doiUrl: "https://pubs.acs.org/doi/10.1021/acs.jpclett.8b01262"
       }
     ]
   },
@@ -330,16 +342,22 @@ const projectsData = [
       "Machine-learning-driven design, synthesis, and thermodynamic modeling of high-entropy carbides and carbonitrides. The project combines deep learning interatomic potentials with plasma and arc-discharge synthesis techniques.",
     publications: [
       {
-        title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf"
+        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+        authors: "Dmitry S. Nikitin, Ivan I. Shanenkov, Artur R. Nassyrbayev, Alexander A. Sivkov, Viktor S. Baidyshev, Yulia A. Kvashnina, Nikita A. Matsokin, Alexander Ya. Pak, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925838824037666?via%3Dihub"
       },
       {
         title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf"
+        authors: "Viktor S. Baidyshev, Christian Tantardini, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf",
+        doiUrl: "https://www.nature.com/articles/s41598-024-78377-4"
       },
       {
-        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
-        pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf"
+        title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide",
+        authors: "Alexander Ya. Pak, Vadim Sotskov, Arina A. Gumovskaya, Yuliya Z. Vassilyeva, Zhanar S. Bolatova, Yulia A. Kvashnina, Gennady Ya. Mamontov, Alexander V. Shapeev, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf",
+        doiUrl: "https://www.nature.com/articles/s41524-022-00955-9"
       }
     ]
   },
@@ -352,20 +370,28 @@ const projectsData = [
       "Computational and experimental studies of functional materials including borides, carbides, thermoelectrics, and low-dimensional systems. Focus on structure–property relationships and scalable synthesis routes.",
     publications: [
       {
-        title: "Computational Search for New W–Mo–B Compounds",
-        pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf"
-      },
-      {
-        title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
-        pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf"
+        title: "Vacuum-Free Arc Synthesis and Characterization of Crystalline Molybdenum Borides as Instrumental Material",
+        authors: "Yuliya Vassilyeva, Yulia Neklya, Mikhail Lukanov, Alexander Kvashnin, Alexander Pak",
+        pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S2451904925009254?via%3Dihub"
       },
       {
         title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
-        pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf"
+        authors: "R.A. Khmelnitsky, V.P. Martovitsky, J.V. Bondareva, A.I. Kolbatova, N.A. Titova, G.N. Goltsman, F.S. Fedorov, A.V. Egorov, N.A. Matsokin, A.G. Kvashnin, D.G. Kvashnin, S.A. Evlashin",
+        pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925838823045693?via%3Dihub"
       },
       {
-        title: "Vacuum-Free Arc Synthesis and Characterization of Crystalline Molybdenum Borides",
-        pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf"
+        title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
+        authors: "Alexander G. Kvashnin, Dmitry S. Nikitin, Ivan I. Shanenkov, Ilia V. Chepkasov, Yulia A. Kvashnina, Artur Nassyrbayev, Alexander A. Sivkov, Zhanar Bolatova, Alexander Ya. Pak",
+        pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
+        doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202206289"
+      },
+      {
+        title: "Computational Search for New W–Mo–B Compounds",
+        authors: "Alexander G. Kvashnin, Christian Tantardini, Hayk A. Zakaryan, Yulia A. Kvashnina, Artem R. Oganov",
+        pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
+        doiUrl: "https://pubs.acs.org/doi/10.1021/acs.chemmater.0c02440?ref=pdf"
       }
     ]
   },
@@ -378,20 +404,28 @@ const projectsData = [
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
       {
-        title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
-        pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf"
-      },
-      {
-        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles",
-        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf"
+        title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
+        authors: "Yulia A. Bayan, Egor R. Beskopylny, Evgeny U. Gerasimov, Egor E. Aydakov, Kirill K. Volik, Ilya V. Pankov, Ilya V. Chepkasov, Michael M. Lukanov, Alexander G. Kvashnin, Anastasia A. Alekseenko",
+        pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
+        doiUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202510144"
       },
       {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
-        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf"
+        authors: "Ilya V. Chepkasov, Aleksandra D. Radina, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
+        doiUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a"
       },
       {
-        title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support",
-        pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf"
+        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A Density Functional Theory Study",
+        authors: "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
+        doiUrl: "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.205414"
+      },
+      {
+        title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
+        authors: "Ilya V. Chepkasov, Viktor S. Baidyshev, Artem A. Golubnichiy, Ivan S. Zamulin, Alexander G. Kvashnin, Sergey M. Kozlov",
+        pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
+        doiUrl: "https://onlinelibrary.wiley.com/doi/10.1002/agt2.273"
       }
     ]
   },
@@ -404,24 +438,33 @@ const projectsData = [
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
       {
-        title: "Nanohardness from First Principles with Active Learning on Atomic Environments",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf"
-      },
-      {
-        title: "GIPAW Pseudopotentials of d Elements for Solid-State NMR",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf"
-      },
-      {
         title: "Physically Intuitive Anisotropic Model of Hardness",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf"
+        authors: "Faridun N. Jalolov, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
+        doiUrl: "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.8.123601"
       },
       {
         title: "Material Hardness Descriptor Derived by Symbolic Regression",
-        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf"
+        authors: "Christian Tantardini, Hayk A. Zakaryan, Zhong-Kang Han, Tariq Altalhi, Sergey V. Levchenko, Alexander G. Kvashnin, Boris I. Yakobson",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/pii/S1877750324001959?via%3Dihub"
+      },
+      {
+        title: "GIPAW Pseudopotentials of d Elements for Solid-State NMR",
+        authors: "Christian Tantardini, Alexander G. Kvashnin, Davide Ceresoli",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf",
+        doiUrl: "https://www.mdpi.com/1996-1944/15/9/3347"
+      },
+      {
+        title: "Nanohardness from First Principles with Active Learning on Atomic Environments",
+        authors: "Evgeny V. Podryabinkin, Alexander G. Kvashnin, Milad Asgarpour, Igor I. Maslenikov, Danila A. Ovsyannikov, Pavel B. Sorokin, Mikhail Yu Popov, Alexander V. Shapeev",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf",
+        doiUrl: "https://pubs.acs.org/doi/10.1021/acs.jctc.1c00783?ref=pdf"
       }
     ]
   }
 ];
+
 
 // ===== COLLABORATORS DATA =====
 const collaboratorsData = [
@@ -533,9 +576,32 @@ function initializeTeam() {
 }
 
 function openTeamModal(member) {
-    const modal = document.getElementById('teamModal');
-    const body = modal.querySelector('.modal-body');
-    if (!modal || !body) return;
+  const modal = document.getElementById('teamModal');
+  if (!modal) return;
+
+  const body = modal.querySelector('.modal-body');
+  if (!body) return;
+
+  body.innerHTML = `
+    <div class="modal-team-member">
+      <div class="modal-photo">
+        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+      </div>
+
+      <div class="modal-info">
+        <h2>${member.name}</h2>
+        <p><strong>Position:</strong> ${member.position}</p>
+        <p><strong>Bio:</strong> ${member.bio}</p>
+
+        ${member.website ? `<a href="${member.website}" target="_blank" rel="noopener" class="team-btn">Google Scholar</a>` : ''}
+        ${member.cv ? `<a href="${member.cv}" target="_blank" rel="noopener" class="team-btn">CV</a>` : ''}
+      </div>
+    </div>
+  `;
+
+  modal.style.display = 'block';
+}
+
 
     body.innerHTML = `
         <div class="modal-team-member">
@@ -564,50 +630,11 @@ function openTeamModal(member) {
 
 
 
-// ===== PROJECTS FUNCTIONS =====
-function initializeProjects() {
-  const container = document.querySelector('.projects-list');
-  if (!container) return;
+// ================= PROJECTS FUNCTIONS =================
 
-  container.innerHTML = projectsData.map(p => `
-    <div class="project-section" data-id="${p.id}">
-      
-      <div class="project-header">
-        <div class="project-header-left">
-          <h2 class="project-title">${p.name}</h2>
-        </div>
-
-        <div class="project-header-image">
-          ${p.image ? `<img src="${p.image}" alt="${p.name}" onerror="this.style.display='none'">` : ''}
-        </div>
-      </div>
-
-      <div class="project-details">
-        ${p.description ? `<p class="project-description">${p.description}</p>` : ''}
-        ${renderPublications(sortPublicationsDescByYear(p.publications))}
-      </div>
-
-    </div>
-  `).join('');
-
- 
-  container.querySelectorAll('.project-header').forEach(header => {
-    header.addEventListener('click', function () {
-      const section = this.closest('.project-section');
-      const details = section.querySelector('.project-details');
-
-      container.querySelectorAll('.project-details').forEach(d => {
-        if (d !== details) d.classList.remove('active');
-      });
-
-      details.classList.toggle('active');
-    });
-  });
-}
-
-// ===== helpers for publications sorting =====
+// ---- sorting helpers (by year from pdf filename prefix: YYYY_...) ----
 function getYearFromPdfUrl(url) {
-  const file = url.split('/').pop() || '';
+  const file = (url || '').split('/').pop() || '';
   const m = file.match(/^(\d{4})/);
   return m ? parseInt(m[1], 10) : 0;
 }
@@ -621,26 +648,76 @@ function sortPublicationsDescByYear(list) {
   });
 }
 
-function renderPublications(list) {
+// ---- render publications for Projects (title + authors gray + PDF + DOI) ----
+function renderProjectPublications(list) {
   if (!list || !list.length) return `<p>No publications yet.</p>`;
 
   return `
-    <div class="publications-grid">
+    <div class="project-pubs">
       ${list.map(pub => `
-        <div class="pub-card">
-          <div class="pub-info">
-            <h4 class="pub-title">
-              <a href="${pub.pdfUrl}" target="_blank" rel="noopener">
-                ${pub.title}
-              </a>
-            </h4>
+        <div class="project-pub-row">
+
+          <div class="project-pub-text">
+            <div class="project-pub-title">${pub.title || ''}</div>
+            ${pub.authors ? `<div class="project-pub-authors">${pub.authors}</div>` : ''}
           </div>
-          <a class="download-btn" href="${pub.pdfUrl}" target="_blank" rel="noopener">PDF</a>
+
+          <div class="project-pub-links">
+            ${pub.pdfUrl ? `<a class="link-pdf" href="${pub.pdfUrl}" target="_blank" rel="noopener">PDF</a>` : ''}
+            ${pub.doiUrl ? `<a class="link-doi" href="${pub.doiUrl}" target="_blank" rel="noopener">DOI</a>` : ''}
+          </div>
+
         </div>
       `).join('')}
     </div>
   `;
 }
+
+// ---- main initializer (collapsed: description+image visible; expanded: publications only) ----
+function initializeProjects() {
+  const container = document.querySelector('.projects-list');
+  if (!container) return;
+
+  container.innerHTML = projectsData.map(p => `
+    <div class="project-section" data-id="${p.id}">
+
+      <div class="project-header">
+        <div class="project-content">
+          <h2 class="project-title">${p.name || ''}</h2>
+          ${p.description ? `<p class="project-short">${p.description}</p>` : ''}
+        </div>
+
+        <div class="project-image">
+          ${p.image ? `<img src="${p.image}" alt="${p.name || 'project image'}" onerror="this.style.display='none'">` : ''}
+        </div>
+      </div>
+
+      <div class="project-details">
+        ${renderProjectPublications(sortPublicationsDescByYear(p.publications))}
+      </div>
+
+    </div>
+  `).join('');
+
+  container.querySelectorAll('.project-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const section = this.closest('.project-section');
+      if (!section) return;
+
+      const details = section.querySelector('.project-details');
+      if (!details) return;
+
+      // close others
+      container.querySelectorAll('.project-details').forEach(d => {
+        if (d !== details) d.classList.remove('active');
+      });
+
+      // toggle current
+      details.classList.toggle('active');
+    });
+  });
+}
+
 
 
 
