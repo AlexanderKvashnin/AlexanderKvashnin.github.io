@@ -327,14 +327,42 @@ body {
         margin: 0 auto;
     }
 }
-/* ===== STYLES FOR PROJECT CARDS ===== */
-.project-tabs {
+/* ================= ONLY FOR PROJECTS ================= */
+/* Публикации внутри проектов: делаем списком-строками, без превью */
+.project-details .publications-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
 }
+
+.project-details .pub-card {
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 14px;
+}
+
+.project-details .pub-thumb,
+.project-details .thumb-placeholder {
+  display: none !important;
+}
+
+.project-details .pub-info {
+  padding: 0;
+  flex: 1;
+}
+
+.project-details .pub-abstract {
+  display: none;
+}
+
+.project-details .download-btn {
+  margin-left: auto;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
 
 
 /* ===== PUBLICATION CARDS GRID ===== */
