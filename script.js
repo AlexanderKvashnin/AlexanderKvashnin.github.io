@@ -297,7 +297,7 @@ const projectsData = [
   {
     id: 1,
     name: "Higher Tungsten Boride",
-    image: "assets/projects_pic/higher_wb.png",
+    image: "assets/projects_pic/WB5-x.png",
     description:
       "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
