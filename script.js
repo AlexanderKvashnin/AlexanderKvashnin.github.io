@@ -438,6 +438,12 @@ const projectsData = [
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
       {
+        title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning",
+        authors: "Faridun N. Jalolov, Evgeny V. Podryabinkin, Artem R. Oganov, Alexander V. Shapeev, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf",
+        doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171"
+      },
+      {
         title: "Physically Intuitive Anisotropic Model of Hardness",
         authors: "Faridun N. Jalolov, Alexander G. Kvashnin",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
