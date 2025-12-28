@@ -512,7 +512,7 @@ const collaboratorsData = [
   {
     id: 6,
     name: "Dmitry Kvashnin",
-    position: "DSc in Physics and Mathematics, Head of the Center for Computer Modeling of Inorganic and Composite Nanoscale Materials",
+    position: "DSc in Physics and Mathematics, Head of the Center for Computer Simulation of Inorganic and Composite Nanoscale Materials",
     affiliation: "Emanuel Institute of Biochemical Physics, RAS",
     website: "https://scholar.google.ru/citations?user=iD1tun0AAAAJ"
   },
