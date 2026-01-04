@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCollaborators();
     initializeVideos();
     initializeReviews();
+    initializeResources();
      const activeTab = document.querySelector('.tab-link.active')?.getAttribute('data-tab');
   if (activeTab === 'courses' && !coursesInitialized) {
     initializeCourses();
@@ -471,6 +472,105 @@ const projectsData = [
   }
 ];
 
+// ===== RESEARCH RESOURCES DATA =====
+const resourcesData = [
+  {
+    id: 1,
+    title: "Datasets",
+    description: "Curated datasets for atomistic simulations, ML potentials, and materials property prediction.",
+    image: "assets/resources/datasets.png", // можно пока не создавать — будет плейсхолдер
+    items: [
+      {
+        name: "PbTe mechanics dataset",
+        note: "Dataset for PbTe mechanical/deformation studies; suitable for ML potential training.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=PbTe_mechanics_dataset&id=394" },
+          { label: "URL", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" }
+        ]
+      },
+      {
+        name: "Nanoindentation dataset",
+        note: "Dataset for training interatomic potentials for nanoindentation simulations.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Nanoindentation_dataset&id=324" }
+        ]
+      },
+      {
+        name: "High-entropy carbonitrides (HECN) dataset",
+        note: "Crystalline + liquid structures for deep learning potentials and atomistic modeling.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=DP_HECN_cryst_liquid_dataset&id=321" }
+        ]
+      },
+      {
+        name: "Hf–Ta–C structural dataset",
+        note: "Atomic structures of Hf–Ta–C compounds.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Hf-Ta-C_dataset&id=323" }
+        ]
+      },
+      {
+        name: "Polycrystalline diamond dataset",
+        note: "Polycrystalline diamond structures for mechanical and atomistic simulations.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Polycrystal_diamond_dataset&id=325" }
+        ]
+      },
+      {
+        name: "Bimetallic core–shell nanoparticles dataset",
+        note: "Core–shell nanoparticle structures with an accompanying publication.",
+        links: [
+          { label: "URL", url: "https://github.com/AlexanderKvashnin/BiClusters" }
+        ]
+      },
+      {
+        name: "CuAu nanoparticles dataset",
+        note: "CuAu nanoparticle structures for atomistic/DFT/ML studies.",
+        links: [
+          { label: "URL", url: "https://github.com/AlexanderKvashnin/AuCu_nanoparticles" }
+        ]
+      },
+      {
+        name: "Hardness prediction dataset (SISSO)",
+        note: "Dataset and code for predicting hardness using symbolic regression descriptors.",
+        links: [
+          { label: "URL", url: "https://github.com/AlexanderKvashnin/SISSO_hardness" }
+        ]
+      },
+      {
+        name: "WB5−x surfaces adsorption dataset",
+        note: "Adsorption structures (POSCARs) for various molecules on WB5−x surfaces.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=WB5-x-surfaces-POSCARS&id=322" }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 2,
+    title: "Pre-trained Models",
+    description: "Ready-to-use interatomic potentials for large-scale simulations.",
+    image: "assets/resources/models.png",
+    items: [
+      {
+        name: "DeePMD potential for high-entropy carbonitrides",
+        note: "Pre-trained DeePMD potential for melting and mechanical simulations.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=DP_HECN_model&id=320" }
+        ]
+      },
+      {
+        name: "DeePMD potential for PbTe",
+        note: "Pre-trained DeePMD potential for mechanical simulations of PbTe.",
+        links: [
+          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=PbTe_mechanics_potentials&id=393" }
+        ]
+      }
+    ]
+  }
+];
+
 
 // ===== COLLABORATORS DATA =====
 const collaboratorsData = [
@@ -702,6 +802,75 @@ function initializeProjects() {
   });
 }
 
+// ===== RESEARCH RESOURCES FUNCTIONS =====
+function renderResourceItems(items) {
+  if (!items || !items.length) return `<p>No items yet.</p>`;
+
+  return `
+    <div class="resource-items">
+      ${items.map(it => `
+        <div class="resource-item">
+          <div class="resource-item-top">
+            <div class="resource-item-text">
+              <div class="resource-item-title">${it.name || ''}</div>
+              ${it.note ? `<div class="resource-item-note">${it.note}</div>` : ''}
+            </div>
+
+            <div class="resource-item-links">
+              ${(it.links || []).map(l => `
+                <a class="resource-link-btn" href="${l.url}" target="_blank" rel="noopener">${l.label || 'URL'}</a>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function initializeResources() {
+  const container = document.querySelector('.resources-list');
+  if (!container) return;
+
+  container.innerHTML = resourcesData.map(section => `
+    <div class="resource-section" data-id="${section.id}">
+
+      <div class="resource-header">
+        <div class="resource-content">
+          <h2 class="resource-title">${section.title || ''}</h2>
+          ${section.description ? `<p class="resource-short">${section.description}</p>` : ''}
+        </div>
+
+        <div class="resource-image">
+          ${section.image ? `<img src="${section.image}" alt="${section.title || 'resource image'}" onerror="this.style.display='none'">` : ''}
+        </div>
+      </div>
+
+      <div class="resource-details">
+        ${renderResourceItems(section.items)}
+      </div>
+
+    </div>
+  `).join('');
+
+  container.querySelectorAll('.resource-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const section = this.closest('.resource-section');
+      if (!section) return;
+
+      const details = section.querySelector('.resource-details');
+      if (!details) return;
+
+      // close others
+      container.querySelectorAll('.resource-details').forEach(d => {
+        if (d !== details) d.classList.remove('active');
+      });
+
+      // toggle current
+      details.classList.toggle('active');
+    });
+  });
+}
 
 
 
