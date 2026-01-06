@@ -478,7 +478,7 @@ const resourcesData = [
     id: 1,
     title: "Datasets",
     description: "Curated datasets for atomistic simulations, ML potentials, and materials property prediction.",
-    image: "assets/resources/datasets.png", // можно пока не создавать — будет плейсхолдер
+    image: "assets/resources/datasets.png", 
     items: [
       {
         name: "PbTe mechanics dataset",
