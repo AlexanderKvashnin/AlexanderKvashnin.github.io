@@ -482,7 +482,7 @@ const resourcesData = [
     items: [
       {
         name: "PbTe mechanics dataset",
-        note: "Dataset of PbTe structural configurations suitable for training of ML potentials for simulations of mechanical properties and complex deformations of material. Using this dataset please cite the following paper",
+        note: "Dataset of PbTe structural configurations suitable for training of ML potentials for simulations of mechanical properties and complex deformations of material. Using this dataset please cite the following PAPER.",
         links: [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=PbTe_mechanics_dataset&id=394" },
           { label: "GitHub", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" },
@@ -491,58 +491,68 @@ const resourcesData = [
       },
       {
         name: "Nanoindentation dataset",
-        note: "Dataset for training interatomic potentials for nanoindentation simulations.",
+        note: "Dataset includes structures for training interatomic potentials for simulations of nanoindentation of Carbon, Silicon, SiC (cubic and hexagonal polymorphs), AlN, and BC2N. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Nanoindentation_dataset&id=324" }
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Nanoindentation_dataset&id=324" },
+            {label: "PAPER", url: "https://pubs.acs.org/doi/abs/10.1021/acs.jctc.1c00783"}
         ]
       },
       {
         name: "High-entropy carbonitrides (HECN) dataset",
-        note: "Crystalline + liquid structures for deep learning potentials and atomistic modeling.",
+        note: "Dataset includes structural configurations of crystalline and liquid phases of HfTaTiNbZrCxNy for training deep learning potentials suitable for simulatoins of melting. Using this dataset please cite PAPER(1) and optionally PAPERS(2-3).",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=DP_HECN_cryst_liquid_dataset&id=321" }
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=DP_HECN_cryst_liquid_dataset&id=321" },
+            {label: "PAPER(1)", url: "https://www.nature.com/articles/s41598-024-78377-4"},
+            {label: "PAPER(2)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0925838824037666"},
+            {label: "PAPER(3)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0263436825005025"}
         ]
       },
       {
         name: "Hf–Ta–C structural dataset",
-        note: "Atomic structures of Hf–Ta–C compounds.",
+        note: "Crystal structures of Hf–Ta–C compounds predicted by USPEX. This data can be used for further investigations of Hf-Ta-C system of refractory compounds. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Hf-Ta-C_dataset&id=323" }
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Hf-Ta-C_dataset&id=323" },
+            {label: "PAPER", url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202206289"}
         ]
       },
       {
         name: "Polycrystalline diamond dataset",
-        note: "Polycrystalline diamond structures for mechanical and atomistic simulations.",
+        note: "Dataset of carbon structural configurations for training ML potential allowing simulations of polycrystalline diamond with grain boundaries, its mechanical properties, fracture etc. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Polycrystal_diamond_dataset&id=325" }
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=Polycrystal_diamond_dataset&id=325" },
+            {label: "PAPER", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171"}
         ]
       },
       {
         name: "Bimetallic core–shell nanoparticles dataset",
-        note: "Core–shell nanoparticle structures with an accompanying publication.",
+        note: "Dataset of atomic structures of bimetallic core–shell nanoparticles  Me@Pt, where Me = Ag, Au, Cu, Co, Ir, Ni, Os, Pd, Rh, Pt, Ru. Each archive contains XYZ files of structural information of nanoclusters with a specific size and different compositions where the final column is the d-band center of each atom. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://github.com/AlexanderKvashnin/BiClusters" }
+          { label: "GitHub", url: "https://github.com/AlexanderKvashnin/BiClusters" },
+            {label: "PAPER", url: "https://www.sciencedirect.com/science/article/abs/pii/S2468606925003387"}
         ]
       },
       {
         name: "CuAu nanoparticles dataset",
-        note: "CuAu nanoparticle structures for atomistic/DFT/ML studies.",
+        note: "Dataset contains atomic structures of CuAu nanoparticle withdifferent compositions suitable for DFT/ML studies. Additionally information about electronic properties of active sites computed by DFT is presented. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://github.com/AlexanderKvashnin/AuCu_nanoparticles" }
+          { label: "GitHub", url: "https://github.com/AlexanderKvashnin/AuCu_nanoparticles" },
+            {label: "PAPER", url: "https://onlinelibrary.wiley.com/doi/full/10.1002/agt2.273"}
         ]
       },
       {
         name: "Hardness prediction dataset (SISSO)",
-        note: "Dataset and code for predicting hardness using symbolic regression descriptors.",
+        note: "Dataset and code for predicting hardness using symbolic regression descriptors. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://github.com/AlexanderKvashnin/SISSO_hardness" }
+          { label: "GitHub", url: "https://github.com/AlexanderKvashnin/SISSO_hardness" },
+             {label: "PAPER", url: "https://www.sciencedirect.com/science/article/pii/S1877750324001959"}
         ]
       },
       {
         name: "WB5−x surfaces adsorption dataset",
-        note: "Adsorption structures (POSCARs) for various molecules on WB5−x surfaces.",
+        note: "Dataset contains structural condigurations of different gas molecules adsorbed on the surfaces of higher tungsten boride WB5-x. Suitable for training the potentials as well as for comparison DFT data. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=WB5-x-surfaces-POSCARS&id=322" }
+          { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=WB5-x-surfaces-POSCARS&id=322" },
+            {label: "PAPER", url: "https://www.nature.com/articles/s41598-024-63676-7"}
         ]
       }
     ]
@@ -551,21 +561,25 @@ const resourcesData = [
   {
     id: 2,
     title: "Pre-trained Models",
-    description: "Ready-to-use interatomic potentials for large-scale simulations.",
+    description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
     image: "assets/resources/models.png",
     items: [
       {
         name: "DeePMD potential for high-entropy carbonitrides",
-        note: "Pre-trained DeePMD potential for melting and mechanical simulations.",
+        note: "Pre-trained DeePMD potential for simulations of melting and mechanical properties of high-entropy carbonitrides. Corresponding dataset is presented above. Using this dataset please cite PAPER(1) and optionally PAPERS(2-3).",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=DP_HECN_model&id=320" }
+          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=DP_HECN_model&id=320" },
+             {label: "PAPER(1)", url: "https://www.nature.com/articles/s41598-024-78377-4"},
+            {label: "PAPER(2)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0925838824037666"},
+            {label: "PAPER(3)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0263436825005025"}
         ]
       },
       {
         name: "DeePMD potential for PbTe",
-        note: "Pre-trained DeePMD potential for mechanical simulations of PbTe.",
+        note: "Pre-trained DeePMD potential for mechanical simulations of PbTe. Using this dataset please cite the following PAPER.",
         links: [
-          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=PbTe_mechanics_potentials&id=393" }
+          { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=PbTe_mechanics_potentials&id=393" },
+            { label: "PAPER", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
         ]
       }
     ]
