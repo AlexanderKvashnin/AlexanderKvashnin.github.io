@@ -485,8 +485,8 @@ const resourcesData = [
         note: "Dataset of PbTe structural configurations suitable for training of ML potentials for simulations of mechanical properties and complex deformations of material. Using this dataset please cite the following paper",
         links: [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=PbTe_mechanics_dataset&id=394" },
-          { label: "URL", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" },
-          { label: "URL", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
+          { label: "GitHub", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" },
+          { label: "PAPER", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
         ]
       },
       {
