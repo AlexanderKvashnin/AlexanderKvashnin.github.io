@@ -477,15 +477,16 @@ const resourcesData = [
   {
     id: 1,
     title: "Datasets",
-    description: "Curated datasets for atomistic simulations, ML potentials, and materials property prediction.",
+    description: "Here we collect different datasets for atomistic simulationsm which cane be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
     image: "assets/resources/datasets.png", 
     items: [
       {
         name: "PbTe mechanics dataset",
-        note: "Dataset for PbTe mechanical/deformation studies; suitable for ML potential training.",
+        note: "Dataset of PbTe structural configurations suitable for training of ML potentials for simulations of mechanical properties and complex deformations of material. Using this dataset please cite the following paper",
         links: [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=PbTe_mechanics_dataset&id=394" },
-          { label: "URL", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" }
+          { label: "URL", url: "https://github.com/AlexanderKvashnin/PbTe_DeepMD" },
+          { label: "URL", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
         ]
       },
       {
