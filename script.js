@@ -388,24 +388,28 @@ const projectsData = [
       {
         title: "Vacuum-Free Arc Synthesis and Characterization of Crystalline Molybdenum Borides as Instrumental Material",
         authors: "Yuliya Vassilyeva, Yulia Neklya, Mikhail Lukanov, Alexander Kvashnin, Alexander Pak",
+        journal: "Thermal Science and Engineering Progress (2025)",
         pdfUrl: "assets/pdfs/Functional_Materials/2025_vacuum_free_arc.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S2451904925009254?via%3Dihub"
       },
       {
         title: "Synthesis and Characterization of Niobium Carbide Thin Films on Diamond Surface for Superconductive Application",
         authors: "R.A. Khmelnitsky, V.P. Martovitsky, J.V. Bondareva, A.I. Kolbatova, N.A. Titova, G.N. Goltsman, F.S. Fedorov, A.V. Egorov, N.A. Matsokin, A.G. Kvashnin, D.G. Kvashnin, S.A. Evlashin",
+        journal: "Journal of alloys and Compounds (2024)",
         pdfUrl: "assets/pdfs/Functional_Materials/2024_NbC_site.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925838823045693?via%3Dihub"
       },
       {
         title: "Large-Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
         authors: "Alexander G. Kvashnin, Dmitry S. Nikitin, Ivan I. Shanenkov, Ilia V. Chepkasov, Yulia A. Kvashnina, Artur Nassyrbayev, Alexander A. Sivkov, Zhanar Bolatova, Alexander Ya. Pak",
+        journal: "Advanced Functional Materials (2022)",
         pdfUrl: "assets/pdfs/Functional_Materials/2022_large_scale.pdf",
         doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202206289"
       },
       {
         title: "Computational Search for New W–Mo–B Compounds",
         authors: "Alexander G. Kvashnin, Christian Tantardini, Hayk A. Zakaryan, Yulia A. Kvashnina, Artem R. Oganov",
+        journal: "Chemistry of Materials (2020)",
         pdfUrl: "assets/pdfs/Functional_Materials/2020_comp_search.pdf",
         doiUrl: "https://pubs.acs.org/doi/10.1021/acs.chemmater.0c02440?ref=pdf"
       }
@@ -420,26 +424,37 @@ const projectsData = [
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
       {
+        title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation",
+        authors: "Aliya R. Vildanova, Anastasia E. Goldt, Sergei V. Porokhin, Alexander G. Kvashnin, Viktor S. Baidyshev, Ilya V. Chepkasov, Fedor S. Fedorov, Kseniya A. Litvintseva, Andrey V. Lalov, Veronika A. Dmitrieva, Marina M. Tepliakova, Albert G. Nasibulin",
+        journal: "Small (2025)",
+        pdfUrl: "assets/pdfs/Catalyst/Aliya-Small_2025_Vildanova_Encapsulated_Nickel_Nanowires_Inside_Plasma‐treated.pdf",
+        doiUrl: "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202507040"
+      },
+      {
         title: "Boosting the Performance of Pt/C Catalysts via Nitrogen-Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
         authors: "Yulia A. Bayan, Egor R. Beskopylny, Evgeny U. Gerasimov, Egor E. Aydakov, Kirill K. Volik, Ilya V. Pankov, Ilya V. Chepkasov, Michael M. Lukanov, Alexander G. Kvashnin, Anastasia A. Alekseenko",
+        journal: "Small (2025)",
         pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
         doiUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202510144"
       },
       {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         authors: "Ilya V. Chepkasov, Aleksandra D. Radina, Alexander G. Kvashnin",
+        journal: "Nanoscale (2024)",
         pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
         doiUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a"
       },
       {
         title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A Density Functional Theory Study",
         authors: "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
+        journal: "Physical Review B (2023)",
         pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
         doiUrl: "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.205414"
       },
       {
         title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
         authors: "Ilya V. Chepkasov, Viktor S. Baidyshev, Artem A. Golubnichiy, Ivan S. Zamulin, Alexander G. Kvashnin, Sergey M. Kozlov",
+        journal: "Aggregate (2022)",
         pdfUrl: "assets/pdfs/Catalyst/2022_aggregate.pdf",
         doiUrl: "https://onlinelibrary.wiley.com/doi/10.1002/agt2.273"
       }
@@ -456,30 +471,35 @@ const projectsData = [
       {
         title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning",
         authors: "Faridun N. Jalolov, Evgeny V. Podryabinkin, Artem R. Oganov, Alexander V. Shapeev, Alexander G. Kvashnin",
+        journal: "Advanced Theory and Simulations (2024)",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov_mechanical_properties_of_single.pdf",
         doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171"
       },
       {
         title: "Physically Intuitive Anisotropic Model of Hardness",
         authors: "Faridun N. Jalolov, Alexander G. Kvashnin",
+        journal: "Physical Review Materials (2024)",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_jalolov.pdf",
         doiUrl: "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.8.123601"
       },
       {
         title: "Material Hardness Descriptor Derived by Symbolic Regression",
         authors: "Christian Tantardini, Hayk A. Zakaryan, Zhong-Kang Han, Tariq Altalhi, Sergey V. Levchenko, Alexander G. Kvashnin, Boris I. Yakobson",
+        journal: "Journal of Computational Science (2024)",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2024_tantardini.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/pii/S1877750324001959?via%3Dihub"
       },
       {
         title: "GIPAW Pseudopotentials of d Elements for Solid-State NMR",
         authors: "Christian Tantardini, Alexander G. Kvashnin, Davide Ceresoli",
+        journal: "Materials (2022)",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2022_tantardini.pdf",
         doiUrl: "https://www.mdpi.com/1996-1944/15/9/3347"
       },
       {
         title: "Nanohardness from First Principles with Active Learning on Atomic Environments",
         authors: "Evgeny V. Podryabinkin, Alexander G. Kvashnin, Milad Asgarpour, Igor I. Maslenikov, Danila A. Ovsyannikov, Pavel B. Sorokin, Mikhail Yu Popov, Alexander V. Shapeev",
+        journal: "Journal of Chemical Theory and Computation (2021)",
         pdfUrl: "assets/pdfs/New_Computational_Methods/2021_podryabinkin.pdf",
         doiUrl: "https://pubs.acs.org/doi/10.1021/acs.jctc.1c00783?ref=pdf"
       }
