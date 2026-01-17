@@ -697,8 +697,8 @@ const collaboratorsData = [
     {
         id: 11,
         name: "Stanislav Evlashin",
-        position: "DSc in Chemistry, Assistant Professor in the Center for Materials Technologies",
-        affiliation: " Skolkovo Institute of Science and Technology",
+        position: "DSc in Chemistry, Associate Professor in the Center for Materials Technologies",
+        affiliation: "Skolkovo Institute of Science and Technology",
         website: "https://scholar.google.com/citations?user=-MlPGEwAAAAJ&hl=ru"
     },
     {
@@ -707,6 +707,13 @@ const collaboratorsData = [
         position: "PhD in Chemistry, Assistant Professor in the Department of Chemical and Biomolecular Engineering",
         affiliation: "National University of Singapore",
         website: "https://scholar.google.com/citations?user=vZCaqdkAAAAJ"
+    },
+    {
+        id: 13,
+        name: "Albert Nasibulin",
+        position: "DSc in Physics and Mathematics, Head of the Nanomaterials Laboratory, Professor in the Center for Photonics Technologies",
+        affiliation: "Skolkovo Institute of Science and Technology",
+        website: "https://scholar.google.ru/citations?user=lIiKbh4AAAAJ&hl=en"
     }
 ];
 
