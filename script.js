@@ -305,32 +305,35 @@ const projectsData = [
       {
         title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
         authors: "Nikita A. Matsokin, Roman A. Eremin, Anastasia A. Kuznetsova, Innokentiy S. Humonen, Aliaksei V. Krautsou, Vladimir D. Lazarev, Yuliya Z. Vassilyeva, Alexander Ya. Pak, Semen A. Budennyy, Alexander G. Kvashnin, Andrei A. Osiptsov",
-        journal: "npj Computational Materials",
+        journal: "npj Computational Materials (2025)",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf",
         doiUrl: "https://doi.org/10.1038/s41524-025-01628-z"
       },
       {
         title: "Photocatalytic H2 Generation and CO2 Reduction by WB5−x Cocatalyst of TiO2",
         authors: "Anna Yu. Kurenkova, Aleksandra D. Radina, Viktor S. Baidyshev, Pavel V. Povalyaev, Egor E. Aidakov, Evgeny Yu. Gerasimov, Denis D. Mishchenko, Angelina V. Zhurenok, Alexander Ya. Pak, Ekaterina A. Kozlova, Alexander G. Kvashnin",
-        journal: "Applied Surface Science",
+        journal: "Applied Surface Science (2024)",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0169433224008080?via%3Dihub"
       },
       {
         title: "Efficient Synthesis of WB5−x–WB2 Powders with Selectivity for WB5−x Content",
         authors: "Alexander Ya. Pak, Dmitry V. Rybkovskiy, Yuliya Z. Vassilyeva, Ekaterina N. Kolobova, Alexander V. Filimonenko, Alexander G. Kvashnin",
+        journal: "Inorganic Chemistry (2022)",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2021_synthesis_wb5x.pdf",
         doiUrl: "https://pubs.acs.org/doi/10.1021/acs.inorgchem.1c03880"
       },
       {
         title: "WB5−x: Synthesis, Properties, and Crystal Structure — New Insights into the Long-Debated Compound",
         authors: "Alexander G. Kvashnin, Dmitry V. Rybkovskiy, Vladimir P. Filonenko, Vasilii I. Bugakov, Igor P. Zibrov, Vadim V. Brazhkin, Artem R. Oganov, Andrey A. Osiptsov, Artem Ya. Zakirov",
+        journal: "Advanced Science (2020)",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2020_wb5x.pdf",
         doiUrl: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202000775"
       },
       {
         title: "New Tungsten Borides, Their Stability and Outstanding Mechanical Properties",
         authors: "Alexander G. Kvashnin, Hayk A. Zakaryan, Changming Zhao, Yifeng Duan, Yulia A. Kvashnina, Congwei Xie, Huafeng Dong, Artem R. Oganov",
+        journal: "The Journal of Physical Chemistry Letters (2018)",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2018_new_tungtsen_borides.pdf",
         doiUrl: "https://pubs.acs.org/doi/10.1021/acs.jpclett.8b01262"
       }
@@ -347,24 +350,28 @@ const projectsData = [
       {
         title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
         authors: "Dmitry S. Nikitin, Ivan I. Shanenkov, Artur R. Nassyrbayev, Alexander A. Sivkov, Viktor S. Baidyshev, Yulia A. Kvashnina, Nikita A. Matsokin, Alexander Ya. Pak, Alexander G. Kvashnin",
+        journal: "International Journal of Refractory Metals and Hard Materials (2026)",
         pdfUrl: "assets/pdfs/all_publications/2026_IJRMHM.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0263436825005025?via%3Dihub"
       },
       {
         title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
         authors: "Dmitry S. Nikitin, Ivan I. Shanenkov, Artur Nassyrbayev, Alexander A. Sivkov, Viktor S. Baidyshev, Yulia A. Kvashnina, Nikita A. Matsokin, Alexander Ya. Pak, Alexander G. Kvashnin",
+        journal: "Journal of Alloys and Compounds (2025)",
         pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925838824037666?via%3Dihub"
       },
       {
         title: "Melting Simulations of High-Entropy Carbonitrides by Deep Learning Potentials",
         authors: "Viktor S. Baidyshev, Christian Tantardini, Alexander G. Kvashnin",
+        journal: "Scientific Reports (2024)",
         pdfUrl: "assets/pdfs/High_Entropy_Materials/2024_scirep_28678.pdf",
         doiUrl: "https://www.nature.com/articles/s41598-024-78377-4"
       },
       {
         title: "Machine Learning-Driven Synthesis of TiZrNbHfTaC5 High-Entropy Carbide",
         authors: "Alexander Ya. Pak, Vadim Sotskov, Arina A. Gumovskaya, Yuliya Z. Vassilyeva, Zhanar S. Bolatova, Yulia A. Kvashnina, Gennady Ya. Mamontov, Alexander V. Shapeev, Alexander G. Kvashnin",
+        journal: "npj computational Materials (2023)",
         pdfUrl: "assets/pdfs/High_Entropy_Materials/2023_ml.pdf",
         doiUrl: "https://www.nature.com/articles/s41524-022-00955-9"
       }
@@ -767,7 +774,7 @@ function renderProjectPublications(list) {
           <div class="project-pub-text">
             <div class="project-pub-title">${pub.title || ''}</div>
             ${pub.authors ? `<div class="project-pub-authors">${pub.authors}</div>` : ''}
-            ${pub.journal ? `<div class="project-pub-journal" style="color: black;">${pub.journal}</div>` : ''}
+            ${pub.journal ? `<div class="project-pub-journal" style="color: black; font-weight: bold;">${pub.journal}</div>` : ''}
           </div>
 
           <div class="project-pub-links">
