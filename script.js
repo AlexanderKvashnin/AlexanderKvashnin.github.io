@@ -343,8 +343,14 @@ const projectsData = [
       "Machine-learning-driven design, synthesis, and thermodynamic modeling of high-entropy carbides and carbonitrides. The project combines deep learning interatomic potentials with plasma and arc-discharge synthesis techniques.",
     publications: [
       {
-        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+        title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
         authors: "Dmitry S. Nikitin, Ivan I. Shanenkov, Artur R. Nassyrbayev, Alexander A. Sivkov, Viktor S. Baidyshev, Yulia A. Kvashnina, Nikita A. Matsokin, Alexander Ya. Pak, Alexander G. Kvashnin",
+        pdfUrl: "assets/pdfs/all_publications/2026_IJRMHM.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0263436825005025?via%3Dihub"
+      },
+      {
+        title: "Synthesis of High-Entropy Ti–Zr–Nb–Hf–Ta Carbides and Carbonitrides in a High-Speed Arc Plasma Jet",
+        authors: "Dmitry S. Nikitin, Ivan I. Shanenkov, Artur Nassyrbayev, Alexander A. Sivkov, Viktor S. Baidyshev, Yulia A. Kvashnina, Nikita A. Matsokin, Alexander Ya. Pak, Alexander G. Kvashnin",
         pdfUrl: "assets/pdfs/High_Entropy_Materials/2025_jalcom_177178.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925838824037666?via%3Dihub"
       },
