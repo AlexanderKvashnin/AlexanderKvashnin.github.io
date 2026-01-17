@@ -305,12 +305,14 @@ const projectsData = [
       {
         title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
         authors: "Nikita A. Matsokin, Roman A. Eremin, Anastasia A. Kuznetsova, Innokentiy S. Humonen, Aliaksei V. Krautsou, Vladimir D. Lazarev, Yuliya Z. Vassilyeva, Alexander Ya. Pak, Semen A. Budennyy, Alexander G. Kvashnin, Andrei A. Osiptsov",
+        journal: "npj Computational Materials",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2025_discovery_of_chemically.pdf",
         doiUrl: "https://doi.org/10.1038/s41524-025-01628-z"
       },
       {
         title: "Photocatalytic H2 Generation and CO2 Reduction by WB5−x Cocatalyst of TiO2",
         authors: "Anna Yu. Kurenkova, Aleksandra D. Radina, Viktor S. Baidyshev, Pavel V. Povalyaev, Egor E. Aidakov, Evgeny Yu. Gerasimov, Denis D. Mishchenko, Angelina V. Zhurenok, Alexander Ya. Pak, Ekaterina A. Kozlova, Alexander G. Kvashnin",
+        journal: "Applied Surface Science",
         pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2024_photocatalytic_h2_generation.pdf",
         doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0169433224008080?via%3Dihub"
       },
