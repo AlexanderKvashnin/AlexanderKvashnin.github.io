@@ -774,7 +774,7 @@ function renderProjectPublications(list) {
           <div class="project-pub-text">
             <div class="project-pub-title">${pub.title || ''}</div>
             ${pub.authors ? `<div class="project-pub-authors">${pub.authors}</div>` : ''}
-            ${pub.journal ? `<div class="project-pub-journal" style="color: black; font-weight: bold;">${pub.journal}</div>` : ''}
+            ${pub.journal ? `<div class="project-pub-journal" style="color: black; font-weight: bold; font-size: 0.9em;">${pub.journal}</div>` : ''}
           </div>
 
           <div class="project-pub-links">
