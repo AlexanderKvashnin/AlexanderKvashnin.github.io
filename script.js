@@ -1053,7 +1053,7 @@ function simulateGoogleScholarFetch() {
             resolve([
 
                 {
-                    title: "High-entropy carbide as cocatalyst for TiO2 in photocatalytic CO2 reduction",
+                    title: "High-Entropy Carbide as Cocatalyst for TiO<sub>2</sub> in Photocatalytic CO<sub>2</sub> Reduction",
                     authors: "A.D. Radina, A.Yu. Kurenkova, V.S. Baidyshev, P.V. Povalyaev, A.A. Saraev, R.F. Alekseev, V.A. Lomakina, E.E. Aydakov, E.Yu. Gerasimov, D.D. Mishchenko, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin",
                     journal: "Materials Today Energy",
                      year: "2026",
