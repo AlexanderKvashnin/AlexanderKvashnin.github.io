@@ -1051,6 +1051,18 @@ function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
+
+                {
+                    title: "High-entropy carbide as cocatalyst for TiO2 in photocatalytic CO2 reduction",
+                    authors: "A.D. Radina, A.Yu. Kurenkova, V.S. Baidyshev, P.V. Povalyaev, A.A. Saraev, R.F. Alekseev, V.A. Lomakina, E.E. Aydakov, E.Yu. Gerasimov, D.D. Mishchenko, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin",
+                    journal: "Materials Today Energy",
+                     year: "2026",
+                      links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_radina_high_entropy_carbide.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.mtener.2026.102206" }
+                          ]
+                        },
+
                 {
                     title: "High-entropy Ti-Zr-Nb-Hf-Ta carbide and carbonitride coatings fabricated by high-speed arc discharge plasma jet",
                     authors: "D.S. Nikitin, I.I. Shanenkov, A. Nassyrbayev, A.A. Sivkov, V.S. Baidyshev, Yu.A. Kvashnina, N.A. Matsokin, A.Ya. Pak, A.G. Kvashnin",
