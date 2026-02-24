@@ -285,7 +285,7 @@ const teamData = [
     id: 12,
     name: "Grigory Bychkov",
     position: "MSc Student",
-    bio: "",
+    bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology. His research lies at the intersection of computational materials science, density functional theory, and machine learning, with a focus on modeling and predicting the catalytic activity of nanomaterials.",
     website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
     photo: "assets/team/Bychkov.jpg",
     cv: "assets/cv/Bychkov.pdf"
