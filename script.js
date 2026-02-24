@@ -286,8 +286,9 @@ const teamData = [
     name: "Grigory Bychkov",
     position: "MSc Student",
     bio: "",
-    website: "",
-    photo: "assets/team/Gr.jpg"
+    website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
+    photo: "assets/team/Bychkov.jpg",
+    cv: "assets/cv/Bychkov.pdf"
   }
 ];
 
