@@ -1053,6 +1053,17 @@ function simulateGoogleScholarFetch() {
         setTimeout(() => {
             resolve([
 
+                 {
+                    title: "Recent advances, challenges and future perspectives of polycyclic aromatic hydrocarbons as materials for metal-ion batteries – A comprehensive review",
+                    authors: "I.V. Chepkasov, S.A. Evlashin, A.G. Kvashnin",
+                    journal: "Progress in Materials Science",
+                     year: "2026",
+                      links: [
+                        { type: "PDF", url: "" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0079642526000605?via%3Dihub" }
+                          ]
+                        },
+                
                 {
                     title: "High-Entropy Carbide as Cocatalyst for TiO<sub>2</sub> in Photocatalytic CO<sub>2</sub> Reduction",
                     authors: "A.D. Radina, A.Yu. Kurenkova, V.S. Baidyshev, P.V. Povalyaev, A.A. Saraev, R.F. Alekseev, V.A. Lomakina, E.E. Aydakov, E.Yu. Gerasimov, D.D. Mishchenko, A.Ya. Pak, E.A. Kozlova, A.G. Kvashnin",
