@@ -48,6 +48,14 @@ function initializeTabs() {
 
 // ===== REVIEWS DATA =====
 const reviewsData = [
+       {
+        title: "Recent Advances, Challenges and Future Perspectives of Polycyclic Aromatic Hydrocarbons as Materials for Metal-Ion Batteries – A Comprehensive Review",
+        authors: "I.V. Chepkasov, S.A. Evlashin, A.G. Kvashnin",
+        abstract: "Polycyclic aromatic hydrocarbons (PAHs) have become a promising choice for the development of metal-ion batteries due to their exceptional redox properties, versatile molecular structures, and affordability. This comprehensive review summarizes recent advances in the use of PAHs as anode and cathode materials for Li-ion, Na-ion, Al-ion, and dual-ion batteries, highlighting their high specific capacity, long cycle life, and environmental sustainability. It also discusses pre-metallization strategies based on PAH reagents to reduce irreversible ion loss and improve initial Coulombic efficiency. In addition, the review considers the integration of machine learning and high-throughput screening for the optimization of PAH-based materials. Despite major progress, challenges such as low redox activity and solubility remain. Overall, this review provides a roadmap for the further development of PAH-based battery systems for practical energy storage applications.",
+        image: "assets/review/2026_JPMS101713.png",
+        journalUrl: "https://doi.org/10.1016/j.pmatsci.2026.101713 ",
+        pdfUrl: "assets/review/2026_JPMS101713.pdf"
+    },
     {
         title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery",
         authors: "I.V. Chepkasov, A.G. Kvashnin",
