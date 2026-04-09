@@ -1059,7 +1059,7 @@ function simulateGoogleScholarFetch() {
                     journal: "Progress in Materials Science",
                      year: "2026",
                       links: [
-                        { type: "PDF", url: "" },
+                        { type: "PDF", url: "/assets/review/2026_JPMS101713.pdf" },
                         { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0079642526000605?via%3Dihub" }
                           ]
                         },
