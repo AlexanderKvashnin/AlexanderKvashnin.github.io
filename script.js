@@ -218,7 +218,8 @@ const teamData = [
     position: "Research Scientist",
     bio: "Dr. Baidyshev specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
-    photo: "assets/team/Baidyshev.jpg"
+    photo: "assets/team/Baidyshev.jpg",
+    cv: "assets/cv/Baidyshev.pdf" 
   },
   {
     id: 4,
