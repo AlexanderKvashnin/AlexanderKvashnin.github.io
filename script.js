@@ -197,7 +197,7 @@ const teamData = [
   {
     id: 1,
     name: "Alexander Kvashnin",
-    position: "Principal Investigator",
+    position: "Head of the Lab",
     bio: "Prof. Alexander Kvashnin is a Full Professor at Skoltech and a head of IOCD Lab. Research experience is over 15 years in the field of computational materials science. Focuese on applications of modern methods of computational science and artificial intelligence to complex problems.",
     website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
     photo: "assets/team/Kvashnin.PNG",
