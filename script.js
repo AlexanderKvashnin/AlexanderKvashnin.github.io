@@ -442,6 +442,13 @@ const projectsData = [
     description:
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
+        {
+            title: "Reactive Gas Modulation Alters Metal Nanostructure Nuclearity and Boosts Catalytic Activity",
+            authors: "Alexey S. Galushko, Ilya V. Chepkasov, Ruslan R. Shaydullin, Daniil A. Boiko, Alexander G. Kvashnin, Artem M. Abakumov, Valentine P. Ananikov",
+            journal: "Chinese Journal of Catalysis (2026)",
+            pdfUrl: "assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf",
+            doiUrl: "https://doi.org/10.1016/S1872-2067(26)64739-4"
+        },
       {
         title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation",
         authors: "Aliya R. Vildanova, Anastasia E. Goldt, Sergei V. Porokhin, Alexander G. Kvashnin, Viktor S. Baidyshev, Ilya V. Chepkasov, Fedor S. Fedorov, Kseniya A. Litvintseva, Andrey V. Lalov, Veronika A. Dmitrieva, Marina M. Tepliakova, Albert G. Nasibulin",
@@ -1070,7 +1077,16 @@ function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
-
+                {
+                    title: "Reactive Gas Modulation Alters Metal Nanostructure Nuclearity and Boosts Catalytic Activity",
+                    authors: "A.S. Galushko, I.V. Chepkasov, R.R. Shaydullin, D.A. Boiko, A.G. Kvashnin, A.M. Abakumov, V.P. Ananikov",
+                    journal: "Chinese Journal of Catalysis",
+                     year: "2026",
+                     links: [
+                    { type: "PDF", url: "/assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf" },
+                    { type: "DOI", url: "https://doi.org/10.1016/S1872-2067(26)64739-4" }
+                         ]
+                        },
                  {
                     title: "Recent advances, challenges and future perspectives of polycyclic aromatic hydrocarbons as materials for metal-ion batteries – A comprehensive review",
                     authors: "I.V. Chepkasov, S.A. Evlashin, A.G. Kvashnin",
