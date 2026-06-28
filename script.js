@@ -117,6 +117,15 @@ function initializeReviews() {
 
 // ===== VIDEO DATA =====
 const videoData = [
+    {
+        title: "Structure Determines Properties",
+        preview: "assets/videos/structure_determines_properties.jpg",
+        url: "https://vk.ru/wall-220903431_5154",
+        description: "Why is the true hardness of diamond still so difficult to measure? In this popular science lecture, Aleksandra Radina explains how materials scientists uncover the hidden properties of materials, why their work resembles detective investigations, how cactus needles inspire laboratory research, and how a Nobel Prize-winning discovery even changed the rules of taxi services. A fascinating look at materials science beyond textbooks and laboratories.",
+        duration: "20:28",
+        date: "2026",
+        source: "VK Video"
+    },
      {
         title: "THE PATH OF THE CONQUEROR",
         preview: "assets/videos/Conqueror.jpg",
