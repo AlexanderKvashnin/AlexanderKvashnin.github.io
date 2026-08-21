@@ -443,6 +443,13 @@ const projectsData = [
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
         {
+            title: "Evolution of the PtPdCuNiCo High-Entropy Alloy Nanoparticles Structure During Thermal Treatment: Modeling and In Situ Study",
+            authors: "Sergey V. Belenov, Anna A. Gavrilova, Dmitry K. Mauer, Egor R. Beskopylny, Alina K. Nevelskaya, Valeria P. Konovalova, Anna M. Kremneva, Evgeniy Yu. Gerasimov, Viktor S. Baidyshev, Alexander G. Kvashnin, Ilya V. Chepkasov",
+            journal: "Journal of Alloys and Compounds (2026)",
+            pdfUrl: "assets/pdfs/Catalyst/2026_PtPdCuNiCo.pdf",
+            doiUrl: "https://doi.org/10.1016/j.jallcom.2026.190381"
+        },
+        {
             title: "Reactive Gas Modulation Alters Metal Nanostructure Nuclearity and Boosts Catalytic Activity",
             authors: "Alexey S. Galushko, Ilya V. Chepkasov, Ruslan R. Shaydullin, Daniil A. Boiko, Alexander G. Kvashnin, Artem M. Abakumov, Valentine P. Ananikov",
             journal: "Chinese Journal of Catalysis (2026)",
@@ -494,6 +501,13 @@ const projectsData = [
     description:
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
+        {
+            title: "Accurate Predictions of Mechanical Properties Using Active Learning on Local Chemical Configurations: A Case Study of WC–Co Composites",
+            authors: "Faridun N. Jalolov, Viktor S. Baidyshev, Alexander G. Kvashnin",
+            journal: "Computational Materials Science (2026)",
+            pdfUrl: "assets/pdfs/New_Computational_Methods/2026_jalolov_WC_Co.pdf",
+            doiUrl: "https://doi.org/10.1016/j.commatsci.2026.114962"
+        },
       {
         title: "Mechanical Properties of Single and Polycrystalline Solids from Machine Learning",
         authors: "Faridun N. Jalolov, Evgeny V. Podryabinkin, Artem R. Oganov, Alexander V. Shapeev, Alexander G. Kvashnin",
