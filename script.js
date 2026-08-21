@@ -1102,7 +1102,6 @@ function simulateGoogleScholarFetch() {
                         ]
                     },
                 {
-{
                     title: "Evolution of the PtPdCuNiCo high-entropy alloy nanoparticles structure during thermal treatment: Modeling and in situ study",
                     authors: "S.V. Belenov, A.A. Gavrilova, D.K. Mauer, E.R. Beskopylny, A.K. Nevelskaya, V.P. Konovalova, A.M. Kremneva, E.Yu. Gerasimov, V.S. Baidyshev, A.G. Kvashnin, I.V. Chepkasov",
                     journal: "Journal of Alloys and Compounds",
