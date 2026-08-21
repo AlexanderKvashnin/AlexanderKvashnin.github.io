@@ -1078,6 +1078,28 @@ function simulateGoogleScholarFetch() {
         setTimeout(() => {
             resolve([
                 {
+                    title: "Accurate predictions of mechanical properties using active learning on local chemical configurations: A case study of WC–Co composites",
+                    authors: "F.N. Jalolov, V.S. Baidyshev, A.G. Kvashnin",
+                    journal: "Computational Materials Science",
+                    year: "2026",
+                    links: [
+                    { type: "PDF", url: "/assets/pdfs/all_publications/2026_jalolov_WC_Co.pdf" },
+                    { type: "DOI", url: "https://doi.org/10.1016/j.commatsci.2026.114962" }
+                        ]
+                    },
+                {
+{
+                    title: "Evolution of the PtPdCuNiCo high-entropy alloy nanoparticles structure during thermal treatment: Modeling and in situ study",
+                    authors: "S.V. Belenov, A.A. Gavrilova, D.K. Mauer, E.R. Beskopylny, A.K. Nevelskaya, V.P. Konovalova, A.M. Kremneva, E.Yu. Gerasimov, V.S. Baidyshev, A.G. Kvashnin, I.V. Chepkasov",
+                    journal: "Journal of Alloys and Compounds",
+                    year: "2026",
+                    links: [
+                    { type: "PDF", url: "/assets/pdfs/all_publications/2026_PtPdCuNiCo.pdf" },
+                    { type: "DOI", url: "https://doi.org/10.1016/j.jallcom.2026.190381" }
+                    ]
+                    },
+                
+                {
                     title: "Reactive Gas Modulation Alters Metal Nanostructure Nuclearity and Boosts Catalytic Activity",
                     authors: "A.S. Galushko, I.V. Chepkasov, R.R. Shaydullin, D.A. Boiko, A.G. Kvashnin, A.M. Abakumov, V.P. Ananikov",
                     journal: "Chinese Journal of Catalysis",
