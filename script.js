@@ -629,7 +629,23 @@ const resourcesData = [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=WB5-x-surfaces-POSCARS&id=322" },
             {label: "PAPER", url: "https://www.nature.com/articles/s41598-024-63676-7"}
         ]
-      }
+      },
+     {
+        name: "Dataset for WC-Co",
+        note: "Dataset of structural configurations of WC, Co, WC-Co to train MTP model for simulations of mechanical properties of WC-Co ceramic. Using this dataset please cite the following PAPER.",
+        links: [
+          { label: "GitHub", url: "https://gitlab.com/faridunjalolov/mtp-for-wc-co-composite-system/" },
+            { label: "PAPER", url: "https://www.sciencedirect.com/science/article/abs/pii/S0927025626004817"}
+        ]
+      },  
+        {
+        name: "Dataset for AuPt nanoparticles",
+        note: "Structures of AuPt nanoclusters predicted by USPEX together with dataset for training of MTP models for simulations of chemical reactor with/without graphene support. Using this dataset please cite the following PAPER.",
+        links: [
+          { label: "GitHub", url: "https://github.com/AlexanderKvashnin/AuPt_uspex" },
+            { label: "PAPER", url: "https://iocd.ru"}
+        ]
+      },  
     ]
   },
 
