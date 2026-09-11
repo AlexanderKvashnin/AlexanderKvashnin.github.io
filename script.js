@@ -656,7 +656,15 @@ const resourcesData = [
           { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=PbTe_mechanics_potentials&id=393" },
             { label: "PAPER", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
         ]
-      }
+      },
+     {
+        name: "MTP potential for WC-Co",
+        note: "Pre-trained MTP model for simulations of mechanical properties of WC-Co ceramic. Training dataset of strucutural configurations included. Using this dataset please cite the following PAPER.",
+        links: [
+          { label: "GitHub", url: "https://gitlab.com/faridunjalolov/mtp-for-wc-co-composite-system/" },
+            { label: "PAPER", url: "https://www.sciencedirect.com/science/article/abs/pii/S0927025626004817"}
+        ]
+      },
     ]
   }
 ];
