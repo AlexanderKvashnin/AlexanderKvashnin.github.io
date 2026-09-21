@@ -268,7 +268,7 @@ const teamData = [
     id: 8,
     name: "Anastasiia Iosimovska",
     position: "PhD Student",
-    bio: "Anastasiia is a PhD student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor's degree in Chemistry from Lomonosov Moscow State University (MSU).",
+    bio: "Anastasiia is a PhD student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. Previous education: BSc at Lomonosov Moscow State University; MSc at the Skolkovo Institute of Science and Technology.",
     website: "https://scholar.google.com/citations?hl=ru&user=Qqe_yZQAAAAJ",
     photo: "assets/team/Iosimovska.jpg",
     cv: "assets/cv/Iosimovska.pdf"
