@@ -267,20 +267,19 @@ const teamData = [
   {
     id: 8,
     name: "Anastasiia Iosimovska",
-    position: "MSc Student",
-    bio: "Anastasiia is a Master's student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor's degree in Chemistry from Lomonosov Moscow State University (MSU).",
+    position: "PhD Student",
+    bio: "Anastasiia is a PhD student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. She holds a Bachelor's degree in Chemistry from Lomonosov Moscow State University (MSU).",
     website: "https://scholar.google.com/citations?hl=ru&user=Qqe_yZQAAAAJ",
     photo: "assets/team/Iosimovska.jpg",
     cv: "assets/cv/Iosimovska.pdf"
   },
   {
     id: 9,
-    name: "Olga Pushkova",
+    name: "Anna Dorosh",
     position: "MSc Student",
-    bio: "Olga Pushkova is a 2st year graduate student at the Skolkovo Institute of Science and Technology, specializing in Applied Computational Mechanics. In 2024, she completed her bachelor's degree at NUST MISIS. Currently, he works in the industrial-oriented materials search group at Skoltech. Research area: prediction of the catalytic properties of nanoclusters using ML, investigation of the characteristics of catalytic materials by the SISSO method.",
-    website: "",
-    photo: "assets/team/Pushkova.jpg",
-    cv: "assets/cv/Pushkova.pdf"
+    bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology with a background in biotechnology and data analysis. Her research interests lie at the intersection of artificial intelligence and chemistry, with a particular focus on machine learning applications in catalysis, prediction of chemical properties, and data-driven discovery of new materials.",
+    photo: "assets/team/Dorosh.jpg",
+    cv: "assets/cv/Dorosh.pdf"
   },
   {
     id: 10,
@@ -307,6 +306,14 @@ const teamData = [
     website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
     photo: "assets/team/Bychkov.jpg",
     cv: "assets/cv/Bychkov.pdf"
+  }
+];
+
+const alumniData = [
+  {
+    id: 1,
+    name: "Olga Pushkova",
+    photo: "assets/team/Pushkova.jpg"
   }
 ];
 
@@ -784,9 +791,12 @@ const collaboratorsData = [
 // ===== TEAM FUNCTIONS =====
 function initializeTeam() {
     const teamGrid = document.querySelector('.team-grid');
-    if (!teamGrid) return;
+    const alumniGrid = document.querySelector('.alumni-grid');
+    if (!teamGrid || !alumniGrid) return;
     
     teamGrid.innerHTML = '';
+    alumniGrid.innerHTML = '';
+
     teamData.forEach(member => {
         const el = document.createElement('div');
         el.className = 'team-member';
@@ -799,6 +809,18 @@ function initializeTeam() {
         `;
         el.addEventListener('click', () => openTeamModal(member));
         teamGrid.appendChild(el);
+    });
+
+    alumniData.forEach(member => {
+        const el = document.createElement('div');
+        el.className = 'team-member alumni-member';
+        el.innerHTML = `
+            <div class="member-photo">
+                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+            </div>
+            <h3>${member.name}</h3>
+        `;
+        alumniGrid.appendChild(el);
     });
 }
 
