@@ -1740,8 +1740,28 @@ a.link-doi { background: #28a745; }
 }
 /* ===== EVENT CARD ===== */
 
+.events-section-heading{
+    margin:32px 0 16px;
+    color:#2c3e50;
+}
+
+.no-events-message{
+    margin:0;
+    padding:18px 20px;
+    background:#f6f8fc;
+    border-left:4px solid #0047ff;
+    border-radius:8px;
+    color:#5b6573;
+}
+
+.past-events{
+    margin-top:40px;
+    padding-top:8px;
+    border-top:1px solid #dfe6e9;
+}
+
 .lab-event{
-    margin:50px 0;
+    margin:20px 0 50px;
 }
 
 .event-card{
