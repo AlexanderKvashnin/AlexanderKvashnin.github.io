@@ -22,26 +22,39 @@ function initializeTabs() {
   const tabLinks = document.querySelectorAll('.tab-link');
   const tabContents = document.querySelectorAll('.tab-content');
 
+  function activateTab(tab) {
+    const tabId = tab.getAttribute('data-tab');
+    const target = document.getElementById(tabId);
+    if (!target) return;
+
+    tabLinks.forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tabContents.forEach(c => c.classList.remove('active'));
+
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    target.classList.add('active');
+
+    if (tabId === 'publications') loadPublications();
+
+    if (tabId === 'courses' && !coursesInitialized) {
+      initializeCourses();
+      coursesInitialized = true;
+    }
+  }
+
   tabLinks.forEach(tab => {
     tab.addEventListener('click', (e) => {
       e.preventDefault();
+      activateTab(tab);
+    });
 
-      const tabId = tab.getAttribute('data-tab');
-      const target = document.getElementById(tabId);
-      if (!target) return;
-
-      tabLinks.forEach(t => t.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
-
-      tab.classList.add('active');
-      target.classList.add('active');
-
-      if (tabId === 'publications') loadPublications();
-
-      if (tabId === 'courses' && !coursesInitialized) {
-        initializeCourses();
-        coursesInitialized = true;
-      }
+    tab.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      activateTab(tab);
     });
   });
 }
@@ -218,7 +231,7 @@ const teamData = [
     position: "Senior Research Scientist",
     bio: "Dr. Chepkasov specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=uld736gAAAAJ&hl=ru",
-    photo: "assets/team/Chepkasov.jpg",
+    photo: "assets/team/Chepkasov.jpg?v=20260921",
     cv: "assets/cv/Chepkasov.pdf" 
   },
   {

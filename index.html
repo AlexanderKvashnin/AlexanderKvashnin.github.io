@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#24364b">
     <title>IOCD Lab Website</title>
     <link rel="stylesheet" href="style.css?v={{ site.time | date: '%s' }}">
 </head>
@@ -10,20 +11,20 @@
 <body>
 
 <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
         <div class="nav-brand">IOCD Lab</div>
-<ul class="nav-tabs">
-    <li class="tab-link active" data-tab="about">About</li>
-    <li class="tab-link" data-tab="team">Our Team</li>
-    <li class="tab-link" data-tab="projects">Projects</li>
-    <li class="tab-link" data-tab="reviews">Reviews</li>
-    <li class="tab-link" data-tab="events">Events</li>
-    <li class="tab-link" data-tab="publications">Publication List</li>
-    <li class="tab-link" data-tab="courses">Courses</li>
-    <li class="tab-link" data-tab="video">Video</li>
-    <li class="tab-link" data-tab="collaborators">Collaborators</li>
-    <li class="tab-link" data-tab="resources">Our Resources</li>
-    <li class="tab-link" data-tab="contact">Contact</li>
+<ul class="nav-tabs" role="tablist">
+    <li class="tab-link active" data-tab="about" role="tab" tabindex="0" aria-controls="about" aria-selected="true">About</li>
+    <li class="tab-link" data-tab="team" role="tab" tabindex="0" aria-controls="team" aria-selected="false">Our Team</li>
+    <li class="tab-link" data-tab="projects" role="tab" tabindex="0" aria-controls="projects" aria-selected="false">Projects</li>
+    <li class="tab-link" data-tab="reviews" role="tab" tabindex="0" aria-controls="reviews" aria-selected="false">Reviews</li>
+    <li class="tab-link" data-tab="events" role="tab" tabindex="0" aria-controls="events" aria-selected="false">Events</li>
+    <li class="tab-link" data-tab="publications" role="tab" tabindex="0" aria-controls="publications" aria-selected="false">Publication List</li>
+    <li class="tab-link" data-tab="courses" role="tab" tabindex="0" aria-controls="courses" aria-selected="false">Courses</li>
+    <li class="tab-link" data-tab="video" role="tab" tabindex="0" aria-controls="video" aria-selected="false">Video</li>
+    <li class="tab-link" data-tab="collaborators" role="tab" tabindex="0" aria-controls="collaborators" aria-selected="false">Collaborators</li>
+    <li class="tab-link" data-tab="resources" role="tab" tabindex="0" aria-controls="resources" aria-selected="false">Our Resources</li>
+    <li class="tab-link" data-tab="contact" role="tab" tabindex="0" aria-controls="contact" aria-selected="false">Contact</li>
 </ul>
     </nav>
 </header>
@@ -68,7 +69,7 @@
 
                  <div class="glance-item">
                     <span class="glance-number">5</span>
-                    <span class="glance-label">Succesfull R&D projects</span>
+                    <span class="glance-label">Successful R&D projects</span>
                 </div>
 
                 <div class="glance-item">
