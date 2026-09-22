@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeVideos();
     initializeReviews();
     initializeResources();
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
      const activeTab = document.querySelector('.tab-link.active')?.getAttribute('data-tab');
   if (activeTab === 'courses' && !coursesInitialized) {
     initializeCourses();
@@ -19,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
 let coursesInitialized = false;
 
 function initializeTabs() {
-  const tabLinks = document.querySelectorAll('.tab-link');
-  const tabContents = document.querySelectorAll('.tab-content');
+  const tabLinks = [...document.querySelectorAll('.tab-link')];
+  const tabContents = [...document.querySelectorAll('.tab-content')];
 
-  function activateTab(tab) {
+  function activateTab(tab, { updateHistory = false, focusTab = false } = {}) {
     const tabId = tab.getAttribute('data-tab');
     const target = document.getElementById(tabId);
     if (!target) return;
@@ -30,12 +32,24 @@ function initializeTabs() {
     tabLinks.forEach(t => {
       t.classList.remove('active');
       t.setAttribute('aria-selected', 'false');
+      t.setAttribute('tabindex', '-1');
     });
-    tabContents.forEach(c => c.classList.remove('active'));
+    tabContents.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-hidden', 'true');
+    });
 
     tab.classList.add('active');
     tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
     target.classList.add('active');
+    target.setAttribute('aria-hidden', 'false');
+
+    if (updateHistory && window.location.hash !== `#${tabId}`) {
+      window.history.pushState({ tab: tabId }, '', `#${tabId}`);
+    }
+
+    if (focusTab) tab.focus();
 
     if (tabId === 'publications') loadPublications();
 
@@ -46,17 +60,50 @@ function initializeTabs() {
   }
 
   tabLinks.forEach(tab => {
+    const tabId = tab.dataset.tab;
+    const panel = document.getElementById(tabId);
+    tab.id = `tab-${tabId}`;
+    if (panel) {
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', tab.id);
+    }
+
     tab.addEventListener('click', (e) => {
       e.preventDefault();
-      activateTab(tab);
+      activateTab(tab, { updateHistory: true });
     });
 
     tab.addEventListener('keydown', (e) => {
-      if (e.key !== 'Enter' && e.key !== ' ') return;
-      e.preventDefault();
-      activateTab(tab);
+      const currentIndex = tabLinks.indexOf(tab);
+      let nextIndex = null;
+
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextIndex = (currentIndex + 1) % tabLinks.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') nextIndex = (currentIndex - 1 + tabLinks.length) % tabLinks.length;
+      if (e.key === 'Home') nextIndex = 0;
+      if (e.key === 'End') nextIndex = tabLinks.length - 1;
+
+      if (nextIndex !== null) {
+        e.preventDefault();
+        activateTab(tabLinks[nextIndex], { updateHistory: true, focusTab: true });
+        return;
+      }
+
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activateTab(tab, { updateHistory: true });
+      }
     });
   });
+
+  const activateFromLocation = () => {
+    const tabId = window.location.hash.slice(1);
+    const matchingTab = tabLinks.find(tab => tab.dataset.tab === tabId);
+    if (matchingTab) activateTab(matchingTab);
+  };
+
+  activateFromLocation();
+  window.addEventListener('popstate', activateFromLocation);
+  window.addEventListener('hashchange', activateFromLocation);
 }
 
 // ===== REVIEWS DATA =====
@@ -65,7 +112,7 @@ const reviewsData = [
         title: "Recent Advances, Challenges and Future Perspectives of Polycyclic Aromatic Hydrocarbons as Materials for Metal-Ion Batteries – A Comprehensive Review",
         authors: "I.V. Chepkasov, S.A. Evlashin, A.G. Kvashnin",
         abstract: "Polycyclic aromatic hydrocarbons (PAHs) have become a promising choice for the development of metal-ion batteries due to their exceptional redox properties, versatile molecular structures, and affordability. This comprehensive review summarizes recent advances in the use of PAHs as anode and cathode materials for Li-ion, Na-ion, Al-ion, and dual-ion batteries, highlighting their high specific capacity, long cycle life, and environmental sustainability. It also discusses pre-metallization strategies based on PAH reagents to reduce irreversible ion loss and improve initial Coulombic efficiency. In addition, the review considers the integration of machine learning and high-throughput screening for the optimization of PAH-based materials. Despite major progress, challenges such as low redox activity and solubility remain. Overall, this review provides a roadmap for the further development of PAH-based battery systems for practical energy storage applications.",
-        image: "assets/review/2026_JPMS101713.png",
+        image: "assets/review/2026_JPMS101713.webp",
         journalUrl: "https://doi.org/10.1016/j.pmatsci.2026.101713 ",
         pdfUrl: "assets/review/2026_JPMS101713.pdf"
     },
@@ -73,7 +120,7 @@ const reviewsData = [
         title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery",
         authors: "I.V. Chepkasov, A.G. Kvashnin",
         abstract: "Recent experiments have revealed that lithium can form multilayer structures when intercalated in bilayer graphene [Nature 564 (2018) 234], challenging the long-held belief that alkali metals in layered materials are confined to single-layer configurations. This pioneering work initiates a new line of research related to the intercalation of alkali metals in carbon-based materials. The possibility of forming multilayer structures between bilayer graphene not only Li but also Na, K, Rb, Cs is shown. Multilayer Li structures are experimentally observed in atomic channels of modified bulk graphite and soft carbon. Multilayer Na structures in the mesochannels of carbon spheres lead to more stable dendrite-free Na cycling with high rate characteristics. It is possible to create fast-charging batteries based on hard carbon, in which the formation of multilayer Na structures in the pores allows to achieve high charging rates. In this review, the achievements in the formation and diffusion of multilayer structures of alkali metals in carbon-based anode materials for creating high-capacity and fast-charging ion batteries are discussed in detail.",
-        image: "assets/review/2025_small_rev.png",
+        image: "assets/review/2025_small_rev.webp",
         journalUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202508433",
         pdfUrl: "assets/review/2025_small_rev.pdf"
     },
@@ -81,7 +128,7 @@ const reviewsData = [
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
         authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
         abstract: "The annual increase in demand for renewable energy is driving the development of catalysis-based technologies that generate, store and convert clean energy by splitting and forming chemical bonds. Thanks to efforts over the last two decades, great progress has been made in the use of core–shell nanostructures to improve the performance of metallic catalysts. The successful preparation and application of a large number of bimetallic core-shell nanocrystals demonstrates the wide range of possibilities they offer and suggests further advances in this field. Here, we have reviewed recent advances in the synthesis and study of core-shell nanostructures that are promising for catalysis. Particular attention has been paid to the structural tuning of the catalytic properties of core-shell nanostructures and to theoretical methods capable of describing their catalytic properties in order to efficiently search for new catalysts with desired properties. We have also identified the most promising areas of research in this field, in terms of experimental and theoretical studies, and in terms of promising materials to be studied.",
-        image: "/assets/review/2024_nanoscale.png",
+        image: "/assets/review/2024_nanoscale.webp",
         journalUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a",
         pdfUrl: "assets/review/2024_nanoscale.pdf"
     },
@@ -89,7 +136,7 @@ const reviewsData = [
         title: "High-Temperature Superconductivity in Hydrides",
         authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D.Zhou, A.V. Sadakov, O.A. Sobolevskiy, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov",
         abstract: "Over the past six years (2015±2021), many superconducting hydrides with critical temperatures Tc up to +15°C, which are currently record high, have been discovered. Now, we can already say that a special field of superconductivity has developed: hydride superconductivity at ultrahigh pressures. For the most part, the properties of superhydrides are well described by the Migdal±Eliashberg theory of strong electron±phonon interactions, especially when the anharmonicity of phonons is taken into account. We investigate the isotope effect, the effect of a magnetic field (up to 60±70 T) on the critical temperature and critical current in the hydride samples, and the dependence of Tc on the pressure and the degree of doping. The divergences between the theory and experiment are of interest, especially in the regions of phase stability and in the behavior of the upper critical magnetic fields at low temperatures. We present a retrospective analysis of data from 2015±2021 and describe promising directions for future research on hydride superconductivity.",
-        image: "assets/review/2022_review.png",
+        image: "assets/review/2022_review.webp",
         journalUrl: "https://arxiv.org/abs/2207.07637",
         pdfUrl: "assets/review/2022_review.pdf"
     },
@@ -97,7 +144,7 @@ const reviewsData = [
         title: "Computational Discovery of Hard and Superhard Materials",
         authors: "A.G. Kvashnin, Z. Allahyari, A.R. Oganov",
         abstract: "Computational materials discovery is a booming field of science, which helps in predicting new unexpected materials with optimal combinations of various physical properties. Going beyond the targeted search for new materials within prespecified systems, the recently developed method, Mendelevian search, allows one to look for materials with the desired properties across the entire Periodic Table, indicating possibly superhard (or other) materials that could be obtained experimentally. From this viewpoint, we discuss the recently developed methods for crystal structure prediction and empirical models of Vickers hardness and fracture toughness that allow fast screening for materials with optimal mechanical properties. We also discuss the results of the computational search for hard and superhard materials obtained in the last few years using these novel approaches and present a “treasure map” of hard and superhard materials, which summarizes known and predicted materials and points to promising future directions of superhard materials discovery",
-        image: "assets/review/2019_review.png",
+        image: "assets/review/2019_review.webp",
         journalUrl: "https://pubs.aip.org/aip/jap/article/126/4/040901/1064664/Computational-discovery-of-hard-and-superhard",
         pdfUrl: "assets/review/2019_review.pdf"
     }
@@ -110,7 +157,7 @@ function initializeReviews() {
     container.innerHTML = reviewsData.map(r => `
         <div class="review-card">
             <div class="review-image">
-                <img src="${r.image}" alt="review image" onerror="this.style.display='none'">
+                <img src="${r.image}" alt="Cover of ${r.title}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
 
             <div class="review-info">
@@ -132,7 +179,7 @@ function initializeReviews() {
 const videoData = [
     {
         title: "Structure Determines Properties",
-        preview: "assets/videos/structure_and_properties.png",
+        preview: "assets/videos/structure_and_properties.webp",
         url: "https://vk.ru/wall-220903431_5154",
         description: "Why is the true hardness of diamond still so difficult to measure? In this popular science lecture, Aleksandra Radina explains how materials scientists uncover the hidden properties of materials, why their work resembles detective investigations, how cactus needles inspire laboratory research, and how a Nobel Prize-winning discovery even changed the rules of taxi services. A fascinating look at materials science beyond textbooks and laboratories.",
         duration: "20:28",
@@ -141,7 +188,7 @@ const videoData = [
     },
      {
         title: "THE PATH OF THE CONQUEROR",
-        preview: "assets/videos/Conqueror.jpg",
+        preview: "assets/videos/Conqueror.webp",
         url: "https://vkvideo.ru/playlist/-229636815_1/video-229636815_456239686?linked=1",
         description: "NEW ISSUE OF THE CONQUEROR'S PATH! Winner of the Sber Prize — about how AI discovers new generation materials",
         duration: "00:32:55",
@@ -150,7 +197,7 @@ const videoData = [
     },
     {
         title: "Cases of application of AI in science",
-        preview: "assets/videos/sber.video.png",
+        preview: "assets/videos/sber.video.webp",
         url: "https://vk.com/video-212217448_456240008",
         description: "29.10 // 16:20 (Moscow time). Cases of AI application in science. Alexander Kvashnin: AI in materials science.",
         duration: "02:00:31",
@@ -177,7 +224,7 @@ const videoData = [
     },
     {
         title: "The loud voice of Russian Science – Zaryadye",
-        preview: "assets/videos/zariadye.png",
+        preview: "assets/videos/zariadye.webp",
         url: "https://vkvideo.ru/video-152260072_456245412?t=2h9m7s",
         description: "Popular science lecture at Zaryadye.",
         duration: "07:11:21",
@@ -195,7 +242,7 @@ const videoData = [
     },
     {
         title: "Aleksandra Radina. Serendipity — the Catalyst of Science.",
-        preview: "assets/videos/preview_aleksandra_radina_video.png",
+        preview: "assets/videos/preview_aleksandra_radina_video.webp",
         url: "https://vkvideo.ru/video-220903431_456239237?list=f45c2b105738f3a17e&t=2m53s",
         description: "A talk by a student of our laboratory about catalyst design.",
         duration: "14:39",
@@ -204,7 +251,7 @@ const videoData = [
     },
     {
         title: "Alexander Kvashnin and Dmitry Kvashnin. Promo, science is for everyone.",
-        preview: "assets/videos/AGDG_promo.png",
+        preview: "assets/videos/AGDG_promo.webp",
         url: "https://vkvideo.ru/video1100113_456239178",
         description: "Promo video within the framework of the Decade of Science and Technology in Russia.",
         duration: "00:20",
@@ -222,7 +269,7 @@ const teamData = [
     position: "Head of the Lab",
     bio: "Prof. Alexander Kvashnin is a Full Professor at Skoltech and a head of IOCD Lab. Research experience is over 15 years in the field of computational materials science. Focuese on applications of modern methods of computational science and artificial intelligence to complex problems.",
     website: "https://scholar.google.com/citations?user=6x6tbTYAAAAJ&hl=en",
-    photo: "assets/team/Kvashnin.PNG",
+    photo: "assets/team/Kvashnin.webp",
     cv: "assets/cv/Kvashnin.pdf"
   },
   {
@@ -337,7 +384,7 @@ const projectsData = [
   {
     id: 1,
     name: "Higher Tungsten Boride",
-    image: "assets/projects_pic/WB5-x.png",
+    image: "assets/projects_pic/WB5-x.webp",
     description:
       "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
@@ -382,7 +429,7 @@ const projectsData = [
   {
     id: 2,
     name: "High-Entropy Materials",
-    image: "assets/projects_pic/high_entropy.png",
+    image: "assets/projects_pic/high_entropy.webp",
     description:
       "Machine-learning-driven design, synthesis, and thermodynamic modeling of high-entropy carbides and carbonitrides. The project combines deep learning interatomic potentials with plasma and arc-discharge synthesis techniques.",
     publications: [
@@ -420,7 +467,7 @@ const projectsData = [
   {
     id: 3,
     name: "Functional Materials",
-    image: "assets/projects_pic/functional_materials.png",
+    image: "assets/projects_pic/functional_materials.webp",
     description:
       "Computational and experimental studies of functional materials including borides, carbides, thermoelectrics, and low-dimensional systems. Focus on structure–property relationships and scalable synthesis routes.",
     publications: [
@@ -458,7 +505,7 @@ const projectsData = [
   {
     id: 4,
     name: "Catalysts",
-    image: "assets/projects_pic/catalysts.png",
+    image: "assets/projects_pic/catalysts.webp",
     description:
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
@@ -517,7 +564,7 @@ const projectsData = [
   {
     id: 5,
     name: "New Computational Methods",
-    image: "assets/projects_pic/computational_methods.png",
+    image: "assets/projects_pic/computational_methods.webp",
     description:
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
@@ -573,7 +620,7 @@ const resourcesData = [
     id: 1,
     title: "Datasets",
     description: "Here we collect different datasets for atomistic simulationsm which cane be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
-    image: "assets/resources/datasets.png", 
+    image: "assets/resources/datasets.webp",
     items: [
       {
         name: "PbTe mechanics dataset",
@@ -673,7 +720,7 @@ const resourcesData = [
     id: 2,
     title: "Pre-trained Models",
     description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
-    image: "assets/resources/models.png",
+    image: "assets/resources/models.webp",
     items: [
       {
         name: "DeePMD potential for high-entropy carbonitrides",
@@ -815,12 +862,20 @@ function initializeTeam() {
         el.className = 'team-member';
         el.innerHTML = `
             <div class="member-photo">
-                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+                <img src="${member.photo}" alt="${member.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
             <h3>${member.name}</h3>
             <p>${member.position}</p>
         `;
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('aria-label', `View ${member.name}'s profile`);
         el.addEventListener('click', () => openTeamModal(member));
+        el.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            openTeamModal(member);
+        });
         teamGrid.appendChild(el);
     });
 
@@ -829,7 +884,7 @@ function initializeTeam() {
         el.className = 'team-member alumni-member';
         el.innerHTML = `
             <div class="member-photo">
-                <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+                <img src="${member.photo}" alt="${member.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
             <h3>${member.name}</h3>
         `;
@@ -847,11 +902,11 @@ function openTeamModal(member) {
   body.innerHTML = `
     <div class="modal-team-member">
       <div class="modal-photo">
-        <img src="${member.photo}" alt="${member.name}" onerror="this.style.display='none'">
+        <img src="${member.photo}" alt="${member.name}" decoding="async" onerror="this.style.display='none'">
       </div>
 
       <div class="modal-info">
-        <h2>${member.name}</h2>
+        <h2 id="teamModalTitle">${member.name}</h2>
         <p><strong>Position:</strong> ${member.position}</p>
         <p><strong>Bio:</strong> ${member.bio}</p>
 
@@ -862,6 +917,22 @@ function openTeamModal(member) {
   `;
 
   modal.style.display = 'block';
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  lastFocusedElement = document.activeElement;
+  modal.querySelector('.close')?.focus();
+}
+
+let lastFocusedElement = null;
+
+function closeTeamModal() {
+  const modal = document.getElementById('teamModal');
+  if (!modal || modal.style.display === 'none') return;
+
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  lastFocusedElement?.focus();
 }
 
 
@@ -929,7 +1000,7 @@ function initializeProjects() {
         </div>
 
         <div class="project-image">
-          ${p.image ? `<img src="${p.image}" alt="${p.name || 'project image'}" onerror="this.style.display='none'">` : ''}
+          ${p.image ? `<img src="${p.image}" alt="${p.name || 'project image'}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
         </div>
       </div>
 
@@ -999,7 +1070,7 @@ function initializeResources() {
         </div>
 
         <div class="resource-image">
-          ${section.image ? `<img src="${section.image}" alt="${section.title || 'resource image'}" onerror="this.style.display='none'">` : ''}
+          ${section.image ? `<img src="${section.image}" alt="${section.title || 'resource image'}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
         </div>
       </div>
 
@@ -1118,11 +1189,11 @@ async function loadPublications() {
             let linksHTML = '';
             if (pub.links && pub.links.length > 0) {
                 linksHTML = pub.links.map(link => 
-                    `<a href="${link.url}" target="_blank" class="link-${link.type.toLowerCase()}">${link.type}</a>`
+                    `<a href="${link.url}" target="_blank" rel="noopener" class="link-${link.type.toLowerCase()}">${link.type}</a>`
                 ).join('\n            ');
             } else if (pub.url) {
                 // Для обратной совместимости с одной ссылкой
-                linksHTML = `<a href="${pub.url}" target="_blank" class="link-pdf">PDF</a>`;
+                linksHTML = `<a href="${pub.url}" target="_blank" rel="noopener" class="link-pdf">PDF</a>`;
             }
             
             // Добавляем контейнер для ссылок только если есть ссылки
@@ -1694,7 +1765,7 @@ function initializeVideos() {
         <div class="video-item">
             <div class="video-preview">
                 <a href="${video.url}" target="_blank" class="video-link">
-                    <img src="${video.preview}" alt="Video preview" class="video-thumbnail">
+                    <img src="${video.preview}" alt="Preview of ${video.title}" class="video-thumbnail" loading="lazy" decoding="async">
                     <div class="video-play-button">
                         <svg width="64" height="64" viewBox="0 0 64 64">
                             <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
@@ -1727,14 +1798,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.modal');
     
     closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            modals.forEach(modal => modal.style.display = 'none');
-        });
+        button.addEventListener('click', closeTeamModal);
     });
 
     window.addEventListener('click', (event) => {
         modals.forEach(modal => {
-            if (event.target === modal) modal.style.display = 'none';
+            if (event.target === modal) closeTeamModal();
         });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        const modal = document.getElementById('teamModal');
+        if (!modal || modal.getAttribute('aria-hidden') === 'true') return;
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeTeamModal();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusable = [...modal.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])')]
+            .filter(element => !element.hasAttribute('disabled'));
+        if (!focusable.length) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
     });
 });

@@ -2528,3 +2528,84 @@ textarea:focus-visible,
         animation-iteration-count: 1 !important;
     }
 }
+
+/* Publication list: restrained single-family color palette */
+.publication-item {
+    padding: 1.7rem 2rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid #7aa6c2;
+    border-radius: 12px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.publication-item h3 {
+    color: var(--navy);
+    line-height: 1.45;
+}
+
+.publication-item p {
+    color: #334155;
+}
+
+.publication-item .links {
+    margin-top: 1rem;
+}
+
+.publication-item .links a {
+    min-width: 4.5rem;
+    padding: 0.48rem 0.9rem;
+    border: 1px solid transparent;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.publication-item .links .link-doi {
+    border-color: #b8cbd8;
+    background: #eaf1f5;
+    color: var(--navy);
+}
+
+.publication-item .links .link-pdf:hover,
+.publication-item .links .link-pdf:focus-visible {
+    background: var(--navy-deep);
+    text-decoration: none;
+}
+
+.publication-item .links .link-doi:hover,
+.publication-item .links .link-doi:focus-visible {
+    border-color: #8eabba;
+    background: #dce9f0;
+    text-decoration: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.close {
+    padding: 0.2rem 0.45rem;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 2rem;
+}
+
+.tab-link:focus-visible,
+.team-member:focus-visible,
+.close:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.4);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .publication-item {
+        padding: 1.25rem;
+    }
+}
