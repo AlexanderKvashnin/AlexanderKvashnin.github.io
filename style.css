@@ -2581,6 +2581,52 @@ textarea:focus-visible,
     text-decoration: none;
 }
 
+/* Reviews, Projects and Events use the same button system as Publication List */
+.review-buttons {
+    gap: 10px;
+}
+
+.review-buttons .review-btn,
+.project-pub-links a.link-pdf,
+.project-pub-links a.link-doi,
+.event-button {
+    min-width: 4.5rem;
+    padding: 0.48rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.review-buttons .review-btn.journal,
+.project-pub-links a.link-doi {
+    border-color: #b8cbd8;
+    background: #eaf1f5;
+    color: var(--navy);
+}
+
+.review-buttons .review-btn.pdf:hover,
+.review-buttons .review-btn.pdf:focus-visible,
+.project-pub-links a.link-pdf:hover,
+.project-pub-links a.link-pdf:focus-visible,
+.event-button:hover,
+.event-button:focus-visible {
+    background: var(--navy-deep);
+    text-decoration: none;
+}
+
+.review-buttons .review-btn.journal:hover,
+.review-buttons .review-btn.journal:focus-visible,
+.project-pub-links a.link-doi:hover,
+.project-pub-links a.link-doi:focus-visible {
+    border-color: #8eabba;
+    background: #dce9f0;
+    color: var(--navy);
+    text-decoration: none;
+}
+
 body.modal-open {
     overflow: hidden;
 }

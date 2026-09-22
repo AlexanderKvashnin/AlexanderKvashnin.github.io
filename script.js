@@ -166,8 +166,8 @@ function initializeReviews() {
                 <p class="review-abstract">${r.abstract}</p>
 
                 <div class="review-buttons">
-                    <a class="review-btn" href="${r.journalUrl}" target="_blank">Journal</a>
-                    <a class="review-btn pdf" href="${r.pdfUrl}" target="_blank">PDF</a>
+                    <a class="review-btn pdf" href="${r.pdfUrl}" target="_blank" rel="noopener">PDF</a>
+                    <a class="review-btn journal" href="${r.journalUrl}" target="_blank" rel="noopener">Journal</a>
                 </div>
             </div>
         </div>
