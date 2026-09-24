@@ -366,6 +366,14 @@ const teamData = [
     website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
     photo: "assets/team/Bychkov.jpg",
     cv: "assets/cv/Bychkov.pdf"
+  },
+  {
+    id: 13,
+    name: "Gleb Prishchepchuk",
+    position: "MSc Student",
+    bio: "Gleb is an MSc student at Skoltech and a '25 BSc MIPT graduate in Applied Maths and Physics. He specializes in non-volatile memory FeRAM and ReRAM and atomistic simulations using MD for modeling ceramics used in biomedicine.",
+    photo: "assets/team/Prishchepchuk.png",
+    cv: "assets/cv/Prishchepchuk.pdf"
   }
 ];
 
