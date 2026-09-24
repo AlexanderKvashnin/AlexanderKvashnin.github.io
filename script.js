@@ -334,14 +334,6 @@ const teamData = [
     cv: "assets/cv/Iosimovska.pdf"
   },
   {
-    id: 9,
-    name: "Anna Dorosh",
-    position: "MSc Student",
-    bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology with a background in biotechnology and data analysis. Her research interests lie at the intersection of artificial intelligence and chemistry, with a particular focus on machine learning applications in catalysis, prediction of chemical properties, and data-driven discovery of new materials.",
-    photo: "assets/team/Dorosh.jpg",
-    cv: "assets/cv/Dorosh.pdf"
-  },
-  {
     id: 10,
     name: "Daria Fedotova",
     position: "MSc Student",
@@ -366,6 +358,14 @@ const teamData = [
     website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
     photo: "assets/team/Bychkov.jpg",
     cv: "assets/cv/Bychkov.pdf"
+  },
+  {
+    id: 9,
+    name: "Anna Dorosh",
+    position: "MSc Student",
+    bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology with a background in biotechnology and data analysis. Her research interests lie at the intersection of artificial intelligence and chemistry, with a particular focus on machine learning applications in catalysis, prediction of chemical properties, and data-driven discovery of new materials.",
+    photo: "assets/team/Dorosh.jpg",
+    cv: "assets/cv/Dorosh.pdf"
   },
   {
     id: 13,
