@@ -757,6 +757,24 @@ const resourcesData = [
         ]
       },
     ]
+  },
+
+ {
+    id: 3,
+    title: "Our codes",
+    description: "Here we collect our codes useful for data-processing.",
+    image: "assets/resources/get_preview_url.png",
+    items: [
+      {
+        name: "gpucohp",
+        note: "Chemical-bonding analysis from a VASP WAVECAR on a GPU. Using this code please cite our paper.",
+        links: [
+          { label: "GITHUB", url: "https://github.com/daneKKK/gpucohp/tree/main" },
+             {label: "ZENODO", url: "https://doi.org/10.5281/zenodo.22983563"},
+            {label: "TESTSET", url: "https://doi.org/10.5281/zenodo.22996181"}
+        ]
+      },
+    ]
   }
 ];
 
