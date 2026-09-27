@@ -627,7 +627,7 @@ const resourcesData = [
   {
     id: 1,
     title: "Datasets",
-    description: "Here we collect different datasets for atomistic simulationsm which cane be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
+    description: "Here we collect different datasets for atomistic simulations, which can be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
     image: "assets/resources/datasets.webp",
     items: [
       {
@@ -649,7 +649,7 @@ const resourcesData = [
       },
       {
         name: "High-entropy carbonitrides (HECN) dataset",
-        note: "Dataset includes structural configurations of crystalline and liquid phases of HfTaTiNbZrCxNy for training deep learning potentials suitable for simulatoins of melting. Using this dataset please cite PAPER(1) and optionally PAPERS(2-3).",
+        note: "Dataset includes structural configurations of crystalline and liquid phases of HfTaTiNbZrCxNy for training deep learning potentials suitable for simulations of melting. Using this dataset please cite PAPER(1) and optionally PAPERS(2-3).",
         links: [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=DP_HECN_cryst_liquid_dataset&id=321" },
             {label: "PAPER(1)", url: "https://www.nature.com/articles/s41598-024-78377-4"},
@@ -683,7 +683,7 @@ const resourcesData = [
       },
       {
         name: "CuAu nanoparticles dataset",
-        note: "Dataset contains atomic structures of CuAu nanoparticle withdifferent compositions suitable for DFT/ML studies. Additionally information about electronic properties of active sites computed by DFT is presented. Using this dataset please cite the following PAPER.",
+        note: "Dataset contains atomic structures of CuAu nanoparticle with different compositions suitable for DFT/ML studies. Additionally information about electronic properties of active sites computed by DFT is presented. Using this dataset please cite the following PAPER.",
         links: [
           { label: "GitHub", url: "https://github.com/AlexanderKvashnin/AuCu_nanoparticles" },
             {label: "PAPER", url: "https://onlinelibrary.wiley.com/doi/full/10.1002/agt2.273"}
@@ -699,7 +699,7 @@ const resourcesData = [
       },
       {
         name: "WB5−x surfaces adsorption dataset",
-        note: "Dataset contains structural condigurations of different gas molecules adsorbed on the surfaces of higher tungsten boride WB5-x. Suitable for training the potentials as well as for comparison DFT data. Using this dataset please cite the following PAPER.",
+        note: "Dataset contains structural configurations of different gas molecules adsorbed on the surfaces of higher tungsten boride WB5-x. Suitable for training the potentials as well as for comparison DFT data. Using this dataset please cite the following PAPER.",
         links: [
           { label: "URL", url: "https://www.aissquare.com/datasets/detail?pageType=datasets&name=WB5-x-surfaces-POSCARS&id=322" },
             {label: "PAPER", url: "https://www.nature.com/articles/s41598-024-63676-7"}
@@ -732,7 +732,7 @@ const resourcesData = [
     items: [
       {
         name: "DeePMD potential for high-entropy carbonitrides",
-        note: "Pre-trained DeePMD potential for simulations of melting and mechanical properties of high-entropy carbonitrides. Corresponding dataset is presented above. Using this dataset please cite PAPER(1) and optionally PAPERS(2-3).",
+        note: "Pre-trained DeePMD potential for simulations of melting and mechanical properties of high-entropy carbonitrides. Corresponding dataset is presented above. Using this model please cite PAPER(1) and optionally PAPERS(2-3).",
         links: [
           { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=DP_HECN_model&id=320" },
              {label: "PAPER(1)", url: "https://www.nature.com/articles/s41598-024-78377-4"},
@@ -742,7 +742,7 @@ const resourcesData = [
       },
       {
         name: "DeePMD potential for PbTe",
-        note: "Pre-trained DeePMD potential for mechanical simulations of PbTe. Using this dataset please cite the following PAPER.",
+        note: "Pre-trained DeePMD potential for mechanical simulations of PbTe. Using this model please cite the following PAPER.",
         links: [
           { label: "URL", url: "https://www.aissquare.com/models/detail?pageType=models&name=PbTe_mechanics_potentials&id=393" },
             { label: "PAPER", url: "https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00823a"}
@@ -750,7 +750,7 @@ const resourcesData = [
       },
      {
         name: "MTP potential for WC-Co",
-        note: "Pre-trained MTP model for simulations of mechanical properties of WC-Co ceramic. Training dataset of strucutural configurations included. Using this dataset please cite the following PAPER.",
+        note: "Pre-trained MTP model for simulations of mechanical properties of WC-Co ceramic. Training dataset of structural configurations included. Using this model please cite the following PAPER.",
         links: [
           { label: "GitHub", url: "https://gitlab.com/faridunjalolov/mtp-for-wc-co-composite-system/" },
             { label: "PAPER", url: "https://www.sciencedirect.com/science/article/abs/pii/S0927025626004817"}
