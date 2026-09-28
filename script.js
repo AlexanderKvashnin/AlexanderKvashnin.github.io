@@ -927,18 +927,19 @@ function initializeTeam() {
     alumniGrid.innerHTML = '';
 
     teamData.forEach(member => {
+        const localizedName = localizedField('team', member.id, 'name', member.name);
         const el = document.createElement('div');
         el.className = 'team-member';
         el.innerHTML = `
             <div class="member-photo">
-                <img src="${member.photo}" alt="${member.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <img src="${member.photo}" alt="${localizedName}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
-            <h3>${member.name}</h3>
+            <h3>${localizedName}</h3>
             <p>${localizedField('team', member.id, 'position', member.position)}</p>
         `;
         el.setAttribute('role', 'button');
         el.setAttribute('tabindex', '0');
-        el.setAttribute('aria-label', window.IOCD_I18N?.language === 'ru' ? `Открыть профиль: ${member.name}` : `View ${member.name}'s profile`);
+        el.setAttribute('aria-label', window.IOCD_I18N?.language === 'ru' ? `Открыть профиль: ${localizedName}` : `View ${localizedName}'s profile`);
         el.addEventListener('click', () => openTeamModal(member));
         el.addEventListener('keydown', (event) => {
             if (event.key !== 'Enter' && event.key !== ' ') return;
@@ -949,13 +950,14 @@ function initializeTeam() {
     });
 
     alumniData.forEach(member => {
+        const localizedName = localizedField('alumni', member.id, 'name', member.name);
         const el = document.createElement('div');
         el.className = 'team-member alumni-member';
         el.innerHTML = `
             <div class="member-photo">
-                <img src="${member.photo}" alt="${member.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <img src="${member.photo}" alt="${localizedName}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
-            <h3>${member.name}</h3>
+            <h3>${localizedName}</h3>
         `;
         alumniGrid.appendChild(el);
     });
@@ -968,14 +970,16 @@ function openTeamModal(member) {
   const body = modal.querySelector('.modal-body');
   if (!body) return;
 
+  const localizedName = localizedField('team', member.id, 'name', member.name);
+
   body.innerHTML = `
     <div class="modal-team-member">
       <div class="modal-photo">
-        <img src="${member.photo}" alt="${member.name}" decoding="async" onerror="this.style.display='none'">
+        <img src="${member.photo}" alt="${localizedName}" decoding="async" onerror="this.style.display='none'">
       </div>
 
       <div class="modal-info">
-        <h2 id="teamModalTitle">${member.name}</h2>
+        <h2 id="teamModalTitle">${localizedName}</h2>
         <p><strong>${localizedText('dynamic.position', 'Position:')}</strong> ${localizedField('team', member.id, 'position', member.position)}</p>
         <p><strong>${localizedText('dynamic.bio', 'Bio:')}</strong> ${localizedField('team', member.id, 'bio', member.bio)}</p>
 
