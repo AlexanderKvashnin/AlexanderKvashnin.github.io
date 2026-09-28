@@ -15,7 +15,7 @@
     <link rel="icon" href="assets/favicon.png?v=20260922-cluster" type="image/png">
     <link rel="apple-touch-icon" href="assets/favicon.png?v=20260922-cluster">
     <title>IOCD Lab | Computational Materials Science at Skoltech</title>
-    <link rel="stylesheet" href="style.css?v=20260924-about">
+    <link rel="stylesheet" href="style.css?v=20260928-i18n2">
 </head>
 
 <body>
@@ -24,18 +24,23 @@
     <nav class="navbar" aria-label="Primary navigation">
         <div class="nav-brand">IOCD Lab</div>
 <ul class="nav-tabs" role="tablist">
-    <li class="tab-link active" data-tab="about" role="tab" tabindex="0" aria-controls="about" aria-selected="true">About</li>
-    <li class="tab-link" data-tab="team" role="tab" tabindex="-1" aria-controls="team" aria-selected="false">Our Team</li>
-    <li class="tab-link" data-tab="projects" role="tab" tabindex="-1" aria-controls="projects" aria-selected="false">Projects</li>
-    <li class="tab-link" data-tab="reviews" role="tab" tabindex="-1" aria-controls="reviews" aria-selected="false">Reviews</li>
-    <li class="tab-link" data-tab="events" role="tab" tabindex="-1" aria-controls="events" aria-selected="false">Events</li>
-    <li class="tab-link" data-tab="publications" role="tab" tabindex="-1" aria-controls="publications" aria-selected="false">Publication List</li>
-    <li class="tab-link" data-tab="courses" role="tab" tabindex="-1" aria-controls="courses" aria-selected="false">Courses</li>
-    <li class="tab-link" data-tab="video" role="tab" tabindex="-1" aria-controls="video" aria-selected="false">Video</li>
-    <li class="tab-link" data-tab="collaborators" role="tab" tabindex="-1" aria-controls="collaborators" aria-selected="false">Collaborators</li>
-    <li class="tab-link" data-tab="resources" role="tab" tabindex="-1" aria-controls="resources" aria-selected="false">Our Resources</li>
-    <li class="tab-link" data-tab="contact" role="tab" tabindex="-1" aria-controls="contact" aria-selected="false">Contact</li>
+    <li class="tab-link active" data-tab="about" role="tab" tabindex="0" aria-controls="about" aria-selected="true" data-i18n="nav.about">About</li>
+    <li class="tab-link" data-tab="team" role="tab" tabindex="-1" aria-controls="team" aria-selected="false" data-i18n="nav.team">Our Team</li>
+    <li class="tab-link" data-tab="projects" role="tab" tabindex="-1" aria-controls="projects" aria-selected="false" data-i18n="nav.projects">Projects</li>
+    <li class="tab-link" data-tab="reviews" role="tab" tabindex="-1" aria-controls="reviews" aria-selected="false" data-i18n="nav.reviews">Reviews</li>
+    <li class="tab-link" data-tab="events" role="tab" tabindex="-1" aria-controls="events" aria-selected="false" data-i18n="nav.events">Events</li>
+    <li class="tab-link" data-tab="publications" role="tab" tabindex="-1" aria-controls="publications" aria-selected="false" data-i18n="nav.publications">Publication List</li>
+    <li class="tab-link" data-tab="courses" role="tab" tabindex="-1" aria-controls="courses" aria-selected="false" data-i18n="nav.courses">Courses</li>
+    <li class="tab-link" data-tab="video" role="tab" tabindex="-1" aria-controls="video" aria-selected="false" data-i18n="nav.video">Video</li>
+    <li class="tab-link" data-tab="collaborators" role="tab" tabindex="-1" aria-controls="collaborators" aria-selected="false" data-i18n="nav.collaborators">Collaborators</li>
+    <li class="tab-link" data-tab="resources" role="tab" tabindex="-1" aria-controls="resources" aria-selected="false" data-i18n="nav.resources">Our Resources</li>
+    <li class="tab-link" data-tab="contact" role="tab" tabindex="-1" aria-controls="contact" aria-selected="false" data-i18n="nav.contact">Contact</li>
 </ul>
+        <div class="language-switcher" role="group" aria-label="Language selection" data-i18n-aria-label="language.label">
+            <button class="language-option active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-option" type="button" data-language="ru" aria-pressed="false">RU</button>
+        </div>
     </nav>
 </header>
 
@@ -49,46 +54,46 @@
         <!-- HERO -->
         <section class="about-hero">
             <div class="about-hero-copy">
-                <p class="about-eyebrow">Computational materials science · Skoltech</p>
-                <h1>Skoltech Industry-Oriented Computational Discovery Lab</h1>
+                <p class="about-eyebrow" data-i18n="about.eyebrow">Computational materials science · Skoltech</p>
+                <h1 data-i18n="about.title">Skoltech Industry-Oriented Computational Discovery Lab</h1>
 
-                <p class="about-lead">
+                <p class="about-lead" data-i18n="about.lead">
                     We discover new materials and predict their properties through advanced simulation,
                     artificial intelligence, and close connection with real industrial challenges.
                 </p>
 
                 <div class="about-actions" aria-label="Explore the laboratory">
-                    <a class="about-button about-button-primary" href="#projects">Explore projects</a>
-                    <a class="about-button about-button-secondary" href="#team">Meet our team</a>
+                    <a class="about-button about-button-primary" href="#projects" data-i18n="about.projectsButton">Explore projects</a>
+                    <a class="about-button about-button-secondary" href="#team" data-i18n="about.teamButton">Meet our team</a>
                 </div>
 
                 <ul class="about-disciplines" aria-label="Fields of expertise">
-                    <li>Physics</li>
-                    <li>Chemistry</li>
-                    <li>Materials science</li>
-                    <li>Artificial intelligence</li>
+                    <li data-i18n="about.physics">Physics</li>
+                    <li data-i18n="about.chemistry">Chemistry</li>
+                    <li data-i18n="about.materials">Materials science</li>
+                    <li data-i18n="about.ai">Artificial intelligence</li>
                 </ul>
             </div>
 
             <figure class="about-hero-visual">
                 <img src="assets/favicon.png?v=20260922-cluster" alt="Atomic model of a nanoparticle" fetchpriority="high">
                 <figcaption>
-                    <span>Our approach</span>
-                    From atomic-scale models to functional materials.
+                    <span data-i18n="about.approachLabel">Our approach</span>
+                    <span class="about-caption-text" data-i18n="about.approachText">From atomic-scale models to functional materials.</span>
                 </figcaption>
             </figure>
         </section>
 
         <section class="about-summary" aria-labelledby="about-summary-title">
-            <p class="about-section-kicker">What we do</p>
+            <p class="about-section-kicker" data-i18n="about.whatWeDo">What we do</p>
             <div class="about-summary-layout">
-                <h2 id="about-summary-title">From computation to real materials</h2>
+                <h2 id="about-summary-title" data-i18n="about.summaryTitle">From computation to real materials</h2>
                 <div class="about-summary-text">
-                    <p>
+                    <p data-i18n="about.summaryOne">
                         We are part of the global AI for Materials Science movement, extending what
                         advanced algorithms and simulations can reveal about real materials.
                     </p>
-                    <p>
+                    <p data-i18n="about.summaryTwo">
                         Our work brings physics, chemistry, materials science, and artificial intelligence
                         together with experimental insight to address ambitious scientific and industrial problems.
                     </p>
@@ -100,51 +105,51 @@
         <section class="lab-glance">
             <div class="about-section-heading">
                 <div>
-                    <p class="about-section-kicker">The lab in numbers</p>
-                    <h2>IOCD Lab at a Glance</h2>
+                    <p class="about-section-kicker" data-i18n="about.numbersKicker">The lab in numbers</p>
+                    <h2 data-i18n="about.glanceTitle">IOCD Lab at a Glance</h2>
                 </div>
-                <p>A compact view of our research activity, collaborations, and academic community.</p>
+                <p data-i18n="about.glanceIntro">A compact view of our research activity, collaborations, and academic community.</p>
             </div>
 
             <div class="glance-grid">
                 <div class="glance-item">
                     <span class="glance-number">30+</span>
-                    <span class="glance-label">Active research projects</span>
+                    <span class="glance-label" data-i18n="about.metric.projects">Active research projects</span>
                 </div>
 
                  <div class="glance-item">
                     <span class="glance-number">5</span>
-                    <span class="glance-label">Successful R&D projects</span>
+                    <span class="glance-label" data-i18n="about.metric.rd">Successful R&amp;D projects</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">100+</span>
-                    <span class="glance-label">Peer-reviewed publications</span>
+                    <span class="glance-label" data-i18n="about.metric.publications">Peer-reviewed publications</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">20+</span>
-                    <span class="glance-label">International collaborators</span>
+                    <span class="glance-label" data-i18n="about.metric.collaborators">International collaborators</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">5</span>
-                    <span class="glance-label">Core research directions</span>
+                    <span class="glance-label" data-i18n="about.metric.directions">Core research directions</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">3</span>
-                    <span class="glance-label">Faculty & senior researchers</span>
+                    <span class="glance-label" data-i18n="about.metric.faculty">Faculty &amp; senior researchers</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">10+</span>
-                    <span class="glance-label">PhD & MSc students</span>
+                    <span class="glance-label" data-i18n="about.metric.students">PhD &amp; MSc students</span>
                 </div>
 
                 <div class="glance-item">
                     <span class="glance-number">5+</span>
-                    <span class="glance-label">Invited talks & media features per year</span>
+                    <span class="glance-label" data-i18n="about.metric.talks">Invited talks &amp; media features per year</span>
                 </div>
             </div>
         </section>
@@ -153,25 +158,25 @@
         <section class="research-scope">
             <div class="about-section-heading">
                 <div>
-                    <p class="about-section-kicker">Areas of expertise</p>
-                    <h2>Research Scope</h2>
+                    <p class="about-section-kicker" data-i18n="about.scopeKicker">Areas of expertise</p>
+                    <h2 data-i18n="about.scopeTitle">Research Scope</h2>
                 </div>
-                <p>Computational methods and machine learning across scales, materials classes, and applications.</p>
+                <p data-i18n="about.scopeIntro">Computational methods and machine learning across scales, materials classes, and applications.</p>
             </div>
 
             <ul class="research-list">
-                <li>The use and implementation of AI-powered methods for predicting the properties of functional materials, in the broadest sense of the term</li>
-                <li>Catalytic nanoparticles: metallic, bimetallic, high-entropy; DFT in conjunction with AI-powered techniques to construct predictive models</li>
-                <li>High-entropy materials: MD simulations with ML potentials; AI-powered techniques for data processing</li>
-                <li>High-temperature superconductivity under high pressure: stability; formation; properties; data analysis; ML-based predictive models</li>
-                <li>Constructional and functional materials: MD simulations with ML potentials; analysis of degradation of properties; increasing the operating time</li>
-                <li>Low-dimensional materials: thermal transport; electronic transport; new ML-based techniques</li>
+                <li data-i18n="about.scope.1">The use and implementation of AI-powered methods for predicting the properties of functional materials, in the broadest sense of the term</li>
+                <li data-i18n="about.scope.2">Catalytic nanoparticles: metallic, bimetallic, high-entropy; DFT in conjunction with AI-powered techniques to construct predictive models</li>
+                <li data-i18n="about.scope.3">High-entropy materials: MD simulations with ML potentials; AI-powered techniques for data processing</li>
+                <li data-i18n="about.scope.4">High-temperature superconductivity under high pressure: stability; formation; properties; data analysis; ML-based predictive models</li>
+                <li data-i18n="about.scope.5">Constructional and functional materials: MD simulations with ML potentials; analysis of degradation of properties; increasing the operating time</li>
+                <li data-i18n="about.scope.6">Low-dimensional materials: thermal transport; electronic transport; new ML-based techniques</li>
             </ul>
         </section>
 
         <!-- QUOTE -->
         <section class="about-quote">
-            <p>
+            <p data-i18n="about.quote">
                 “We envision the future of materials science as a convergence of computational power, 
                 theoretical frameworks, and intelligent algorithms with experimental materials science”
             </p>
@@ -184,15 +189,15 @@
 
 <!-- ================= EVENTS ================= -->
 <div id="events" class="tab-content">
-    <h1>Events</h1>
+    <h1 data-i18n="events.title">Events</h1>
 
     <section class="upcoming-events">
-        <h2 class="events-section-heading">Upcoming Events</h2>
-        <p class="no-events-message">There are currently no upcoming events.</p>
+        <h2 class="events-section-heading" data-i18n="events.upcoming">Upcoming Events</h2>
+        <p class="no-events-message" data-i18n="events.none">There are currently no upcoming events.</p>
     </section>
 
     <section class="past-events">
-        <h2 class="events-section-heading">Past Events</h2>
+        <h2 class="events-section-heading" data-i18n="events.past">Past Events</h2>
 
         <div class="lab-event">
             <div class="event-card">
@@ -204,19 +209,19 @@
                 </div>
 
                 <div class="event-content">
-                    <span class="event-badge">Past Event</span>
+                    <span class="event-badge" data-i18n="events.badge">Past Event</span>
 
-                    <h2>International School for Young Scientists</h2>
+                    <h2 data-i18n="events.schoolTitle">International School for Young Scientists</h2>
 
                     <p class="event-subtitle">
-                        <strong>Advanced Computational Materials Technologies</strong>
+                        <strong data-i18n="events.schoolSubtitle">Advanced Computational Materials Technologies</strong>
                     </p>
 
-                    <p class="event-date">
+                    <p class="event-date" data-i18n="events.schoolDate">
                         April 16, 2026 • Skolkovo Institute of Science and Technology
                     </p>
 
-                    <p class="event-description">
+                    <p class="event-description" data-i18n="events.schoolDescription">
                         The school is dedicated to modern approaches in computational materials science,
                         including atomic modeling and artificial intelligence. The event featured
                         lectures by leading Russian and Chinese scientists, as well as presentations
@@ -227,7 +232,7 @@
                        href="https://sci.skoltech.ru/internationalschoolforyoungscientists"
                        target="_blank"
                        rel="noopener">
-                       Learn more
+                       <span data-i18n="common.learnMore">Learn more</span>
                     </a>
                 </div>
             </div>
@@ -236,16 +241,16 @@
 </div>
     <!-- ================= TEAM ================= -->
     <div id="team" class="tab-content">
-        <h1>Our Team</h1>
-        <h2 class="team-section-title">Current Members</h2>
+        <h1 data-i18n="team.title">Our Team</h1>
+        <h2 class="team-section-title" data-i18n="team.current">Current Members</h2>
         <div class="team-grid"></div>
-        <h2 class="team-section-title alumni-title">Alumni</h2>
+        <h2 class="team-section-title alumni-title" data-i18n="team.alumni">Alumni</h2>
         <div class="team-grid alumni-grid"></div>
     </div>
 
 <!-- =============== PROJECTS =============== -->
 <section id="projects" class="tab-content">
-  <h1>Projects</h1>
+  <h1 data-i18n="projects.title">Projects</h1>
 
   <!-- accordion container like Courses -->
   <div class="projects-list"></div>
@@ -255,26 +260,26 @@
 
     <!-- ============ PUBLICATIONS ============== -->
     <div id="publications" class="tab-content">
-        <h1>Publication List</h1>
+        <h1 data-i18n="publications.title">Publication List</h1>
         <div class="publications-list"></div>
     </div>
 
     <!-- ================= REVIEWS =============== -->
     <div id="reviews" class="tab-content">
-        <h1>Reviews</h1>
+        <h1 data-i18n="reviews.title">Reviews</h1>
         <div class="reviews-grid"></div>
     </div>
 
     <!-- ================= COURSES =============== -->
     <div id="courses" class="tab-content">
-        <h1>Courses</h1>
+        <h1 data-i18n="courses.title">Courses</h1>
 
         <!-- Course 1 -->
         <div class="course-section">
             <div class="course-header">
                 <div class="course-content">
-                    <h2>Thermodynamics of Materials</h2>
-                    <p>Graduate-level overview of thermodynamics applied to computational materials science.</p>
+                    <h2 data-i18n="courses.thermo.title">Thermodynamics of Materials</h2>
+                    <p data-i18n="courses.thermo.intro">Graduate-level overview of thermodynamics applied to computational materials science.</p>
                 </div>
                 <div class="course-image">
                     <img src="assets/courses/TM.webp" alt="Thermodynamics of Materials" loading="lazy" decoding="async">
@@ -283,17 +288,17 @@
 
             <div class="course-details">
                 <div class="course-description">
-                    <h3>Detailed Description</h3>
-                    <p>
+                    <h3 data-i18n="courses.details">Detailed Description</h3>
+                    <p data-i18n="courses.thermo.description">
                         The course covers stability of materials, phase transitions, defects, surfaces,
                         and thin films with applications in catalysis, sensing, and energy storage.
                     </p>
                 </div>
 
                 <div class="course-links">
-  <a class="course-link-btn" href="https://github.com/AlexanderKvashnin/QE_tutorial" target="_blank">Laboratory work</a>
-  <a class="course-link-btn" href="assets/courses/MA060589_TM.pdf" target="_blank">Syllabus PDF</a>
-  <a class="course-link-btn" href="#">Assignments</a>
+  <a class="course-link-btn" href="https://github.com/AlexanderKvashnin/QE_tutorial" target="_blank" data-i18n="courses.lab">Laboratory work</a>
+  <a class="course-link-btn" href="assets/courses/MA060589_TM.pdf" target="_blank" data-i18n="courses.syllabus">Syllabus PDF</a>
+  <a class="course-link-btn" href="#" data-i18n="courses.assignments">Assignments</a>
 </div>
             </div>
         </div>
@@ -302,8 +307,8 @@
         <div class="course-section">
             <div class="course-header">
                 <div class="course-content">
-                    <h2>Computational Methods in Atomistic Simulations</h2>
-                    <p>Classical and modern computational approaches in materials science.</p>
+                    <h2 data-i18n="courses.methods.title">Computational Methods in Atomistic Simulations</h2>
+                    <p data-i18n="courses.methods.intro">Classical and modern computational approaches in materials science.</p>
                 </div>
                 <div class="course-image">
                     <img src="assets/courses/CMAS.webp" alt="Computational Methods" loading="lazy" decoding="async">
@@ -312,17 +317,17 @@
 
             <div class="course-details">
                 <div class="course-description">
-                    <h3>Detailed Description</h3>
-                    <p>
+                    <h3 data-i18n="courses.details">Detailed Description</h3>
+                    <p data-i18n="courses.methods.description">
                         The course spans classical transport theories to modern DFT, molecular dynamics,
                         and machine learning methods with hands-on computational practice.
                     </p>
                 </div>
 
                 <div class="course-links">
-  <a class="course-link-btn" href="https://github.com/AlexanderKvashnin/QE_tutorial" target="_blank">Laboratory work</a>
-  <a class="course-link-btn" href="assets/courses/MA060573_CMAS.pdf" target="_blank">Syllabus PDF</a>
-  <a class="course-link-btn" href="#">Assignments</a>
+  <a class="course-link-btn" href="https://github.com/AlexanderKvashnin/QE_tutorial" target="_blank" data-i18n="courses.lab">Laboratory work</a>
+  <a class="course-link-btn" href="assets/courses/MA060573_CMAS.pdf" target="_blank" data-i18n="courses.syllabus">Syllabus PDF</a>
+  <a class="course-link-btn" href="#" data-i18n="courses.assignments">Assignments</a>
 </div>
             </div>
         </div>
@@ -330,47 +335,47 @@
 
     <!-- ================= VIDEO ================= -->
     <div id="video" class="tab-content">
-        <h1>Video Content</h1>
+        <h1 data-i18n="video.title">Video Content</h1>
         <div class="video-grid"></div>
     </div>
 
     <!-- ============ COLLABORATORS ============== -->
     <div id="collaborators" class="tab-content">
-        <h1>Collaborators</h1>
+        <h1 data-i18n="collaborators.title">Collaborators</h1>
         <div class="collaborators-grid"></div>
     </div>
 
     <!-- ============ RESEARCH RESOURCES ============== -->
 <div id="resources" class="tab-content">
-    <h1>Our Resources</h1>
+    <h1 data-i18n="resources.title">Our Resources</h1>
     <div class="resources-list"></div>
 </div>
 
 
     <!-- ================= CONTACT =============== -->
     <div id="contact" class="tab-content contact-container">
-        <h1>Contact Us</h1>
+        <h1 data-i18n="contact.title">Contact Us</h1>
 
         <form class="contact-form"
               action="https://formspree.io/f/xqajdovr"
               method="POST">
 
             <label>
-                Full Name
+                <span data-i18n="contact.name">Full Name</span>
                 <input type="text" name="name" required>
             </label>
 
             <label>
-                Email
+                <span data-i18n="contact.email">Email</span>
                 <input type="email" name="email" required>
             </label>
 
             <label>
-                Message
+                <span data-i18n="contact.message">Message</span>
                 <textarea name="message" rows="6" required></textarea>
             </label>
 
-            <button type="submit" class="contact-btn">Send Message</button>
+            <button type="submit" class="contact-btn" data-i18n="contact.send">Send Message</button>
         </form>
     </div>
 
@@ -379,30 +384,31 @@
 <!-- ================= MODAL ================= -->
 <div id="teamModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="teamModalTitle">
     <div class="modal-content" tabindex="-1">
-        <button class="close" type="button" aria-label="Close profile">&times;</button>
+        <button class="close" type="button" aria-label="Close profile" data-i18n-aria-label="team.close">&times;</button>
         <div class="modal-body"></div>
     </div>
 </div>
 
-<script src="script.js?v=20260924-order" defer></script>
+<script src="i18n.js?v=20260928-ru" defer></script>
+<script src="script.js?v=20260928-ru-publication" defer></script>
 
 <footer class="footer">
     <div class="footer-content">
         <div class="contact-info">
-            <h3>Contact</h3>
-            <p><a href="https://yandex.ru/maps/org/skolkovskiy_institut_nauki_i_tekhnologiy/116676186390/?ll=37.359577%2C55.698539&z=17.56" target="_blank"> Skolkovo Institute of Science and Technology, Moscow</a></p>
-            <p>Phone: <a href="tel:+74952801481">+7 (495) 280-14-81</a></p>
+            <h3 data-i18n="footer.contact">Contact</h3>
+            <p><a href="https://yandex.ru/maps/org/skolkovskiy_institut_nauki_i_tekhnologiy/116676186390/?ll=37.359577%2C55.698539&z=17.56" target="_blank" data-i18n="footer.address">Skolkovo Institute of Science and Technology, Moscow</a></p>
+            <p><span data-i18n="footer.phone">Phone:</span> <a href="tel:+74952801481">+7 (495) 280-14-81</a></p>
         </div>
 
         <div class="footer-links">
-            <a href="https://www.skoltech.ru" target="_blank">Skoltech Website</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Use</a>
+            <a href="https://www.skoltech.ru" target="_blank" data-i18n="footer.skoltech">Skoltech Website</a>
+            <a href="#privacy" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#terms" data-i18n="footer.terms">Terms of Use</a>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; <span id="copyright-year">2026</span> IOCD Lab. All rights reserved.</p>
+        <p>&copy; <span id="copyright-year">2026</span> IOCD Lab. <span data-i18n="footer.rights">All rights reserved.</span></p>
     </div>
 </footer>
 

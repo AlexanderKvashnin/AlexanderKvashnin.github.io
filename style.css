@@ -1867,7 +1867,7 @@ header {
 .navbar {
     flex-wrap: nowrap;
     gap: 1.5rem;
-    padding: 0.85rem max(1.25rem, calc((100vw - 1240px) / 2));
+    padding: 0.85rem max(1.25rem, calc((100vw - 1440px) / 2));
     background: var(--navy);
 }
 
@@ -1878,6 +1878,7 @@ header {
 }
 
 .nav-tabs {
+    flex-wrap: nowrap;
     justify-content: flex-end;
     gap: 0.15rem;
 }
@@ -2953,6 +2954,110 @@ textarea:focus-visible,
     .about-button,
     #about .research-scope li {
         transition: none;
+    }
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.language-switcher {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.language-option {
+    min-width: 34px;
+    min-height: 32px;
+    padding: 0.35rem 0.45rem;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.72);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-option:hover {
+    color: #fff;
+}
+
+.language-option.active {
+    background: #fff;
+    color: var(--navy);
+}
+
+.language-option:focus-visible {
+    outline: 3px solid rgba(191, 219, 254, 0.7);
+    outline-offset: 2px;
+}
+
+.about-caption-text {
+    display: block;
+}
+
+html[lang="ru"] #about .about-hero h1 {
+    font-size: clamp(2.4rem, 4.4vw, 4.25rem);
+    line-height: 1.03;
+}
+
+@media (max-width: 1400px) and (min-width: 901px) {
+    .navbar {
+        gap: 0.55rem;
+    }
+
+    .tab-link {
+        padding-right: 0.48rem;
+        padding-left: 0.48rem;
+        font-size: 0.82rem;
+    }
+
+    .language-option {
+        min-width: 30px;
+        padding-right: 0.35rem;
+        padding-left: 0.35rem;
+    }
+}
+
+@media (max-width: 1180px) {
+    .navbar {
+        gap: 0.75rem;
+    }
+
+    .tab-link {
+        padding-right: 0.58rem;
+        padding-left: 0.58rem;
+        font-size: 0.86rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        position: relative;
+        padding-right: 5.8rem;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 0.65rem;
+        right: 1.1rem;
+    }
+
+    .nav-tabs {
+        width: calc(100vw - 2.2rem);
+    }
+}
+
+@media (max-width: 700px) {
+    html[lang="ru"] #about .about-hero h1 {
+        font-size: clamp(2.05rem, 10.5vw, 3.1rem);
     }
 }
 

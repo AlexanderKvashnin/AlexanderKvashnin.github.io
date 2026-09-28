@@ -1,14 +1,57 @@
-console.log('JS LOADED v10');
+console.log('JS LOADED v11');
+
+function localizedField(group, id, key, fallback = '') {
+  return window.IOCD_I18N?.field(group, id, key, fallback) ?? fallback;
+}
+
+function localizedText(key, fallback = '') {
+  return window.IOCD_I18N?.text(key, fallback) ?? fallback;
+}
+
+function refreshLocalizedSections() {
+  const modal = document.getElementById('teamModal');
+  const openMemberId = modal?.getAttribute('data-member-id');
+  const shouldRefreshModal = modal?.getAttribute('aria-hidden') === 'false' && openMemberId;
+  initializeTeam();
+  initializeProjects();
+  initializeCollaborators();
+  initializeVideos();
+  initializeReviews();
+  initializeResources();
+  window.IOCD_I18N?.applyStatic();
+  updateLanguageControls();
+  if (shouldRefreshModal) {
+    const member = teamData.find(item => String(item.id) === String(openMemberId));
+    if (member) openTeamModal(member);
+  }
+}
+
+function updateLanguageControls() {
+  const language = window.IOCD_I18N?.language || 'en';
+  document.querySelectorAll('.language-option').forEach(button => {
+    const isActive = button.dataset.language === language;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+
+function initializeLanguageControls() {
+  document.querySelectorAll('.language-option').forEach(button => {
+    button.addEventListener('click', () => {
+      window.IOCD_I18N?.setLanguage(button.dataset.language);
+    });
+  });
+
+  window.IOCD_I18N?.subscribe(() => refreshLocalizedSections());
+  window.IOCD_I18N?.applyStatic();
+  updateLanguageControls();
+}
 
 // ===== TAB SWITCHING FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
-    initializeTeam();
-    initializeProjects();
-    initializeCollaborators();
-    initializeVideos();
-    initializeReviews();
-    initializeResources();
+    initializeLanguageControls();
+    refreshLocalizedSections();
     const copyrightYear = document.getElementById('copyright-year');
     if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
      const activeTab = document.querySelector('.tab-link.active')?.getAttribute('data-tab');
@@ -154,20 +197,20 @@ function initializeReviews() {
     const container = document.querySelector('.reviews-grid');
     if (!container) return;
 
-    container.innerHTML = reviewsData.map(r => `
+    container.innerHTML = reviewsData.map((r, index) => `
         <div class="review-card">
             <div class="review-image">
-                <img src="${r.image}" alt="Cover of ${r.title}" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <img src="${r.image}" alt="${localizedField('reviews', index, 'title', r.title)}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
 
             <div class="review-info">
-                <h2 class="review-title">${r.title}</h2>
-                <p class="review-authors"><strong>Authors:</strong> ${r.authors}</p>
-                <p class="review-abstract">${r.abstract}</p>
+                <h2 class="review-title">${localizedField('reviews', index, 'title', r.title)}</h2>
+                <p class="review-authors"><strong>${localizedText('dynamic.authors', 'Authors:')}</strong> ${r.authors}</p>
+                <p class="review-abstract">${localizedField('reviews', index, 'abstract', r.abstract)}</p>
 
                 <div class="review-buttons">
                     <a class="review-btn pdf" href="${r.pdfUrl}" target="_blank" rel="noopener">PDF</a>
-                    <a class="review-btn journal" href="${r.journalUrl}" target="_blank" rel="noopener">Journal</a>
+                    <a class="review-btn journal" href="${r.journalUrl}" target="_blank" rel="noopener">${localizedText('dynamic.journal', 'Journal')}</a>
                 </div>
             </div>
         </div>
@@ -891,11 +934,11 @@ function initializeTeam() {
                 <img src="${member.photo}" alt="${member.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
             <h3>${member.name}</h3>
-            <p>${member.position}</p>
+            <p>${localizedField('team', member.id, 'position', member.position)}</p>
         `;
         el.setAttribute('role', 'button');
         el.setAttribute('tabindex', '0');
-        el.setAttribute('aria-label', `View ${member.name}'s profile`);
+        el.setAttribute('aria-label', window.IOCD_I18N?.language === 'ru' ? `Открыть профиль: ${member.name}` : `View ${member.name}'s profile`);
         el.addEventListener('click', () => openTeamModal(member));
         el.addEventListener('keydown', (event) => {
             if (event.key !== 'Enter' && event.key !== ' ') return;
@@ -933,8 +976,8 @@ function openTeamModal(member) {
 
       <div class="modal-info">
         <h2 id="teamModalTitle">${member.name}</h2>
-        <p><strong>Position:</strong> ${member.position}</p>
-        <p><strong>Bio:</strong> ${member.bio}</p>
+        <p><strong>${localizedText('dynamic.position', 'Position:')}</strong> ${localizedField('team', member.id, 'position', member.position)}</p>
+        <p><strong>${localizedText('dynamic.bio', 'Bio:')}</strong> ${localizedField('team', member.id, 'bio', member.bio)}</p>
 
         ${member.website ? `<a href="${member.website}" target="_blank" rel="noopener" class="team-btn">Google Scholar</a>` : ''}
         ${member.cv ? `<a href="${member.cv}" target="_blank" rel="noopener" class="team-btn">CV</a>` : ''}
@@ -943,6 +986,7 @@ function openTeamModal(member) {
   `;
 
   modal.style.display = 'block';
+  modal.setAttribute('data-member-id', member.id);
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
   lastFocusedElement = document.activeElement;
@@ -987,7 +1031,7 @@ function sortPublicationsDescByYear(list) {
 
 // ---- render publications for Projects (title + authors gray + PDF + DOI) ----
 function renderProjectPublications(list) {
-  if (!list || !list.length) return `<p>No publications yet.</p>`;
+  if (!list || !list.length) return `<p>${localizedText('dynamic.noPublications', 'No publications yet.')}</p>`;
 
   return `
     <div class="project-pubs">
@@ -1021,12 +1065,12 @@ function initializeProjects() {
 
       <div class="project-header">
         <div class="project-content">
-          <h2 class="project-title">${p.name || ''}</h2>
-          ${p.description ? `<p class="project-short">${p.description}</p>` : ''}
+          <h2 class="project-title">${localizedField('projects', p.id, 'name', p.name || '')}</h2>
+          ${p.description ? `<p class="project-short">${localizedField('projects', p.id, 'description', p.description)}</p>` : ''}
         </div>
 
         <div class="project-image">
-          ${p.image ? `<img src="${p.image}" alt="${p.name || 'project image'}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
+          ${p.image ? `<img src="${p.image}" alt="${localizedField('projects', p.id, 'name', p.name || 'project image')}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
         </div>
       </div>
 
@@ -1057,17 +1101,17 @@ function initializeProjects() {
 }
 
 // ===== RESEARCH RESOURCES FUNCTIONS =====
-function renderResourceItems(items) {
-  if (!items || !items.length) return `<p>No items yet.</p>`;
+function renderResourceItems(items, sectionId) {
+  if (!items || !items.length) return `<p>${localizedText('dynamic.noItems', 'No items yet.')}</p>`;
 
   return `
     <div class="resource-items">
-      ${items.map(it => `
+      ${items.map((it, itemIndex) => `
         <div class="resource-item">
           <div class="resource-item-top">
             <div class="resource-item-text">
-              <div class="resource-item-title">${it.name || ''}</div>
-              ${it.note ? `<div class="resource-item-note">${it.note}</div>` : ''}
+              <div class="resource-item-title">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'name', it.name || '') ?? (it.name || '')}</div>
+              ${it.note ? `<div class="resource-item-note">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'note', it.note) ?? it.note}</div>` : ''}
             </div>
 
             <div class="resource-item-links">
@@ -1091,17 +1135,17 @@ function initializeResources() {
 
       <div class="resource-header">
         <div class="resource-content">
-          <h2 class="resource-title">${section.title || ''}</h2>
-          ${section.description ? `<p class="resource-short">${section.description}</p>` : ''}
+          <h2 class="resource-title">${localizedField('resources', section.id, 'title', section.title || '')}</h2>
+          ${section.description ? `<p class="resource-short">${localizedField('resources', section.id, 'description', section.description)}</p>` : ''}
         </div>
 
         <div class="resource-image">
-          ${section.image ? `<img src="${section.image}" alt="${section.title || 'resource image'}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
+          ${section.image ? `<img src="${section.image}" alt="${localizedField('resources', section.id, 'title', section.title || 'resource image')}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
         </div>
       </div>
 
       <div class="resource-details">
-        ${renderResourceItems(section.items)}
+        ${renderResourceItems(section.items, section.id)}
       </div>
 
     </div>
@@ -1139,8 +1183,8 @@ function initializeCollaborators() {
     el.className = 'collaborator-card';
     el.innerHTML = `
       <h3>${person.name}</h3>
-      <p><strong>${person.position}</strong></p>
-      <p>${person.affiliation}</p>
+      <p><strong>${localizedField('collaborators', person.id, 'position', person.position)}</strong></p>
+      <p>${localizedField('collaborators', person.id, 'affiliation', person.affiliation)}</p>
       <a href="${person.website}" target="_blank" class="collaborator-link">Google Scholar</a>
     `;
     collaboratorsGrid.appendChild(el);
@@ -1247,6 +1291,16 @@ function simulateGoogleScholarFetch() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
+                {
+                    title: "Defect-Enhanced Low-Temperature CO Oxidation on Graphene-Supported Pt-Au Nanoclusters",
+                    authors: "I.V. Chepkasov, V.S. Baidyshev, A.D. Radina, M.M. Lukanov, V.S. Baturin, M. Lazarev, N.V. Ter-Oganessian, A.S. Galushko, M.N. Khrizanforov, V.P. Ananikov, A.G. Kvashnin",
+                    journal: "Small",
+                    year: "2026",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_Small_PtAu_Gr.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1002/smll.75835" }
+                    ]
+                },
                 {
                     title: "Accurate predictions of mechanical properties using active learning on local chemical configurations: A case study of WC–Co composites",
                     authors: "F.N. Jalolov, V.S. Baidyshev, A.G. Kvashnin",
@@ -1787,11 +1841,11 @@ function initializeVideos() {
     const videoGrid = document.querySelector(".video-grid");
     if (!videoGrid) return;
 
-    videoGrid.innerHTML = videoData.map(video => `
+    videoGrid.innerHTML = videoData.map((video, index) => `
         <div class="video-item">
             <div class="video-preview">
                 <a href="${video.url}" target="_blank" class="video-link">
-                    <img src="${video.preview}" alt="Preview of ${video.title}" class="video-thumbnail" loading="lazy" decoding="async">
+                    <img src="${video.preview}" alt="${localizedField('videos', index, 'title', video.title)}" class="video-thumbnail" loading="lazy" decoding="async">
                     <div class="video-play-button">
                         <svg width="64" height="64" viewBox="0 0 64 64">
                             <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.7)"/>
@@ -1802,16 +1856,16 @@ function initializeVideos() {
             </div>
 
             <div class="video-info">
-                <h3>${video.title}</h3>
-                <p class="video-description">${video.description}</p>
+                <h3>${localizedField('videos', index, 'title', video.title)}</h3>
+                <p class="video-description">${localizedField('videos', index, 'description', video.description)}</p>
 
                 <div class="video-meta">
                     <span class="video-duration">${video.duration}</span>
-                    <span class="video-date">${video.date}</span>
+                    <span class="video-date">${localizedField('videos', index, 'date', video.date)}</span>
                 </div>
 
                 <a href="${video.url}" target="_blank" class="watch-btn">
-                    Watch (${video.source})
+                    ${localizedText('dynamic.watch', 'Watch')} (${video.source})
                 </a>
             </div>
         </div>
