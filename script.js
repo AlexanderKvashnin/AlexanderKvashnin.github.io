@@ -734,6 +734,9 @@ function initializeHeroProjectShowcase() {
   const dots = visual?.querySelector('.hero-project-dots');
   if (!visual || !dots || visual.dataset.slideshowReady === 'true') return;
 
+  let touchStartX = null;
+  let touchStartY = null;
+
   visual.dataset.slideshowReady = 'true';
   dots.innerHTML = projectsData.map((project, index) => (
     `<button class="hero-project-dot" type="button" data-project-index="${index}" aria-pressed="false"></button>`
@@ -753,6 +756,38 @@ function initializeHeroProjectShowcase() {
     showHeroProject(Number(dot.dataset.projectIndex));
     startHeroProjectAutoplay();
   });
+
+  visual.addEventListener('touchstart', event => {
+    const startedOnControl = event.target instanceof Element && event.target.closest('a, button');
+    if (event.touches.length !== 1 || startedOnControl) {
+      touchStartX = null;
+      touchStartY = null;
+      return;
+    }
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+    stopHeroProjectAutoplay();
+  }, { passive: true });
+
+  visual.addEventListener('touchend', event => {
+    if (touchStartX === null || touchStartY === null || !event.changedTouches.length) return;
+
+    const deltaX = event.changedTouches[0].clientX - touchStartX;
+    const deltaY = event.changedTouches[0].clientY - touchStartY;
+    touchStartX = null;
+    touchStartY = null;
+
+    if (Math.abs(deltaX) >= 48 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
+      showHeroProject(heroProjectIndex + (deltaX < 0 ? 1 : -1));
+    }
+    startHeroProjectAutoplay();
+  }, { passive: true });
+
+  visual.addEventListener('touchcancel', () => {
+    touchStartX = null;
+    touchStartY = null;
+    startHeroProjectAutoplay();
+  }, { passive: true });
 
   visual.addEventListener('mouseenter', stopHeroProjectAutoplay);
   visual.addEventListener('mouseleave', startHeroProjectAutoplay);
