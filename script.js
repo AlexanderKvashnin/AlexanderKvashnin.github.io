@@ -18,6 +18,7 @@ function refreshLocalizedSections() {
   initializeVideos();
   initializeReviews();
   initializeResources();
+  refreshHeroProjectShowcase();
   window.IOCD_I18N?.applyStatic();
   updateLanguageControls();
   if (shouldRefreshModal) {
@@ -51,6 +52,7 @@ function initializeLanguageControls() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     initializeLanguageControls();
+    initializeHeroProjectShowcase();
     refreshLocalizedSections();
     const copyrightYear = document.getElementById('copyright-year');
     if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
@@ -200,17 +202,17 @@ function initializeReviews() {
     container.innerHTML = reviewsData.map((r, index) => `
         <div class="review-card">
             <div class="review-image">
-                <img src="${r.image}" alt="${localizedField('reviews', index, 'title', r.title)}" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <img src="${r.image}" alt="${r.title}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
 
             <div class="review-info">
-                <h2 class="review-title">${localizedField('reviews', index, 'title', r.title)}</h2>
-                <p class="review-authors"><strong>${localizedText('dynamic.authors', 'Authors:')}</strong> ${r.authors}</p>
-                <p class="review-abstract">${localizedField('reviews', index, 'abstract', r.abstract)}</p>
+                <h2 class="review-title">${r.title}</h2>
+                <p class="review-authors"><strong>Authors:</strong> ${r.authors}</p>
+                <p class="review-abstract">${r.abstract}</p>
 
                 <div class="review-buttons">
                     <a class="review-btn pdf" href="${r.pdfUrl}" target="_blank" rel="noopener">PDF</a>
-                    <a class="review-btn journal" href="${r.journalUrl}" target="_blank" rel="noopener">${localizedText('dynamic.journal', 'Journal')}</a>
+                    <a class="review-btn journal" href="${r.journalUrl}" target="_blank" rel="noopener">Journal</a>
                 </div>
             </div>
         </div>
@@ -664,6 +666,108 @@ const projectsData = [
     ]
   }
 ];
+
+// ===== ABOUT HERO PROJECT SHOWCASE =====
+let heroProjectIndex = 0;
+let heroProjectTimer = null;
+
+function refreshHeroProjectShowcase() {
+  const visual = document.querySelector('.about-hero-visual');
+  if (!visual || !projectsData.length) return;
+
+  const project = projectsData[heroProjectIndex];
+  const title = localizedField('projects', project.id, 'name', project.name);
+  const description = localizedField('projects', project.id, 'description', project.description);
+  const image = visual.querySelector('.hero-project-image');
+  const titleElement = visual.querySelector('.hero-project-title');
+  const descriptionElement = visual.querySelector('.hero-project-description');
+
+  if (image) {
+    image.src = project.image;
+    image.alt = title;
+  }
+  if (titleElement) titleElement.textContent = title;
+  if (descriptionElement) descriptionElement.textContent = description;
+
+  const isRussian = window.IOCD_I18N?.language === 'ru';
+  const previousButton = visual.querySelector('.hero-project-prev');
+  const nextButton = visual.querySelector('.hero-project-next');
+  const controls = visual.querySelector('.hero-project-controls');
+  if (previousButton) previousButton.setAttribute('aria-label', isRussian ? 'Предыдущий проект' : 'Previous project');
+  if (nextButton) nextButton.setAttribute('aria-label', isRussian ? 'Следующий проект' : 'Next project');
+  if (controls) controls.setAttribute('aria-label', isRussian ? 'Управление слайд-шоу проектов' : 'Project slideshow controls');
+
+  visual.querySelectorAll('.hero-project-dot').forEach((dot, index) => {
+    const dotProject = projectsData[index];
+    const dotTitle = localizedField('projects', dotProject.id, 'name', dotProject.name);
+    const isActive = index === heroProjectIndex;
+    dot.classList.toggle('active', isActive);
+    dot.setAttribute('aria-pressed', String(isActive));
+    dot.setAttribute('aria-label', `${isRussian ? 'Показать проект' : 'Show project'}: ${dotTitle}`);
+  });
+
+  visual.classList.remove('is-project-changing');
+  void visual.offsetWidth;
+  visual.classList.add('is-project-changing');
+  window.setTimeout(() => visual.classList.remove('is-project-changing'), 520);
+}
+
+function showHeroProject(index) {
+  heroProjectIndex = (index + projectsData.length) % projectsData.length;
+  refreshHeroProjectShowcase();
+}
+
+function stopHeroProjectAutoplay() {
+  if (!heroProjectTimer) return;
+  window.clearInterval(heroProjectTimer);
+  heroProjectTimer = null;
+}
+
+function startHeroProjectAutoplay() {
+  stopHeroProjectAutoplay();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  heroProjectTimer = window.setInterval(() => showHeroProject(heroProjectIndex + 1), 6500);
+}
+
+function initializeHeroProjectShowcase() {
+  const visual = document.querySelector('.about-hero-visual');
+  const dots = visual?.querySelector('.hero-project-dots');
+  if (!visual || !dots || visual.dataset.slideshowReady === 'true') return;
+
+  visual.dataset.slideshowReady = 'true';
+  dots.innerHTML = projectsData.map((project, index) => (
+    `<button class="hero-project-dot" type="button" data-project-index="${index}" aria-pressed="false"></button>`
+  )).join('');
+
+  visual.querySelector('.hero-project-prev')?.addEventListener('click', () => {
+    showHeroProject(heroProjectIndex - 1);
+    startHeroProjectAutoplay();
+  });
+  visual.querySelector('.hero-project-next')?.addEventListener('click', () => {
+    showHeroProject(heroProjectIndex + 1);
+    startHeroProjectAutoplay();
+  });
+  dots.addEventListener('click', event => {
+    const dot = event.target.closest('.hero-project-dot');
+    if (!dot) return;
+    showHeroProject(Number(dot.dataset.projectIndex));
+    startHeroProjectAutoplay();
+  });
+
+  visual.addEventListener('mouseenter', stopHeroProjectAutoplay);
+  visual.addEventListener('mouseleave', startHeroProjectAutoplay);
+  visual.addEventListener('focusin', stopHeroProjectAutoplay);
+  visual.addEventListener('focusout', event => {
+    if (!visual.contains(event.relatedTarget)) startHeroProjectAutoplay();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopHeroProjectAutoplay();
+    else startHeroProjectAutoplay();
+  });
+
+  refreshHeroProjectShowcase();
+  startHeroProjectAutoplay();
+}
 
 // ===== RESEARCH RESOURCES DATA =====
 const resourcesData = [

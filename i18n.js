@@ -23,6 +23,8 @@
     'about.chemistry': 'Химия',
     'about.materials': 'Материаловедение',
     'about.ai': 'Искусственный интеллект',
+    'about.projectLabel': 'Направление исследований',
+    'about.projectLink': 'Подробнее о проекте',
     'about.approachLabel': 'Наш подход',
     'about.approachText': 'От моделей атомного масштаба до функциональных материалов.',
     'about.whatWeDo': 'Чем мы занимаемся',
@@ -221,7 +223,6 @@
     team: teamRu,
     alumni: alumniRu,
     projects: projectsRu,
-    reviews: reviewsRu,
     videos: videosRu,
     collaborators: collaboratorsRu,
     resources: resourcesRu

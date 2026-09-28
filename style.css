@@ -2622,7 +2622,7 @@ textarea:focus-visible,
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 55%, rgba(16, 35, 57, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(16, 35, 57, 0.02) 35%, rgba(16, 35, 57, 0.94) 100%);
     pointer-events: none;
 }
 
@@ -2630,15 +2630,15 @@ textarea:focus-visible,
     width: 100%;
     height: 100%;
     min-height: 480px;
-    padding: clamp(1.5rem, 4vw, 3.25rem) clamp(1.5rem, 4vw, 3.25rem) 5.5rem;
-    object-fit: contain;
-    filter: drop-shadow(0 24px 26px rgba(94, 78, 12, 0.2));
+    padding: 0;
+    object-fit: cover;
+    filter: none;
 }
 
 .about-hero-visual figcaption {
     position: absolute;
     right: 1.4rem;
-    bottom: 1.35rem;
+    bottom: 1.25rem;
     left: 1.4rem;
     z-index: 1;
     color: rgba(255, 255, 255, 0.88);
@@ -2654,6 +2654,126 @@ textarea:focus-visible,
     font-weight: 750;
     letter-spacing: 0.13em;
     text-transform: uppercase;
+}
+
+.about-hero-visual figcaption .hero-project-title {
+    display: block;
+    max-width: 90%;
+    margin: 0.15rem 0 0.35rem;
+    color: #fff;
+    font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+    font-weight: 760;
+    letter-spacing: -0.02em;
+    line-height: 1.18;
+}
+
+.about-hero-visual figcaption .hero-project-description {
+    display: -webkit-box;
+    max-width: 95%;
+    margin: 0;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.83rem;
+    font-weight: 450;
+    letter-spacing: 0;
+    line-height: 1.45;
+    text-transform: none;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.hero-project-link {
+    display: inline-flex;
+    margin-top: 0.7rem;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero-project-link::after {
+    content: "\2192";
+    margin-left: 0.4rem;
+    transition: transform 0.2s ease;
+}
+
+.hero-project-link:hover::after {
+    transform: translateX(3px);
+}
+
+.hero-project-controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(20, 40, 62, 0.58);
+    backdrop-filter: blur(8px);
+}
+
+.hero-project-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.hero-project-arrow,
+.hero-project-dot {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero-project-arrow {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.hero-project-arrow:hover,
+.hero-project-arrow:focus-visible {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-project-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.42);
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-project-dot.active {
+    width: 18px;
+    border-radius: 999px;
+    background: #fff;
+}
+
+.about-hero-visual.is-project-changing .hero-project-image,
+.about-hero-visual.is-project-changing figcaption {
+    animation: hero-project-reveal 0.5s ease both;
+}
+
+@keyframes hero-project-reveal {
+    from {
+        opacity: 0.35;
+        transform: scale(1.015);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .about-summary {
@@ -2901,7 +3021,17 @@ textarea:focus-visible,
 
     .about-hero-visual,
     .about-hero-visual img {
-        min-height: 310px;
+        min-height: 390px;
+    }
+
+    .about-hero-visual figcaption {
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .about-hero-visual figcaption .hero-project-description {
+        -webkit-line-clamp: 4;
     }
 
     .about-summary {
@@ -2954,6 +3084,11 @@ textarea:focus-visible,
     .about-button,
     #about .research-scope li {
         transition: none;
+    }
+
+    .about-hero-visual.is-project-changing .hero-project-image,
+    .about-hero-visual.is-project-changing figcaption {
+        animation: none;
     }
 }
 
