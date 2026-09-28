@@ -92,8 +92,6 @@
     'footer.address': 'Сколковский институт науки и технологий, Москва',
     'footer.phone': 'Телефон:',
     'footer.skoltech': 'Сколтех',
-    'footer.privacy': 'Политика конфиденциальности',
-    'footer.terms': 'Условия использования',
     'footer.rights': 'Все права защищены.',
     'dynamic.authors': 'Авторы:',
     'dynamic.journal': 'Журнал',
