@@ -574,7 +574,7 @@ const projectsData = [
             authors: "Alexey S. Galushko, Ilya V. Chepkasov, Ruslan R. Shaydullin, Daniil A. Boiko, Alexander G. Kvashnin, Artem M. Abakumov, Valentine P. Ananikov",
             journal: "Chinese Journal of Catalysis (2026)",
             pdfUrl: "assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf",
-            doiUrl: "https://doi.org/10.1016/S1872-2067(26)64739-4"
+            doiUrl: "https://www.sciencedirect.com/science/article/abs/pii/S1872206726650048"
         },
       {
         title: "Encapsulated Nickel Nanowires Inside Plasma-treated Single-Walled Carbon Nanotubes for Urea Oxidation",
@@ -1472,7 +1472,7 @@ function simulateGoogleScholarFetch() {
                      year: "2026",
                      links: [
                     { type: "PDF", url: "/assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf" },
-                    { type: "DOI", url: "https://doi.org/10.1016/S1872-2067(26)64739-4" }
+                    { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S1872206726650048" }
                          ]
                         },
                  {
