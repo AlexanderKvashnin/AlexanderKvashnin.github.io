@@ -15,7 +15,7 @@
     <link rel="icon" href="assets/favicon.png?v=20260922-cluster" type="image/png">
     <link rel="apple-touch-icon" href="assets/favicon.png?v=20260922-cluster">
     <title>IOCD Lab | Computational Materials Science at Skoltech</title>
-    <link rel="stylesheet" href="style.css?v=20260928-i18n2">
+    <link rel="stylesheet" href="style.css?v=20261006-publication-filters">
 </head>
 
 <body>
@@ -268,7 +268,36 @@
     <!-- ============ PUBLICATIONS ============== -->
     <div id="publications" class="tab-content">
         <h1 data-i18n="publications.title">Publication List</h1>
-        <div class="publications-list"></div>
+        <div class="publication-controls" role="search" aria-label="Search publications" data-i18n-aria-label="publications.searchRegion">
+            <label class="publication-search">
+                <span data-i18n="publications.search">Search publications</span>
+                <input id="publication-search" type="search" aria-controls="publication-results" placeholder="Title, author, journal or DOI">
+            </label>
+            <label>
+                <span data-i18n="publications.type">Publication type</span>
+                <select id="publication-type" aria-controls="publication-results">
+                    <option value="all" data-i18n="publications.allTypes">All publications</option>
+                    <option value="article" data-i18n="publications.articles">Articles</option>
+                    <option value="review" data-i18n="publications.reviews">Reviews</option>
+                </select>
+            </label>
+            <label>
+                <span data-i18n="publications.year">Year</span>
+                <select id="publication-year" aria-controls="publication-results">
+                    <option value="all" data-i18n="publications.allYears">All years</option>
+                </select>
+            </label>
+            <label>
+                <span data-i18n="publications.sort">Sort by year</span>
+                <select id="publication-sort" aria-controls="publication-results">
+                    <option value="desc" data-i18n="publications.newest">Newest first</option>
+                    <option value="asc" data-i18n="publications.oldest">Oldest first</option>
+                </select>
+            </label>
+            <button id="publication-reset" type="button" data-i18n="publications.reset">Reset</button>
+        </div>
+        <p id="publication-count" class="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="publication-results" class="publications-list"></div>
     </div>
 
     <!-- ================= REVIEWS =============== -->
@@ -396,8 +425,8 @@
     </div>
 </div>
 
-<script src="i18n.js?v=20260928-project-showcase" defer></script>
-<script src="script.js?v=20260928-project-swipe" defer></script>
+<script src="i18n.js?v=20261006-publication-filters" defer></script>
+<script src="script.js?v=20261006-publication-filters" defer></script>
 
 <footer class="footer">
     <div class="footer-content">

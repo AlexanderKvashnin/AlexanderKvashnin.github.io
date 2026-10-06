@@ -17,6 +17,7 @@ function refreshLocalizedSections() {
   initializeCollaborators();
   initializeVideos();
   initializeReviews();
+  if (publicationCatalog) renderPublications();
   initializeResources();
   refreshHeroProjectShowcase();
   window.IOCD_I18N?.applyStatic();
@@ -154,6 +155,7 @@ function initializeTabs() {
 // ===== REVIEWS DATA =====
 const reviewsData = [
        {
+        year: "2026",
         title: "Recent Advances, Challenges and Future Perspectives of Polycyclic Aromatic Hydrocarbons as Materials for Metal-Ion Batteries – A Comprehensive Review",
         authors: "I.V. Chepkasov, S.A. Evlashin, A.G. Kvashnin",
         abstract: "Polycyclic aromatic hydrocarbons (PAHs) have become a promising choice for the development of metal-ion batteries due to their exceptional redox properties, versatile molecular structures, and affordability. This comprehensive review summarizes recent advances in the use of PAHs as anode and cathode materials for Li-ion, Na-ion, Al-ion, and dual-ion batteries, highlighting their high specific capacity, long cycle life, and environmental sustainability. It also discusses pre-metallization strategies based on PAH reagents to reduce irreversible ion loss and improve initial Coulombic efficiency. In addition, the review considers the integration of machine learning and high-throughput screening for the optimization of PAH-based materials. Despite major progress, challenges such as low redox activity and solubility remain. Overall, this review provides a roadmap for the further development of PAH-based battery systems for practical energy storage applications.",
@@ -163,6 +165,7 @@ const reviewsData = [
     },
     {
         title: "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon-Based Metal-Ion Battery",
+        year: "2025",
         authors: "I.V. Chepkasov, A.G. Kvashnin",
         abstract: "Recent experiments have revealed that lithium can form multilayer structures when intercalated in bilayer graphene [Nature 564 (2018) 234], challenging the long-held belief that alkali metals in layered materials are confined to single-layer configurations. This pioneering work initiates a new line of research related to the intercalation of alkali metals in carbon-based materials. The possibility of forming multilayer structures between bilayer graphene not only Li but also Na, K, Rb, Cs is shown. Multilayer Li structures are experimentally observed in atomic channels of modified bulk graphite and soft carbon. Multilayer Na structures in the mesochannels of carbon spheres lead to more stable dendrite-free Na cycling with high rate characteristics. It is possible to create fast-charging batteries based on hard carbon, in which the formation of multilayer Na structures in the pores allows to achieve high charging rates. In this review, the achievements in the formation and diffusion of multilayer structures of alkali metals in carbon-based anode materials for creating high-capacity and fast-charging ion batteries are discussed in detail.",
         image: "assets/review/2025_small_rev.webp",
@@ -171,6 +174,8 @@ const reviewsData = [
     },
     {
         title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
+        year: "2024",
+        journal: "Nanoscale",
         authors: "I.V. Chepkasov, A.D. Radina, A.G. Kvashnin",
         abstract: "The annual increase in demand for renewable energy is driving the development of catalysis-based technologies that generate, store and convert clean energy by splitting and forming chemical bonds. Thanks to efforts over the last two decades, great progress has been made in the use of core–shell nanostructures to improve the performance of metallic catalysts. The successful preparation and application of a large number of bimetallic core-shell nanocrystals demonstrates the wide range of possibilities they offer and suggests further advances in this field. Here, we have reviewed recent advances in the synthesis and study of core-shell nanostructures that are promising for catalysis. Particular attention has been paid to the structural tuning of the catalytic properties of core-shell nanostructures and to theoretical methods capable of describing their catalytic properties in order to efficiently search for new catalysts with desired properties. We have also identified the most promising areas of research in this field, in terms of experimental and theoretical studies, and in terms of promising materials to be studied.",
         image: "/assets/review/2024_nanoscale.webp",
@@ -179,6 +184,7 @@ const reviewsData = [
     },
     {
         title: "High-Temperature Superconductivity in Hydrides",
+        year: "2022",
         authors: "I.A. Troyan, D.V. Semenok, A.G. Ivanova, A.G. Kvashnin, D.Zhou, A.V. Sadakov, O.A. Sobolevskiy, V.M. Pudalov, I.S. Lyubutin, A.R. Oganov",
         abstract: "Over the past six years (2015±2021), many superconducting hydrides with critical temperatures Tc up to +15°C, which are currently record high, have been discovered. Now, we can already say that a special field of superconductivity has developed: hydride superconductivity at ultrahigh pressures. For the most part, the properties of superhydrides are well described by the Migdal±Eliashberg theory of strong electron±phonon interactions, especially when the anharmonicity of phonons is taken into account. We investigate the isotope effect, the effect of a magnetic field (up to 60±70 T) on the critical temperature and critical current in the hydride samples, and the dependence of Tc on the pressure and the degree of doping. The divergences between the theory and experiment are of interest, especially in the regions of phase stability and in the behavior of the upper critical magnetic fields at low temperatures. We present a retrospective analysis of data from 2015±2021 and describe promising directions for future research on hydride superconductivity.",
         image: "assets/review/2022_review.webp",
@@ -187,6 +193,7 @@ const reviewsData = [
     },
     {
         title: "Computational Discovery of Hard and Superhard Materials",
+        year: "2019",
         authors: "A.G. Kvashnin, Z. Allahyari, A.R. Oganov",
         abstract: "Computational materials discovery is a booming field of science, which helps in predicting new unexpected materials with optimal combinations of various physical properties. Going beyond the targeted search for new materials within prespecified systems, the recently developed method, Mendelevian search, allows one to look for materials with the desired properties across the entire Periodic Table, indicating possibly superhard (or other) materials that could be obtained experimentally. From this viewpoint, we discuss the recently developed methods for crystal structure prediction and empirical models of Vickers hardness and fracture toughness that allow fast screening for materials with optimal mechanical properties. We also discuss the results of the computational search for hard and superhard materials obtained in the last few years using these novel approaches and present a “treasure map” of hard and superhard materials, which summarizes known and predicted materials and points to promising future directions of superhard materials discovery",
         image: "assets/review/2019_review.webp",
@@ -810,7 +817,7 @@ const resourcesData = [
     id: 1,
     title: "Datasets",
     description: "Here we collect different datasets for atomistic simulations, which can be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
-    image: "assets/resources/datasets.webp",
+    image: "assets/resources/datasets-abstract.svg",
     items: [
       {
         name: "PbTe mechanics dataset",
@@ -910,7 +917,7 @@ const resourcesData = [
     id: 2,
     title: "Pre-trained Models",
     description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
-    image: "assets/resources/models.webp",
+    image: "assets/resources/models-abstract.svg",
     items: [
       {
         name: "DeePMD potential for high-entropy carbonitrides",
@@ -945,7 +952,7 @@ const resourcesData = [
     id: 3,
     title: "Our codes",
     description: "Here we collect our codes useful for data-processing.",
-    image: "assets/resources/get_preview_url.png",
+    image: "assets/resources/codes-abstract.svg",
     items: [
       {
         name: "gpucohp",
@@ -1386,54 +1393,114 @@ async function loadPublications() {
 }
 */
 // ===== PUBLICATIONS FUNCTIONS =====
-async function loadPublications() {
-    const publicationsList = document.querySelector('.publications-list');
-    if (!publicationsList) return;
-    
-    publicationsList.innerHTML = '<p>Loading publications...</p>';
-    try {
-        const publications = await simulateGoogleScholarFetch();
-        publicationsList.innerHTML = '';
-        publications.forEach(pub => {
-            const el = document.createElement('div');
-            el.className = 'publication-item';
-            
-            // Генерируем HTML для ссылок, если они есть
-            let linksHTML = '';
-            if (pub.links && pub.links.length > 0) {
-                linksHTML = pub.links.map(link => 
-                    `<a href="${link.url}" target="_blank" rel="noopener" class="link-${link.type.toLowerCase()}">${link.type}</a>`
-                ).join('\n            ');
-            } else if (pub.url) {
-                // Для обратной совместимости с одной ссылкой
-                linksHTML = `<a href="${pub.url}" target="_blank" rel="noopener" class="link-pdf">PDF</a>`;
-            }
-            
-            // Добавляем контейнер для ссылок только если есть ссылки
-            const linksSection = linksHTML ? 
-                `<div class="links">${linksHTML}</div>` : 
-                '';
-            
-            el.innerHTML = `
-                <h3>${pub.title}</h3>
-                <p><strong>Authors:</strong> ${pub.authors}</p>
-                <p><strong>Journal:</strong> ${pub.journal}</p>
-                <p><strong>Year:</strong> ${pub.year}</p>
-                ${linksSection}
-            `;
-            publicationsList.appendChild(el);
-        });
-    } catch (error) {
-        console.error('Error loading publications:', error);
-        publicationsList.innerHTML = '<p>Error loading publications. Please try again later.</p>';
-    }
+let publicationCatalog = null;
+
+function normalizePublicationSearch(value) {
+    return String(value).replace(/<[^>]*>/g, '').normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '').toLowerCase()
+        .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 }
 
+function loadPublications() {
+    if (!document.querySelector('.publications-list')) return;
+    if (!publicationCatalog) {
+        publicationCatalog = getPublicationData().map(pub => ({ ...pub, type: 'article' }));
+        // Include the site's featured reviews without duplicating existing entries.
+        reviewsData.forEach(review => {
+            const reviewTitle = normalizePublicationSearch(review.title);
+            const match = publicationCatalog.find(pub => {
+                const title = normalizePublicationSearch(pub.title);
+                return title === reviewTitle || title.replace(/ a review$/, '') === reviewTitle;
+            });
+            if (match) {
+                match.type = 'review';
+            } else {
+                publicationCatalog.push({
+                    title: review.title, authors: review.authors,
+                    journal: review.journal || '', year: review.year, type: 'review',
+                    links: [
+                        { type: 'PDF', url: review.pdfUrl },
+                        { type: 'Journal', url: review.journalUrl.trim() }
+                    ]
+                });
+            }
+        });
+        publicationCatalog.forEach(pub => {
+            pub.searchText = normalizePublicationSearch([
+                pub.title, pub.authors, pub.journal, pub.year,
+                ...(pub.links || []).map(link => link.url)
+            ].join(' '));
+        });
 
-function simulateGoogleScholarFetch() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve([
+        const yearSelect = document.getElementById('publication-year');
+        const years = [...new Set(publicationCatalog.map(pub => pub.year))]
+            .sort((a, b) => Number(b) - Number(a));
+        years.forEach(year => yearSelect.add(new Option(year, year)));
+
+        document.getElementById('publication-search').addEventListener('input', renderPublications);
+        ['publication-type', 'publication-year', 'publication-sort'].forEach(id => {
+            document.getElementById(id).addEventListener('change', renderPublications);
+        });
+        document.getElementById('publication-reset').addEventListener('click', () => {
+            document.getElementById('publication-search').value = '';
+            document.getElementById('publication-type').value = 'all';
+            yearSelect.value = 'all';
+            document.getElementById('publication-sort').value = 'desc';
+            renderPublications();
+            document.getElementById('publication-search').focus();
+        });
+    }
+    renderPublications();
+}
+
+function renderPublications() {
+    if (!publicationCatalog) return;
+    const search = document.getElementById('publication-search');
+    search.placeholder = localizedText('publications.placeholder', 'Title, author, journal or DOI');
+    const terms = normalizePublicationSearch(search.value).split(/\s+/).filter(Boolean);
+    const type = document.getElementById('publication-type').value;
+    const year = document.getElementById('publication-year').value;
+    const direction = document.getElementById('publication-sort').value === 'asc' ? 1 : -1;
+    const results = publicationCatalog.filter(pub =>
+        (type === 'all' || pub.type === type) &&
+        (year === 'all' || pub.year === year) &&
+        terms.every(term => pub.searchText.includes(term))
+    ).sort((a, b) => direction * (Number(a.year) - Number(b.year)));
+
+    document.getElementById('publication-count').textContent =
+        localizedText('publications.count', 'Showing {shown} of {total}')
+            .replace('{shown}', results.length).replace('{total}', publicationCatalog.length);
+    const list = document.querySelector('.publications-list');
+    if (!results.length) {
+        const empty = document.createElement('p');
+        empty.className = 'publication-empty';
+        empty.textContent = localizedText('publications.empty', 'No publications found. Change your search or reset the filters.');
+        list.replaceChildren(empty);
+        return;
+    }
+    const items = results.map(pub => {
+        const item = document.createElement('article');
+        item.className = 'publication-item';
+        item.dataset.year = pub.year;
+        item.dataset.type = pub.type;
+        const links = pub.links?.length ? pub.links : (pub.url ? [{ type: 'PDF', url: pub.url }] : []);
+        item.innerHTML = `
+            <span class="publication-kind">${localizedText(`publications.${pub.type}`, pub.type === 'review' ? 'Review' : 'Article')}</span>
+            <h3>${pub.title}</h3>
+            <p><strong>${localizedText('dynamic.authors', 'Authors:')}</strong> ${pub.authors}</p>
+            ${pub.journal ? `<p><strong>${localizedText('dynamic.journal', 'Journal')}:</strong> ${pub.journal}</p>` : ''}
+            <p><strong>${localizedText('publications.year', 'Year')}:</strong> ${pub.year}</p>
+            ${links.length ? `<div class="links">${links.map(link =>
+                `<a href="${link.url}" target="_blank" rel="noopener" class="link-${link.type === 'PDF' ? 'pdf' : 'doi'}">${link.type === 'Journal' ? localizedText('dynamic.journal', 'Journal') : link.type}</a>`
+            ).join('')}</div>` : ''}
+        `;
+        return item;
+    });
+    list.replaceChildren(...items);
+}
+
+function getPublicationData() {
+    return [
                 {
                     title: "Defect-Enhanced Low-Temperature CO Oxidation on Graphene-Supported Pt-Au Nanoclusters",
                     authors: "I.V. Chepkasov, V.S. Baidyshev, A.D. Radina, M.M. Lukanov, V.S. Baturin, M. Lazarev, N.V. Ter-Oganessian, A.S. Galushko, M.N. Khrizanforov, V.P. Ananikov, A.G. Kvashnin",
@@ -1975,9 +2042,7 @@ function simulateGoogleScholarFetch() {
                         { type: "DOI", url: "https://www.sciencedirect.com/science/article/abs/pii/S0169433221024144?via%3Dihub" }
                     ]
                 }
-            ]);
-        }, 1000);
-    });
+    ];
 }
 // ===== VIDEO FUNCTIONS =====
 function initializeVideos() {
