@@ -651,6 +651,8 @@ body {
 }
 
 .video-item {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -666,9 +668,11 @@ body {
 
 .video-preview {
     position: relative;
+    flex-shrink: 0;
 }
 
 .video-thumbnail {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -688,6 +692,9 @@ body {
 }
 
 .video-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 16px;
 }
 
@@ -700,6 +707,7 @@ body {
 .video-meta {
     font-size: 13px;
     color: #777;
+    margin-top: auto;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -3428,7 +3436,7 @@ html[lang="ru"] #about .about-hero h1 {
     text-decoration: none;
 }
 
-/* Reviews, Projects and Events use the same button system as Publication List */
+/* Section actions use the same button system as Publication List */
 .review-buttons {
     gap: 10px;
 }
@@ -3436,7 +3444,9 @@ html[lang="ru"] #about .about-hero h1 {
 .review-buttons .review-btn,
 .project-pub-links a.link-pdf,
 .project-pub-links a.link-doi,
-.event-button {
+.event-button,
+.watch-btn,
+.course-link-btn {
     min-width: 4.5rem;
     padding: 0.48rem 0.9rem;
     border: 1px solid transparent;
@@ -3445,6 +3455,20 @@ html[lang="ru"] #about .about-hero h1 {
     color: #fff;
     font-weight: 600;
     text-align: center;
+}
+
+.watch-btn,
+.course-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.watch-btn {
+    align-self: flex-start;
 }
 
 .review-buttons .review-btn.journal,
@@ -3459,8 +3483,13 @@ html[lang="ru"] #about .about-hero h1 {
 .project-pub-links a.link-pdf:hover,
 .project-pub-links a.link-pdf:focus-visible,
 .event-button:hover,
-.event-button:focus-visible {
+.event-button:focus-visible,
+.watch-btn:hover,
+.watch-btn:focus-visible,
+.course-link-btn:hover,
+.course-link-btn:focus-visible {
     background: var(--navy-deep);
+    box-shadow: none;
     text-decoration: none;
 }
 
