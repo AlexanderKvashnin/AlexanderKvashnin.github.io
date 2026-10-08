@@ -1110,6 +1110,13 @@ const collaboratorsData = [
         affiliation: "Distinguished Professor at Skolkovo Institute of Science and Technology, MAE, FRSC, APS Fellow",
         website: "https://scholar.google.com/citations?user=PqAlzTcAAAAJ&hl=en",
         profileWebsite: "https://uspex-team.org/en"
+    },
+    {
+        id: 18,
+        name: "Roman Eremin",
+        position: "PhD in materials Science",
+        affiliation: "AIRI",
+        website: "https://scholar.google.com/citations?user=ZVGVPwsAAAAJ&hl=ru"
     }
 ];
 
