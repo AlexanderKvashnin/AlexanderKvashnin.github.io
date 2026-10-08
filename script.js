@@ -538,7 +538,7 @@ const projectsData = [
   {
     id: 3,
     name: "Functional Materials",
-    image: "assets/projects_pic/stylized/functional_materials-layered.webp",
+    image: "assets/projects_pic/stylized/functional_materials-atomic-layers.webp",
     description:
       "Computational and experimental studies of functional materials including borides, carbides, thermoelectrics, and low-dimensional systems. Focus on structure–property relationships and scalable synthesis routes.",
     publications: [
