@@ -1248,7 +1248,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/body1.webp");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/backgrounds/atomic-harmony.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2391,7 +2391,7 @@ textarea:focus-visible,
 
 @media (max-width: 768px) {
     body::before {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/body1-mobile.webp");
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/backgrounds/atomic-harmony-mobile.webp");
     }
 
     .main-content {
