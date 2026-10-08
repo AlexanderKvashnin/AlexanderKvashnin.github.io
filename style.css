@@ -2068,6 +2068,23 @@ textarea:focus-visible,
     background: #eef2f7;
 }
 
+.member-photo,
+.modal-photo {
+    position: relative;
+    background: var(--portrait-background, #eef2f7);
+}
+
+.member-photo img,
+.modal-photo img {
+    position: absolute;
+    width: var(--portrait-width, 100%);
+    max-width: none;
+    height: var(--portrait-height, 100%);
+    left: var(--portrait-left, 0%);
+    top: var(--portrait-top, 0%);
+    object-fit: cover;
+}
+
 .member-photo img {
     border-radius: 0;
     object-position: center top;

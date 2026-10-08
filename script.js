@@ -340,6 +340,7 @@ const teamData = [
     bio: "Dr. Baidyshev specializes in computational methods and data analysis. He has published numerous papers in top-tier journals.",
     website: "https://scholar.google.com/citations?user=Ludi0DIAAAAJ&hl=ru",
     photo: "assets/team/Baidyshev.jpg",
+    photoCrop: { x: 0.109, y: 0.307, size: 0.781 },
     cv: "assets/cv/Baidyshev.pdf" 
   },
   {
@@ -348,7 +349,8 @@ const teamData = [
     position: "PhD Student",
     bio: "Faridun Jalolov became a PhD student at the Skolkovo Institute of Science and Technology in 2022. His work focuses on studying the mechanical properties of complex materials using machine-learning-driven methods.",
     website: "https://scholar.google.com/citations?user=a03dBGcAAAAJ&hl=ru",
-    photo: "assets/team/Jalolov.jpg"
+    photo: "assets/team/Jalolov.jpg",
+    photoCrop: { x: 0.03, y: 0.173, size: 0.939 }
   },
   {
     id: 5,
@@ -365,6 +367,7 @@ const teamData = [
     bio: "Young scientist focusing on materials design using machine learning and AI; experience with low-dimensional materials (carbon nanotubes, graphene, diamane).",
     website: "https://scholar.google.com/citations?user=NaPKRbwAAAAJ&hl=ru",
     photo: "assets/team/Akhmadiev.jpg",
+    photoCrop: { x: 0.211, y: 0.023, size: 0.5 },
     cv: "assets/cv/Akhmadiev.pdf"
   },
   {
@@ -374,6 +377,7 @@ const teamData = [
     bio: "Studying the catalytic processes, dreams to make a new effective catalyst. Also involved in projects devoted to the studies of the chemical bonding changes in thermoelectrics, phase transitions and properties of the 2D materials.",
     website: "https://scholar.google.com/citations?user=iymrPcMAAAAJ&hl=ru",
     photo: "assets/team/Radina.jpg",
+    photoCrop: { x: 0.104, y: 0.182, size: 0.792 },
     cv: "assets/cv/Radina.pdf"
   },
   {
@@ -383,6 +387,7 @@ const teamData = [
     bio: "Anastasiia is a PhD student at the Skolkovo Institute of Science and Technology. Her research focuses on computational modeling of catalytic nanomaterials. Previous education: BSc at Lomonosov Moscow State University; MSc at the Skolkovo Institute of Science and Technology.",
     website: "https://scholar.google.com/citations?hl=ru&user=Qqe_yZQAAAAJ",
     photo: "assets/team/Iosimovska.jpg",
+    photoCrop: { x: -0.075, y: 0, size: 1.15 },
     cv: "assets/cv/Iosimovska.pdf"
   },
   {
@@ -391,7 +396,8 @@ const teamData = [
     position: "MSc Student",
     bio: "During her Bachelor's studies at Mendeleev University, Daria focused on the surface reconstruction and surface chemistry of (111)-SiC, employing Molecular Dynamics simulations with the USPEX algorithm and DFT calculations. Currently, she is a first-year Master's student in Materials Science at Skoltech.",
     website: "",
-    photo: "assets/team/Fedotova.jpg"
+    photo: "assets/team/Fedotova.jpg",
+    photoCrop: { x: 0.22, y: 0.513, size: 0.563 }
   },
   {
     id: 11,
@@ -400,6 +406,7 @@ const teamData = [
     bio: "Daniil is a 1st year MSc student at Skoltech and '25 BSc MIPT graduate in Applied Maths and Physics. He specializes in atomistic simulations using MD and DFT methods supplement by ML. Has an experience with materials at extreme conditions and carbon allotropes.",
     website: "https://scholar.google.com/citations?user=BPuuytwAAAAJ&hl=ru",
     photo: "assets/team/Alekseev.jpg",
+    photoCrop: { x: 0, y: 0.026, size: 1 },
     cv: "assets/cv/Alekseev.pdf"
   },
   {
@@ -409,6 +416,7 @@ const teamData = [
     bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology. His research lies at the intersection of computational materials science, density functional theory, and machine learning, with a focus on modeling and predicting the catalytic activity of nanomaterials.",
     website: "https://scholar.google.com/citations?user=s81G4eYAAAAJ",
     photo: "assets/team/Bychkov.jpg",
+    photoCrop: { x: 0, y: 0.069, size: 1 },
     cv: "assets/cv/Bychkov.pdf"
   },
   {
@@ -417,6 +425,7 @@ const teamData = [
     position: "MSc Student",
     bio: "Master’s student in Materials Science at the Skolkovo Institute of Science and Technology with a background in biotechnology and data analysis. Her research interests lie at the intersection of artificial intelligence and chemistry, with a particular focus on machine learning applications in catalysis, prediction of chemical properties, and data-driven discovery of new materials.",
     photo: "assets/team/Dorosh.jpg",
+    photoCrop: { x: 0, y: 0.049, size: 1 },
     cv: "assets/cv/Dorosh.pdf"
   },
   {
@@ -425,6 +434,7 @@ const teamData = [
     position: "MSc Student",
     bio: "Gleb is an MSc student at Skoltech and a '25 BSc MIPT graduate in Applied Maths and Physics. He specializes in non-volatile memory FeRAM and ReRAM and atomistic simulations using MD for modeling ceramics used in biomedicine.",
     photo: "assets/team/Prishchepchuk.png",
+    photoCrop: { x: -0.1, y: 0, size: 1.2 },
     cv: "assets/cv/Prishchepchuk.pdf"
   }
 ];
@@ -433,7 +443,8 @@ const alumniData = [
   {
     id: 1,
     name: "Olga Pushkova",
-    photo: "assets/team/Pushkova.jpg"
+    photo: "assets/team/Pushkova.jpg",
+    photoCrop: { x: 0.257, y: 0.052, size: 0.521 }
   }
 ];
 
@@ -1072,6 +1083,15 @@ const collaboratorsData = [
 ];
 
 // ===== TEAM FUNCTIONS =====
+function teamPortraitStyle(member) {
+    if (!member.photoCrop) return '';
+    // Square crop coordinates are fractions of the original image width.
+    // The same frame scales with the card and the profile modal.
+    const { x, y, size } = member.photoCrop;
+    const background = size > 1 ? '--portrait-background: #fff;' : '';
+    return `--portrait-width: ${100 / size}%; --portrait-left: ${-100 * x / size}%; --portrait-top: ${-100 * y / size}%; --portrait-height: auto; ${background}`;
+}
+
 function initializeTeam() {
     const teamGrid = document.querySelector('.team-grid');
     const alumniGrid = document.querySelector('.alumni-grid');
@@ -1085,7 +1105,7 @@ function initializeTeam() {
         const el = document.createElement('div');
         el.className = 'team-member';
         el.innerHTML = `
-            <div class="member-photo">
+            <div class="member-photo" style="${teamPortraitStyle(member)}">
                 <img src="${member.photo}" alt="${localizedName}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
             <h3>${localizedName}</h3>
@@ -1108,7 +1128,7 @@ function initializeTeam() {
         const el = document.createElement('div');
         el.className = 'team-member alumni-member';
         el.innerHTML = `
-            <div class="member-photo">
+            <div class="member-photo" style="${teamPortraitStyle(member)}">
                 <img src="${member.photo}" alt="${localizedName}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
             <h3>${localizedName}</h3>
@@ -1128,7 +1148,7 @@ function openTeamModal(member) {
 
   body.innerHTML = `
     <div class="modal-team-member">
-      <div class="modal-photo">
+      <div class="modal-photo" style="${teamPortraitStyle(member)}">
         <img src="${member.photo}" alt="${localizedName}" decoding="async" onerror="this.style.display='none'">
       </div>
 
