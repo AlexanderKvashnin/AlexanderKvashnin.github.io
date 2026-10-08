@@ -946,7 +946,7 @@ const resourcesData = [
         ]
       },
       {
-        name: "MTP potential for AuPt@graphene with CO atmosphere WC-Co",
+        name: "MTP potential for AuPt@graphene with CO atmosphere",
         note: "Pre-trained MTP model for simulations of chemical reactor containing free-standing or supported by graphene AuPt nanoparticles with CO atmosphere. Training dataset of structural configurations included. Using this model please cite the following PAPER.",
         links: [
           { label: "GitHub", url: "https://github.com/AlexanderKvashnin/AuPt_uspex/tree/main/MLIP" },
