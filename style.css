@@ -2467,6 +2467,15 @@ textarea:focus-visible,
         height: 180px;
     }
 
+    .project-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-image img {
+        object-fit: contain;
+    }
+
     .course-details,
     .project-details,
     .resource-details {
