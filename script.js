@@ -444,7 +444,7 @@ const projectsData = [
   {
     id: 1,
     name: "Higher Tungsten Boride",
-    image: "assets/projects_pic/WB5-x.webp",
+    image: "assets/projects_pic/stylized/wb.webp",
     description:
       "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
@@ -489,7 +489,7 @@ const projectsData = [
   {
     id: 2,
     name: "High-Entropy Materials",
-    image: "assets/projects_pic/high_entropy.webp",
+    image: "assets/projects_pic/stylized/high_entropy.webp",
     description:
       "Machine-learning-driven design, synthesis, and thermodynamic modeling of high-entropy carbides and carbonitrides. The project combines deep learning interatomic potentials with plasma and arc-discharge synthesis techniques.",
     publications: [
@@ -527,7 +527,7 @@ const projectsData = [
   {
     id: 3,
     name: "Functional Materials",
-    image: "assets/projects_pic/functional_materials.webp",
+    image: "assets/projects_pic/stylized/functional_materials.webp",
     description:
       "Computational and experimental studies of functional materials including borides, carbides, thermoelectrics, and low-dimensional systems. Focus on structure–property relationships and scalable synthesis routes.",
     publications: [
@@ -565,7 +565,7 @@ const projectsData = [
   {
     id: 4,
     name: "Catalysts",
-    image: "assets/projects_pic/catalysts.webp",
+    image: "assets/projects_pic/stylized/catalysts.webp",
     description:
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
@@ -624,7 +624,7 @@ const projectsData = [
   {
     id: 5,
     name: "New Computational Methods",
-    image: "assets/projects_pic/computational_methods.webp",
+    image: "assets/projects_pic/stylized/computational_methods.webp",
     description:
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
