@@ -1102,6 +1102,14 @@ const collaboratorsData = [
         position: "PhD in Materials Science",
         affiliation: "Professor at Xinjiang Technical Institute of Physics and Chemistry, CAS",
         website: "https://scholar.google.com/citations?user=WUI1T-8AAAAJ&hl=en"
+    },
+    {
+        id: 17,
+        name: "Artem Oganov",
+        position: "DSc in materials science",
+        affiliation: "Distinguished Professor at Skolkovo Institute of Science and Technology, MAE, FRSC, APS Fellow",
+        website: "https://scholar.google.com/citations?user=PqAlzTcAAAAJ&hl=en",
+        profileWebsite: "https://uspex-team.org/en"
     }
 ];
 
