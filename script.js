@@ -1114,7 +1114,7 @@ const collaboratorsData = [
     {
         id: 18,
         name: "Roman Eremin",
-        position: "PhD in materials Science",
+        position: "PhD in Materials Science",
         affiliation: "AIRI",
         website: "https://scholar.google.com/citations?user=ZVGVPwsAAAAJ&hl=ru"
     }
