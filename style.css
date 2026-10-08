@@ -1239,19 +1239,19 @@ body {
 body {
     position: relative;
     min-height: 100vh;
-
-    background-image: url("assets/body1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    isolation: isolate;
+    background: #f8fafc;
 }
 
-/* полупрозрачный слой */
+/* Keep the artwork and its white veil in one viewport-sized layer. */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.75); /* ← прозрачность */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/body1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     pointer-events: none;
     z-index: -1;
 }
@@ -1853,10 +1853,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-body::before {
-    background: rgba(255, 255, 255, 0.9);
-}
-
 header {
     position: sticky;
     top: 0;
@@ -2395,7 +2391,7 @@ textarea:focus-visible,
 
 @media (max-width: 768px) {
     body::before {
-        background: rgba(255, 255, 255, 0.95);
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("assets/body1-mobile.webp");
     }
 
     .main-content {
