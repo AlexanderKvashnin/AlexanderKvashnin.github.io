@@ -1079,6 +1079,27 @@ const collaboratorsData = [
         position: "DSc in Physics and Mathematics, Head of the Nanomaterials Laboratory, Professor in the Center for Photonics Technologies",
         affiliation: "Skolkovo Institute of Science and Technology",
         website: "https://scholar.google.ru/citations?user=lIiKbh4AAAAJ&hl=en"
+    },
+    {
+        id: 14,
+        name: "Valentine Ananikov",
+        position: "Academician of RAS, DSc in Chemistry",
+        affiliation: "Zelinsky Institute of Organic Chemistry, RAS",
+        website: "https://scholar.google.com/citations?user=V2bwOqsAAAAJ&hl=ru"
+    },
+    {
+        id: 15,
+        name: "Haiyang Niu",
+        position: "PhD in Materials Science",
+        affiliation: "Professor at Northwestern Polytechnical University",
+        website: "https://scholar.google.com/citations?user=KiFmkVoAAAAJ&hl=en"
+    },
+    {
+        id: 16,
+        name: "Congwei Xie",
+        position: "PhD in Materials Science",
+        affiliation: "Professor at Xinjiang Technical Institute of Physics and Chemistry, CAS",
+        website: "https://scholar.google.com/citations?user=WUI1T-8AAAAJ&hl=en"
     }
 ];
 
