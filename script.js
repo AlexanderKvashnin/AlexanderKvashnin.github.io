@@ -1078,14 +1078,16 @@ const collaboratorsData = [
         name: "Albert Nasibulin",
         position: "DSc in Physics and Mathematics, Head of the Nanomaterials Laboratory, Professor in the Center for Photonics Technologies",
         affiliation: "Skolkovo Institute of Science and Technology",
-        website: "https://scholar.google.ru/citations?user=lIiKbh4AAAAJ&hl=en"
+        website: "https://scholar.google.ru/citations?user=lIiKbh4AAAAJ&hl=en",
+        profileWebsite: "https://nanonasibulin.com/"
     },
     {
         id: 14,
         name: "Valentine Ananikov",
         position: "Academician of RAS, DSc in Chemistry",
         affiliation: "Zelinsky Institute of Organic Chemistry, RAS",
-        website: "https://scholar.google.com/citations?user=V2bwOqsAAAAJ&hl=ru"
+        website: "https://scholar.google.com/citations?user=V2bwOqsAAAAJ&hl=ru",
+        profileWebsite: "https://ananikovlab.ru/"
     },
     {
         id: 15,
@@ -1377,14 +1379,22 @@ function initializeCollaborators() {
   if (!collaboratorsGrid) return;
 
   collaboratorsGrid.innerHTML = '';
-  collaboratorsData.forEach(person => {
+  const sortedCollaborators = [...collaboratorsData].sort((a, b) => {
+    const surnameA = a.name.trim().split(/\s+/).at(-1);
+    const surnameB = b.name.trim().split(/\s+/).at(-1);
+    return surnameA.localeCompare(surnameB, 'en') || a.name.localeCompare(b.name, 'en');
+  });
+  sortedCollaborators.forEach(person => {
     const el = document.createElement('div');
     el.className = 'collaborator-card';
     el.innerHTML = `
       <h3>${person.name}</h3>
       <p><strong>${localizedField('collaborators', person.id, 'position', person.position)}</strong></p>
       <p>${localizedField('collaborators', person.id, 'affiliation', person.affiliation)}</p>
-      <a href="${person.website}" target="_blank" class="collaborator-link">Google Scholar</a>
+      <div class="collaborator-links">
+        <a href="${person.website}" target="_blank" rel="noopener noreferrer" class="collaborator-link">Google Scholar</a>
+        ${person.profileWebsite ? `<a href="${person.profileWebsite}" target="_blank" rel="noopener noreferrer" class="collaborator-link">${localizedText('collaborators.website', 'Website')}</a>` : ''}
+      </div>
     `;
     collaboratorsGrid.appendChild(el);
   });
