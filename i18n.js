@@ -4,7 +4,7 @@
   const staticRu = {
     'language.label': 'Выбор языка',
     'nav.about': 'О нас',
-    'nav.team': 'Наша команда',
+    'nav.team': 'Команда',
     'nav.projects': 'Проекты',
     'nav.reviews': 'Обзоры',
     'nav.events': 'Мероприятия',
