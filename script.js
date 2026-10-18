@@ -1576,6 +1576,16 @@ function renderPublications() {
 function getPublicationData() {
     return [
                 {
+                    title: "First-principles investigation of ammonia adsorption and N–H activation on W–B nanoclusters",
+                    authors: "A.V. Iosimovska, M.M. Lukanov, C. Tantardini, A.S. Novikov, V.S. Baidyshev, A.G. Kvashnin",
+                    journal: "International Journal of Hydrogen Energy",
+                    year: "2026",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_IJHE_WB.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.ijhydene.2026.158057" }
+                    ]
+                },
+                {
                     title: "Defect-Enhanced Low-Temperature CO Oxidation on Graphene-Supported Pt-Au Nanoclusters",
                     authors: "I.V. Chepkasov, V.S. Baidyshev, A.D. Radina, M.M. Lukanov, V.S. Baturin, M. Lazarev, N.V. Ter-Oganessian, A.S. Galushko, M.N. Khrizanforov, V.P. Ananikov, A.G. Kvashnin",
                     journal: "Small",
