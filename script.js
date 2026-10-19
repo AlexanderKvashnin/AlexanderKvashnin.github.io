@@ -985,10 +985,7 @@ const resourcesData = [
     browseLabel: "Browse codes",
     countLabel: "codes",
     description: "Research software for atomistic simulations, materials-property prediction and scientific data analysis.",
-    video: "assets/resources/allcc-demo.mp4",
-    poster: "assets/resources/allcc-poster.webp",
-    videoLabel: "ALLCC demonstration",
-    videoCaption: "ALLCC · From atomic structure to mechanical properties",
+    image: "assets/resources/codes-abstract.svg",
     items: [
       {
         name: "gpucohp",
@@ -1002,6 +999,9 @@ const resourcesData = [
       {
         name: "ALLCC",
         note: "Active learning of Moment Tensor Potentials on local chemical configurations: you give a structure, ALLCC returns the elastic tensor, the moduli, the hardness and stress–strain curves, with DFT accuracy at the scale of large structures. Using this code please cite our papers.",
+        video: "assets/resources/allcc-demo.mp4",
+        poster: "assets/resources/allcc-poster.webp",
+        videoCaption: "ALLCC · From atomic structure to mechanical properties",
         links: [
           { label: "GITLAB", url: "https://gitlab.com/faridunjalolov/project" },
              {label: "PAPER1", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171"},
@@ -1362,6 +1362,17 @@ function renderResourceItems(items, sectionId) {
               `).join('')}
             </div>
           </div>
+          ${it.video ? `
+            <figure class="resource-demo">
+              <div class="resource-media">
+                <video controls playsinline preload="none" poster="${it.poster}" width="1920" height="1080" aria-label="${localizedText('resources.videoLabel', 'ALLCC demonstration')}">
+                  <source src="${it.video}" type="video/mp4">
+                  <a href="${it.video}">${localizedText('resources.downloadVideo', 'Download video')}</a>
+                </video>
+              </div>
+              <figcaption>${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'videoCaption', it.videoCaption) ?? it.videoCaption}</figcaption>
+            </figure>
+          ` : ''}
         </article>
       `).join('')}
     </div>
@@ -1379,14 +1390,8 @@ function initializeResources() {
       <div class="resource-overview">
         <figure class="resource-visual">
           <div class="resource-media">
-            ${section.video ? `
-              <video controls playsinline preload="none" poster="${section.poster}" width="1920" height="1080" aria-label="${localizedField('resources', section.id, 'videoLabel', section.videoLabel)}">
-                <source src="${section.video}" type="video/mp4">
-                <a href="${section.video}">${localizedText('resources.downloadVideo', 'Download video')}</a>
-              </video>
-            ` : `<img src="${section.image}" alt="" width="600" height="350" loading="lazy" decoding="async">`}
+            <img src="${section.image}" alt="" width="600" height="350" loading="lazy" decoding="async">
           </div>
-          ${section.videoCaption ? `<figcaption>${localizedField('resources', section.id, 'videoCaption', section.videoCaption)}</figcaption>` : ''}
         </figure>
         <div class="resource-copy">
           <span class="resource-count">${section.items.length} ${localizedField('resources', section.id, 'countLabel', section.countLabel)}</span>
@@ -1403,6 +1408,11 @@ function initializeResources() {
       </details>
     </section>
   `).join('');
+  container.querySelectorAll('.resource-catalog').forEach(details => {
+    details.addEventListener('toggle', () => {
+      if (!details.open) details.querySelectorAll('video').forEach(video => video.pause());
+    });
+  });
 }
 
 
