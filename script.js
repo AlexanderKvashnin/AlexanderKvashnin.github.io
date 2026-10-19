@@ -81,6 +81,7 @@ function initializeTabs() {
       t.setAttribute('tabindex', '-1');
     });
     tabContents.forEach(c => {
+      if (c !== target) c.querySelectorAll('video').forEach(video => video.pause());
       c.classList.remove('active');
       c.setAttribute('aria-hidden', 'true');
     });
@@ -834,6 +835,8 @@ const resourcesData = [
   {
     id: 1,
     title: "Datasets",
+    browseLabel: "Browse datasets",
+    countLabel: "datasets",
     description: "Here we collect different datasets for atomistic simulations, which can be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
     image: "assets/resources/datasets-abstract.svg",
     items: [
@@ -934,6 +937,8 @@ const resourcesData = [
   {
     id: 2,
     title: "Pre-trained Models",
+    browseLabel: "Browse models",
+    countLabel: "models",
     description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
     image: "assets/resources/models-abstract.svg",
     items: [
@@ -976,9 +981,14 @@ const resourcesData = [
 
  {
     id: 3,
-    title: "Our codes",
-    description: "Here we collect our codes useful for data-processing.",
-    image: "assets/resources/codes-abstract.svg",
+    title: "Our Codes",
+    browseLabel: "Browse codes",
+    countLabel: "codes",
+    description: "Research software for atomistic simulations, materials-property prediction and scientific data analysis.",
+    video: "assets/resources/allcc-demo.mp4",
+    poster: "assets/resources/allcc-poster.webp",
+    videoLabel: "ALLCC demonstration",
+    videoCaption: "ALLCC · From atomic structure to mechanical properties",
     items: [
       {
         name: "gpucohp",
@@ -1339,10 +1349,10 @@ function renderResourceItems(items, sectionId) {
   return `
     <div class="resource-items">
       ${items.map((it, itemIndex) => `
-        <div class="resource-item">
+        <article class="resource-item">
           <div class="resource-item-top">
             <div class="resource-item-text">
-              <div class="resource-item-title">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'name', it.name || '') ?? (it.name || '')}</div>
+              <h3 class="resource-item-title">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'name', it.name || '') ?? (it.name || '')}</h3>
               ${it.note ? `<div class="resource-item-note">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'note', it.note) ?? it.note}</div>` : ''}
             </div>
 
@@ -1352,7 +1362,7 @@ function renderResourceItems(items, sectionId) {
               `).join('')}
             </div>
           </div>
-        </div>
+        </article>
       `).join('')}
     </div>
   `;
@@ -1361,45 +1371,38 @@ function renderResourceItems(items, sectionId) {
 function initializeResources() {
   const container = document.querySelector('.resources-list');
   if (!container) return;
+  const openSections = new Set([...container.querySelectorAll('.resource-catalog[open]')].map(details => details.dataset.id));
+  container.querySelectorAll('video').forEach(video => video.pause());
 
   container.innerHTML = resourcesData.map(section => `
-    <div class="resource-section" data-id="${section.id}">
-
-      <div class="resource-header">
-        <div class="resource-content">
-          <h2 class="resource-title">${localizedField('resources', section.id, 'title', section.title || '')}</h2>
+    <section class="resource-section" aria-labelledby="resource-title-${section.id}">
+      <div class="resource-overview">
+        <figure class="resource-visual">
+          <div class="resource-media">
+            ${section.video ? `
+              <video controls playsinline preload="none" poster="${section.poster}" width="1920" height="1080" aria-label="${localizedField('resources', section.id, 'videoLabel', section.videoLabel)}">
+                <source src="${section.video}" type="video/mp4">
+                <a href="${section.video}">${localizedText('resources.downloadVideo', 'Download video')}</a>
+              </video>
+            ` : `<img src="${section.image}" alt="" width="600" height="350" loading="lazy" decoding="async">`}
+          </div>
+          ${section.videoCaption ? `<figcaption>${localizedField('resources', section.id, 'videoCaption', section.videoCaption)}</figcaption>` : ''}
+        </figure>
+        <div class="resource-copy">
+          <span class="resource-count">${section.items.length} ${localizedField('resources', section.id, 'countLabel', section.countLabel)}</span>
+          <h2 id="resource-title-${section.id}">${localizedField('resources', section.id, 'title', section.title)}</h2>
           ${section.description ? `<p class="resource-short">${localizedField('resources', section.id, 'description', section.description)}</p>` : ''}
         </div>
-
-        <div class="resource-image">
-          ${section.image ? `<img src="${section.image}" alt="${localizedField('resources', section.id, 'title', section.title || 'resource image')}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
-        </div>
       </div>
-
-      <div class="resource-details">
-        ${renderResourceItems(section.items, section.id)}
-      </div>
-
-    </div>
+      <details class="resource-catalog" data-id="${section.id}"${openSections.has(String(section.id)) ? ' open' : ''}>
+        <summary>
+          <span>${localizedField('resources', section.id, 'browseLabel', section.browseLabel)}</span>
+          <span class="resource-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="resource-details">${renderResourceItems(section.items, section.id)}</div>
+      </details>
+    </section>
   `).join('');
-
-  container.querySelectorAll('.resource-header').forEach(header => {
-    header.addEventListener('click', function () {
-      const section = this.closest('.resource-section');
-      if (!section) return;
-
-      const details = section.querySelector('.resource-details');
-      if (!details) return;
-
-      // close others
-      container.querySelectorAll('.resource-details').forEach(d => {
-        if (d !== details) d.classList.remove('active');
-      });
-
-      // toggle current
-      details.classList.toggle('active');
-    });
-  });
 }
 
 
