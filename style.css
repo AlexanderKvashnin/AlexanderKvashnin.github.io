@@ -1614,16 +1614,86 @@ a.link-doi { background: #28a745; }
     object-fit: contain;
 }
 
-.resource-demo {
-    max-width: 760px;
-    margin: 1.5rem 0 0;
+/* A separate software feature keeps the three resource categories consistent. */
+.resource-spotlight {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.75rem;
+    border: 1px solid #dce5ee;
+    border-radius: var(--radius);
+    background: linear-gradient(120deg, #edf3f8, #fbfdff 75%);
+    box-shadow: var(--shadow-sm);
 }
 
-.resource-demo figcaption {
+.resource-spotlight-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #52708c;
+    font-size: 0.7rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.resource-spotlight-copy h2 {
+    margin: 0 0 0.7rem;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.15;
+}
+
+.resource-spotlight-lead {
+    margin: 0 0 0.6rem;
+    color: var(--navy);
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.resource-spotlight-text {
+    margin: 0 0 1.25rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.resource-spotlight-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    background: var(--navy);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.resource-spotlight-link:hover {
+    background: var(--navy-deep);
+}
+
+.resource-spotlight-video {
+    min-width: 0;
+    margin: 0;
+}
+
+.resource-spotlight-video figcaption {
     margin-top: 0.65rem;
     color: var(--muted);
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .resource-spotlight {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
 }
 
 .resource-count {
