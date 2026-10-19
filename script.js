@@ -982,6 +982,15 @@ const resourcesData = [
             {label: "TESTSET", url: "https://doi.org/10.5281/zenodo.22996181"}
         ]
       },
+      {
+        name: "ALLCC",
+        note: "Active learning of Moment Tensor Potentials on local chemical configurations: you give a structure, ALLCC returns the elastic tensor, the moduli, the hardness and stress–strain curves, with DFT accuracy at the scale of large structures. Using this code please cite our papers.",
+        links: [
+          { label: "GITLAB", url: "https://gitlab.com/faridunjalolov/project" },
+             {label: "PAPER1", url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adts.202301171"},
+            {label: "PAPER2", url: "https://linkinghub.elsevier.com/retrieve/pii/S0927025626004817"}
+        ]
+      },
     ]
   }
 ];
