@@ -639,6 +639,13 @@ const projectsData = [
     description:
       "Development of new computational approaches for materials discovery, including machine-learning interatomic potentials, hardness models, pseudopotentials, and symbolic regression descriptors.",
     publications: [
+      {
+        title: "NEPMaker: Active learning of neuroevolution machine learning potential for large cells",
+        authors: "Junjie Wang, Haoting Zhang, Shuning Pan, Qiuhan Jia, Chi Ding, Michel M. Lukanov, Faridun Jalolov, Alexander G. Kvashnin, Zheyong Fan, Jian Sun",
+        journal: "Chinese Physics B (2026)",
+        year: "2026",
+        doiUrl: "https://iopscience.iop.org/article/10.1088/1674-1056/ae85f8"
+      },
         {
             title: "Accurate Predictions of Mechanical Properties Using Active Learning on Local Chemical Configurations: A Case Study of WC–Co Composites",
             authors: "Faridun N. Jalolov, Viktor S. Baidyshev, Alexander G. Kvashnin",
@@ -1238,7 +1245,7 @@ function closeTeamModal() {
 
 // ================= PROJECTS FUNCTIONS =================
 
-// ---- sorting helpers (by year from pdf filename prefix: YYYY_...) ----
+// ---- sorting helpers (explicit year, then PDF filename prefix: YYYY_...) ----
 function getYearFromPdfUrl(url) {
   const file = (url || '').split('/').pop() || '';
   const m = file.match(/^(\d{4})/);
@@ -1247,8 +1254,8 @@ function getYearFromPdfUrl(url) {
 
 function sortPublicationsDescByYear(list) {
   return [...(list || [])].sort((a, b) => {
-    const ya = getYearFromPdfUrl(a.pdfUrl || '');
-    const yb = getYearFromPdfUrl(b.pdfUrl || '');
+    const ya = Number(a.year) || getYearFromPdfUrl(a.pdfUrl || '');
+    const yb = Number(b.year) || getYearFromPdfUrl(b.pdfUrl || '');
     if (yb !== ya) return yb - ya;
     return (b.title || '').localeCompare(a.title || '');
   });
@@ -1584,6 +1591,15 @@ function renderPublications() {
 
 function getPublicationData() {
     return [
+                {
+                    title: "NEPMaker: Active learning of neuroevolution machine learning potential for large cells",
+                    authors: "J. Wang, H. Zhang, S. Pan, Q. Jia, C. Ding, M.M. Lukanov, F. Jalolov, A.G. Kvashnin, Z. Fan, J. Sun",
+                    journal: "Chinese Physics B",
+                    year: "2026",
+                    links: [
+                        { type: "DOI", url: "https://iopscience.iop.org/article/10.1088/1674-1056/ae85f8" }
+                    ]
+                },
                 {
                     title: "First-principles investigation of ammonia adsorption and N–H activation on W–B nanoclusters",
                     authors: "A.V. Iosimovska, M.M. Lukanov, C. Tantardini, A.S. Novikov, V.S. Baidyshev, A.G. Kvashnin",
