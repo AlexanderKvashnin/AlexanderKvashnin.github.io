@@ -836,7 +836,7 @@ const resourcesData = [
     id: 1,
     title: "Datasets",
     description: "Here we collect different datasets for atomistic simulations, which can be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
-    image: "assets/resources/datasets-abstract.svg",
+    image: "assets/resources/stylized/datasets-3d.webp",
     items: [
       {
         name: "PbTe mechanics dataset",
@@ -936,7 +936,7 @@ const resourcesData = [
     id: 2,
     title: "Pre-trained Models",
     description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
-    image: "assets/resources/models-abstract.svg",
+    image: "assets/resources/stylized/models-3d.webp",
     items: [
       {
         name: "DeePMD potential for high-entropy carbonitrides",
@@ -979,7 +979,7 @@ const resourcesData = [
     id: 3,
     title: "Our codes",
     description: "Here we collect our codes useful for data-processing.",
-    image: "assets/resources/codes-abstract.svg",
+    image: "assets/resources/stylized/codes-3d.webp",
     items: [
       {
         name: "gpucohp",

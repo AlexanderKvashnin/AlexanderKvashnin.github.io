@@ -3496,3 +3496,18 @@ textarea:focus-visible {
     color: var(--muted);
     font-size: 13px;
 }
+
+/* Keep the full 3D illustrations visible at every screen size. */
+.resource-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #f4f9fc;
+}
+
+.resource-image img {
+    object-fit: contain;
+}
+
+.resource-image::after {
+    content: none;
+}
