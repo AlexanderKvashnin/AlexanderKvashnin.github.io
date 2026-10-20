@@ -835,8 +835,6 @@ const resourcesData = [
   {
     id: 1,
     title: "Datasets",
-    browseLabel: "Browse datasets",
-    countLabel: "datasets",
     description: "Here we collect different datasets for atomistic simulations, which can be used to pre-train your own machine learning models for simulations of properties of different materials. We hope this will help you to reduce the number of DFT calculations for creating initial dataset of structures.",
     image: "assets/resources/datasets-abstract.svg",
     items: [
@@ -937,8 +935,6 @@ const resourcesData = [
   {
     id: 2,
     title: "Pre-trained Models",
-    browseLabel: "Browse models",
-    countLabel: "models",
     description: "Here we collect our ready-to-use interatomic potentials for large-scale simulations for different systems. If you would not like to train your own model for some systems you can use our models.",
     image: "assets/resources/models-abstract.svg",
     items: [
@@ -981,10 +977,8 @@ const resourcesData = [
 
  {
     id: 3,
-    title: "Our Codes",
-    browseLabel: "Browse codes",
-    countLabel: "codes",
-    description: "Research software for atomistic simulations, materials-property prediction and scientific data analysis.",
+    title: "Our codes",
+    description: "Here we collect our codes useful for data-processing.",
     image: "assets/resources/codes-abstract.svg",
     items: [
       {
@@ -999,6 +993,8 @@ const resourcesData = [
       },
       {
         name: "ALLCC",
+        video: "assets/resources/allcc-demo.mp4",
+        poster: "assets/resources/allcc-poster.webp",
         note: "Active learning of Moment Tensor Potentials on local chemical configurations: you give a structure, ALLCC returns the elastic tensor, the moduli, the hardness and stress–strain curves, with DFT accuracy at the scale of large structures. Using this code please cite our papers.",
         links: [
           { label: "GITLAB", url: "https://gitlab.com/faridunjalolov/project" },
@@ -1347,10 +1343,10 @@ function renderResourceItems(items, sectionId) {
   return `
     <div class="resource-items">
       ${items.map((it, itemIndex) => `
-        <article class="resource-item">
+        <div class="resource-item">
           <div class="resource-item-top">
             <div class="resource-item-text">
-              <h3 class="resource-item-title">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'name', it.name || '') ?? (it.name || '')}</h3>
+              <div class="resource-item-title">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'name', it.name || '') ?? (it.name || '')}</div>
               ${it.note ? `<div class="resource-item-note">${window.IOCD_I18N?.resourceField(sectionId, itemIndex, 'note', it.note) ?? it.note}</div>` : ''}
             </div>
 
@@ -1360,7 +1356,16 @@ function renderResourceItems(items, sectionId) {
               `).join('')}
             </div>
           </div>
-        </article>
+          ${it.video ? `
+            <figure class="resource-code-video">
+              <video controls playsinline preload="none" poster="${it.poster}" width="1920" height="1080" aria-label="${localizedText('resources.allccDemo', 'ALLCC demonstration')}">
+                <source src="${it.video}" type="video/mp4">
+                <a href="${it.video}">${localizedText('resources.downloadVideo', 'Download video')}</a>
+              </video>
+              <figcaption>${localizedText('resources.allccDemo', 'ALLCC demonstration')}</figcaption>
+            </figure>
+          ` : ''}
+        </div>
       `).join('')}
     </div>
   `;
@@ -1369,32 +1374,51 @@ function renderResourceItems(items, sectionId) {
 function initializeResources() {
   const container = document.querySelector('.resources-list');
   if (!container) return;
-  const openSections = new Set([...container.querySelectorAll('.resource-catalog[open]')].map(details => details.dataset.id));
 
   container.innerHTML = resourcesData.map(section => `
-    <section class="resource-section" aria-labelledby="resource-title-${section.id}">
-      <div class="resource-overview">
-        <figure class="resource-visual">
-          <div class="resource-media">
-            <img src="${section.image}" alt="" width="600" height="350" loading="lazy" decoding="async">
-          </div>
-        </figure>
-        <div class="resource-copy">
-          <span class="resource-count">${section.items.length} ${localizedField('resources', section.id, 'countLabel', section.countLabel)}</span>
-          <h2 id="resource-title-${section.id}">${localizedField('resources', section.id, 'title', section.title)}</h2>
+    <div class="resource-section" data-id="${section.id}">
+
+      <div class="resource-header">
+        <div class="resource-content">
+          <h2 class="resource-title">${localizedField('resources', section.id, 'title', section.title || '')}</h2>
           ${section.description ? `<p class="resource-short">${localizedField('resources', section.id, 'description', section.description)}</p>` : ''}
         </div>
+
+        <div class="resource-image">
+          ${section.image ? `<img src="${section.image}" alt="${localizedField('resources', section.id, 'title', section.title || 'resource image')}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
+        </div>
       </div>
-      <details class="resource-catalog" data-id="${section.id}"${openSections.has(String(section.id)) ? ' open' : ''}>
-        <summary>
-          <span>${localizedField('resources', section.id, 'browseLabel', section.browseLabel)}</span>
-          <span class="resource-chevron" aria-hidden="true"></span>
-        </summary>
-        <div class="resource-details">${renderResourceItems(section.items, section.id)}</div>
-      </details>
-    </section>
+
+      <div class="resource-details">
+        ${renderResourceItems(section.items, section.id)}
+      </div>
+
+    </div>
   `).join('');
 
+  container.querySelectorAll('.resource-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const section = this.closest('.resource-section');
+      if (!section) return;
+
+      const details = section.querySelector('.resource-details');
+      if (!details) return;
+
+      // close others
+      container.querySelectorAll('.resource-details').forEach(d => {
+        if (d !== details) {
+          d.classList.remove('active');
+          d.querySelectorAll('video').forEach(video => video.pause());
+        }
+      });
+
+      // toggle current
+      details.classList.toggle('active');
+      if (!details.classList.contains('active')) {
+        details.querySelectorAll('video').forEach(video => video.pause());
+      }
+    });
+  });
 }
 
 
