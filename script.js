@@ -155,6 +155,16 @@ function initializeTabs() {
 
 // ===== REVIEWS DATA =====
 const reviewsData = [
+    {
+        year: "2026",
+        title: "Carbon Nitride Polymorphs: Materials of the Future",
+        journal: "Russian Chemical Reviews, 95 (10), RCR5243",
+        authors: "A.V. Khlyustova, X. Xiong, V.D. Aisina, N.A. Sirotkin, A.D. Radina, A.G. Kvashnin, K. Lv, A.V. Agafonov",
+        abstract: "Carbon nitride polymorphs offer a wide range of structures and properties, from layered graphitic carbon nitride to dense three-dimensional phases with promising mechanical and electronic characteristics. This review critically examines the structure, synthesis methods, product yields, and particle morphology of both dense and layered polymorphs. It traces the evolution of approaches to preparing dense carbon nitrides and assesses theoretical studies of their electronic band structures. Bringing together fragmented findings on C3N4 polymorphs, the review discusses how synthesis conditions influence structure and morphology, and considers potential applications in wear-resistant coatings, photocatalysis, optoelectronics, and sensor technology.",
+        image: "assets/review/stylized/carbon-nitride-polymorphs.webp",
+        journalUrl: "https://www.russchemrev.org/RCR5243",
+        pdfUrl: "assets/review/2026_RCR5243.pdf"
+    },
        {
         year: "2026",
         title: "Recent Advances, Challenges and Future Perspectives of Polycyclic Aromatic Hydrocarbons as Materials for Metal-Ion Batteries – A Comprehensive Review",
