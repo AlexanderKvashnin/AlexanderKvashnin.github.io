@@ -304,7 +304,7 @@ const videoData = [
         source: "VK Video"
     },
     {
-        title: "Aleksandra Radina. Serendipity — the Catalyst of Science.",
+        title: "Aleksandra Radina. Coincidence — the Catalyst of Science.",
         preview: "assets/videos/preview_aleksandra_radina_video.webp",
         url: "https://vkvideo.ru/video-220903431_456239237?list=f45c2b105738f3a17e&t=2m53s",
         description: "A talk by a student of our laboratory about catalyst design.",
