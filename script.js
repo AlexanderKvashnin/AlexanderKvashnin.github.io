@@ -1967,8 +1967,8 @@ function getPublicationData() {
                     journal: "Computer Physics Communications", 
                     year: "2024", 
                     links: [
-                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf" },
-                        { type: "DOI", url: "https://doi.org/10.1038/s41598-024-63676-7" }
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2024_generating_and_grading.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/pii/S0010465523003478" }
                     ]
                 },
                 { 
