@@ -591,6 +591,13 @@ const projectsData = [
     description:
       "Atomistic modeling and experimental validation of nanocatalysts for energy and chemical applications. Emphasis on structure-driven tuning of adsorption and catalytic activity in nanoparticles and core–shell systems.",
     publications: [
+      {
+        title: "Kinetically driven synthesis and high-performance Pt-Pd alloy catalysts for PEM fuel cells",
+        authors: "Vladimir E. Guterman, Kirill O. Paperzh, Ilya V. Kantsypa, Ilya V. Chepkasov, Viktor S. Baidyshev, Georgii Bychkov, Alexander G. Kvashnin, Anna M. Kremneva, Kirill K. Volik, Ilya V. Pankov, Vladislav S. Menshchikov, Egor R. Beskopylny",
+        journal: "Applied Catalysis B: Environment and Energy (2027)",
+        pdfUrl: "assets/pdfs/all_publications/2027_Applied_Catalysis_B_Pt_Pd.pdf",
+        doiUrl: "https://doi.org/10.1016/j.apcatb.2026.127718"
+      },
         {
             title: "Evolution of the PtPdCuNiCo High-Entropy Alloy Nanoparticles Structure During Thermal Treatment: Modeling and In Situ Study",
             authors: "Sergey V. Belenov, Anna A. Gavrilova, Dmitry K. Mauer, Egor R. Beskopylny, Alina K. Nevelskaya, Valeria P. Konovalova, Anna M. Kremneva, Evgeniy Yu. Gerasimov, Viktor S. Baidyshev, Alexander G. Kvashnin, Ilya V. Chepkasov",
@@ -618,20 +625,6 @@ const projectsData = [
         journal: "Small (2025)",
         pdfUrl: "assets/pdfs/Catalyst/2025_Small.pdf",
         doiUrl: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202510144"
-      },
-      {
-        title: "Structure-Driven Tuning of Catalytic Properties of Core–Shell Nanostructures",
-        authors: "Ilya V. Chepkasov, Aleksandra D. Radina, Alexander G. Kvashnin",
-        journal: "Nanoscale (2024)",
-        pdfUrl: "assets/pdfs/Catalyst/2024_nanoscale.pdf",
-        doiUrl: "https://pubs.rsc.org/en/content/articlelanding/2024/nr/d3nr06194a"
-      },
-      {
-        title: "Structure-Driven Tuning of O and CO Adsorption on AuCu Nanoparticles: A Density Functional Theory Study",
-        authors: "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
-        journal: "Physical Review B (2023)",
-        pdfUrl: "assets/pdfs/Catalyst/2023_structure_driven_tuning.pdf",
-        doiUrl: "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.205414"
       },
       {
         title: "Cu–Au Nanoparticles Produced by Aggregation of Gas-Phase Metal Atoms for CO Oxidation",
@@ -1620,6 +1613,16 @@ function renderPublications() {
 
 function getPublicationData() {
     return [
+                {
+                    title: "Kinetically driven synthesis and high-performance Pt-Pd alloy catalysts for PEM fuel cells",
+                    authors: "V.E. Guterman, K.O. Paperzh, I.V. Kantsypa, I.V. Chepkasov, V.S. Baidyshev, G. Bychkov, A.G. Kvashnin, A.M. Kremneva, K.K. Volik, I.V. Pankov, V.S. Menshchikov, E.R. Beskopylny",
+                    journal: "Applied Catalysis B: Environment and Energy",
+                    year: "2027",
+                    links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2027_Applied_Catalysis_B_Pt_Pd.pdf" },
+                        { type: "DOI", url: "https://doi.org/10.1016/j.apcatb.2026.127718" }
+                    ]
+                },
                 {
                     title: "NEPMaker: Active learning of neuroevolution machine learning potential for large cells",
                     authors: "J. Wang, H. Zhang, S. Pan, Q. Jia, C. Ding, M.M. Lukanov, F. Jalolov, A.G. Kvashnin, Z. Fan, J. Sun",
