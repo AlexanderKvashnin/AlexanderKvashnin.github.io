@@ -598,6 +598,13 @@ const projectsData = [
         pdfUrl: "assets/pdfs/all_publications/2027_Applied_Catalysis_B_Pt_Pd.pdf",
         doiUrl: "https://doi.org/10.1016/j.apcatb.2026.127718"
       },
+      {
+        title: "First-principles investigation of ammonia adsorption and N–H activation on W–B nanoclusters",
+        authors: "A.V. Iosimovska, M.M. Lukanov, C. Tantardini, A.S. Novikov, V.S. Baidyshev, A.G. Kvashnin",
+        journal: "International Journal of Hydrogen Energy (2026)",
+        pdfUrl: "assets/pdfs/all_publications/2026_IJHE_WB.pdf",
+        doiUrl: "https://doi.org/10.1016/j.ijhydene.2026.158057"
+      },
         {
             title: "Evolution of the PtPdCuNiCo High-Entropy Alloy Nanoparticles Structure During Thermal Treatment: Modeling and In Situ Study",
             authors: "Sergey V. Belenov, Anna A. Gavrilova, Dmitry K. Mauer, Egor R. Beskopylny, Alina K. Nevelskaya, Valeria P. Konovalova, Anna M. Kremneva, Evgeniy Yu. Gerasimov, Viktor S. Baidyshev, Alexander G. Kvashnin, Ilya V. Chepkasov",
