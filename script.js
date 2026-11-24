@@ -655,6 +655,7 @@ const projectsData = [
         authors: "Junjie Wang, Haoting Zhang, Shuning Pan, Qiuhan Jia, Chi Ding, Michel M. Lukanov, Faridun Jalolov, Alexander G. Kvashnin, Zheyong Fan, Jian Sun",
         journal: "Chinese Physics B (2026)",
         year: "2026",
+        pdfUrl: "assets/pdfs/New_Computational_Methods/2026_nepmaker.pdf",
         doiUrl: "https://iopscience.iop.org/article/10.1088/1674-1056/ae85f8"
       },
         {
@@ -1636,6 +1637,7 @@ function getPublicationData() {
                     journal: "Chinese Physics B",
                     year: "2026",
                     links: [
+                        { type: "PDF", url: "/assets/pdfs/all_publications/2026_nepmaker.pdf" },
                         { type: "DOI", url: "https://iopscience.iop.org/article/10.1088/1674-1056/ae85f8" }
                     ]
                 },
