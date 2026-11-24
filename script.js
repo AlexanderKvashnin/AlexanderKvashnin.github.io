@@ -471,6 +471,13 @@ const projectsData = [
       "Discovery, synthesis, and characterization of higher tungsten borides combining evolutionary prediction, density functional theory, and experimental validation. These materials demonstrate exceptional hardness, toughness, and thermal stability.",
     publications: [
       {
+        title: "Tungsten borides nanoparticles for X-ray and photothermal sensitization of cancer cells",
+        authors: "Anton L. Popov, Nikita N. Chukavin, Darya A. Vinnik, Gleb V. Tikhonowski, Polina Kotelnikova, Islam V. Sozaev, Dinara A. Borodulina, Natalia A. Chadina, Yuliya Z. Vassilyeva, Alexander Y. Pak, Nikolai A. Sokovikov, Anton A. Popov, Andrei V. Kabashin, Alexander G. Kvashnin, Ivan V. Zelepukin",
+        journal: "Materials Today Nano (2026)",
+        pdfUrl: "assets/pdfs/Higher_Tungtsen_Boride/2026_MatTodayNano.pdf",
+        doiUrl: "https://www.sciencedirect.com/science/article/pii/S2588842026002518?via%3Dihub"
+      },
+      {
         title: "Discovery of Chemically Modified Higher Tungsten Boride by a Hybrid GNN/DFT Approach",
         authors: "Nikita A. Matsokin, Roman A. Eremin, Anastasia A. Kuznetsova, Innokentiy S. Humonen, Aliaksei V. Krautsou, Vladimir D. Lazarev, Yuliya Z. Vassilyeva, Alexander Ya. Pak, Semen A. Budennyy, Alexander G. Kvashnin, Andrei A. Osiptsov",
         journal: "npj Computational Materials (2025)",
@@ -1621,7 +1628,7 @@ function renderPublications() {
 
 function getPublicationData() {
     return [
-                {
+               {
                     title: "Kinetically driven synthesis and high-performance Pt-Pd alloy catalysts for PEM fuel cells",
                     authors: "V.E. Guterman, K.O. Paperzh, I.V. Kantsypa, I.V. Chepkasov, V.S. Baidyshev, G. Bychkov, A.G. Kvashnin, A.M. Kremneva, K.K. Volik, I.V. Pankov, V.S. Menshchikov, E.R. Beskopylny",
                     journal: "Applied Catalysis B: Environment and Energy",
@@ -1629,6 +1636,16 @@ function getPublicationData() {
                     links: [
                         { type: "PDF", url: "/assets/pdfs/all_publications/2027_Applied_Catalysis_B_Pt_Pd.pdf" },
                         { type: "DOI", url: "https://doi.org/10.1016/j.apcatb.2026.127718" }
+                    ]
+                },
+               {
+                    title: "Tungsten borides nanoparticles for X-ray and photothermal sensitization of cancer cells",
+                    authors: "A.L. Popov, N.N. Chukavin, D.A. Vinnik, G.V. Tikhonowski, P. Kotelnikova, I.V. Sozaev, D.A. Borodulina, N.A. Chadina, Yu.Z. Vassilyeva, A.Ya. Pak, N.A. Sokovikov, A.A. Popov, A.V. Kabashin, A.G. Kvashnin, I.V. Zelepukin",
+                    journal: "Materials Today Nano",
+                    year: "2026",
+                    links: [
+                        { type: "PDF", url: "assets/pdfs/Higher_Tungtsen_Boride/2026_MatTodayNano.pdf" },
+                        { type: "DOI", url: "https://www.sciencedirect.com/science/article/pii/S2588842026002518?via%3Dihub" }
                     ]
                 },
                 {
